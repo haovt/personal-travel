@@ -18,8 +18,10 @@ coordinate and fact needs a source you actually read.
 - In a new worktree, git-ignored inputs are missing. Before the map steps, get the Natural Earth
   file only if you need it (you normally don't). For the local map, the `fetch` step downloads the
   OSM extract.
-- Dev server: `python -m http.server 5520` (or VS Code Live Server). Python's server lets browsers
-  cache CSS/JS, so hard-refresh after edits.
+- Dev server: `preview_start` with an entry from `.claude/launch.json` (`static-dev` = port 5520,
+  `static-dev-2` … `-4` = 5521–5523), or `python -I tools/dev-server.py <port>`. It serves this
+  worktree's own files with no caching. It refuses a port another worktree's server already holds:
+  then use the next entry.
 - Your URLs: `#/<country>/<id>` and `#/<country>/<id>/<location-id>`. Country ids: `viet-nam`,
   `thuy-si`.
 - Allowed downloads (owner approval 2026-11-08):
@@ -191,8 +193,16 @@ Replace the `planned` placeholder. Shape (see `da-nang`):
      `source-assets/commons/<id>/<owner>/NN.jpg`, where `NN` is the photo's 1-based position in
      that place's list in `photo-selection.json` (e.g. `02.jpg`) and `<owner>` is `cover` or the
      location id.
-   - `photos.py <id> download` skips files that already exist, and `build` then processes them
-     normally.
+   - **Browser downloads, step by step:** open the photo's `/sizes/k/` page on Flickr (e.g.
+     `https://www.flickr.com/photos/<user>/<id>/sizes/k/`) and click Flickr's own "Download the
+     Large 2048 size" link. Chrome blocks a second download that a script triggers on the same
+     site, so click each link instead of scripting it.
+   - `photos.py <id> download` keeps a file saved by hand, records which selection entry it is
+     (`NN.source.json`, marked `assumed`) and warns once, so check it on the contact sheet. `build`
+     then processes it normally.
+   - If you later insert, remove or reorder photos in a place's list, `download` re-downloads any
+     `NN.jpg` that came from a different file (`REPLACE`), and `build` refuses a mismatch. Files
+     saved by hand must then be saved again at their new position.
    - The credits page shows the source name.
    - NC photos are flagged "chỉ dùng phi thương mại".
 6. Check each photo visually as in B4 step 6.

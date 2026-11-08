@@ -6,6 +6,10 @@
 
 Input:   data/destinations/<id>/photo-selection.json   {"cover": [...], "locations": {"<loc-id>": [...]}}
 Cache:   source-assets/commons/<id>/metadata.json, source-assets/commons/<id>/<owner>/NN.jpg  (git-ignored)
+         plus NN.source.json next to each NN.jpg, naming the file it was downloaded from. The cache is
+         keyed by position, so when a selection changes (a photo inserted, removed or swapped), a
+         cached NN.jpg from another file is downloaded again instead of being built under the new
+         photo's credit.
 Output:  assets/destinations/<id>/<owner>/NN-<width>.webp   (owner = "cover" or a location id)
          data/destinations/<id>/photo-credits.json           (generated; do not edit by hand)
 
@@ -174,6 +178,20 @@ def usable(m):
     return bool(m.get("sourceName")) or bool(FREE.match(m["license"]))
 
 
+def source_path(jpg):
+    return jpg.with_name(jpg.stem + ".source.json")
+
+
+def cached_key(jpg):
+    sp = source_path(jpg)
+    return json.loads(sp.read_text(encoding="utf-8")).get("key") if sp.exists() else None
+
+
+def record_source(jpg, k, assumed=False):
+    data = {"key": k, **({"assumed": True} if assumed else {})}
+    source_path(jpg).write_text(json.dumps(data, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
 def cmd_download(d):
     meta = json.loads(d.meta.read_text(encoding="utf-8"))
     for owner, i, name in d.items():
@@ -183,9 +201,19 @@ def cmd_download(d):
             continue
         dest = d.src / owner / f"{i:02d}.jpg"
         if dest.exists():
-            continue
+            have = cached_key(dest)
+            if have == key(name):
+                continue
+            if have is None:
+                # Cached before NN.source.json existed, or saved by hand (playbook B4b): trust it once.
+                record_source(dest, key(name), assumed=True)
+                print(f"WARN   {owner} #{i}: cached {dest.name} has no source record; assuming it is "
+                      f"{key(name)}. Check it on the contact sheet.")
+                continue
+            print(f"REPLACE {owner} #{i}: cached {dest.name} came from {have}, selection now has {key(name)}")
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_bytes(wm_http.fetch(m["downloadUrl"], timeout=120))
+        record_source(dest, key(name))
         print(f"downloaded {owner} #{i}: {dest.stat().st_size // 1024} kB", flush=True)
 
 
@@ -199,6 +227,10 @@ def cmd_build(d):
         src = d.src / owner / f"{i:02d}.jpg"
         if not usable(m) or not src.exists():
             print(f"skip {owner} #{i}")
+            continue
+        have = cached_key(src)
+        if have is not None and have != key(name):
+            print(f"ERROR  {owner} #{i}: cached {src.name} is {have}, not {key(name)}; run download first")
             continue
         out_dir = d.assets / owner
         out_dir.mkdir(parents=True, exist_ok=True)

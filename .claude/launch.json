@@ -4,8 +4,26 @@
     {
       "name": "static-dev",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "5520", "--bind", "127.0.0.1"],
+      "runtimeArgs": ["-I", "tools/dev-server.py", "5520"],
       "port": 5520
+    },
+    {
+      "name": "static-dev-2",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-I", "tools/dev-server.py", "5521"],
+      "port": 5521
+    },
+    {
+      "name": "static-dev-3",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-I", "tools/dev-server.py", "5522"],
+      "port": 5522
+    },
+    {
+      "name": "static-dev-4",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-I", "tools/dev-server.py", "5523"],
+      "port": 5523
     }
   ]
 }

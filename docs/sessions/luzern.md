@@ -189,3 +189,4 @@ not a constraint here. KKL (1998) exteriors would also be fine, but it is not pr
    worktree port, or a launcher that reads the port from the environment.
 3. **Playbook B4b:** Chrome blocks a second script-triggered download from the same site; clicking
    Flickr's own "Download the Large 2048 size" link on the `/sizes/k/` page works. Worth a line in B4b.
+4. Status of 1–3: fixed on main (2026-11-08): `photos.py` tracks each cached file's source (`NN.source.json`), `tools/dev-server.py` with one launch entry per port, and the Flickr download steps are in B4b.
