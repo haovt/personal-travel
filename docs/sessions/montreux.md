@@ -154,11 +154,41 @@ Expected: 27 photos, with a possible gap only for the wine place.
 |---|---|
 | 2026-11-08 | Brief created by the main session. Placeholder `destination.json` exists with `"status": "planned"`. |
 | 2026-11-08 | Session started on branch `dest/montreux`. Stage A research done; proposal written above. Waiting for approval via the main session. |
+| 2026-11-08 | **Stage A approved via main session**: names "Montreux" / "Hồ Genève"; map Option A (bbox `[6.765, 46.385, 6.990, 46.490]`, shrink `coreBbox` first if > 1.5 MB); all 8 locations; photo plan incl. B4b (Flickr/Unsplash/Pexels) and browser downloads of the listed files. Lavaux area re-checked: en.wikipedia says 830 ha, fr.wikipedia 806 ha (2015), so the text says "hơn 800 ha". |
+| 2026-11-08 | Map: one Overpass fetch (13.8 MB raw), build → `assets/maps/montreux.geojson` **681 kB** (134 kB gzipped). No coastline → whole area land; Lake Geneva (relation 332617) is clipped to the bbox and drawn as one water polygon with its harbour/island holes. 19 peak labels from OSM; `mapLabels` for "Hồ Genève", Montreux, Vevey, Villeneuve, Lavaux. |
+| 2026-11-08 | Photos: all 27 from Commons (no Flickr needed). Chillon's top category holds only archival drawings, so candidates came from its "viewed from …" subcategories. `meta` all OK, downloaded, built; every `-400.webp` checked on a contact sheet. |
+| 2026-11-08 | B6 tests passed at 1440 × 900 and 390 × 844 (see Result). `status: "published"`. |
 
 ## Result
 
-_(Stage C: what works, photo counts (target 3 per place), known gaps.)_
+**Published**, 8 locations, **27 photos (3 per place, all Wikimedia Commons)**, map 681 kB.
+
+- Tested in the in-app browser at 1440 × 900 and 390 × 844:
+  - world → Thụy Sĩ → Montreux pin → fly-in; the local map fades in; the area lock holds the bbox
+    (desktop lands at zoom 13.25, phone at 13; panning stops at the bbox corner);
+  - each of the 8 locations opens with 3 photos, credit line, thumbnails and a Google Maps link with
+    its `mapsQuery`; full-screen viewer and Esc; swipe to 3/3 on the phone sheet;
+  - "Ảnh minh họa" tag on the perch and fondue photos; category chips filter (Ẩm thực → 3);
+  - back from location → destination → country; "Nguồn ảnh & bản quyền" lists the Montreux photos;
+  - no console errors, no failed requests.
+- Photos: cover 3, Chillon 3, Freddie Mercury 3, Lavaux 3, Rochers-de-Naye 3, La Fourchette (+ Chaplin
+  statue) 3, filets de perche 3 (illustrative; one is "Filets de perches du Léman"), fondue 3
+  (illustrative), vang Lavaux 3 (Lavaux Vinorama entrance, a Lavaux AOC bottle, Rivaz/Chexbres).
+  Licences: CC BY-SA 2.0–4.0, CC BY 2.0, CC0. No NC, no ND.
+- Known gaps / notes:
+  - The Lavaux wine bottle photo is a red Lavaux AOC (Gamaret-Garanoir), while the text says the
+    region's wine is mainly white Chasselas; the alt text describes it as a red Lavaux AOC.
+  - The fondue venue's menu doesn't name its cheese blend, so moitié-moitié is mentioned only as the
+    Fribourg style.
+  - On desktop the Lavaux pin lands under the chip row, and the off-screen hint pill for it sits on top
+    of the La Fourchette pin near Vevey (see request 1). Panning fixes both.
 
 ## Requests for the main session
 
-_(Shared-code bugs or changes you need. Don't edit shared files yourself.)_
+1. **Hint pill over a visible pin (cosmetic, `offscreen-hints.js`).** At 1440 × 900 on
+   `#/thuy-si/montreux`, the Lavaux pin is inside the map but hidden under the chip row, so it gets
+   an off-screen pill. The pill is placed over the La Fourchette pin at Vevey and hides it until the
+   user pans. Maybe skip pills for pins inside the viewport, or avoid covering other pins.
+2. **Phone attribution position (observation, shared).** At 390 × 844 the "Nguồn & bản quyền |
+   © OpenStreetMap" attribution sits at the top right, just under the chips (top ≈ 112 px), not
+   bottom-left as the CLAUDE.md table says. Luzern shows the same, so it is not Montreux-specific.

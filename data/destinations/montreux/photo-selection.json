@@ -1,0 +1,145 @@
+{
+  "_note": "Photos for this destination. Order = gallery order. Used by: python -I tools/photos.py montreux meta|download|build. candidateSources is read by tools/commons_candidates.py. Swiss freedom of panorama covers works permanently in public places (incl. the 1996 Freddie Mercury statue and La Fourchette); no interiors with copyrighted works.",
+  "cover": [
+    "Montreux (VD).jpg",
+    "L05 102 Montreux.jpg",
+    "Blick auf Montreux am Genfersee.jpg"
+  ],
+  "locations": {
+    "montreux-chillon": [
+      "Château de Chillon - juillet 2022.jpg",
+      "Château de Chillon (Chillon Castle) on Lake Geneva Shore (Ank Kumar, Infosys) 02.jpg",
+      "Chillon Castle - Montreux, Switzerland - panoramio (1).jpg"
+    ],
+    "montreux-tuong-freddie-mercury": [
+      "Statue de Freddie Mercury 2015-08-03.jpg",
+      "Freddie Mercury - Montreux 02.jpg",
+      "Montreux, Switzerland - panoramio (21).jpg"
+    ],
+    "montreux-lavaux": [
+      "Bourg-en-Lavaux (47146815941).jpg",
+      "A wine in Lavaux.jpg",
+      "Blick auf Riex im Lavaux VD (2018).jpg"
+    ],
+    "montreux-rochers-de-naye": [
+      "Lac Léman from Rochers de Naye.jpg",
+      "Bergstation vom Rochers de Naye.jpg",
+      "Rochers de Naye Bergbahnhof.jpg"
+    ],
+    "montreux-fourchette-vevey": [
+      "The Fork - Alimentarium in Vevey.jpg",
+      "RoyLindmanCharlieChaplin.jpg",
+      "Vevey in-May 2018 12 copy.jpg"
+    ],
+    "montreux-filets-de-perche": [
+      "Filets de perches du Léman - 1.JPG",
+      "Filet de perche meuniere nov 2020.jpg",
+      "Fried perch.jpg"
+    ],
+    "montreux-fondue": [
+      "Käsefondue auf der WikiCon 2018 01.jpg",
+      "Vive la Fondue.jpg",
+      "Swiss cheese fondue.JPG"
+    ],
+    "montreux-vang-lavaux": [
+      "Corseaux, Switzerland - panoramio (2).jpg",
+      "Vin Lavaux AOC Gamaret Garanoir DSCN4405.jpg",
+      "Blick auf Rivaz und Chexbes im Lavaux (2015).jpg"
+    ]
+  },
+  "candidateSources": {
+    "cover": {
+      "cats": [
+        "Category:Views of Montreux",
+        "Category:Montreux"
+      ],
+      "search": [
+        "intitle:Montreux intitle:panorama"
+      ],
+      "min_w": 1800
+    },
+    "montreux-chillon": {
+      "cats": [
+        "Category:Château de Chillon viewed from north",
+        "Category:Château de Chillon viewed from south",
+        "Category:Château de Chillon viewed from east",
+        "Category:Aerial photographs of Château de Chillon",
+        "Category:Courtyard of Chillon"
+      ],
+      "search": [],
+      "min_w": 1600,
+      "note": "Top-level category holds only archival drawings; photos are in the \"viewed from\" subcategories."
+    },
+    "montreux-tuong-freddie-mercury": {
+      "cats": [
+        "Category:Statue of Freddie Mercury, Montreux"
+      ],
+      "search": [],
+      "min_w": 1200
+    },
+    "montreux-lavaux": {
+      "cats": [
+        "Category:Lavaux Vineyard Terraces",
+        "Category:Saint-Saphorin (Lavaux)"
+      ],
+      "search": [
+        "intitle:Lavaux intitle:vineyard"
+      ],
+      "min_w": 1600
+    },
+    "montreux-rochers-de-naye": {
+      "cats": [
+        "Category:Views from les Rochers de Naye",
+        "Category:Chemin de fer Montreux–Glion–Rochers-de-Naye",
+        "Category:Rochers-de-Naye railway station",
+        "Category:Rochers de Naye"
+      ],
+      "search": [],
+      "min_w": 1400
+    },
+    "montreux-fourchette-vevey": {
+      "cats": [
+        "Category:La Fourchette",
+        "Category:Statue of Charlie Chaplin in Vevey"
+      ],
+      "search": [
+        "intitle:Vevey intitle:fourchette"
+      ],
+      "min_w": 1200
+    },
+    "montreux-filets-de-perche": {
+      "cats": [
+        "Category:Perch dishes",
+        "Category:Fish dishes of Switzerland"
+      ],
+      "search": [
+        "intitle:\"filets de perche\"",
+        "intitle:\"filet de perche\"",
+        "intitle:perches intitle:Léman"
+      ],
+      "min_w": 1000
+    },
+    "montreux-fondue": {
+      "cats": [
+        "Category:Cheese fondue"
+      ],
+      "search": [
+        "intitle:fondue intitle:moitié"
+      ],
+      "min_w": 1000
+    },
+    "montreux-vang-lavaux": {
+      "cats": [
+        "Category:Wines of Switzerland",
+        "Category:Lavaux Vineyard Terraces"
+      ],
+      "search": [
+        "intitle:Chasselas",
+        "intitle:Dézaley",
+        "intitle:Lavaux intitle:vin",
+        "intitle:Lavaux intitle:wine"
+      ],
+      "min_w": 1000
+    }
+  }
+}
