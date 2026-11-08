@@ -1,0 +1,177 @@
+{
+  "_note": "Wikimedia Commons files for this destination. Order = gallery order. Used by: python -I tools/photos.py da-lat meta|download|build. candidateSources is used by tools/commons_candidates.py.",
+  "candidateSources": {
+    "cover": {
+      "cats": [
+        "Category:Da Lat",
+        "Category:Views of Da Lat"
+      ],
+      "search": [
+        "Dalat panorama"
+      ],
+      "min_w": 1800
+    },
+    "da-lat-ho-xuan-huong": {
+      "cats": [
+        "Category:Xuan Huong Lake"
+      ],
+      "min_w": 1600
+    },
+    "da-lat-nha-tho-chinh-toa": {
+      "cats": [
+        "Category:Cathedral of Da Lat"
+      ],
+      "min_w": 1600
+    },
+    "da-lat-ga-da-lat": {
+      "cats": [
+        "Category:Da Lat Station"
+      ],
+      "min_w": 1600
+    },
+    "da-lat-dinh-bao-dai": {
+      "cats": [
+        "Category:Palace III"
+      ],
+      "min_w": 1600
+    },
+    "da-lat-thien-vien-truc-lam": {
+      "cats": [
+        "Category:Truc Lam Monastery of Da Lat",
+        "Category:Tuyen Lam Lake"
+      ],
+      "min_w": 1600,
+      "pre2023": true
+    },
+    "da-lat-thac-datanla": {
+      "cats": [
+        "Category:Datanla Waterfall"
+      ],
+      "min_w": 1600,
+      "pre2023": true
+    },
+    "da-lat-cho-da-lat": {
+      "cats": [
+        "Category:Da Lat Market"
+      ],
+      "search": [
+        "Dalat night market"
+      ],
+      "min_w": 1600,
+      "pre2023": true
+    },
+    "da-lat-banh-trang-nuong": {
+      "cats": [
+        "Category:Bánh tráng nướng"
+      ],
+      "search": [
+        "\"bánh tráng nướng\""
+      ],
+      "min_w": 1000
+    }
+  },
+  "cover": [
+    "Da_Lat_-_Viet_Nam.jpg",
+    "DA_LAT_VIETNAM_JAN_2012_(6864583156).jpg",
+    "Vietnam_-_panoramio_(54).jpg",
+    "475_Vietnam_Aussicht_auf_Dalat.jpg",
+    "Vietnam_-_panoramio_(61).jpg",
+    "View_of_Da_Lat_03.jpg"
+  ],
+  "locations": {
+    "da-lat-ho-xuan-huong": [
+      "Xuan_Huong_Lake_16.jpg",
+      "Xuan_Huong_Lake_(46420763535).jpg",
+      "Xuan_Huong_Lake_06.jpg",
+      "Ho_Xuan_Huong_03.jpg",
+      "Xuan_Huong_Lake_08.jpg",
+      "Xuan_Huong_Lake_-_Boat_station.JPG",
+      "Thanh_Thuy_Restaurant.JPG",
+      "29-12-2011_Xuan_Huong,_Doi_Cu_2.JPG",
+      "Xuan_Huong_Lake_18.jpg"
+    ],
+    "da-lat-nha-tho-chinh-toa": [
+      "Nha_tho_chinh_toa_Da_Lat.jpg",
+      "Cathedral_of_Da_Lat_08.jpg",
+      "DA_LAT_CATHEDERAL_VIETNAM_JAN_2012_(6821878370).jpg",
+      "DA_LAT_CATHEDERAL_VIETNAM_JAN_2012_(6821886542).jpg",
+      "Cathedral_of_Da_Lat.jpg",
+      "Cathedral_of_Da_Lat_15.jpg"
+    ],
+    "da-lat-ga-da-lat": [
+      "Dalat_Train_Station_(23009048936).jpg",
+      "Da_Lat_-_Train_Station.jpg",
+      "Dalat_Train_Station_(22616796548).jpg",
+      "Da_Lat_train_station_27.jpg",
+      "Dalat_Railroad_car.JPG",
+      "Dalat_Train_Station_(22414094863).jpg"
+    ],
+    "da-lat-dinh-bao-dai": [
+      "Bao_Dai's_Summer_Palace_08.jpg",
+      "Dinh_Bao_Dai_III_(23036128796).jpg",
+      "Dinh_Bảo_Đại,_Đà_Lạt_(4).JPG",
+      "Dinh_Bao_Dai_III_(22440350523).jpg",
+      "Dinh_Bao_Dai_III_(23061927305).jpg",
+      "Bao_Dai's_Summer_Palace_09.jpg"
+    ],
+    "da-lat-thien-vien-truc-lam": [
+      "Thiền_viện_Trúc_Lâm_(chánh_điện_mặt_ngoài)_(1).jpg",
+      "Hô_Tuyên_Lâm_chup_buôi_tôi_-_panoramio.jpg",
+      "Thiền_viện_Trúc_Lâm_(gác_trống_nhìn_trước,_cận_cảnh)_(1).jpg",
+      "Truc_Lam_Zen_Monastery_(August_7,_2018)_(43120315095).jpg",
+      "Truc_Lam_Zen_Monastery_(August_7,_2018)_(43120319545).jpg",
+      "Truc_Lam_Zen_Monastery_(August_7,_2018)_(43977800862).jpg"
+    ],
+    "da-lat-thac-datanla": [
+      "Datanla_Waterfall_1.jpg",
+      "Thác_Datanla.jpg",
+      "Datanla_Waterfall_2.jpg",
+      "Thac.jpg",
+      "Thác_Datanla,_Đà_Lạt_(3).JPG",
+      "Thác_Datanla,_Đà_Lạt_(4).JPG",
+      "Alpine_Sled,_Datanla_Waterfall.jpg",
+      "Datanla_falls_(August_8,_2018)_(43968936702).jpg"
+    ],
+    "da-lat-cho-da-lat": [
+      "Da_Lat_Market_08.jpg",
+      "Chợ_Đà_Lạt.jpg",
+      "Bên_trong_chợ_Đà_Lạt.jpg",
+      "DA_LAT_MARKET_VIETNAM_JAN_2012_(6864543808).jpg",
+      "DA_LAT_MARKET_VIETNAM_JAN_2012_(6817973520).jpg",
+      "Da_Lat_Market_02.jpg"
+    ],
+    "da-lat-banh-trang-nuong": [
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/lugxyh/33065548282/",
+        "file": "https://live.staticflickr.com/3704/33065548282_ec5438a9a4_o.jpg",
+        "creator": "Lùg Memories",
+        "license": "CC BY-NC-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "checked": "2026-11-08"
+      },
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/trungquan/15013764957/",
+        "file": "https://live.staticflickr.com/3882/15013764957_e65572f704_k.jpg",
+        "creator": "Trung Quân",
+        "license": "CC BY-NC 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/2.0/",
+        "checked": "2026-11-08"
+      },
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/christophercrouzet/38659281742/",
+        "file": "https://live.staticflickr.com/4570/38659281742_79e33bdf82_k.jpg",
+        "creator": "Christopher Crouzet",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "checked": "2026-11-08"
+      },
+      "Bánh_tráng_nướng_TP._Hồ_Chí_Minh_-_street_food_in_Ho_Chi_Minh_City,_Vietnam.jpg",
+      "Dalat_market,_Vietnam.jpg",
+      "Dalat_night_market_-_panoramio.jpg",
+      "DA_LAT_MARKET_VIETNAM_JAN_2012_(6910709520).jpg"
+    ]
+  }
+}
