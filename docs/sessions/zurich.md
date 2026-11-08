@@ -157,10 +157,46 @@ Stage A, 2026-11-08. Sources read: Wikidata (SPARQL), OpenStreetMap (Overpass, t
 | 2026-11-08 | Local map: one Overpass fetch (4.5 MB raw) → `assets/maps/zurich.geojson` **479 kB**. The lake renders as one water body; the Limmat and Sihl are drawn; 20 OSM labels (German quarter and peak names). Vietnamese `mapLabels`: "Hồ Zürich", "Sông Limmat". The tool needed a workaround for the space in the worktree path (see requests). |
 | 2026-11-08 | `destination.json` and `locations.json` written (8 locations, facts as in the proposal). |
 | 2026-11-08 | Photo candidate search run; picks recorded in `photo-selection.json` for Geschnetzeltes 8, Luxemburgerli 7, Grossmünster 7, Fraumünster 5 (exteriors only, no Chagall windows) and Landesmuseum 7 (exteriors plus historic interiors). Still to do: Zürichhorn, Uetliberg, cover, and a Lindenhof rerun (its first search returned unrelated aerial photos). **Stopped at the owner's request**, because the photo rule is being updated in the main session. Nothing has been downloaded or built (`photos.py` not run). |
+| 2026-11-08 | Merged `main` (shared Wikimedia queue, Flickr/Unsplash/Pexels rules). Re-read B4/B4b. The remaining candidate runs took about 2.5 min for 4 places with no 429s. Lindenhof was rerun with category + `intitle:` search only. |
+| 2026-11-08 | Photos: 61 picked, all `OK` in `photos.py meta` (Commons only, no extra source needed), downloaded and built (34 MB WebP at 400/800/1200/1800). Every built photo checked on a contact sheet; Vietnamese alt texts written. 3 generic dish photos flagged `illustrative`. |
+| 2026-11-08 | Added `mapsQuery` with the German names for the 6 non-food places, because Google Maps would not reliably match the Vietnamese names. |
+| 2026-11-08 | B6 test passed in the in-app browser at 1024 × 768 (pane size) and 390 × 844. Checked: world → Thụy Sĩ → Zürich fly-in and local map; 8 locations load their photos; gallery, thumbnails, full-screen viewer, credit line and Google Maps link; back navigation; the "Ẩm thực" chip (2 places); area lock (panning outside stops at the bbox); Zürich listed on the credits page; no console errors. Status set to `published`. Not tested on a real iPhone. |
 
 ## Result
 
-_(Stage C: what works, photo counts vs. minimums, known gaps.)_
+**Status: `published`.** URL `#/thuy-si/zurich`.
+
+- **Map:** `assets/maps/zurich.geojson`, 479 kB. Inland; Lake Zürich is one water body. The Limmat
+  and Sihl are drawn; OSM quarter and peak names are in German; Vietnamese labels "Hồ Zürich" and
+  "Sông Limmat". Uetliberg (4.3 km) is reached by an off-screen hint pill.
+- **Locations (8):** Grossmünster, Fraumünster, Lindenhof, Landesmuseum, Zürichhorn, Uetliberg,
+  Zürcher Geschnetzeltes (Zeughauskeller), Luxemburgerli (Sprüngli, Paradeplatz). Every coordinate
+  is from OSM or Wikidata, and every fact from Wikipedia (sources in `locations.json`).
+- **Photos (61, all Wikimedia Commons) against the minimums:**
+
+  | Place | Photos | Minimum |
+  |---|---|---|
+  | Cover (destination) | 6 | 5 |
+  | Grossmünster | 7 | 3 |
+  | Fraumünster | 5 | 3 |
+  | Lindenhof | 6 | 3 |
+  | Landesmuseum | 7 | 3 |
+  | Zürichhorn | 7 | 3 |
+  | Uetliberg | 8 | 3 |
+  | Zürcher Geschnetzeltes | 8 (5 at Zeughauskeller, 3 "Ảnh minh họa") | 3 |
+  | Luxemburgerli | 7 | 3 |
+
+- **Freedom of panorama:** all outdoor works are covered by Swiss FoP. No Chagall windows (Fraumünster)
+  and no Kronenhalle art. The three Landesmuseum interiors show only historic rooms and objects,
+  whose makers died long ago, so FoP isn't needed for them.
+- **Known gaps / notes:**
+  - No photo of the Uetliberg lookout tower itself, only the views from it (Commons search didn't
+    surface one).
+  - No photo of the Chinagarten mentioned in the Zürichhorn facts.
+  - One Commons author string reads "Xocolatl (talk) 21:25, 12 April 2022 (UTC)" on the credits page
+    (see request 4).
+  - Not tested on a real iPhone. The 1440 × 900 check ran at the pane's 1024 × 768 instead, because
+    the pane couldn't emulate a larger size reliably.
 
 ## Requests for the main session
 
@@ -172,5 +208,11 @@ _(Stage C: what works, photo counts vs. minimums, known gaps.)_
      `path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')`.
    - Workaround used here: run it through a junction without spaces, with
      `node --preserve-symlinks --preserve-symlinks-main tools/build-local-map.mjs zurich …`.
-2. Note for the photo stage: Wikimedia APIs often answer HTTP 429 when several destination sessions
-   run at once from the same IP. The tools back off, but the runs are slow.
+2. ~~Wikimedia 429s during parallel photo runs~~: fixed on main by `tools/wm_http.py`.
+3. **`tools/__pycache__/*.pyc` is committed on `main`** (`photos.cpython-311.pyc`,
+   `wm_http.cpython-311.pyc`). Suggest `git rm --cached` and adding `__pycache__/` to `.gitignore`,
+   or every session that runs the tools will show modified binaries.
+4. **Commons author strings can include a talk-page signature**, e.g.
+   "Xocolatl (talk) 21:25, 12 April 2022 (UTC)" for `zurich-geschnetzeltes-06`. `photos.py meta`
+   could strip a trailing `(talk) … (UTC)` signature. `photo-credits.json` is generated, so I
+   didn't edit it by hand.

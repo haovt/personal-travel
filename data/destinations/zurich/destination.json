@@ -4,7 +4,7 @@
   "name": "Zürich",
   "type": "city",
   "region": null,
-  "status": "draft",
+  "status": "published",
   "coordinates": {
     "lat": 47.374444,
     "lon": 8.541111,
@@ -47,7 +47,32 @@
     }
   ],
   "summary": "Thành phố lớn nhất Thụy Sĩ, nằm bên hồ Zürich, nơi sông Limmat bắt đầu chảy qua phố cổ.",
-  "images": [],
+  "images": [
+    {
+      "photo": "zurich-01",
+      "alt": "Toàn cảnh phố cổ Zürich bên sông Limmat với hai tháp Grossmünster và tháp nhọn Fraumünster, xa xa là hồ Zürich và dãy Alps"
+    },
+    {
+      "photo": "zurich-02",
+      "alt": "Sông Limmat chảy qua trung tâm Zürich ra hồ Zürich, nhìn từ trên cao, phía xa là dãy Alps"
+    },
+    {
+      "photo": "zurich-03",
+      "alt": "Hồ Zürich và các mái nhà thành phố nhìn từ trên cao vào ngày trời trong"
+    },
+    {
+      "photo": "zurich-04",
+      "alt": "Nhà thờ Wasserkirche và hai tháp Grossmünster soi bóng xuống sông Limmat"
+    },
+    {
+      "photo": "zurich-05",
+      "alt": "Bờ sông Limmat với các tòa nhà cổ và tháp nhọn xanh của Fraumünster"
+    },
+    {
+      "photo": "zurich-06",
+      "alt": "Dòng Limmat xanh trong giữa hai dãy nhà cổ của Zürich"
+    }
+  ],
   "locationIds": [
     "zurich-grossmunster",
     "zurich-fraumunster",

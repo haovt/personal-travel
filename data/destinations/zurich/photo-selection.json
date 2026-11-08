@@ -1,6 +1,13 @@
 {
   "_note": "Wikimedia Commons files for this destination. Order = gallery order. Used by: python -I tools/photos.py zurich meta|download|build. candidateSources is read by tools/commons_candidates.py. Swiss freedom of panorama covers outdoor works only: no interiors with copyrighted works (Chagall windows, Kronenhalle art).",
-  "cover": [],
+  "cover": [
+    "City_3.jpg",
+    "Central_mit_Blick_auf_den_See.jpg",
+    "D81_1735.jpg",
+    "CH_Zürich,_Limmat_002.jpg",
+    "CH_Zürich,_Limmat_004.jpg",
+    "Curych,_2017_(22).jpg"
+  ],
   "locations": {
     "zurich-geschnetzeltes": [
       "Kalbsgeschnetzeltes_nach_Zürcher_Art_Zeughauskeller_Zürich.jpg",
@@ -45,6 +52,33 @@
       "Tiled_stove_and_wall_boiserie,_Pestalozzi_Room,_Swiss_National_Museum,_Zurich,_Switzerland_julesvernex2.jpg",
       "Light_filtered_through_window,_Lochmann_Hall,_Swiss_National_Museum,_Zurich,_Switzerland_julesvernex2.jpg",
       "Vaulted_hall_with_reliefs_Landesmuseum_Zurich_2026.JPG"
+    ],
+    "zurich-lindenhof": [
+      "View_across_Limmat_river_from_Lindenhof.jpg",
+      "Zürich_-_Lindenhof_2011-08-01.jpg",
+      "Lindenhof_Square_and_Hill,_Zurich_(Ank_Kumar)_06.jpg",
+      "Lindenhof_Zürich_-_Hedwig-Brunnen_2018-09-05_15-30-59.jpg",
+      "CH_Zürich,_Lindenhof_001.jpg",
+      "Lindenhof_In_Zürich_(20113111).jpeg"
+    ],
+    "zurich-zurichhorn": [
+      "'Zürichhorn'_in_Zürich-Seefeld,_Ansicht_von_der_Schifflände_der_Zürichsee-Schifffahrtsgesellschaft_(ZSG)_2013-09-19_17-50-37.JPG",
+      "'Säntis'_-_Zürichhorn_2011-04-07_17-15-24.jpg",
+      "Adlisberg_-_Seefeldquai_-_Zürichhorn_-_Zürichsee_in_Zürich_-_Landiwiese_2015-05-06_13-34-03.JPG",
+      "Albis_-_Felsenegg_-_Zürichsee_in_Zürich_-_Zürichhorn_-_Tiefenbrunnen_2015-05-06_15-54-16.JPG",
+      "'Albis'_-_ZSG_Landungssteg_Zürichhorn_2011-04-02_17-15-48.jpg",
+      "'Hochwasser'_am_Zürichsee_-_Zürichhorn_2013-06-04_-_15-42_(Xperia_Z).jpeg",
+      "Anas_platyrhynchos_(Küken)_-_Blatterwiese-Zürichhorn_2011-05-02_18-01-46.JPG"
+    ],
+    "zurich-uetliberg": [
+      "City_Zürich_mit_Zürichsee.jpg",
+      "Albis,_Felsenegg,_Zimmerberg_und_die_Voralpen_im_Nebelmeer,_Ansicht_vom_Uetliberg_2011-11-19_16-14-08.JPG",
+      "Blick_vom_uetliberg_uebers_nebelmeer_zu_den_alpen.jpg",
+      "From_Uetliberg_to_Felsenegg_,_Zurich_-_panoramio_(102).jpg",
+      "From_Uetliberg_to_Felsenegg_,_Zurich_-_panoramio_(38).jpg",
+      "From_Uetliberg_to_Felsenegg_,_Zurich_-_panoramio_(63).jpg",
+      "From_Uetliberg_to_Felsenegg_,_Zurich_-_panoramio_(43).jpg",
+      "Albis_-_Uetliberg_2012-10-29_16-12-02.JPG"
     ]
   },
   "candidateSources": {
@@ -109,11 +143,12 @@
     },
     "zurich-uetliberg": {
       "cats": [
-        "Category:Uetliberg",
         "Category:Views from Uetliberg"
       ],
       "search": [
-        "Uetliberg Uto Kulm view"
+        "intitle:\"Uto Kulm\"",
+        "intitle:Uetliberg intitle:Aussichtsturm",
+        "intitle:Uetliberg intitle:Turm"
       ],
       "min_w": 1600
     },
