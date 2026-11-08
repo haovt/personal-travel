@@ -55,6 +55,12 @@ coordinate and fact needs a source you actually read.
    - `coreBbox`: the dense centre, where residential streets are included. Keep it small.
    - `initialView`: what the first view shows.
    - A far-away location (e.g. Bà Nà, 26 km) is fine: an off-screen hint pill points to it.
+   - **Leave room around `initialView`** (lessons from Hội An, Hạ Long and Ninh Bình). The area lock
+     never lets the map show anything outside `bbox`, so the landing view is clamped when the bbox is
+     tight. Make the bbox about **2× the initial view**, and add **extra margin on the west side**
+     (about half the initial view's width): on desktop the side panel covers the left of the map,
+     so the camera shifts west to keep pins right of the panel. Otherwise pins land under the panel,
+     and phones land at the minimum zoom with no room to zoom out.
 6. **Photo plan** (owner rule, updated 2026-11-08): **at most 3 photos per place**, both the
    destination (cover) and each location. Aim for exactly 3, and use fewer only if no suitable
    licensed photos exist (report it as a gap).

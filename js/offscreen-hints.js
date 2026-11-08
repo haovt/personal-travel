@@ -32,6 +32,7 @@ export function createOffscreenHints(map, container, { getCandidates, onSelect }
       const ty = dy > 0 ? (box.bottom - cy) / dy : dy < 0 ? (box.top - cy) / dy : Infinity;
       const t = Math.min(tx, ty);
       out.push({
+        alongY: tx < ty, // on the left/right edge: slide up/down to dodge pins; else left/right
         loc,
         x: cx + dx * t + mapRect.left,
         y: cy + dy * t + mapRect.top,
@@ -50,24 +51,35 @@ export function createOffscreenHints(map, container, { getCandidates, onSelect }
         <span class="offscreen-hint__km">${formatKm(h.km)}</span>
       </button>`).join('');
 
-    // Keep each pill fully inside the visible map area (it is centred on its anchor), and drop
-    // pills that would overlap a nearer one (places in the same direction).
+    // Keep each pill fully inside the visible map area (it is centred on its anchor). A pill must
+    // not cover a nearer pill or a visible pin (e.g. a pin hidden under the chip row gets a pill
+    // that could land on another pin): slide it along its edge, and drop it if no spot is free.
     const margin = 8;
-    const placed = [];
+    const overlaps = (a, b) => a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];
+    const placed = [...map.getContainer().querySelectorAll('.loc-pin:not(.is-filtered) .loc-pin__svg')]
+      .map((svg) => svg.getBoundingClientRect())
+      .filter((r) => r.width > 0)
+      .map((r) => [r.left, r.top, r.right, r.bottom]);
     container.querySelectorAll('.offscreen-hint').forEach((el) => {
+      const hint = current[Number(el.dataset.i)];
       const w = el.offsetWidth / 2, h = el.offsetHeight / 2;
       const minX = mapRect.left + v.left + margin + w, maxX = mapRect.left + v.right - margin - w;
       const minY = mapRect.top + v.top + margin + h, maxY = mapRect.top + v.bottom - margin - h;
-      const x = Math.min(maxX, Math.max(minX, parseFloat(el.style.left)));
-      const y = Math.min(maxY, Math.max(minY, parseFloat(el.style.top)));
-      const box = [x - w - 4, y - h - 4, x + w + 4, y + h + 4];
-      if (placed.some((b) => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) {
-        el.remove();
+      const clamp = (val, lo, hi) => Math.min(hi, Math.max(lo, val));
+      const x0 = clamp(parseFloat(el.style.left), minX, maxX);
+      const y0 = clamp(parseFloat(el.style.top), minY, maxY);
+      const step = hint.alongY ? 2 * h + 8 : 2 * w + 8;
+      for (const k of [0, 1, -1, 2, -2]) {
+        const x = hint.alongY ? x0 : clamp(x0 + k * step, minX, maxX);
+        const y = hint.alongY ? clamp(y0 + k * step, minY, maxY) : y0;
+        const box = [x - w - 4, y - h - 4, x + w + 4, y + h + 4];
+        if (placed.some((b) => overlaps(box, b))) continue;
+        placed.push(box);
+        el.style.left = `${x}px`;
+        el.style.top = `${y}px`;
         return;
       }
-      placed.push(box);
-      el.style.left = `${x}px`;
-      el.style.top = `${y}px`;
+      el.remove();
     });
   }
 

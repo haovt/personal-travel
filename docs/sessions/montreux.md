@@ -192,3 +192,4 @@ Expected: 27 photos, with a possible gap only for the wine place.
 2. **Phone attribution position (observation, shared).** At 390 × 844 the "Nguồn & bản quyền |
    © OpenStreetMap" attribution sits at the top right, just under the chips (top ≈ 112 px), not
    bottom-left as the CLAUDE.md table says. Luzern shows the same, so it is not Montreux-specific.
+3. Status of 1–2: fixed on main (2026-11-08): hint pills slide off visible pins (or are dropped), and on phones the attribution sits bottom-left above the sheet.

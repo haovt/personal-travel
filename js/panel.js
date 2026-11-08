@@ -47,6 +47,13 @@ export function createPanel(data, handlers) {
   syncTopbar();
 
   const phonePortrait = window.matchMedia('(max-width: 767px) and (orientation: portrait)');
+  // How much of the screen bottom the sheet covers (phones in portrait; 0 elsewhere). CSS uses it
+  // to keep the map attribution just above the sheet, bottom-left.
+  const syncSheetOverlap = () => document.documentElement.style.setProperty(
+    '--sheet-overlap', `${phonePortrait.matches ? Math.round(sheet.getBoundingClientRect().height) : 0}px`);
+  new ResizeObserver(syncSheetOverlap).observe(sheet);
+  phonePortrait.addEventListener('change', syncSheetOverlap);
+  syncSheetOverlap();
   function setCollapsed(collapsed) {
     sheet.classList.toggle('is-collapsed', collapsed);
     handle.setAttribute('aria-expanded', String(!collapsed));

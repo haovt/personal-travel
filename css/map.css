@@ -335,10 +335,15 @@
 }
 .leaflet-control-attribution a { color: var(--text-2); }
 
-/* On phones the sheet covers the bottom: place attribution at the top-right under the chips. */
+/* Phones: attribution bottom-left, just above the bottom sheet (--sheet-overlap, set by
+   js/panel.js) or above the home indicator when there is no sheet below (landscape). */
 @media (max-width: 767px) {
   .leaflet-bottom.leaflet-right {
-    bottom: auto;
-    top: calc(var(--safe-top) + 112px);
+    right: auto;
+    left: var(--safe-left);
+    margin: 0 0 4px 4px;
+    bottom: max(var(--sheet-overlap, 0px), var(--safe-bottom));
+    transition: bottom .2s ease;
   }
+  .leaflet-bottom.leaflet-right .leaflet-control { float: left; clear: both; margin-left: 0; }
 }
