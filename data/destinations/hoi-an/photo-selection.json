@@ -1,0 +1,131 @@
+{
+  "_note": "Wikimedia Commons files for this destination. Order = gallery order. Used by: python -I tools/photos.py hoi-an meta|download|build",
+  "cover": [
+    "Hội_An_river_boats_(44810595704).jpg",
+    "Hoi_An_Riverside_(38714293090).jpg",
+    "Hội_An_streets_(44622168345).jpg",
+    "Hoi_An,_Vietnam_(25710326363).jpg",
+    "Hoi'an_by_the_river.jpg",
+    "Hoi_An_(26653103898).jpg"
+  ],
+  "locations": {
+    "hoi-an-chua-cau": [
+      "DSC1063_-_Hoi_An_-_Ponte_coperto_giapponese.jpg",
+      "2024-12-20_Japanese_Bridge_in_Hoi_An.jpg",
+      "DSC1070_-_Hoi_An_-_Ponte_coperto_giapponese.jpg",
+      "Japanese_Bridge_in_Hoi_An.jpg",
+      "Chùa_Cầu,_Hội_An,_from_an_angle.jpg",
+      "Japanese_Covered_Bridge_in_Hoi_An_(26312976905).jpg"
+    ],
+    "hoi-an-hoi-quan-phuc-kien": [
+      "Hội_An_2024_-_Fujian_Assembly_Hall_(Hội_quán_Phúc_Kiến_,_會安福建會館)_-_img_14.jpg",
+      "Hội_An_2024_-_Fujian_Assembly_Hall_(Hội_quán_Phúc_Kiến_,_會安福建會館)_-_img_02.jpg",
+      "Hội_An_2024_-_Fujian_Assembly_Hall_(Hội_quán_Phúc_Kiến_,_會安福建會館)_-_img_06.jpg",
+      "Fujian_Assembly_Hall_Hoi_An_6.jpg",
+      "Hoi_Quan_Phuc_Kien_(Hoi_An)_(4410385675).jpg"
+    ],
+    "hoi-an-nha-co-tan-ky": [
+      "Hoi_An_-_Tan_Ky_Old_House.jpg",
+      "DSC1051_-Vecchia_casa_di_Tan_Ky.jpg",
+      "DSC1054_-Vecchia_casa_di_Tan_Ky.jpg",
+      "DSC1057_-Vecchia_casa_di_Tan_Ky.jpg"
+    ],
+    "hoi-an-song-hoai": [
+      "Hội_An_lantern_festival_(45485644722).jpg",
+      "Hoi_An_by_night_(53200).jpg",
+      "Hoi_An_by_night_(47751).jpg",
+      "Hoi_An_by_night_(13772).jpg",
+      "Hội_An_lantern_festival_(44810593224).jpg",
+      "Lanterns_in_Hoi_An_(26652142358).jpg"
+    ],
+    "hoi-an-bien-an-bang": [
+      "Playa_An_Bang,_Hoi_An,_Vietnam_(39510560665).jpg",
+      "An_Bàng_Beach_(40500401802).jpg",
+      "An_Bàng_Beach_(39647687335).jpg",
+      "An_Bàng_Beach_(39647682455).jpg",
+      "An_Bang_Beach_(46404328641).jpg",
+      "An_Bàng_Beach_(39647680125).jpg"
+    ]
+  },
+  "candidateSources": {
+    "cover": {
+      "cats": [
+        "Category:Hoi An Old Town",
+        "Category:Thu Bon River in Hoi An"
+      ],
+      "search": [],
+      "min_w": 1800
+    },
+    "hoi-an-chua-cau": {
+      "cats": [
+        "Category:Japanese Bridge"
+      ],
+      "search": [],
+      "min_w": 1600
+    },
+    "hoi-an-hoi-quan-phuc-kien": {
+      "cats": [
+        "Category:Fujian Assembly Hall, Hoi An",
+        "Category:Tam Quan, Fujian Assembly Hall, Hoi An"
+      ],
+      "search": [],
+      "min_w": 1400
+    },
+    "hoi-an-nha-co-tan-ky": {
+      "cats": [
+        "Category:Tan Ky Old House"
+      ],
+      "search": [
+        "Tan Ky house Hoi An"
+      ],
+      "min_w": 1000
+    },
+    "hoi-an-song-hoai": {
+      "cats": [
+        "Category:Lanterns in Hoi An",
+        "Category:Hội An lantern festival"
+      ],
+      "search": [
+        "Hoai river Hoi An night"
+      ],
+      "min_w": 1400
+    },
+    "hoi-an-bien-an-bang": {
+      "cats": [
+        "Category:An Bang Beach"
+      ],
+      "search": [
+        "An Bang beach Hoi An"
+      ],
+      "min_w": 1400
+    },
+    "hoi-an-rung-dua-bay-mau": {
+      "cats": [],
+      "search": [
+        "Cam Thanh coconut",
+        "Bay Mau coconut",
+        "basket boat Hoi An",
+        "Cẩm Thanh Hội An"
+      ],
+      "min_w": 1200
+    },
+    "hoi-an-cao-lau": {
+      "cats": [
+        "Category:Cao lầu"
+      ],
+      "search": [
+        "cao lau Hoi An"
+      ],
+      "min_w": 1000
+    },
+    "hoi-an-com-ga": {
+      "cats": [],
+      "search": [
+        "cơm gà Hội An",
+        "com ga Hoi An",
+        "Hoi An chicken rice"
+      ],
+      "min_w": 1000
+    }
+  }
+}

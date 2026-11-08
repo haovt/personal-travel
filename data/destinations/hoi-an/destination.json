@@ -2,7 +2,61 @@
   "id": "hoi-an",
   "countryId": "viet-nam",
   "name": "Hội An",
+  "type": "city",
   "region": "trung",
-  "status": "planned",
-  "_note": "Placeholder. Owned by the session in docs/sessions/hoi-an.md, which fills this in and sets status to \"published\"."
+  "status": "draft",
+  "coordinates": {
+    "lat": 15.87959,
+    "lon": 108.33194,
+    "source": "https://www.openstreetmap.org/node/110506070",
+    "note": "OSM place=city node of the former city of Hội An (now phường Hội An, TP Đà Nẵng). Wikidata Q36160 gives 15.87767, 108.33265 (about 220 m away)."
+  },
+  "bounds": [
+    [
+      15.835,
+      108.24
+    ],
+    [
+      15.955,
+      108.43
+    ]
+  ],
+  "initialView": [
+    [
+      15.866,
+      108.312
+    ],
+    [
+      15.918,
+      108.385
+    ]
+  ],
+  "mapData": "assets/maps/hoi-an.geojson",
+  "mapAttribution": "© <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>",
+  "mapLabels": [
+    {
+      "text": "Biển Đông",
+      "kind": "sea",
+      "lat": 15.915,
+      "lon": 108.38
+    }
+  ],
+  "summary": "Đô thị cổ bên sông Thu Bồn, từng là thương cảng sầm uất thế kỷ 17–18, được UNESCO công nhận là di sản văn hóa thế giới năm 1999.",
+  "images": [],
+  "locationIds": [
+    "hoi-an-chua-cau",
+    "hoi-an-hoi-quan-phuc-kien",
+    "hoi-an-nha-co-tan-ky",
+    "hoi-an-song-hoai",
+    "hoi-an-bien-an-bang",
+    "hoi-an-rung-dua-bay-mau",
+    "hoi-an-cao-lau",
+    "hoi-an-com-ga"
+  ],
+  "sources": [
+    "https://www.openstreetmap.org/node/110506070",
+    "https://www.wikidata.org/wiki/Q5965459",
+    "https://vi.wikipedia.org/wiki/Ph%E1%BB%91_c%E1%BB%95_H%E1%BB%99i_An",
+    "https://vi.wikipedia.org/wiki/H%E1%BB%99i_An_(ph%C6%B0%E1%BB%9Dng)"
+  ]
 }
