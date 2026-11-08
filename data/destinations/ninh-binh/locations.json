@@ -1,0 +1,429 @@
+[
+  {
+    "id": "ninh-binh-trang-an",
+    "destinationId": "ninh-binh",
+    "name": "Tràng An",
+    "category": "experience",
+    "tags": [
+      "nature"
+    ],
+    "coordinates": {
+      "lat": 20.25273,
+      "lon": 105.91808,
+      "source": "https://www.openstreetmap.org/way/474685617",
+      "wikidata": "Q10810559",
+      "note": "OSM building \"Khu Du lịch sinh Thái Tràng An\" (Trang An Boat Tour Start), the boat wharf. Wikidata Q10810559 gives 20.2557, 105.9156 for the whole complex (about 400 m away)."
+    },
+    "summary": "Ngồi thuyền len qua những hang nước xuyên núi và thung lũng đá vôi trong lòng di sản thế giới Tràng An.",
+    "facts": [
+      {
+        "label": "Di sản thế giới",
+        "value": "Di sản hỗn hợp văn hóa và thiên nhiên đầu tiên của Việt Nam, công nhận 23/6/2014"
+      },
+      {
+        "label": "Tuyến thuyền chính",
+        "value": "Sông Sào Khê, chảy dọc trong lòng di sản"
+      },
+      {
+        "label": "Bến thuyền",
+        "value": "Bên đại lộ Tràng An, cách trung tâm phường Hoa Lư khoảng 7 km"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ninh-binh-trang-an-01",
+        "alt": "Những chiếc thuyền chở du khách mặc áo phao lướt dưới chân núi đá vôi"
+      },
+      {
+        "photo": "ninh-binh-trang-an-02",
+        "alt": "Thuyền nan che ô nối nhau trên dòng sông xanh giữa núi rừng Tràng An"
+      },
+      {
+        "photo": "ninh-binh-trang-an-03",
+        "alt": "Thuyền nhỏ chở khách trước vách núi đá vôi cao"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/474685617",
+      "https://www.wikidata.org/wiki/Q10810559",
+      "https://vi.wikipedia.org/wiki/Qu%E1%BA%A7n_th%E1%BB%83_danh_th%E1%BA%AFng_Tr%C3%A0ng_An"
+    ],
+    "status": "published",
+    "mapsQuery": "Bến thuyền Tràng An, Ninh Bình"
+  },
+  {
+    "id": "ninh-binh-tam-coc",
+    "destinationId": "ninh-binh",
+    "name": "Tam Cốc",
+    "category": "nature",
+    "tags": [
+      "experience"
+    ],
+    "coordinates": {
+      "lat": 20.21634,
+      "lon": 105.93746,
+      "source": "https://www.openstreetmap.org/node/4567308091",
+      "wikidata": "Q1406000",
+      "note": "OSM node \"Tam Cốc -Bích Động\" (Tam Coc Boat Ride), at the boat wharf in Văn Lâm. Wikidata Q1406000 gives a coarse 20.2185, 105.916 near chùa Bích Động (about 2.2 km west)."
+    },
+    "summary": "Thuyền đi trên sông Ngô Đồng giữa núi đá và đồng lúa, xuyên qua ba hang nước: hang Cả, hang Hai và hang Ba.",
+    "facts": [
+      {
+        "label": "Ba hang",
+        "value": "Hang Cả dài 127 m, hang Hai 60 m, hang Ba 50 m"
+      },
+      {
+        "label": "Đi thuyền",
+        "value": "Khoảng 2 giờ cả đi và về"
+      },
+      {
+        "label": "Gần đó",
+        "value": "Chùa Bích Động, cách bến thuyền khoảng 2 km về phía tây"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ninh-binh-tam-coc-01",
+        "alt": "Thuyền nhỏ trên sông Ngô Đồng giữa đồng lúa và dãy núi đá vôi"
+      },
+      {
+        "photo": "ninh-binh-tam-coc-02",
+        "alt": "Nhìn ra từ cửa hang: mặt sông và những đỉnh núi đá vôi phía xa"
+      },
+      {
+        "photo": "ninh-binh-tam-coc-03",
+        "alt": "Mũi thuyền trên dòng sông phẳng lặng, hai bên là vách núi"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/4567308091",
+      "https://www.wikidata.org/wiki/Q1406000",
+      "https://vi.wikipedia.org/wiki/Tam_C%E1%BB%91c_%E2%80%93_B%C3%ADch_%C4%90%E1%BB%99ng",
+      "https://www.openstreetmap.org/node/1540779110"
+    ],
+    "status": "published",
+    "mapsQuery": "Bến thuyền Tam Cốc, Ninh Bình"
+  },
+  {
+    "id": "ninh-binh-hang-mua",
+    "destinationId": "ninh-binh",
+    "name": "Hang Múa",
+    "category": "attraction",
+    "tags": [
+      "nature"
+    ],
+    "coordinates": {
+      "lat": 20.22946,
+      "lon": 105.9338,
+      "source": "https://www.openstreetmap.org/node/937741359",
+      "wikidata": "Q65172044",
+      "note": "OSM peak \"Lying Dragon Top\", the summit of núi Múa. vi.wikipedia \"Hang Múa\" gives 20.228611, 105.931667 (about 230 m away); the ticket gate is OSM node 7019043060 (check_date 2026-10-01)."
+    },
+    "summary": "Leo gần 500 bậc đá lên đỉnh núi Múa để ngắm trọn cánh đồng và dòng sông Tam Cốc giữa núi đá vôi.",
+    "facts": [
+      {
+        "label": "Đường lên đỉnh",
+        "value": "486 bậc đá"
+      },
+      {
+        "label": "Đón khách du lịch",
+        "value": "Từ năm 2000"
+      },
+      {
+        "label": "Vị trí",
+        "value": "Thôn Khê Đầu Hạ, phường Hoa Lư"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ninh-binh-hang-mua-01",
+        "alt": "Dòng sông uốn quanh cánh đồng lúa giữa núi đá vôi, nhìn từ trên cao"
+      },
+      {
+        "photo": "ninh-binh-hang-mua-02",
+        "alt": "Ngọn tháp nhỏ trên đỉnh núi đá lởm chởm, phía dưới là đồng ruộng"
+      },
+      {
+        "photo": "ninh-binh-hang-mua-03",
+        "alt": "Toàn cảnh đồng ruộng và núi đá vôi nhìn từ đỉnh núi Múa"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/937741359",
+      "https://www.wikidata.org/wiki/Q65172044",
+      "https://vi.wikipedia.org/wiki/Hang_M%C3%BAa"
+    ],
+    "status": "published",
+    "mapsQuery": "Hang Múa, Ninh Bình"
+  },
+  {
+    "id": "ninh-binh-bai-dinh",
+    "destinationId": "ninh-binh",
+    "name": "Chùa Bái Đính",
+    "category": "culture",
+    "tags": [],
+    "coordinates": {
+      "lat": 20.27366,
+      "lon": 105.86439,
+      "source": "https://www.openstreetmap.org/way/449263549",
+      "wikidata": "Q3360468",
+      "note": "Centre of the OSM place of worship \"Chùa Bái Đính\". Wikidata gives 20.27694, 105.86278 (about 400 m up the slope)."
+    },
+    "summary": "Quần thể chùa trên sườn núi gồm chùa cổ và khu chùa mới xây từ năm 2003, với nhiều tượng Phật bằng đồng cỡ lớn.",
+    "facts": [
+      {
+        "label": "Diện tích",
+        "value": "539 ha (chùa cổ 27 ha, chùa mới 80 ha)"
+      },
+      {
+        "label": "Hành lang La Hán",
+        "value": "500 tượng La Hán bằng đá xanh nguyên khối"
+      },
+      {
+        "label": "Đại hồng chung",
+        "value": "Nặng 36 tấn, treo trong tháp chuông"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ninh-binh-bai-dinh-01",
+        "alt": "Bảo tháp nhiều tầng giữa khuôn viên chùa Bái Đính, nhìn từ trên cao"
+      },
+      {
+        "photo": "ninh-binh-bai-dinh-02",
+        "alt": "Điện chùa mái cong hai tầng và quả chuông đồng lớn trên sân rộng"
+      },
+      {
+        "photo": "ninh-binh-bai-dinh-03",
+        "alt": "Hành lang dài với hàng tượng La Hán bằng đá"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/449263549",
+      "https://www.wikidata.org/wiki/Q3360468",
+      "https://vi.wikipedia.org/wiki/Ch%C3%B9a_B%C3%A1i_%C4%90%C3%ADnh"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "ninh-binh-co-do-hoa-lu",
+    "destinationId": "ninh-binh",
+    "name": "Cố đô Hoa Lư",
+    "category": "history",
+    "tags": [
+      "culture"
+    ],
+    "coordinates": {
+      "lat": 20.28461,
+      "lon": 105.90514,
+      "source": "https://www.openstreetmap.org/way/772041809",
+      "wikidata": "Q10841714",
+      "note": "Pinned at the OSM building \"Đền vua Đinh Tiên Hoàng\". Wikidata Q10841714 gives 20.285556, 105.903333 (about 200 m). The ancient capital as a whole is OSM way 1362974362 (Wikidata Q2421186, whose own coordinate 20.2553, 105.9542 lies in phường Hoa Lư and is wrong)."
+    },
+    "summary": "Kinh đô của nước Đại Cồ Việt từ năm 968 đến 1010, nay còn đền thờ vua Đinh Tiên Hoàng và vua Lê Đại Hành ở làng cổ Trường Yên.",
+    "facts": [
+      {
+        "label": "Kinh đô",
+        "value": "968–1010, thời nhà Đinh, Tiền Lê và đầu nhà Lý"
+      },
+      {
+        "label": "Đền vua Đinh",
+        "value": "Dựng trên nền cung điện kinh đô Hoa Lư xưa"
+      },
+      {
+        "label": "Đền vua Lê",
+        "value": "Ngay gần, cách đền vua Đinh khoảng 200 m"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ninh-binh-co-do-hoa-lu-01",
+        "alt": "Lối vào đền vua Đinh Tiên Hoàng với hai cột đá, cờ hội và núi đá phía sau"
+      },
+      {
+        "photo": "ninh-binh-co-do-hoa-lu-02",
+        "alt": "Sân đá và tòa đền mái ngói cổ thờ vua Đinh Tiên Hoàng"
+      },
+      {
+        "photo": "ninh-binh-co-do-hoa-lu-03",
+        "alt": "Chính điện đền vua Lê Đại Hành, phía sau là núi đá vôi"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/772041809",
+      "https://www.openstreetmap.org/way/772041801",
+      "https://www.wikidata.org/wiki/Q10841714",
+      "https://vi.wikipedia.org/wiki/C%E1%BB%91_%C4%91%C3%B4_Hoa_L%C6%B0",
+      "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%81n_vua_%C4%90inh_Ti%C3%AAn_Ho%C3%A0ng"
+    ],
+    "status": "published",
+    "mapsQuery": "Đền vua Đinh Tiên Hoàng, Trường Yên, Ninh Bình"
+  },
+  {
+    "id": "ninh-binh-thung-nham",
+    "destinationId": "ninh-binh",
+    "name": "Thung Nham",
+    "category": "nature",
+    "tags": [],
+    "coordinates": {
+      "lat": 20.21692,
+      "lon": 105.89328,
+      "source": "https://www.openstreetmap.org/node/6366200011",
+      "wikidata": "Q18459048",
+      "note": "OSM ticket point \"Thung Nham Bird Park\". The Wikivoyage \"Ninh Binh\" listing gives 20.218, 105.89234 (about 150 m). Another OSM ticket node (3887717277) is 900 m east; not used."
+    },
+    "summary": "Thung lũng giữa núi đá vôi với vườn chim tự nhiên và nhiều hang động, ngắm chim từ thuyền hoặc xe đạp.",
+    "facts": [
+      {
+        "label": "Vườn chim",
+        "value": "Hơn 300 ha, khoảng 40.000 con thuộc 46 loài"
+      },
+      {
+        "label": "Động Vái Giời",
+        "value": "439 bậc đá, động có 3 tầng"
+      },
+      {
+        "label": "Vị trí",
+        "value": "Thung Hải Nham, phường Nam Hoa Lư"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ninh-binh-thung-nham-01",
+        "alt": "Đàn cò đậu trên ngọn cây ở vườn chim Thung Nham"
+      },
+      {
+        "photo": "ninh-binh-thung-nham-02",
+        "alt": "Mặt hồ xanh dưới chân núi đá vôi phủ rừng ở Thung Nham"
+      },
+      {
+        "photo": "ninh-binh-thung-nham-03",
+        "alt": "Hồ nước phản chiếu cây xanh và núi trong khu sinh thái Thung Nham"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/6366200011",
+      "https://www.wikidata.org/wiki/Q18459048",
+      "https://vi.wikipedia.org/wiki/Khu_du_l%E1%BB%8Bch_sinh_th%C3%A1i_Thung_Nham",
+      "https://en.wikivoyage.org/wiki/Ninh_Binh"
+    ],
+    "status": "published",
+    "mapsQuery": "Vườn chim Thung Nham, Ninh Bình"
+  },
+  {
+    "id": "ninh-binh-de-nui",
+    "destinationId": "ninh-binh",
+    "name": "Dê núi",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 20.2896,
+      "lon": 105.88912,
+      "source": "https://www.openstreetmap.org/node/3889399634",
+      "note": "OSM node \"NHÀ HÀNG THĂNG LONG - ĐẶC SẢN DÊ NÚI NINH BÌNH\" (amenity=restaurant). The Wikivoyage \"Ninh Binh\" listing (edited 2026-09-02) gives the same point and says it serves mountain goat dishes and com chay, 07:00-22:30 daily. Both food locations are pinned here (approved via main session 2026-11-08)."
+    },
+    "summary": "Thịt dê nuôi trên núi đá vôi, săn chắc và ít mỡ, thường ăn cùng cơm cháy.",
+    "facts": [
+      {
+        "label": "Chỉ dẫn địa lý",
+        "value": "Được bảo hộ từ năm 2018"
+      },
+      {
+        "label": "Kỷ lục",
+        "value": "Trong top 50 món đặc sản Việt Nam (Trung tâm Kỷ lục Việt Nam, 2012)"
+      },
+      {
+        "label": "Một địa chỉ tiêu biểu",
+        "value": "Nhà hàng Thăng Long, thôn Chi Phong, phường Tây Hoa Lư"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ninh-binh-de-nui-01",
+        "alt": "Đĩa thịt dê ăn kèm rau sống và bát nước chấm, món dê Ninh Bình"
+      },
+      {
+        "photo": "ninh-binh-de-nui-02",
+        "alt": "Thịt dê nướng rắc vừng cùng rau thơm, mì xào và cơm trắng trong bữa trưa ở Hoa Lư"
+      },
+      {
+        "photo": "ninh-binh-de-nui-03",
+        "alt": "Đĩa thịt dê nướng thái miếng",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/3889399634",
+      "https://en.wikivoyage.org/wiki/Ninh_Binh",
+      "https://vi.wikipedia.org/wiki/D%C3%AA_n%C3%BAi_Ninh_B%C3%ACnh"
+    ],
+    "status": "published",
+    "venue": {
+      "name": "Nhà hàng Thăng Long",
+      "address": "Thôn Chi Phong, phường Tây Hoa Lư"
+    },
+    "mapsQuery": "Nhà hàng Thăng Long đặc sản dê núi, Tràng An, Ninh Bình"
+  },
+  {
+    "id": "ninh-binh-com-chay",
+    "destinationId": "ninh-binh",
+    "name": "Cơm cháy",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 20.2896,
+      "lon": 105.88912,
+      "source": "https://www.openstreetmap.org/node/3889399634",
+      "note": "OSM node \"NHÀ HÀNG THĂNG LONG - ĐẶC SẢN DÊ NÚI NINH BÌNH\" (amenity=restaurant). The Wikivoyage \"Ninh Binh\" listing (edited 2026-09-02) gives the same point and says it serves mountain goat dishes and com chay, 07:00-22:30 daily. Both food locations are pinned here (approved via main session 2026-11-08)."
+    },
+    "summary": "Lớp cơm cháy đáy nồi phơi khô rồi chiên giòn, ăn kèm thịt dê, bò hoặc tim cật xào.",
+    "facts": [
+      {
+        "label": "Kỷ lục châu Á",
+        "value": "Được công nhận món ngon kỷ lục châu Á ngày 1/8/2012"
+      },
+      {
+        "label": "Gạo",
+        "value": "Thường dùng gạo nếp hương"
+      },
+      {
+        "label": "Một địa chỉ tiêu biểu",
+        "value": "Nhà hàng Thăng Long, thôn Chi Phong, phường Tây Hoa Lư"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ninh-binh-com-chay-01",
+        "alt": "Miếng cơm cháy vàng giòn, đặc sản Ninh Bình"
+      },
+      {
+        "photo": "ninh-binh-com-chay-02",
+        "alt": "Bát cơm cháy giòn bên bát canh và đĩa rau trong bữa ăn ở Ninh Bình"
+      },
+      {
+        "photo": "ninh-binh-com-chay-03",
+        "alt": "Tấm cơm cháy lớn ăn kèm kho quẹt và rau củ luộc",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/3889399634",
+      "https://en.wikivoyage.org/wiki/Ninh_Binh",
+      "https://vi.wikipedia.org/wiki/C%C6%A1m_ch%C3%A1y"
+    ],
+    "status": "published",
+    "venue": {
+      "name": "Nhà hàng Thăng Long",
+      "address": "Thôn Chi Phong, phường Tây Hoa Lư"
+    },
+    "mapsQuery": "Nhà hàng Thăng Long đặc sản dê núi, Tràng An, Ninh Bình"
+  }
+]

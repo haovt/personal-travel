@@ -2,7 +2,69 @@
   "id": "ninh-binh",
   "countryId": "viet-nam",
   "name": "Ninh Bình",
+  "type": "region",
   "region": "bac",
-  "status": "planned",
-  "_note": "Placeholder. Owned by the session in docs/sessions/ninh-binh.md, which fills this in and sets status to \"published\"."
+  "status": "published",
+  "coordinates": {
+    "lat": 20.25725,
+    "lon": 105.97189,
+    "source": "https://www.openstreetmap.org/node/369486919",
+    "wikidata": "Q131417547",
+    "note": "OSM place node \"Hoa Lư\" (the provincial seat, phường Hoa Lư). Wikidata Q36900 (tỉnh Ninh Bình) gives a coarse 20.25, 105.833 (14 km west)."
+  },
+  "bounds": [
+    [
+      20.19,
+      105.79
+    ],
+    [
+      20.32,
+      105.99
+    ]
+  ],
+  "initialView": [
+    [
+      20.21,
+      105.855
+    ],
+    [
+      20.295,
+      105.945
+    ]
+  ],
+  "mapData": "assets/maps/ninh-binh.geojson",
+  "mapAttribution": "© <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>",
+  "mapLabels": [],
+  "summary": "Vùng núi đá vôi, sông nước và hang động quanh cố đô Hoa Lư, với quần thể Tràng An là di sản thế giới hỗn hợp đầu tiên của Việt Nam.",
+  "images": [
+    {
+      "photo": "ninh-binh-01",
+      "alt": "Dòng sông lặng giữa những vách núi đá vôi phủ cây xanh ở Tràng An"
+    },
+    {
+      "photo": "ninh-binh-02",
+      "alt": "Vách đá vôi dựng đứng bên mặt nước trong quần thể Tràng An"
+    },
+    {
+      "photo": "ninh-binh-03",
+      "alt": "Dãy núi đá vôi nối nhau sau rặng cây ven sông"
+    }
+  ],
+  "locationIds": [
+    "ninh-binh-trang-an",
+    "ninh-binh-tam-coc",
+    "ninh-binh-hang-mua",
+    "ninh-binh-bai-dinh",
+    "ninh-binh-co-do-hoa-lu",
+    "ninh-binh-thung-nham",
+    "ninh-binh-de-nui",
+    "ninh-binh-com-chay"
+  ],
+  "sources": [
+    "https://www.openstreetmap.org/node/369486919",
+    "https://www.wikidata.org/wiki/Q36900",
+    "https://vi.wikipedia.org/wiki/Ninh_B%C3%ACnh",
+    "https://vi.wikipedia.org/wiki/Qu%E1%BA%A7n_th%E1%BB%83_danh_th%E1%BA%AFng_Tr%C3%A0ng_An",
+    "https://en.wikivoyage.org/wiki/Ninh_Binh"
+  ]
 }

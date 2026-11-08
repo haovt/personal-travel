@@ -105,6 +105,9 @@ phường Hoa Lư. Hint pills will point to whichever are off-screen.
 - `initialView`: [[20.21, 105.855], [20.295, 105.945]] (all 8 locations).
 - `riverLabels`: ["Sông Sào Khê", "Sông Ngô Đồng", "Sông Bến Đang"] if those names exist on OSM waterways; checked
   at build time.
+- **Built with (2026-11-08):** `bbox` [105.79, 20.19, 105.99, 20.32] (widened 5 km west and 1 km north, see the
+  status log) and `riverLabels` ["Sông Bến Đang", "Sông Hoàng Long", "Sông Chanh", "Sông Vạc"] (Sào Khê and Ngô Đồng
+  have no name on OSM). `bounds` in `destination.json` matches the bbox.
 - `mapLabels`: possibly "Tràng An" (area); decided after looking at the built map.
 
 ### Photo plan (Commons first; at most 3 per place)
@@ -140,11 +143,46 @@ buildings, Hang Múa's stairway and statues, and any other new structures.
 |---|---|
 | 2026-11-08 | Brief created by the main session. Placeholder `destination.json` exists with `"status": "planned"`. |
 | 2026-11-08 | Branch `dest/ninh-binh` created. Stage A research done (vi.wiki, Wikidata, OSM Overpass, Wikivoyage, Commons category counts); proposal written above. Waiting for approval via the main session. |
+| 2026-11-08 | **Stage A approved via main session** (owner delegated): all 8 locations, Thung Nham kept; Bích Động only as a fact line under Tam Cốc; dê núi pinned at Nhà hàng Thăng Long (OSM node/3889399634, Wikivoyage listing edited 2026-09), not Chính Thư; both food pins share the point; Flickr/Unsplash/Pexels allowed per B4b; bbox, coreBbox, initialView and photo plan approved; pre-2023 rule kept for Bái Đính's new buildings and Hang Múa's stairway and dragon. |
+| 2026-11-08 | B1–B3: `map-config.json`, one Overpass fetch, map built (408 kB). OSM has no names on sông Sào Khê or sông Ngô Đồng, so `riverLabels` are Bến Đang, Hoàng Long, Chanh and Vạc. `destination.json` (draft) and 8 locations written. |
+| 2026-11-08 | B4: Commons candidates for all 9 places; 26 Commons files chosen, plus 1 Flickr photo for dê núi (Magalie L'Abbé, grilled goat in Hoa Lư, CC BY-NC 2.0, read on its page, flagged NC). Flickr searches for cơm cháy found only unrelated photos ("cơm cháy" is also the elder plant), so the third cơm cháy photo is the Commons "Cơm cháy kho quẹt.jpg" tagged Ảnh minh họa. `photos.py` meta/download/build all OK (the Flickr file downloaded by script); every built photo checked on a contact sheet. |
+| 2026-11-08 | B6 at 1440 × 900: the fly-in landed clamped by the area lock, because the bbox had too little room west of Bái Đính for the desktop side panel, so Bái Đính sat under the panel. Widened the bbox to [105.79, 20.19, 105.99, 20.32] and re-fetched once (the bbox grew); map now 428 kB and every pin lands right of the panel. |
+| 2026-11-08 | B6 passed at 1440 × 900 and 390 × 844 (details under Result). Status set to `published`. |
 
 ## Result
 
-_(Stage C: what works, photo counts (target 3 per place), known gaps.)_
+**Published 2026-11-08** on branch `dest/ninh-binh` (not pushed, not merged).
+
+- **8 locations:** Tràng An (trải nghiệm), Tam Cốc (thiên nhiên), Hang Múa (địa danh), Chùa Bái Đính (văn hóa),
+  Cố đô Hoa Lư (lịch sử, pinned at đền vua Đinh), Thung Nham (thiên nhiên), Dê núi and Cơm cháy (ẩm thực, both at
+  Nhà hàng Thăng Long, spread apart on the map).
+- **Photos: 27, exactly 3 for the destination and for every location.** 26 from Wikimedia Commons, 1 from Flickr
+  (dê núi #2, CC BY-NC 2.0, shown as "chỉ dùng phi thương mại"). 13 MB of WebP.
+  - "Ảnh minh họa" (generic, not from Ninh Bình): dê núi #3 (goat dish from Đông Hà, Quảng Trị) and cơm cháy #3
+    (cơm cháy with kho quẹt).
+  - Pre-2023 rule: Bái Đính photos uploaded 2010–2019; the Hang Múa summit tower photo uploaded 2021; no post-2022
+    upload shows a modern work.
+- **Map:** `assets/maps/ninh-binh.geojson`, 428 kB, inland (whole area land), water, rivers, forest, roads; residential
+  streets only in Tam Cốc village. Labels: 4 rivers, peaks, ward names (Tây Hoa Lư, Nam Hoa Lư, Hoa Lư, Yên Sơn).
+- **Tested (B6), in the in-app browser:**
+  - 1440 × 900: world → country pin → fly-in, local map fades in, all 8 pins visible right of the panel; area lock holds
+    (panning stops at the bbox, zoom can't go below 13.5); each location's gallery (3 photos, thumbnails, credit line
+    per photo, NC and "Ảnh minh họa" tags), full-screen viewer (opens, Esc closes), Google Maps link with `mapsQuery`;
+    back button location → destination → country; "Ẩm thực" chip filters pins and list to the 2 food places;
+    "Nguồn ảnh & bản quyền" lists all Ninh Bình photos with the Flickr NC note.
+  - 390 × 844: fly-in and detail bottom sheet work. No console errors; all requests 200.
+- **Known cosmetic issues:**
+  - On phones the map lands at its minimum zoom (13.25) and shows a narrow north–south strip; Bái Đính, Hang Múa and
+    Tam Cốc are reached through the off-screen hint pills. A taller bbox would fix it (another Overpass fetch).
+  - On desktop the initial view is also the minimum zoom (13.5), so the user can't zoom out further.
+  - The Bái Đính pin label sits on the "TÂY HOA LƯ" ward label.
+- **Not verified:** whc.unesco.org (inscription date from vi.wikipedia); opening hours (left out); real iPhone.
 
 ## Requests for the main session
 
-_(Shared-code bugs or changes you need. Don't edit shared files yourself.)_
+None blocking. One observation for the main session:
+
+1. **Initial view vs. area lock on desktop:** with the left side panel, `flyToBounds(initialView)` needs the map to
+   extend about half a view-width west of the initial view, or the area lock clamps it and pins end up under the panel.
+   I fixed it here with a wider bbox. The playbook's bbox advice (A5) could mention leaving extra margin on the west
+   side for the desktop panel.
