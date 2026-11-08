@@ -1,0 +1,300 @@
+[
+  {
+    "id": "zurich-grossmunster",
+    "destinationId": "zurich",
+    "name": "Nhà thờ Grossmünster",
+    "category": "attraction",
+    "tags": [
+      "history"
+    ],
+    "coordinates": {
+      "lat": 47.3701,
+      "lon": 8.54397,
+      "source": "https://www.openstreetmap.org/way/36916418",
+      "wikidata": "Q684948",
+      "note": "Centroid of the OSM building (check_date 2025-11-22). Wikidata gives 47.37000, 8.54417 (about 20 m away)."
+    },
+    "summary": "Nhà thờ phong cách Roman bên sông Limmat, hai tháp đôi là hình ảnh quen thuộc nhất của Zürich.",
+    "facts": [
+      {
+        "label": "Xây dựng",
+        "value": "khoảng 1100–1220"
+      },
+      {
+        "label": "Hai tháp",
+        "value": "dựng 1487–1492, mái tháp hiện nay xong năm 1787"
+      },
+      {
+        "label": "Cải cách tôn giáo",
+        "value": "Zwingli khởi xướng tại đây từ năm 1520"
+      }
+    ],
+    "images": [],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q684948",
+      "https://en.wikipedia.org/wiki/Grossm%C3%BCnster"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "zurich-fraumunster",
+    "destinationId": "zurich",
+    "name": "Nhà thờ Fraumünster",
+    "category": "culture",
+    "tags": [
+      "history"
+    ],
+    "coordinates": {
+      "lat": 47.36971,
+      "lon": 8.5412,
+      "source": "https://www.openstreetmap.org/way/89967877",
+      "wikidata": "Q690944",
+      "note": "Centroid of the OSM building (check_date 2026-07-04). Wikidata is about 7 m away."
+    },
+    "summary": "Nhà thờ dựng trên nền một tu viện nữ thành lập năm 853, nổi tiếng với các ô kính màu của Marc Chagall.",
+    "facts": [
+      {
+        "label": "Thành lập tu viện",
+        "value": "năm 853"
+      },
+      {
+        "label": "Kính màu Chagall",
+        "value": "5 ô, lắp năm 1970"
+      }
+    ],
+    "images": [],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q690944",
+      "https://en.wikipedia.org/wiki/Fraum%C3%BCnster"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "zurich-lindenhof",
+    "destinationId": "zurich",
+    "name": "Đồi Lindenhof",
+    "category": "history",
+    "tags": [
+      "attraction"
+    ],
+    "coordinates": {
+      "lat": 47.37299,
+      "lon": 8.5408,
+      "source": "https://www.openstreetmap.org/way/10594810",
+      "wikidata": "Q39374",
+      "note": "Centroid of the OSM pedestrian square. Wikidata is about 8 m away."
+    },
+    "summary": "Quảng trường cây xanh trên ngọn đồi giữa phố cổ, nơi từng có thành lũy La Mã, nhìn xuống sông Limmat.",
+    "facts": [
+      {
+        "label": "Thành lũy La Mã",
+        "value": "thời hoàng đế Valentinian I (364–375)"
+      },
+      {
+        "label": "Hàng cây đoạn",
+        "value": "52 cây trồng năm 1774"
+      },
+      {
+        "label": "Di sản",
+        "value": "cấp quốc gia của Thụy Sĩ"
+      }
+    ],
+    "images": [],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q39374",
+      "https://en.wikipedia.org/wiki/Lindenhof_hill"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "zurich-landesmuseum",
+    "destinationId": "zurich",
+    "name": "Bảo tàng Quốc gia Thụy Sĩ",
+    "category": "culture",
+    "tags": [],
+    "coordinates": {
+      "lat": 47.37924,
+      "lon": 8.54015,
+      "source": "https://www.openstreetmap.org/relation/4281153",
+      "wikidata": "Q691896",
+      "note": "Centroid of the OSM museum area. Wikidata gives 47.37917, 8.53972 (about 34 m away)."
+    },
+    "summary": "Bảo tàng lịch sử và văn hóa Thụy Sĩ trong tòa nhà dáng lâu đài cạnh ga trung tâm Zürich.",
+    "facts": [
+      {
+        "label": "Tên tiếng Đức",
+        "value": "Landesmuseum Zürich"
+      },
+      {
+        "label": "Tòa nhà",
+        "value": "năm 1898, kiến trúc sư Gustav Gull"
+      },
+      {
+        "label": "Mở rộng",
+        "value": "2013–2016"
+      }
+    ],
+    "images": [],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q691896",
+      "https://en.wikipedia.org/wiki/Swiss_National_Museum"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "zurich-zurichhorn",
+    "destinationId": "zurich",
+    "name": "Bờ hồ Zürichhorn",
+    "category": "nature",
+    "tags": [
+      "experience"
+    ],
+    "coordinates": {
+      "lat": 47.3536,
+      "lon": 8.55211,
+      "source": "https://www.wikidata.org/wiki/Q248693",
+      "wikidata": "Q248693",
+      "note": "Wikidata P625. The park has no single OSM object; OSM node 8026420964 \"Zürichhorn\" is about 83 m away."
+    },
+    "summary": "Công viên ven hồ Zürich, một trong những nơi thư giãn được yêu thích nhất thành phố.",
+    "facts": [
+      {
+        "label": "Đi bộ từ Bellevue",
+        "value": "khoảng 20 phút"
+      },
+      {
+        "label": "Gần đó",
+        "value": "Vườn Trung Hoa, quà tặng của thành phố kết nghĩa Côn Minh"
+      }
+    ],
+    "images": [],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q248693",
+      "https://en.wikipedia.org/wiki/Z%C3%BCrichhorn",
+      "https://en.wikipedia.org/wiki/Chinese_Garden,_Zurich"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "zurich-uetliberg",
+    "destinationId": "zurich",
+    "name": "Núi Uetliberg",
+    "category": "nature",
+    "tags": [
+      "experience"
+    ],
+    "coordinates": {
+      "lat": 47.34945,
+      "lon": 8.49197,
+      "source": "https://www.openstreetmap.org/node/29971007",
+      "wikidata": "Q16524",
+      "note": "OSM natural=peak node (ele 871). Wikidata is about 2 m away. Wikipedia gives 870 m."
+    },
+    "summary": "Ngọn núi nhà của Zürich, từ đỉnh nhìn bao quát toàn thành phố và hồ Zürich.",
+    "facts": [
+      {
+        "label": "Độ cao",
+        "value": "870 m"
+      },
+      {
+        "label": "Tháp truyền hình",
+        "value": "cao 186 m"
+      }
+    ],
+    "images": [],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q16524",
+      "https://en.wikipedia.org/wiki/Uetliberg"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "zurich-geschnetzeltes",
+    "destinationId": "zurich",
+    "name": "Zürcher Geschnetzeltes",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 47.37037,
+      "lon": 8.53992,
+      "source": "https://www.openstreetmap.org/node/105459350",
+      "note": "OSM restaurant node, check_date 2026-01-20."
+    },
+    "venue": {
+      "name": "Zeughauskeller",
+      "address": "Bahnhofstrasse 28a"
+    },
+    "summary": "Món thịt bê thái sợi nấu với vang trắng và kem của Zürich; Zeughauskeller là một địa chỉ tiêu biểu.",
+    "facts": [
+      {
+        "label": "Quán",
+        "value": "Zeughauskeller"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "Bahnhofstrasse 28a"
+      },
+      {
+        "label": "Ghi chép đầu tiên",
+        "value": "sách nấu ăn năm 1947"
+      }
+    ],
+    "images": [],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/105459350",
+      "https://en.wikipedia.org/wiki/Z%C3%BCrcher_Geschnetzeltes"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "zurich-luxemburgerli",
+    "destinationId": "zurich",
+    "name": "Bánh Luxemburgerli",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 47.36948,
+      "lon": 8.53914,
+      "source": "https://www.openstreetmap.org/node/648907100",
+      "note": "OSM shop node, check_date 2026-04-27. Wikidata Sprüngli-Haus (Q30321652) is about 12 m away."
+    },
+    "venue": {
+      "name": "Confiserie Sprüngli",
+      "address": "Bahnhofstrasse 21"
+    },
+    "summary": "Những chiếc macaron nhỏ nổi tiếng của tiệm bánh kẹo Sprüngli; cửa hàng chính ở quảng trường Paradeplatz.",
+    "facts": [
+      {
+        "label": "Tiệm",
+        "value": "Confiserie Sprüngli"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "Bahnhofstrasse 21 (Paradeplatz)"
+      },
+      {
+        "label": "Mở ở Paradeplatz",
+        "value": "năm 1859"
+      },
+      {
+        "label": "Luxemburgerli đầu tiên",
+        "value": "năm 1957"
+      }
+    ],
+    "images": [],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/648907100",
+      "https://www.wikidata.org/wiki/Q30321652",
+      "https://en.wikipedia.org/wiki/Confiserie_Spr%C3%BCngli"
+    ],
+    "status": "published"
+  }
+]
