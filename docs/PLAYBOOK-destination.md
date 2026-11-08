@@ -22,9 +22,10 @@ coordinate and fact needs a source you actually read.
   cache CSS/JS, so hard-refresh after edits.
 - Your URLs: `#/<country>/<id>` and `#/<country>/<id>/<location-id>`. Country ids: `viet-nam`,
   `thuy-si`.
-- Allowed downloads (owner approval 2026-11-08, same sources as Đà Nẵng):
+- Allowed downloads (owner approval 2026-11-08):
   - one Overpass extract for your area;
-  - Wikimedia Commons photos that pass the licence check;
+  - single photos from **Wikimedia Commons, Flickr, Unsplash, Pexels** that pass the licence rules
+    (step B4/B4b);
   - Wikidata / OSM / Wikipedia pages for research.
 
   Ask the owner before downloading from any other source.
@@ -57,13 +58,16 @@ coordinate and fact needs a source you actually read.
    - **≥ 3 per location**, and **≥ 3 per food location**. Generic dish photos tagged
      "Ảnh minh họa" (`"illustrative": true`) count.
    - **Up to 10** for food, beach and mountain/forest places.
-   - Commons only, licences **CC0, public domain, CC BY, CC BY-SA**.
+   - **Wikimedia Commons first** (CC0, public domain, CC BY, CC BY-SA).
+   - If Commons can't meet a minimum, use **Flickr** (CC0, Public Domain Mark, CC BY, CC BY-SA,
+     CC BY-NC, CC BY-NC-SA; **never ND or "All rights reserved"**), **Unsplash** or **Pexels**
+     (step B4b).
    - Vietnam has no freedom of panorama since 2023. For modern copyrighted works (new bridges,
      statues, modern buildings) use only files uploaded **before 2023**.
    - Switzerland: check `Commons:Copyright rules by territory/Switzerland` (freedom of panorama)
      before choosing photos of modern works, and note what you found.
-   - If you can't reach a minimum from Commons, list it as a gap and ask the owner about another
-     source. Never pad with unrelated photos.
+   - If even these sources can't reach a minimum, list it as a gap and ask the owner (for example
+     about their own photos). Never pad with unrelated photos.
 7. **Write the proposal** in the "Proposal" section of your brief:
    - the locations table (Vietnamese name, category, lat/lon, source, facts);
    - the bbox values;
@@ -147,6 +151,34 @@ Replace the `planned` placeholder. Shape (see `da-nang`):
    show the right place: Commons categories sometimes mix places. Write a short Vietnamese `alt`
    for each, describing only what is visible. Set `"illustrative": true` on generic dish photos.
 
+### B4b. Photos from Flickr, Unsplash or Pexels (when Commons isn't enough)
+
+1. Search the site in the browser. On Flickr, use the licence filter; Unsplash and Pexels photos all
+   carry their site licence. Pick single photos; no bulk downloading.
+2. **Open each photo's own page and read the licence there.**
+   - Flickr shows it under the photo (e.g. "Some rights reserved" → CC BY 2.0).
+   - Allowed: CC0, Public Domain Mark, CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA.
+   - **Reject** anything with ND / "NoDerivs" and "All rights reserved".
+3. **Unsplash/Pexels location tags are typed by users:** accept a photo only if it visibly shows
+   the place (a recognisable landmark, or matching your verified Commons photos). Dish photos can
+   be generic and get `"illustrative": true`.
+4. Add an **object entry** to the place's list in `photo-selection.json`, in gallery order:
+   ```json
+   {"source": "flickr", "page": "https://www.flickr.com/photos/<user>/<id>/",
+    "file": "https://live.staticflickr.com/…_b.jpg", "creator": "Name as shown",
+    "license": "CC BY 2.0", "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "checked": "YYYY-MM-DD"}
+   ```
+   - `file` is the direct image URL. Prefer one about 2000–2400 px wide (Flickr "Large"/"_b" or
+     bigger; Unsplash/Pexels `?w=2400`).
+   - Unsplash: `"license": "Unsplash License"`, `"licenseUrl": "https://unsplash.com/license"`.
+   - Pexels: `"license": "Pexels License"`, `"licenseUrl": "https://www.pexels.com/license/"`.
+5. Run `photos.py <id> meta`. It validates these entries (source host, allowed licence, required
+   fields) and prints `OK`/`REJECT`. Then run `download` and `build` as usual.
+   - The credits page shows the source name.
+   - NC photos are flagged "chỉ dùng phi thương mại".
+6. Check each photo visually as in B4 step 6.
+
 ### B5. Text rules (owner: images first, text short)
 
 - Summary: one sentence.
@@ -186,6 +218,8 @@ Replace the `planned` placeholder. Shape (see `da-nang`):
 
 - Don't edit shared files (see `CLAUDE.md` → "Working in parallel"), other destinations, or
   `CLAUDE.md`.
-- Don't use Google Images or Google Maps photos, or any source the owner hasn't approved.
+- Don't use Google Images, Google Maps photos, social media or blog photos, or any source other
+  than Commons, Flickr, Unsplash and Pexels (unless the author gave written permission, recorded
+  with the owner's OK).
 - Don't add coordinates "by eye" from a map.
 - Don't re-run Overpass fetches or Commons candidate searches in loops.

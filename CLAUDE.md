@@ -172,6 +172,7 @@ separate git worktree). To keep the sessions from conflicting:
 | 2026-11-08 | Phase 3 implemented (see "Phase 3 status"). The owner asked about using Google Images: answered no, since search results aren't licences. Possible wider sources are listed under Phase 3 status. |
 | 2026-11-08 | Phase 3 extended (see "Phase 3 extension"): 48 photos, a wider photo-first detail view, and a Google Maps link. |
 | 2026-11-08 | **Owner: new destinations.** Việt Nam: Đà Lạt, Vũng Tàu, Cần Giờ, Hội An, Vịnh Hạ Long, Ninh Bình, Nha Trang. Thụy Sĩ: Zürich, Luzern, Montreux (Lake Geneva). Same site with a country picker; Vietnamese for Switzerland too; git set up with `haovt/personal-travel`. |
+| 2026-11-08 | **Owner approved extra photo sources:** Flickr (CC, NC allowed for this non-commercial site, never ND), Unsplash, Pexels (see "Approved photo sources"). `tools/photos.py` accepts object entries for them, and the credits show the source and Vietnamese licence labels. Google Maps/Images photos stay forbidden. |
 | 2026-11-08 | **Restructured for parallel work** (commit `10b0116`): world level, `data/countries.json`, one folder per destination, per-destination tools, and `status: "planned"` placeholders for the 10 new destinations. Playbook and session briefs in `docs/`. **Next:** the owner starts one session per brief; the main session later merges branches and continues Phase 4 (search, favourites, featured, related places/food) and Phase 5 (offline, Pages). |
 
 ### Phase 3 extension (2026-11-08): more photos, wider detail, Google Maps link
@@ -330,10 +331,27 @@ Deviations from the proposal:
 - **Photo counts (owner, 2026-11-08):** at least **5 photos per destination (city)** and at least
   3 photos per location where suitable licensed photos exist. **Every food location (dish or
   food market) must have at least 3 photos** (owner, 2026-11-08). Generic dish photos tagged
-  "Ảnh minh họa" count. If Commons can't supply 3, ask the owner about another licensed source
-  (Flickr CC BY/BY-SA, Unsplash/Pexels, own photos) rather than leaving it short. Food places,
+  "Ảnh minh họa" count. If Commons can't supply 3, use the approved extra sources below
+  (Flickr, Unsplash, Pexels) rather than leaving it short. Food places,
   beaches and mountain/forest places get more, up to 10. If a place
   can't reach 3, report it as a gap instead of padding with unrelated photos.
+- **Approved photo sources (owner, 2026-11-08):**
+  1. **Wikimedia Commons** first: CC0, public domain, CC BY, CC BY-SA.
+  2. **Flickr**, when Commons can't meet a minimum or a much better photo exists. Licences:
+     CC0, Public Domain Mark, CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA.
+     - NC is acceptable only because this site is personal and non-commercial; such photos are
+       flagged `nonCommercialOnly` and must be removed if that ever changes.
+     - **Never ND ("NoDerivs")** (we resize/crop) and never "All rights reserved".
+  3. **Unsplash** (Unsplash License) and **Pexels** (Pexels License).
+     - Their location tags are typed by users: use a photo only when the place is **visually
+       confirmed** (a recognisable landmark, or matching other verified photos).
+     - Credit the photographer anyway.
+  - Read the licence on each photo's own page; never assume. Record it in `photo-selection.json`
+    as an object entry (see `tools/photos.py`). Download single files only, never bulk.
+  - The Vietnam freedom-of-panorama rule still applies whatever the source: photos of modern
+    copyrighted works must be published before 2023.
+  - Still **not allowed**: Google Images, Google Maps photos, social media or blog photos, unless
+    the author gave written permission (record it).
 - **Photo source decision (owner, 2026-11-08):** photos stay **local and licensed**.
   - **Never** load Google Maps / Google Places photos into the site: that needs an API key with
     billing in public code, Google's terms bar Places content next to a non-Google map, and

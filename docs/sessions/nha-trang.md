@@ -39,7 +39,7 @@ Minimums (owner):
 - ≥ 3 per food location;
 - up to 10 for food, beach and mountain/forest places.
 
-Commons only (CC0 / PD / CC BY / CC BY-SA). Report gaps instead of padding.
+Wikimedia Commons first (CC0 / PD / CC BY / CC BY-SA). If a minimum can't be met, use Flickr (CC, never ND), Unsplash or Pexels as described in the playbook (step B4b). Report gaps instead of padding.
 
 ## Map notes
 
