@@ -1,0 +1,6 @@
+{
+  "_note": "Local map extract settings. Used by: node tools/build-local-map.mjs luzern fetch|build",
+  "bbox": [8.27, 47.03, 8.345, 47.07],
+  "coreBbox": [8.298, 47.048, 8.316, 47.06],
+  "riverLabels": []
+}

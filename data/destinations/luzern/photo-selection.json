@@ -1,0 +1,171 @@
+{
+  "_note": "Wikimedia Commons files for this destination. Order = gallery order. Used by: python -I tools/photos.py luzern meta|download|build. candidateSources is read by tools/commons_candidates.py. Swiss freedom of panorama covers outdoor works only: no interiors with copyrighted works.",
+  "cover": [
+    "Lucerne._Centre_ville_vu_de_chez_Gutsch.jpg",
+    "Lucerne,_Switzerland_-_panoramio_(68).jpg",
+    "Vierwaldstättersee_mit_St._Leodegar.JPG"
+  ],
+  "locations": {
+    "luzern-kapellbrucke": [
+      "20240906.Ansichten_von_Luzern.-016.3.jpg",
+      "Chapel_Bridge_GFgf814.jpg",
+      "Aerial_view_of_Luzern_Altstadt_rechts_(1).jpg"
+    ],
+    "luzern-lowendenkmal": [
+      "Lion_Monument,_Lucerne,_Switzerland_2024.jpg",
+      "Lucerne_Lion_Monument.jpg",
+      "Lucerne,_Switzerland_-_panoramio_(61).jpg"
+    ],
+    "luzern-spreuerbrucke": [
+      "Lucerne_Spreuerbrücke.jpg",
+      "Luzern-1170938.jpg",
+      "Switzerland-03386_-_Spreuer_Bridge_(23842846145).jpg"
+    ],
+    "luzern-museggmauer": [
+      "Luzern,_Stadtmauer.jpg",
+      "00_0210_Luzern_-_Spreuerbrücke_-_Museggmauer.jpg",
+      "Lucerne,_Switzerland_-_panoramio_(51).jpg"
+    ],
+    "luzern-pho-co": [
+      "00_702_Luzern,_Weinmarkt.jpg",
+      "Häuser_am_Weinmarkt_in_Luzern.jpg",
+      "Switzerland-03472_-_Hirschenplatz_Square_(23216544653).jpg"
+    ],
+    "luzern-du-thuyen": [
+      "Dampfschiffe_in_Luzern.jpg",
+      "\"Stadt_Luzern\"_(at_Rütli)_2018_front.jpg",
+      "DS_\"Stadt_Luzern\"_am_Liegeplatz_in_Luzern_(2014).jpg"
+    ],
+    "luzern-chugelipastete": [
+      "Luzerner_Chügelipastete.jpg",
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/docgeek/5537633438/",
+        "file": "https://live.staticflickr.com/5254/5537633438_f0539b6174_k.jpg",
+        "creator": "Dylan Hardesty",
+        "license": "CC BY-NC-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "checked": "2026-11-08"
+      },
+      "Luzerner_Chügelipastete_(Nachbildung).jpg"
+    ],
+    "luzern-socola": [
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/diueine/418122778/",
+        "file": "https://live.staticflickr.com/167/418122778_9e96e9b099_k.jpg",
+        "creator": "Diueine Monteiro",
+        "license": "CC BY-NC-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "checked": "2026-11-08"
+      },
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/eirikso/491856167/",
+        "file": "https://live.staticflickr.com/206/491856167_98ea9eb629_k.jpg",
+        "creator": "Eirik Solheim",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "checked": "2026-11-08"
+      },
+      "Luzern_(5030213004).jpg"
+    ]
+  },
+  "candidateSources": {
+    "cover": {
+      "cats": [
+        "Category:Views of Luzern",
+        "Category:Quality images of Lucerne"
+      ],
+      "search": [
+        "intitle:Luzern intitle:Panorama",
+        "Luzern Kapellbrücke Pilatus"
+      ],
+      "min_w": 1800
+    },
+    "luzern-kapellbrucke": {
+      "cats": [
+        "Category:Kapellbrücke",
+        "Category:Kapellbrücke (view from upstream)",
+        "Category:Wasserturm Luzern"
+      ],
+      "search": [],
+      "min_w": 1600
+    },
+    "luzern-lowendenkmal": {
+      "cats": [
+        "Category:Löwendenkmal (Lucerne)"
+      ],
+      "search": [],
+      "min_w": 1600
+    },
+    "luzern-spreuerbrucke": {
+      "cats": [
+        "Category:Spreuerbrücke"
+      ],
+      "search": [],
+      "min_w": 1400
+    },
+    "luzern-museggmauer": {
+      "cats": [
+        "Category:Museggmauer",
+        "Category:Zytturm (Luzern)",
+        "Category:Männliturm"
+      ],
+      "search": [
+        "intitle:Museggmauer"
+      ],
+      "min_w": 1600
+    },
+    "luzern-pho-co": {
+      "cats": [
+        "Category:Weinmarkt",
+        "Category:Hirschenplatz (Luzern)",
+        "Category:Kornmarkt (Luzern)",
+        "Category:Rathaus Luzern",
+        "Category:Weinmarktbrunnen (Luzern)"
+      ],
+      "search": [
+        "intitle:Luzern intitle:Altstadt"
+      ],
+      "min_w": 1400
+    },
+    "luzern-du-thuyen": {
+      "cats": [
+        "Category:Stadt Luzern (ship, 1928)",
+        "Category:Luzern Bahnhofquai"
+      ],
+      "search": [
+        "intitle:Raddampfer intitle:Luzern"
+      ],
+      "min_w": 1600
+    },
+    "luzern-chugelipastete": {
+      "cats": [
+        "Category:Luzerner Chügelipastete"
+      ],
+      "search": [
+        "Chügelipastete",
+        "Fritschipastete",
+        "intitle:Pastetli",
+        "intitle:Chügeli",
+        "intitle:Kügelipastete"
+      ],
+      "min_w": 800
+    },
+    "luzern-socola": {
+      "cats": [
+        "Category:Chocolate shops in Switzerland"
+      ],
+      "search": [
+        "intitle:Bachmann intitle:Luzern",
+        "intitle:Schwanenplatz",
+        "intitle:Schokolade intitle:Luzern",
+        "intitle:chocolate intitle:Lucerne",
+        "intitle:Pralinen",
+        "Confiserie Bachmann Luzern"
+      ],
+      "min_w": 1000
+    }
+  }
+}

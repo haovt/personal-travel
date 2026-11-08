@@ -1,0 +1,432 @@
+[
+  {
+    "id": "luzern-kapellbrucke",
+    "destinationId": "luzern",
+    "name": "Cầu Kapellbrücke và tháp Wasserturm",
+    "category": "attraction",
+    "tags": [
+      "history"
+    ],
+    "coordinates": {
+      "lat": 47.05163,
+      "lon": 8.30741,
+      "source": "https://www.openstreetmap.org/way/396669328",
+      "wikidata": "Q25225",
+      "note": "Centroid of the OSM covered-bridge way. Wikidata is about 9 m away."
+    },
+    "summary": "Cây cầu gỗ có mái che cổ nhất châu Âu, bắc chéo qua sông Reuss; cùng tháp Wasserturm, đây là biểu tượng của Luzern.",
+    "facts": [
+      {
+        "label": "Xây dựng",
+        "value": "khoảng năm 1365"
+      },
+      {
+        "label": "Chiều dài",
+        "value": "204,7 m"
+      },
+      {
+        "label": "Hỏa hoạn",
+        "value": "18/8/1993, mở lại ngày 14/4/1994"
+      },
+      {
+        "label": "Tháp Wasserturm",
+        "value": "hình bát giác, cao khoảng 35 m, có trước cây cầu"
+      }
+    ],
+    "images": [
+      {
+        "photo": "luzern-kapellbrucke-01",
+        "alt": "Cầu Kapellbrücke và tháp Wasserturm in bóng trên mặt sông Reuss, phía sau là dãy nhà phố cổ"
+      },
+      {
+        "photo": "luzern-kapellbrucke-02",
+        "alt": "Tháp Wasserturm hình bát giác bên cạnh cầu gỗ Kapellbrücke có mái che"
+      },
+      {
+        "photo": "luzern-kapellbrucke-03",
+        "alt": "Nhìn từ trên cao: cầu Kapellbrücke bắc chéo qua sông Reuss giữa phố cổ Luzern"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q25225",
+      "https://en.wikipedia.org/wiki/Kapellbr%C3%BCcke",
+      "https://de.wikipedia.org/wiki/Wasserturm_Luzern"
+    ],
+    "mapsQuery": "Kapellbrücke, Luzern",
+    "status": "published"
+  },
+  {
+    "id": "luzern-lowendenkmal",
+    "destinationId": "luzern",
+    "name": "Tượng Sư tử Luzern (Löwendenkmal)",
+    "category": "history",
+    "tags": [
+      "culture"
+    ],
+    "coordinates": {
+      "lat": 47.05844,
+      "lon": 8.31087,
+      "source": "https://www.openstreetmap.org/node/1485039642",
+      "wikidata": "Q688214",
+      "note": "OSM monument node. Wikidata is about 1 m away."
+    },
+    "summary": "Con sư tử hấp hối tạc vào vách đá, tưởng niệm những người lính cận vệ Thụy Sĩ tử trận ở Paris năm 1792.",
+    "facts": [
+      {
+        "label": "Tạc",
+        "value": "năm 1820–1821"
+      },
+      {
+        "label": "Thiết kế",
+        "value": "nhà điêu khắc Đan Mạch Bertel Thorvaldsen"
+      },
+      {
+        "label": "Kích thước",
+        "value": "dài 10 m, cao 6 m"
+      }
+    ],
+    "images": [
+      {
+        "photo": "luzern-lowendenkmal-01",
+        "alt": "Cận cảnh con sư tử đá hấp hối gục trên tấm khiên, bên dưới là dòng chữ khắc"
+      },
+      {
+        "photo": "luzern-lowendenkmal-02",
+        "alt": "Tượng Sư tử tạc trong vách đá, soi bóng xuống hồ nước nhỏ phía trước"
+      },
+      {
+        "photo": "luzern-lowendenkmal-03",
+        "alt": "Du khách đứng ngắm tượng Sư tử dưới tán cây"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q688214",
+      "https://en.wikipedia.org/wiki/Lion_Monument"
+    ],
+    "mapsQuery": "Löwendenkmal, Luzern",
+    "status": "published"
+  },
+  {
+    "id": "luzern-spreuerbrucke",
+    "destinationId": "luzern",
+    "name": "Cầu Spreuerbrücke",
+    "category": "history",
+    "tags": [
+      "culture"
+    ],
+    "coordinates": {
+      "lat": 47.05179,
+      "lon": 8.30183,
+      "source": "https://www.openstreetmap.org/way/396669333",
+      "wikidata": "Q680284",
+      "note": "Centroid of the OSM covered-bridge way. Wikidata is about 15 m away."
+    },
+    "summary": "Cây cầu gỗ có mái che thứ hai còn lại của Luzern, nổi tiếng với loạt tranh “Vũ điệu tử thần” dưới mái.",
+    "facts": [
+      {
+        "label": "Dựng lại",
+        "value": "sau trận lũ năm 1566"
+      },
+      {
+        "label": "Tranh Totentanz",
+        "value": "vẽ năm 1616–1637, còn 45 trên 67 bức"
+      }
+    ],
+    "images": [
+      {
+        "photo": "luzern-spreuerbrucke-01",
+        "alt": "Cầu Spreuerbrücke vắt ngang sông Reuss, phía sau là phố cổ và tường thành Musegg trên đồi"
+      },
+      {
+        "photo": "luzern-spreuerbrucke-02",
+        "alt": "Cầu Spreuerbrücke có mái ngói với ngôi nhà nguyện nhỏ mái nhọn màu đỏ giữa cầu"
+      },
+      {
+        "photo": "luzern-spreuerbrucke-03",
+        "alt": "Thân cầu gỗ Spreuerbrücke đặt trên các trụ đá giữa dòng sông chảy xiết"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q680284",
+      "https://en.wikipedia.org/wiki/Spreuer_Bridge"
+    ],
+    "mapsQuery": "Spreuerbrücke, Luzern",
+    "status": "published"
+  },
+  {
+    "id": "luzern-museggmauer",
+    "destinationId": "luzern",
+    "name": "Tường thành Musegg",
+    "category": "history",
+    "tags": [
+      "attraction"
+    ],
+    "coordinates": {
+      "lat": 47.05433,
+      "lon": 8.30464,
+      "source": "https://www.openstreetmap.org/relation/21285991",
+      "wikidata": "Q1571757",
+      "note": "Centroid of the OSM city-walls relation (the wall is 870 m long). Wikidata is about 34 m away."
+    },
+    "summary": "Tường thành thời Trung cổ trải dài trên ngọn đồi sau phố cổ, với chín tòa tháp.",
+    "facts": [
+      {
+        "label": "Xây dựng",
+        "value": "bắt đầu muộn nhất khoảng năm 1370"
+      },
+      {
+        "label": "Chiều dài",
+        "value": "870 m, cao trung bình khoảng 9 m"
+      },
+      {
+        "label": "Tháp Zytturm",
+        "value": "dựng năm 1442; đồng hồ điểm chuông sớm hơn mọi đồng hồ khác trong thành phố một phút"
+      }
+    ],
+    "images": [
+      {
+        "photo": "luzern-museggmauer-01",
+        "alt": "Tường thành Musegg với các tháp canh trong nắng chiều, phía sau là núi"
+      },
+      {
+        "photo": "luzern-museggmauer-02",
+        "alt": "Tường thành Musegg và các tháp nhìn từ bên kia sông Reuss, phía dưới là cầu Spreuerbrücke"
+      },
+      {
+        "photo": "luzern-museggmauer-03",
+        "alt": "Một tháp canh vuông bên đoạn tường thành đá dài"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q1571757",
+      "https://de.wikipedia.org/wiki/Museggmauer",
+      "https://de.wikipedia.org/wiki/Zytturm_(Luzern)"
+    ],
+    "mapsQuery": "Museggmauer, Luzern",
+    "status": "published"
+  },
+  {
+    "id": "luzern-pho-co",
+    "destinationId": "luzern",
+    "name": "Phố cổ và quảng trường Weinmarkt",
+    "category": "culture",
+    "tags": [
+      "attraction"
+    ],
+    "coordinates": {
+      "lat": 47.052,
+      "lon": 8.30471,
+      "source": "https://www.openstreetmap.org/way/134989600",
+      "wikidata": "Q110626674",
+      "note": "Centroid of the OSM Weinmarkt square."
+    },
+    "summary": "Khu phố cổ bờ bắc sông Reuss, với những ngôi nhà khung gỗ, mặt tiền vẽ tranh và các quảng trường nhỏ.",
+    "facts": [
+      {
+        "label": "Tòa thị chính",
+        "value": "xây năm 1602–1606 theo phong cách Phục hưng Ý"
+      },
+      {
+        "label": "Lễ hội Fasnacht",
+        "value": "hóa trang, diễu hành trên phố cổ mỗi cuối đông"
+      }
+    ],
+    "images": [
+      {
+        "photo": "luzern-pho-co-01",
+        "alt": "Quảng trường Weinmarkt với đài phun nước giữa những ngôi nhà cổ"
+      },
+      {
+        "photo": "luzern-pho-co-02",
+        "alt": "Dãy nhà có mặt tiền vẽ tranh nhiều màu ở quảng trường Weinmarkt"
+      },
+      {
+        "photo": "luzern-pho-co-03",
+        "alt": "Mặt tiền vẽ tranh cầu kỳ của một ngôi nhà ở quảng trường Hirschenplatz"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q110626674",
+      "https://en.wikipedia.org/wiki/Lucerne",
+      "https://de.wikipedia.org/wiki/Rathaus_(Luzern)"
+    ],
+    "mapsQuery": "Weinmarkt, Luzern",
+    "status": "published"
+  },
+  {
+    "id": "luzern-du-thuyen",
+    "destinationId": "luzern",
+    "name": "Du thuyền trên hồ Luzern",
+    "category": "experience",
+    "tags": [
+      "nature"
+    ],
+    "coordinates": {
+      "lat": 47.05113,
+      "lon": 8.31174,
+      "source": "https://www.openstreetmap.org/relation/17371811",
+      "note": "Centroid of the OSM stop area 'Luzern Bahnhofquai' (landing stages of the SGV lake ships)."
+    },
+    "summary": "Từ bến Bahnhofquai trước nhà ga, tàu thủy và tàu hơi nước bánh guồng đưa khách đi khắp hồ Luzern.",
+    "facts": [
+      {
+        "label": "Tàu hơi nước đầu tiên",
+        "value": "“Stadt Luzern”, năm 1837"
+      },
+      {
+        "label": "Đội tàu",
+        "value": "có 5 tàu hơi nước bánh guồng cổ"
+      },
+      {
+        "label": "Tàu lớn nhất",
+        "value": "“Stadt Luzern” (1928), chở được 1.200 khách"
+      },
+      {
+        "label": "Bến dọc hồ",
+        "value": "32 điểm dừng"
+      }
+    ],
+    "images": [
+      {
+        "photo": "luzern-du-thuyen-01",
+        "alt": "Các tàu hơi nước neo ở bến Luzern, phía xa là hồ Luzern và núi"
+      },
+      {
+        "photo": "luzern-du-thuyen-02",
+        "alt": "Tàu hơi nước bánh guồng Stadt Luzern treo cờ chạy trên hồ"
+      },
+      {
+        "photo": "luzern-du-thuyen-03",
+        "alt": "Tàu Stadt Luzern neo đậu ở bến trong thành phố Luzern"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/relation/17371811",
+      "https://en.wikipedia.org/wiki/Lake_Lucerne_Navigation_Company",
+      "https://de.wikipedia.org/wiki/Stadt_Luzern_(Schiff,_1928)"
+    ],
+    "mapsQuery": "Schiffstation Luzern Bahnhofquai",
+    "status": "published"
+  },
+  {
+    "id": "luzern-chugelipastete",
+    "destinationId": "luzern",
+    "name": "Luzerner Chügelipastete",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 47.05096,
+      "lon": 8.3008,
+      "source": "https://www.openstreetmap.org/way/93459848",
+      "note": "OSM restaurant building 'Galliker' (no check_date). Still operating: its own website, read 2026-11-08, lists 2026 opening hours and the dish."
+    },
+    "venue": {
+      "name": "Wirtshaus Galliker",
+      "address": "Schützenstrasse 1"
+    },
+    "summary": "Bánh vỏ ngàn lớp nhân ragu thịt bê, thịt viên, nấm và nho khô của Luzern; Wirtshaus Galliker là một địa chỉ tiêu biểu.",
+    "facts": [
+      {
+        "label": "Quán",
+        "value": "Wirtshaus Galliker"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "Schützenstrasse 1"
+      },
+      {
+        "label": "Ghi chép sớm nhất",
+        "value": "thế kỷ 18"
+      },
+      {
+        "label": "Tên khác",
+        "value": "Fritschipastete"
+      }
+    ],
+    "images": [
+      {
+        "photo": "luzern-chugelipastete-01",
+        "alt": "Đĩa Chügelipastete với vỏ bánh ngàn lớp, rau củ và đậu Hà Lan",
+        "illustrative": true
+      },
+      {
+        "photo": "luzern-chugelipastete-02",
+        "alt": "Phần nhân thịt bê, nấm và nho khô sốt kem trên vỏ bánh ngàn lớp",
+        "illustrative": true
+      },
+      {
+        "photo": "luzern-chugelipastete-03",
+        "alt": "Mô hình một chiếc Chügelipastete cỡ lớn kiểu truyền thống, trang trí hình trái tim",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/93459848",
+      "https://de.wikipedia.org/wiki/Luzerner_Ch%C3%BCgelipastete",
+      "https://wirtshaus-galliker.ch/restaurant-galliker/tradition"
+    ],
+    "mapsQuery": "Wirtshaus Galliker, Schützenstrasse 1, Luzern",
+    "status": "published"
+  },
+  {
+    "id": "luzern-socola",
+    "destinationId": "luzern",
+    "name": "Sô-cô-la ở Confiserie Bachmann",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 47.05376,
+      "lon": 8.30863,
+      "source": "https://www.openstreetmap.org/node/3497527550",
+      "note": "OSM shop node 'Bachmann', Schwanenplatz 7, check_date 2026-03-05."
+    },
+    "venue": {
+      "name": "Confiserie Bachmann",
+      "address": "Schwanenplatz 7"
+    },
+    "summary": "Sô-cô-la và bánh kẹo Thụy Sĩ; Confiserie Bachmann, tiệm bánh kẹo của Luzern từ năm 1897, là một địa chỉ tiêu biểu.",
+    "facts": [
+      {
+        "label": "Tiệm",
+        "value": "Confiserie Bachmann"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "Schwanenplatz 7"
+      },
+      {
+        "label": "Thành lập",
+        "value": "năm 1897"
+      }
+    ],
+    "images": [
+      {
+        "photo": "luzern-socola-01",
+        "alt": "Quầy kính đầy sô-cô-la và kẹo nhân bên trong Confiserie Bachmann ở Luzern"
+      },
+      {
+        "photo": "luzern-socola-02",
+        "alt": "Mặt tiền cửa hàng Bachmann trên phố Luzern, cạnh cờ Thụy Sĩ"
+      },
+      {
+        "photo": "luzern-socola-03",
+        "alt": "Kệ sô-cô-la Thụy Sĩ và giỏ kẹo trong một cửa hàng ở Luzern",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/3497527550",
+      "https://www.confiserie.ch/ueber-uns/geschichte/"
+    ],
+    "mapsQuery": "Confiserie Bachmann, Schwanenplatz 7, Luzern",
+    "status": "published"
+  }
+]
