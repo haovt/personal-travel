@@ -14,6 +14,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const COUNTRIES = {
   'viet-nam': {
@@ -31,7 +32,7 @@ const COUNTRIES = {
   'thuy-si': { adm0: 'CHE', tolerance: 0.003 },
 };
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const input = path.join(root, 'source-assets/naturalearth/ne_10m_admin_0_countries_vnm.geojson');
 const id = process.argv[2];
 if (id !== 'world' && !COUNTRIES[id]) {

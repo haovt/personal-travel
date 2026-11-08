@@ -104,6 +104,8 @@ def strip_html(s):
 
 def clean_creator(s):
     # Commons signatures often end with a talk-page link: "Name (thảo luận)", "Name (talk)".
+    # Also drops a trailing wiki signature timestamp: "Xocolatl (talk) 21:25, 12 April 2022 (UTC)".
+    s = re.sub(r"\s*\d{1,2}:\d{2}, \d{1,2} \w+ \d{4} \(UTC\)\s*$", "", s)
     return re.sub(r"\s*\((thảo luận|talk|discussion|contribs)\)\s*$", "", s, flags=re.I).strip()
 
 

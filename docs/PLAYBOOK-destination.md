@@ -183,6 +183,16 @@ Replace the `planned` placeholder. Shape (see `da-nang`):
    - Pexels: `"license": "Pexels License"`, `"licenseUrl": "https://www.pexels.com/license/"`.
 5. Run `photos.py <id> meta`. It validates these entries (source host, allowed licence, required
    fields) and prints `OK`/`REJECT`. Then run `download` and `build` as usual.
+   - **Flickr's image server often refuses scripted downloads** (HTTP 429 to `photos.py`, while
+     the same file opens in a browser). Don't try to work around it with a fake browser
+     User-Agent.
+   - Instead, **ask the owner** to approve downloading those specific files through the browser
+     (each file is a download). Save each one as
+     `source-assets/commons/<id>/<owner>/NN.jpg`, where `NN` is the photo's 1-based position in
+     that place's list in `photo-selection.json` (e.g. `02.jpg`) and `<owner>` is `cover` or the
+     location id.
+   - `photos.py <id> download` skips files that already exist, and `build` then processes them
+     normally.
    - The credits page shows the source name.
    - NC photos are flagged "chỉ dùng phi thương mại".
 6. Check each photo visually as in B4 step 6.

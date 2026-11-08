@@ -21,8 +21,9 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const [id, mode = 'build'] = process.argv.slice(2);
 const configPath = path.join(root, `data/destinations/${id}/map-config.json`);
 if (!id || !fs.existsSync(configPath) || !['fetch', 'build'].includes(mode)) {
