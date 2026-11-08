@@ -1,0 +1,6 @@
+{
+  "_note": "Local map extract settings. Used by: node tools/build-local-map.mjs ninh-binh fetch|build",
+  "bbox": [105.79, 20.19, 105.99, 20.32],
+  "coreBbox": [105.932, 20.212, 105.945, 20.22],
+  "riverLabels": ["Sông Bến Đang", "Sông Hoàng Long", "Sông Chanh", "Sông Vạc"]
+}

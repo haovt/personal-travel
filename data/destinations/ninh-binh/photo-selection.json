@@ -1,0 +1,141 @@
+{
+  "_note": "Wikimedia Commons files (and object entries for Flickr/Unsplash/Pexels) for this destination. Order = gallery order. Used by: python -I tools/photos.py ninh-binh meta|download|build",
+  "cover": [
+    "Trang_An_Scenic_Landscape_Complex,_northern_Vietnam_(252)_(37635054885).jpg",
+    "Trang_An_Scenic_Landscape_Complex,_northern_Vietnam_(267)_(38522016751).jpg",
+    "Trang_An_Scenic_Landscape_Complex,_northern_Vietnam_(240)_(38522414071).jpg"
+  ],
+  "locations": {
+    "ninh-binh-trang-an": [
+      "Trang_An_Scenic_Landscape_Complex,_northern_Vietnam_(244)_(26746263579).jpg",
+      "Trang_An_31.JPG",
+      "Trang_An_Scenic_Landscape_Complex,_northern_Vietnam_(253)_(38490028882).jpg"
+    ],
+    "ninh-binh-tam-coc": [
+      "Ninh_binh_550.jpg",
+      "Ninh_binh_290.jpg",
+      "Barques_à_Tam_Coc_(3).jpg"
+    ],
+    "ninh-binh-hang-mua": [
+      "Tam_Coc_by_Tuan_Mai_\"007\"_(8888350545).jpg",
+      "Dragon_Mountain_(29843112887).jpg",
+      "View_from_Hang_Mua.jpg"
+    ],
+    "ninh-binh-bai-dinh": [
+      "Ninh_Binh_vue_d'en_haut.jpg",
+      "Part_of_BaiDinh_Pagoda_-_panoramio.jpg",
+      "Chùa_Bái_Đính,_tượng_các_A-la-hán.JPG"
+    ],
+    "ninh-binh-co-do-hoa-lu": [
+      "Temple_commémoratif_au_roi_Dinh_Tien_Hoang_(Hoa_Lu).jpg",
+      "Dinh_Tien_Hoang_temple_(7172236091).jpg",
+      "Đền_Lê_Đại_Hành,_chính_điện.JPG"
+    ],
+    "ninh-binh-thung-nham": [
+      "Vườn_chim_Thung_Nham_.jpg",
+      "Thung_Nham.jpg",
+      "Thung_Nham_24.JPG"
+    ],
+    "ninh-binh-de-nui": [
+      "Thịt_dê_Ninh_Bình.JPG",
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/magtravels/5374608761/",
+        "file": "https://live.staticflickr.com/5007/5374608761_9fb40ae502_k.jpg",
+        "creator": "Magalie L'Abbé",
+        "license": "CC BY-NC 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/2.0/",
+        "checked": "2026-11-08"
+      },
+      "Đặc_sản_món_dê_tại_Bích_La_Thôn-Đông_Hà_2018_(6).jpg"
+    ],
+    "ninh-binh-com-chay": [
+      "Cơm_cháy_Ninh_Bình.JPG",
+      "Cơm_cháy_thịt_dê_Ninh_Bình.JPG",
+      "Cơm_cháy_kho_quẹt.jpg"
+    ]
+  },
+  "candidateSources": {
+    "cover": {
+      "cats": [
+        "Category:Tràng An Landscape Complex"
+      ],
+      "search": [],
+      "min_w": 1800
+    },
+    "ninh-binh-trang-an": {
+      "cats": [
+        "Category:Tràng An"
+      ],
+      "search": [
+        "intitle:\"Trang An\"",
+        "intitle:\"Tràng An\""
+      ],
+      "min_w": 1400
+    },
+    "ninh-binh-tam-coc": {
+      "cats": [
+        "Category:Tam Coc"
+      ],
+      "search": [],
+      "min_w": 1600
+    },
+    "ninh-binh-hang-mua": {
+      "cats": [
+        "Category:Mua Cave"
+      ],
+      "search": [
+        "\"Hang Múa\"",
+        "\"Hang Mua\"",
+        "\"Mua Cave\"",
+        "intitle:\"Dragon Mountain\" Ninh"
+      ],
+      "min_w": 1200
+    },
+    "ninh-binh-bai-dinh": {
+      "cats": [
+        "Category:Bai Dinh Pagoda"
+      ],
+      "search": [],
+      "min_w": 1400,
+      "pre2023": true
+    },
+    "ninh-binh-co-do-hoa-lu": {
+      "cats": [
+        "Category:Dinh Bo Linh Shrine",
+        "Category:Le Hoan Shrine"
+      ],
+      "search": [
+        "intitle:\"Co do Hoa Lu\""
+      ],
+      "min_w": 1200
+    },
+    "ninh-binh-thung-nham": {
+      "cats": [
+        "Category:Thung Nham"
+      ],
+      "search": [
+        "intitle:\"Thung Nham\""
+      ],
+      "min_w": 1200
+    },
+    "ninh-binh-de-nui": {
+      "cats": [
+        "Category:Goat meat of Vietnam"
+      ],
+      "search": [
+        "intitle:\"dê\" Ninh Bình",
+        "intitle:\"Tái dê\""
+      ],
+      "min_w": 800
+    },
+    "ninh-binh-com-chay": {
+      "cats": [],
+      "search": [
+        "intitle:\"Cơm cháy\" Ninh Bình",
+        "intitle:\"Cơm cháy\""
+      ],
+      "min_w": 800
+    }
+  }
+}
