@@ -1,0 +1,6 @@
+{
+  "_note": "Local map extract settings. Used by: node tools/build-local-map.mjs montreux fetch|build",
+  "bbox": [6.765, 46.385, 6.99, 46.49],
+  "coreBbox": [6.9, 46.425, 6.925, 46.442],
+  "riverLabels": []
+}

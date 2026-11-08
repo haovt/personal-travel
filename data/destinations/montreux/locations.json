@@ -1,0 +1,456 @@
+[
+  {
+    "id": "montreux-chillon",
+    "destinationId": "montreux",
+    "name": "Lâu đài Chillon",
+    "category": "history",
+    "tags": [
+      "attraction"
+    ],
+    "coordinates": {
+      "lat": 46.41424,
+      "lon": 6.9276,
+      "source": "https://www.openstreetmap.org/relation/6501627",
+      "wikidata": "Q372647",
+      "note": "Centroid of the OSM castle relation. Wikidata is about 8 m away."
+    },
+    "summary": "Tòa lâu đài trung cổ dựng trên một mỏm đá nhô ra hồ Genève, giữa Montreux và Villeneuve, từng canh giữ con đường sang nước Ý.",
+    "facts": [
+      {
+        "label": "Tháp chính",
+        "value": "có từ thế kỷ 11"
+      },
+      {
+        "label": "Năm 1536",
+        "value": "quân Bern chiếm lâu đài, giải thoát tù nhân François Bonivard"
+      },
+      {
+        "label": "Năm 1816",
+        "value": "Lord Byron viết bài thơ “Người tù ở Chillon”"
+      },
+      {
+        "label": "Khách tham quan",
+        "value": "di tích lịch sử đông khách nhất Thụy Sĩ, theo trang web của lâu đài"
+      }
+    ],
+    "images": [
+      {
+        "photo": "montreux-chillon-01",
+        "alt": "Lâu đài Chillon bên mép nước, phía sau là núi và hồ Genève"
+      },
+      {
+        "photo": "montreux-chillon-02",
+        "alt": "Lâu đài Chillon với các tháp nhọn và lá cờ Thụy Sĩ trên mỏm đá giữa hồ"
+      },
+      {
+        "photo": "montreux-chillon-03",
+        "alt": "Lâu đài Chillon nhô ra mặt hồ xanh, dưới chân sườn núi phủ rừng"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q372647",
+      "https://en.wikipedia.org/wiki/Chillon_Castle",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chillon"
+    ],
+    "mapsQuery": "Château de Chillon, Veytaux",
+    "status": "published"
+  },
+  {
+    "id": "montreux-tuong-freddie-mercury",
+    "destinationId": "montreux",
+    "name": "Tượng Freddie Mercury bên bờ hồ",
+    "category": "culture",
+    "tags": [
+      "attraction"
+    ],
+    "coordinates": {
+      "lat": 46.43276,
+      "lon": 6.90951,
+      "source": "https://www.openstreetmap.org/node/1226470695",
+      "wikidata": "Q12138448",
+      "note": "OSM artwork node (artist Irena Sedlecká, 1996). Wikidata Q12138448 and Q63145175 are 65-75 m further south; the OSM node is mapped in place."
+    },
+    "summary": "Bức tượng đồng tưởng nhớ ca sĩ Freddie Mercury của ban nhạc Queen, đứng trên kè bờ hồ ở trung tâm Montreux.",
+    "facts": [
+      {
+        "label": "Khánh thành",
+        "value": "25/11/1996"
+      },
+      {
+        "label": "Tác giả",
+        "value": "nhà điêu khắc Séc Irena Sedlecká"
+      },
+      {
+        "label": "Chiều cao",
+        "value": "3 m, tạc dáng Freddie lúc mở màn buổi diễn ở Wembley năm 1986"
+      },
+      {
+        "label": "Vị trí",
+        "value": "cuối quảng trường Place du Marché, trên kè Quai de la Rouvenaz"
+      }
+    ],
+    "images": [
+      {
+        "photo": "montreux-tuong-freddie-mercury-01",
+        "alt": "Tượng Freddie Mercury giơ cao nắm tay, đứng trên bệ đá cạnh mặt hồ"
+      },
+      {
+        "photo": "montreux-tuong-freddie-mercury-02",
+        "alt": "Cận cảnh tượng đồng Freddie Mercury giơ tay lên trời"
+      },
+      {
+        "photo": "montreux-tuong-freddie-mercury-03",
+        "alt": "Du khách quanh tượng Freddie Mercury trên quảng trường bờ hồ, phía sau là mái chợ"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q12138448",
+      "https://fr.wikipedia.org/wiki/Statue_de_Freddie_Mercury",
+      "https://www.openstreetmap.org/node/1226470695"
+    ],
+    "mapsQuery": "Freddie Mercury Statue, Montreux",
+    "status": "published"
+  },
+  {
+    "id": "montreux-lavaux",
+    "destinationId": "montreux",
+    "name": "Ruộng nho bậc thang Lavaux",
+    "category": "nature",
+    "tags": [
+      "culture"
+    ],
+    "coordinates": {
+      "lat": 46.47318,
+      "lon": 6.79596,
+      "source": "https://www.openstreetmap.org/node/240024056",
+      "wikidata": "Q70535",
+      "note": "Pinned at the village of Saint-Saphorin (OSM place node, Wikidata Q70535), inside the UNESCO area at the start of the Terrasses de Lavaux trail. Lavaux itself is Q688060 (centroid 5 km west, outside the map). Area: en.wikipedia 830 ha, fr.wikipedia 806 ha (2015)."
+    },
+    "summary": "Những bậc ruộng nho xếp tầng trên sườn đồi dốc nhìn xuống hồ Genève, được UNESCO công nhận là Di sản thế giới.",
+    "facts": [
+      {
+        "label": "Di sản thế giới",
+        "value": "UNESCO, từ tháng 7/2007"
+      },
+      {
+        "label": "Quy mô",
+        "value": "hơn 800 ha, trải khoảng 30 km dọc bờ bắc hồ"
+      },
+      {
+        "label": "Lịch sử",
+        "value": "có từ thế kỷ 11, dưới thời các tu viện"
+      },
+      {
+        "label": "Đường đi bộ",
+        "value": "“Terrasses de Lavaux” từ làng Saint-Saphorin đến Lutry"
+      }
+    ],
+    "images": [
+      {
+        "photo": "montreux-lavaux-01",
+        "alt": "Những bậc ruộng nho dốc đứng ở Dézaley đổ xuống hồ Genève"
+      },
+      {
+        "photo": "montreux-lavaux-02",
+        "alt": "Ruộng nho Lavaux trên sườn đồi, nhìn ra hồ Genève và dãy núi bên kia hồ"
+      },
+      {
+        "photo": "montreux-lavaux-03",
+        "alt": "Làng Riex nằm giữa những bậc ruộng nho Lavaux"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q688060",
+      "https://en.wikipedia.org/wiki/Lavaux",
+      "https://fr.wikipedia.org/wiki/Lavaux",
+      "https://fr.wikipedia.org/wiki/Saint-Saphorin_(Lavaux)"
+    ],
+    "mapsQuery": "Saint-Saphorin, Lavaux",
+    "status": "published"
+  },
+  {
+    "id": "montreux-rochers-de-naye",
+    "destinationId": "montreux",
+    "name": "Núi Rochers-de-Naye và tàu răng cưa",
+    "category": "experience",
+    "tags": [
+      "nature"
+    ],
+    "coordinates": {
+      "lat": 46.43182,
+      "lon": 6.97605,
+      "source": "https://www.openstreetmap.org/node/26864467",
+      "wikidata": "Q676030",
+      "note": "OSM summit node (ele 2042). Wikidata is about 14 m away."
+    },
+    "summary": "Đỉnh núi nhìn bao quát hồ Genève và dãy Alpes, lên được bằng tàu răng cưa chạy thẳng từ ga Montreux.",
+    "facts": [
+      {
+        "label": "Độ cao",
+        "value": "2.042 m; ga trên đỉnh ở 1.968 m"
+      },
+      {
+        "label": "Tàu răng cưa",
+        "value": "dài 10,36 km, leo khoảng 1.600 m trong 55 phút"
+      },
+      {
+        "label": "Khai trương",
+        "value": "đoạn Glion – Rochers-de-Naye năm 1892"
+      }
+    ],
+    "images": [
+      {
+        "photo": "montreux-rochers-de-naye-01",
+        "alt": "Hồ Genève nhìn từ núi Rochers-de-Naye, giữa các dãy núi"
+      },
+      {
+        "photo": "montreux-rochers-de-naye-02",
+        "alt": "Tàu răng cưa leo qua đồng cỏ để vào ga trên đỉnh Rochers-de-Naye"
+      },
+      {
+        "photo": "montreux-rochers-de-naye-03",
+        "alt": "Ga trên đỉnh Rochers-de-Naye giữa đồng cỏ, xa xa là các dãy núi"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q676030",
+      "https://en.wikipedia.org/wiki/Rochers_de_Naye",
+      "https://fr.wikipedia.org/wiki/Rochers_de_Naye",
+      "https://en.wikipedia.org/wiki/Montreux%E2%80%93Glion%E2%80%93Rochers-de-Naye_railway"
+    ],
+    "mapsQuery": "Rochers de Naye",
+    "status": "published"
+  },
+  {
+    "id": "montreux-fourchette-vevey",
+    "destinationId": "montreux",
+    "name": "Chiếc nĩa khổng lồ ở Vevey (La Fourchette)",
+    "category": "attraction",
+    "tags": [
+      "culture"
+    ],
+    "coordinates": {
+      "lat": 46.45776,
+      "lon": 6.84626,
+      "source": "https://www.openstreetmap.org/node/2368669635",
+      "wikidata": "Q38250820",
+      "note": "OSM artwork node. Wikidata is about 1 m away."
+    },
+    "summary": "Chiếc nĩa thép cao 8 m cắm giữa mặt hồ trước bảo tàng thực phẩm Alimentarium ở thị trấn Vevey, gần Montreux.",
+    "facts": [
+      {
+        "label": "Tác giả",
+        "value": "nghệ sĩ Thụy Sĩ Jean-Pierre Zaugg, năm 1995"
+      },
+      {
+        "label": "Kích thước",
+        "value": "cao 8 m, rộng 1,3 m, bằng thép không gỉ"
+      },
+      {
+        "label": "Ở lại vĩnh viễn",
+        "value": "từ cuối năm 2008"
+      },
+      {
+        "label": "Gần đó",
+        "value": "tượng Charlie Chaplin (1982); Chaplin sống ở vùng Vevey từ năm 1952 đến khi mất"
+      }
+    ],
+    "images": [
+      {
+        "photo": "montreux-fourchette-vevey-01",
+        "alt": "Chiếc nĩa thép khổng lồ cắm giữa hồ Genève, phía sau là núi"
+      },
+      {
+        "photo": "montreux-fourchette-vevey-02",
+        "alt": "Tượng Charlie Chaplin trong vườn bên hồ ở Vevey, xa xa là chiếc nĩa trên mặt nước"
+      },
+      {
+        "photo": "montreux-fourchette-vevey-03",
+        "alt": "Chiếc nĩa khổng lồ trên mặt hồ ở Vevey dưới bầu trời nhiều mây"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q38250820",
+      "https://fr.wikipedia.org/wiki/Fourchette_de_Vevey",
+      "https://www.wikidata.org/wiki/Q63341652",
+      "https://en.wikipedia.org/wiki/Vevey"
+    ],
+    "mapsQuery": "La Fourchette, Vevey",
+    "status": "published"
+  },
+  {
+    "id": "montreux-filets-de-perche",
+    "destinationId": "montreux",
+    "name": "Phi lê cá rô hồ (filets de perche)",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 46.39577,
+      "lon": 6.92389,
+      "source": "https://www.openstreetmap.org/node/918022476",
+      "note": "Venue node (OSM check_date 2023-11-11). The restaurant's website, read 2026-11-08, shows current opening hours and mentions the filet de perche."
+    },
+    "summary": "Món phi lê cá rô áp chảo bơ quen thuộc ở các nhà hàng quanh hồ Genève; quán L'Étoile ở Villeneuve là một địa chỉ tiêu biểu.",
+    "facts": [
+      {
+        "label": "Cách làm",
+        "value": "lăn bột, chiên bơ kiểu “meunière”, có khi dùng sốt vang trắng"
+      },
+      {
+        "label": "Quán",
+        "value": "Café-Restaurant L'Étoile, mở từ năm 1997"
+      }
+    ],
+    "venue": {
+      "name": "Café-Restaurant L'Étoile",
+      "address": "Grand-Rue 74, 1844 Villeneuve"
+    },
+    "images": [
+      {
+        "photo": "montreux-filets-de-perche-01",
+        "alt": "Đĩa phi lê cá rô hồ Léman áp chảo, kèm lát chanh",
+        "illustrative": true
+      },
+      {
+        "photo": "montreux-filets-de-perche-02",
+        "alt": "Phi lê cá rô kiểu meunière ăn kèm khoai tây luộc",
+        "illustrative": true
+      },
+      {
+        "photo": "montreux-filets-de-perche-03",
+        "alt": "Phi lê cá rô tẩm bột chiên giòn",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://fr.wikipedia.org/wiki/Cuisine_suisse",
+      "https://en.wikipedia.org/wiki/Swiss_cuisine",
+      "https://www.restaurantetoile.ch/",
+      "https://www.openstreetmap.org/node/918022476"
+    ],
+    "mapsQuery": "Café-Restaurant L'Étoile, Grand-Rue 74, Villeneuve",
+    "status": "published"
+  },
+  {
+    "id": "montreux-fondue",
+    "destinationId": "montreux",
+    "name": "Fondue phô mai",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 46.43354,
+      "lon": 6.91328,
+      "source": "https://www.openstreetmap.org/node/6195576914",
+      "note": "Venue node (OSM check_date 2026-06-19). The venue's menu, read 2026-11-08, lists \"Fondue traditionnelle\" without naming the cheeses, so the text does not claim it is moitié-moitié."
+    },
+    "summary": "Nồi phô mai nấu chảy với vang trắng, ăn chung bằng cách chấm bánh mì; Caveau des Vignerons ở Montreux là một địa chỉ tiêu biểu.",
+    "facts": [
+      {
+        "label": "Món ăn quốc gia",
+        "value": "được quảng bá thành món ăn quốc gia của Thụy Sĩ từ thập niên 1930"
+      },
+      {
+        "label": "Kiểu “moitié-moitié”",
+        "value": "nửa Gruyère, nửa Vacherin fribourgeois, đặc sản của bang Fribourg láng giềng"
+      },
+      {
+        "label": "Quán",
+        "value": "Caveau des Vignerons, có fondue phô mai truyền thống"
+      }
+    ],
+    "venue": {
+      "name": "Caveau des Vignerons",
+      "address": "Rue Industrielle 30bis, 1820 Montreux"
+    },
+    "images": [
+      {
+        "photo": "montreux-fondue-01",
+        "alt": "Nồi fondue phô mai trên bếp nhỏ, bên cạnh giỏ bánh mì",
+        "illustrative": true
+      },
+      {
+        "photo": "montreux-fondue-02",
+        "alt": "Dùng nĩa dài chấm miếng bánh mì vào phô mai nóng chảy",
+        "illustrative": true
+      },
+      {
+        "photo": "montreux-fondue-03",
+        "alt": "Nồi fondue phô mai màu đỏ cùng bánh mì cắt miếng",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Fondue",
+      "https://fr.wikipedia.org/wiki/Fondue_moiti%C3%A9-moiti%C3%A9",
+      "https://caveau-des-vignerons.ch/",
+      "https://www.openstreetmap.org/node/6195576914"
+    ],
+    "mapsQuery": "Caveau des Vignerons, Rue Industrielle 30bis, Montreux",
+    "status": "published"
+  },
+  {
+    "id": "montreux-vang-lavaux",
+    "destinationId": "montreux",
+    "name": "Rượu vang Lavaux",
+    "category": "food",
+    "tags": [
+      "experience"
+    ],
+    "coordinates": {
+      "lat": 46.4749,
+      "lon": 6.77743,
+      "source": "https://www.openstreetmap.org/node/6005394385",
+      "note": "Venue node (no OSM check_date). Its website, read 2026-11-08, announces a closing time for 18 November, so it operates."
+    },
+    "summary": "Đặc sản của vùng Lavaux là vang trắng làm từ nho Chasselas; trung tâm Lavaux Vinorama ở Rivaz là một địa chỉ tiêu biểu để tìm hiểu.",
+    "facts": [
+      {
+        "label": "Giống nho",
+        "value": "Chasselas, có nguồn gốc ở miền tây Thụy Sĩ"
+      },
+      {
+        "label": "Vùng vang nổi tiếng",
+        "value": "Dézaley grand cru, 54 ha trong Lavaux"
+      },
+      {
+        "label": "Lavaux Vinorama",
+        "value": "trưng bày gần 300 loại vang của Lavaux"
+      }
+    ],
+    "venue": {
+      "name": "Lavaux Vinorama",
+      "address": "Route du Lac 2, 1071 Rivaz"
+    },
+    "images": [
+      {
+        "photo": "montreux-vang-lavaux-01",
+        "alt": "Lối vào trung tâm Lavaux Vinorama ở Rivaz, bên trên là ruộng nho"
+      },
+      {
+        "photo": "montreux-vang-lavaux-02",
+        "alt": "Chai vang đỏ Lavaux AOC và một ly rượu"
+      },
+      {
+        "photo": "montreux-vang-lavaux-03",
+        "alt": "Làng Rivaz và Chexbres giữa ruộng nho Lavaux, nhìn từ phía hồ"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Lavaux",
+      "https://en.wikipedia.org/wiki/Chasselas",
+      "https://fr.wikipedia.org/wiki/Viticulture_dans_le_canton_de_Vaud",
+      "https://lavaux-vinorama.ch/",
+      "https://www.openstreetmap.org/node/6005394385"
+    ],
+    "mapsQuery": "Lavaux Vinorama, Rivaz",
+    "status": "published"
+  }
+]

@@ -2,7 +2,97 @@
   "id": "montreux",
   "countryId": "thuy-si",
   "name": "Montreux",
+  "type": "city",
   "region": null,
-  "status": "planned",
-  "_note": "Placeholder. Owned by the session in docs/sessions/montreux.md, which fills this in and sets status to \"published\"."
+  "status": "published",
+  "coordinates": {
+    "lat": 46.435,
+    "lon": 6.9125,
+    "source": "https://www.wikidata.org/wiki/Q69354"
+  },
+  "bounds": [
+    [
+      46.385,
+      6.765
+    ],
+    [
+      46.49,
+      6.99
+    ]
+  ],
+  "initialView": [
+    [
+      46.405,
+      6.835
+    ],
+    [
+      46.47,
+      6.96
+    ]
+  ],
+  "mapData": "assets/maps/montreux.geojson",
+  "mapAttribution": "© <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>",
+  "mapLabels": [
+    {
+      "text": "Hồ Genève",
+      "kind": "water",
+      "lat": 46.42,
+      "lon": 6.865
+    },
+    {
+      "text": "Montreux",
+      "kind": "area",
+      "lat": 46.44,
+      "lon": 6.915
+    },
+    {
+      "text": "Vevey",
+      "kind": "area",
+      "lat": 46.463,
+      "lon": 6.845
+    },
+    {
+      "text": "Villeneuve",
+      "kind": "area",
+      "lat": 46.398,
+      "lon": 6.928
+    },
+    {
+      "text": "Lavaux",
+      "kind": "area",
+      "lat": 46.4805,
+      "lon": 6.81
+    }
+  ],
+  "summary": "Thị trấn nghỉ dưỡng bên bờ hồ Genève, dưới chân dãy Alpes, nổi tiếng với lâu đài Chillon, lễ hội nhạc jazz và những ruộng nho bậc thang Lavaux gần đó.",
+  "images": [
+    {
+      "photo": "montreux-01",
+      "alt": "Thị trấn Montreux bên bờ hồ Genève nhìn từ trên đồi, xa xa là dãy núi bên kia hồ"
+    },
+    {
+      "photo": "montreux-02",
+      "alt": "Trung tâm Montreux trên mũi đất nhô ra hồ Genève, nhìn từ sườn đồi"
+    },
+    {
+      "photo": "montreux-03",
+      "alt": "Montreux bên mặt hồ, phía sau là đồi xanh và núi phủ tuyết"
+    }
+  ],
+  "locationIds": [
+    "montreux-chillon",
+    "montreux-tuong-freddie-mercury",
+    "montreux-lavaux",
+    "montreux-rochers-de-naye",
+    "montreux-fourchette-vevey",
+    "montreux-filets-de-perche",
+    "montreux-fondue",
+    "montreux-vang-lavaux"
+  ],
+  "sources": [
+    "https://www.wikidata.org/wiki/Q69354",
+    "https://en.wikipedia.org/wiki/Montreux",
+    "https://en.wikipedia.org/wiki/Montreux_Jazz_Festival",
+    "https://vi.wikipedia.org/wiki/H%E1%BB%93_Gen%C3%A8ve"
+  ]
 }
