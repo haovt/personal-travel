@@ -305,7 +305,15 @@ function polygonsFromElement(e) {
 }
 
 // Land
-const land = buildLand(els.filter((e) => e.type === 'way' && tag(e, 'natural') === 'coastline'));
+const coastWays = els.filter((e) => e.type === 'way' && tag(e, 'natural') === 'coastline');
+const land = buildLand(coastWays);
+// Inland destination (no sea coast crosses the area): the whole area is land; lakes and rivers
+// are drawn on top as water.
+if (!coastWays.some((w) => coordsOf(w).some(inside))) {
+  land.length = 0;
+  land.push([[minX, minY], [maxX, minY], [maxX, maxY], [minX, maxY], [minX, minY]]);
+  console.log('no coastline in area: using the whole area as land');
+}
 for (const ring of land) {
   const s = simplifyRing(ring, 0.00004);
   if (s) push({ k: 'land' }, { type: 'Polygon', coordinates: [roundRing(s)] });

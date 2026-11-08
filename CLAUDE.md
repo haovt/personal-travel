@@ -1,17 +1,22 @@
-# Virtual Vietnam Travel — instructions for Claude sessions
+# Travel atlas (Việt Nam, Thụy Sĩ) — instructions for Claude sessions
 
 Read this file first in every session. Then read:
 - `docs/SPEC.md` — the owner's full original specification plus dated amendments (authoritative).
-- `docs/phase-0-proposal.md` — the Phase 0 research and architecture proposal (once written).
+- `docs/phase-0-proposal.md` — the Phase 0 research and architecture proposal.
+- **Destination session?** If you were started to build one destination, read
+  `docs/PLAYBOOK-destination.md` (how to build any destination) and your brief
+  `docs/sessions/<destination-id>.md`. Follow "Working in parallel" below strictly.
 
-Update the **Status and decision log** at the end of this file whenever a phase, a decision or a
-verification changes. A new session must be able to continue from this file alone.
+The **main session** (integration, shared code) updates the **Status and decision log** at the end
+of this file. **Destination sessions never edit this file**; they log progress in their own brief.
 
 ## What this is
 
-A static, offline, interactive "digital travel atlas" of Vietnam with three levels:
-Vietnam overview map → destination local map → location detail (real photos, Vietnamese text,
-optional Vietnamese audio). It is NOT a booking site, blog, Google Maps clone, game or VR app.
+A static, offline, interactive "digital travel atlas" with four levels:
+world (pick a country) → country overview map → destination local map → location detail (real
+photos, Vietnamese text). Countries: **Việt Nam** and **Thụy Sĩ** (Switzerland), added 2026-11-08.
+All UI and text are Vietnamese, for Switzerland too. It is NOT a booking site, blog, Google Maps
+clone, game or VR app.
 
 ## Hard rules
 
@@ -25,8 +30,9 @@ optional Vietnamese audio). It is NOT a booking site, blog, Google Maps clone, g
   assets are local.
   Node/Python may be used only as **build-time tools** (data extraction, image resizing, audio
   generation) and are never required to run the site.
-- **Data-driven:** all content lives in `data/*.json`. Adding a destination or location must need
-  data and assets only, never a code change.
+- **Data-driven:** all content lives in `data/`. Adding a destination, location or country must need
+  data and assets only, never a code change. Each destination owns its own folder (see "Project
+  layout").
 - **Never invent** coordinates, facts, opening hours, prices, image sources, authors or licenses.
   Every coordinate records its source (Wikidata QID / OSM id / URL). Every asset is in the asset
   manifest with source URL, creator, license, attribution. If something can't be verified or found,
@@ -35,9 +41,11 @@ optional Vietnamese audio). It is NOT a booking site, blog, Google Maps clone, g
   owner's explicit approval. No bulk scraping.
 - **Map sovereignty:** maps must show Hoàng Sa and Trường Sa as part of Vietnam, labelled in
   Vietnamese (Hoàng Sa is a special zone, đặc khu, of Đà Nẵng since the 2025 reform).
-- **Work phase by phase** (Phase 0 → 5 in the spec). One destination first (**Đà Nẵng**), and the
-  full flow must work before adding another. At the end of every phase, report what works, what
-  is incomplete, and which decisions need the owner, then wait for review.
+- **Work phase by phase** (Phase 0 → 5 in the spec). Đà Nẵng was built first as the reference
+  destination. Since 2026-11-08 the owner builds further destinations **in parallel sessions**, one
+  per destination, each following `docs/PLAYBOOK-destination.md`. At the end of every phase or
+  destination, report what works, what is incomplete, and which decisions need the owner, then
+  wait for review.
 
 ## Target devices
 
@@ -98,20 +106,56 @@ anything interactive under the notch, the Dynamic Island area, or the home indic
     local map data, and credits for the narration voice and the libraries.
   - CC BY-SA photos that are cropped or resized are adaptations and stay CC BY-SA. Note "đã chỉnh
     sửa kích thước" in the credit.
-- Don't initialise git, commit or push unless the owner asks.
+- **Git:** the repository is `https://github.com/haovt/personal-travel` (remote `origin`, branch
+  `main`). Commit and push only when the owner asks. Destination sessions commit only to their own
+  branch (`dest/<destination-id>`) and never push to or merge into `main`; the owner (or the main
+  session, when asked) merges them. Commit messages end with the co-author line from the harness.
+  `.gitattributes` keeps LF line endings.
 
-## Project layout (planned; confirm in the Phase 0 proposal)
+## Project layout
 
 ```text
 index.html
-css/      main.css, map.css, destinations.css, details.css, animations.css
-js/       app.js, navigation.js, vietnam-map.js, local-map.js, locations.js, gallery.js, audio.js
-data/     destinations.json, locations.json, categories.json, assets-manifest.json
-assets/   maps/, destinations/, locations/, audio/, icons/, fonts/
-vendor/   third-party libraries stored locally (e.g. Leaflet), with their LICENSE files
-tools/    build-time scripts (map extraction, image resizing, audio generation), not shipped
-docs/     SPEC.md, phase-0-proposal.md, ATTRIBUTIONS.md
+css/      main.css, map.css, details.css, animations.css, fonts.css
+js/       app.js (levels + routing glue), router.js, data.js, map-core.js,
+          world-map.js, country-map.js, local-map.js, offscreen-hints.js,
+          panel.js (top bar, chips, sheet), gallery.js, credits.js
+data/     countries.json        countries: map, bounds, Vietnamese texts, regions, labels, destination ids
+          categories.json       location categories (shared)
+          assets-manifest.json  shared assets (maps, fonts, libraries)
+          destinations/<id>/    ONE FOLDER PER DESTINATION, owned by that destination's session:
+            destination.json    the destination (status: planned | draft | published | reference)
+            locations.json      its locations
+            photo-selection.json  chosen Commons files (+ "candidateSources" for the candidate finder)
+            photo-credits.json  GENERATED by tools/photos.py
+            map-config.json     local map bbox / coreBbox / riverLabels
+assets/   maps/world.geojson, maps/country-<country>.geojson, maps/<destination-id>.geojson
+          destinations/<id>/cover/…, destinations/<id>/<location-id>/…   (WebP photos)
+          fonts/, icons/
+vendor/   leaflet/ (1.9.4, BSD-2)
+tools/    build-time only: build-country-map.mjs, build-local-map.mjs, photos.py,
+          commons_candidates.py
+docs/     SPEC.md, phase-0-proposal.md, PLAYBOOK-destination.md, sessions/<id>.md
+source-assets/  originals and caches (git-ignored): naturalearth/, osm/, commons/<destination-id>/
 ```
+
+Routes: `#/` world · `#/<country>` · `#/<country>/<destination>` · `#/<country>/<destination>/<location>`
+· `#/nguon-anh` credits. Country ids: `viet-nam`, `thuy-si`.
+
+## Working in parallel (destination sessions)
+
+Each new destination is built in its **own session, on its own branch** (`dest/<id>`, ideally a
+separate git worktree). To keep the sessions from conflicting:
+- **Write only inside your own paths:** `data/destinations/<id>/`, `assets/destinations/<id>/`,
+  `assets/maps/<id>.geojson`, `source-assets/…/<id>…`, and your brief `docs/sessions/<id>.md`.
+- **Do not edit shared files:** `js/`, `css/`, `index.html`, `tools/`, `data/countries.json`,
+  `data/categories.json`, `data/assets-manifest.json`, `CLAUDE.md`, `docs/SPEC.md`,
+  `docs/PLAYBOOK-destination.md`, or other destinations' folders. (`countries.json` already lists
+  every planned destination id.)
+- If you find a bug or need a shared change (a new category, a tool option, a CSS fix), **don't make
+  it**. Describe it under "Requests for the main session" in your brief, and work around it if
+  possible.
+- Status log: write progress and decisions in the "Status log" section of your brief, not here.
 
 ## Status and decision log
 
@@ -125,7 +169,10 @@ docs/     SPEC.md, phase-0-proposal.md, ATTRIBUTIONS.md
 | 2026-11-08 | **Owner decided all 8 Phase 0 questions** (see "Owner decisions" below). |
 | 2026-11-08 | Phase 1 implemented (see "Phase 1 status" below). During Phase 1 the owner also chose a Google-like map style and a Vietnam-only overview (no neighbouring countries). Owner said "Start Phase 2". |
 | 2026-11-08 | Phase 2 implemented (see "Phase 2 status"); area lock added at owner's request. Owner said "Start Phase 3". |
-| 2026-11-08 | **Phase 3 implemented, waiting for owner review** (see "Phase 3 status"). The owner asked about using Google Images: answered no, since search results aren't licences. Possible wider sources are listed under Phase 3 status. **Next step: Phase 4 (search, favourites, featured, region exploration, related places/food) after the owner's OK.** |
+| 2026-11-08 | Phase 3 implemented (see "Phase 3 status"). The owner asked about using Google Images: answered no, since search results aren't licences. Possible wider sources are listed under Phase 3 status. |
+| 2026-11-08 | Phase 3 extended (see "Phase 3 extension"): 48 photos, a wider photo-first detail view, and a Google Maps link. |
+| 2026-11-08 | **Owner: new destinations.** Việt Nam: Đà Lạt, Vũng Tàu, Cần Giờ, Hội An, Vịnh Hạ Long, Ninh Bình, Nha Trang. Thụy Sĩ: Zürich, Luzern, Montreux (Lake Geneva). Same site with a country picker; Vietnamese for Switzerland too; git set up with `haovt/personal-travel`. |
+| 2026-11-08 | **Restructured for parallel work** (commit `10b0116`): world level, `data/countries.json`, one folder per destination, per-destination tools, and `status: "planned"` placeholders for the 10 new destinations. Playbook and session briefs in `docs/`. **Next:** the owner starts one session per brief; the main session later merges branches and continues Phase 4 (search, favourites, featured, related places/food) and Phase 5 (offline, Pages). |
 
 ### Phase 3 extension (2026-11-08): more photos, wider detail, Google Maps link
 
@@ -137,7 +184,7 @@ docs/     SPEC.md, phase-0-proposal.md, ATTRIBUTIONS.md
 - **Photos are now 48:** Mỹ Khê 10, Ngũ Hành Sơn 10, Bà Nà 10, and 3 each for Cầu Rồng,
   Chùa Linh Ứng, Bảo tàng Chăm and Chợ Cồn.
   - New files were picked visually from contact sheets made by
-    `python -I tools/commons_candidates.py <out_dir> [place…]`. It filters by licence, size and
+    `python -I tools/commons_candidates.py <destination-id> <out_dir> [place…]`. It filters by licence, size and
     aspect, and accepts only pre-2023 uploads where modern copyrighted works appear.
   - The tool is slow because Commons rate-limits it. The owner stopped it mid-run.
 - **Known gaps, accepted by the owner for now ("use what we have"):**
