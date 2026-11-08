@@ -82,6 +82,9 @@
   pointer-events: auto;
   transform: translate(var(--dx, 0px), var(--dy, 0px));
 }
+/* Hidden at the world level and on a local map: the body must not catch taps then either. */
+.map.level-world .dest-pin__body,
+.map.is-local .dest-pin__body { pointer-events: none; }
 /* Leader line and dot at the true position, shown only while the pin is shifted. */
 .dest-pin__leader,
 .dest-pin__dot { display: none; position: absolute; pointer-events: none; }
@@ -239,6 +242,41 @@
 .loc-pin:focus-visible { outline: none; }
 .loc-pin.is-filtered { display: none; }
 .map:not(.is-local) .loc-pin { opacity: 0; pointer-events: none; }
+
+/* Like .dest-pin: only the (possibly shifted) body takes taps; a leader and dot mark the true
+   point while the pin is pushed aside (spreadPins in js/local-map.js). */
+.leaflet-marker-icon.loc-pin.leaflet-interactive { pointer-events: none; }
+.loc-pin__body {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  transform: translate(var(--dx, 0px), var(--dy, 0px));
+}
+.map:not(.is-local) .loc-pin__body { pointer-events: none; }
+.loc-pin__leader,
+.loc-pin__dot { display: none; position: absolute; pointer-events: none; }
+.loc-pin.is-offset .loc-pin__leader,
+.loc-pin.is-offset .loc-pin__dot { display: block; }
+.loc-pin__leader {
+  left: 20px;
+  top: 33.25px;
+  width: var(--leader-len, 0px);
+  height: 1.5px;
+  background: #5f6368;
+  opacity: .7;
+  transform-origin: 0 50%;
+  transform: rotate(var(--leader-angle, 0rad));
+}
+.loc-pin__dot {
+  left: 17px;
+  top: 31px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f6368;
+  border: 1.5px solid #fff;
+  box-sizing: border-box;
+}
 
 /* ---------- Off-screen hints ---------- */
 .offscreen-hints { position: fixed; inset: 0; z-index: 900; pointer-events: none; }

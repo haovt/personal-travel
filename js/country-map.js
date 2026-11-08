@@ -140,7 +140,7 @@ export function createCountryLayer(map, data, country, geo, { onSelectDestinatio
       el.style.setProperty('--dy', `${dy.toFixed(1)}px`);
       el.style.setProperty('--leader-len', `${len.toFixed(1)}px`);
       el.style.setProperty('--leader-angle', `${Math.atan2(dy, dx)}rad`);
-      el.classList.toggle('is-offset', len > 1);
+      el.classList.toggle('is-offset', len > 6); // tiny nudges need no leader
       const w = labelWidth.get(it.id);
       const right = [it.x + 16, it.y - 30, it.x + 16 + w, it.y - 10];
       const left = [it.x - 16 - w, it.y - 30, it.x - 16, it.y - 10];

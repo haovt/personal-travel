@@ -105,7 +105,11 @@ export function createLocalLayer(map, data, dest, geo, { onSelectLocation }) {
       riseOnHover: true,
       icon: L.divIcon({
         className: 'loc-pin',
-        html: `${pinSvg(cat?.color ?? '#5f6368', 'loc-pin__svg')}<span class="loc-pin__label">${escapeHtml(loc.name)}</span>`,
+        // The body can be shifted off the true point when pins overlap (see spreadPins); the
+        // leader and dot then mark the real position.
+        html: '<span class="loc-pin__leader"></span><span class="loc-pin__dot"></span>'
+          + `<span class="loc-pin__body">${pinSvg(cat?.color ?? '#5f6368', 'loc-pin__svg')}`
+          + `<span class="loc-pin__label">${escapeHtml(loc.name)}</span></span>`,
         iconSize: [40, 40],
         iconAnchor: [20, 34],
       }),
@@ -123,13 +127,54 @@ export function createLocalLayer(map, data, dest, geo, { onSelectLocation }) {
   ctx.font = '600 13px "Be Vietnam Pro", system-ui, sans-serif';
   const labelWidth = new Map(locations.map((l) => [l.id, Math.ceil(ctx.measureText(l.name).width) + 6]));
 
+  // Places that share (almost) one point, e.g. two dishes at the same market, would hide each
+  // other: push their pins apart on screen until the tips are PIN_GAP px apart. Display only.
+  const PIN_GAP = 26;
+  function spreadPins(visible) {
+    const items = visible.map((l) => {
+      const p = map.latLngToContainerPoint([l.coordinates.lat, l.coordinates.lon]);
+      return { id: l.id, ox: p.x, oy: p.y, x: p.x, y: p.y };
+    });
+    for (let iter = 0; iter < 20; iter++) {
+      let moved = false;
+      for (let i = 0; i < items.length; i++) {
+        for (let j = i + 1; j < items.length; j++) {
+          const a = items[i], b = items[j];
+          let dx = b.x - a.x, dy = b.y - a.y, dist = Math.hypot(dx, dy);
+          if (dist >= PIN_GAP - 0.5) continue;
+          if (dist < 0.01) { dx = 1; dy = 0; dist = 1; }
+          const push = (PIN_GAP - dist) / 2;
+          a.x -= (dx / dist) * push; a.y -= (dy / dist) * push;
+          b.x += (dx / dist) * push; b.y += (dy / dist) * push;
+          moved = true;
+        }
+      }
+      if (!moved) break;
+    }
+    const pos = new Map();
+    for (const it of items) {
+      pos.set(it.id, L.point(it.x, it.y));
+      const el = pins.get(it.id).getElement();
+      if (!el) continue;
+      const dx = it.x - it.ox, dy = it.y - it.oy, len = Math.hypot(dx, dy);
+      el.style.setProperty('--dx', `${dx.toFixed(1)}px`);
+      el.style.setProperty('--dy', `${dy.toFixed(1)}px`);
+      el.style.setProperty('--leader-len', `${len.toFixed(1)}px`);
+      el.style.setProperty('--leader-angle', `${Math.atan2(dy, dx)}rad`);
+      el.classList.toggle('is-offset', len > 6); // tiny nudges need no leader
+    }
+    return pos;
+  }
+
   // Show a pin's name only where it does not collide with other names or pins
   // (right side first, then left). The active pin gets priority.
   const LABEL_MIN_Z = 12;
   function layoutLabels() {
+    if (!map.hasLayer(markers) || !map._loaded) return;
     const z = map.getZoom();
     const visible = locations.filter((l) => matches(l, filter));
-    const pt = (l) => map.latLngToContainerPoint([l.coordinates.lat, l.coordinates.lon]);
+    const pos = spreadPins(visible);
+    const pt = (l) => pos.get(l.id);
     const pinBoxes = new Map(visible.map((l) => { const p = pt(l); return [l.id, [p.x - 11, p.y - 28, p.x + 11, p.y]]; }));
     const taken = [];
     const size = map.getSize();
@@ -160,6 +205,15 @@ export function createLocalLayer(map, data, dest, geo, { onSelectLocation }) {
     }
   }
   map.on('moveend', layoutLabels);
+  // On a deep link, Leaflet creates the pin elements only after the first moveend: lay out again
+  // once they are added (a microtask, since requestAnimationFrame doesn't run in background tabs).
+  let layoutQueued = false;
+  const queueLayout = () => {
+    if (layoutQueued) return;
+    layoutQueued = true;
+    queueMicrotask(() => { layoutQueued = false; layoutLabels(); });
+  };
+  for (const m of pins.values()) m.on('add', queueLayout);
 
   function applyClasses() {
     for (const loc of locations) {

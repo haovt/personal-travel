@@ -202,3 +202,4 @@ domain). 13 MB of WebP.
 3. (Minor) `tools/build-local-map.mjs` labels only `place=island/islet` **nodes**. In Hạ Long most named islands are
    **ways/relations** (Bồ Hòn, Đầu Gỗ, Ti Tốp, Tuần Châu), so I added them as `mapLabels`. Labelling named island
    ways/relations at their centroid would help Hạ Long, Nha Trang and Cần Giờ.
+4. Status of 1–3: fixed on main (2026-11-08): maritime protected areas are skipped (rebuild needs no hand edit), pins sharing a point are spread apart, and `islandLabels` in `map-config.json` labels named island ways/relations.

@@ -10,6 +10,8 @@
 //   bbox        [minLon, minLat, maxLon, maxLat]  area of the local map (= destination "bounds")
 //   coreBbox    [minLon, minLat, maxLon, maxLat]  optional: also include residential streets here
 //   riverLabels ["Sông …", …]                     optional: named rivers/lakes to label
+//   islandLabels ["Hòn …", …]                     optional: named islands/islets to label (OSM name;
+//                                                 node, closed coastline way or multipolygon)
 //
 // Data © OpenStreetMap contributors, ODbL 1.0 (https://www.openstreetmap.org/copyright).
 // The output is a derived database and stays under ODbL. Download once per destination; do not
@@ -30,7 +32,7 @@ if (!id || !fs.existsSync(configPath) || !['fetch', 'build'].includes(mode)) {
   console.error('Usage: node tools/build-local-map.mjs <destination-id> fetch|build  (needs data/destinations/<id>/map-config.json)');
   process.exit(1);
 }
-const { bbox, coreBbox, riverLabels = [] } = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+const { bbox, coreBbox, riverLabels = [], islandLabels = [] } = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const rawPath = path.join(root, `source-assets/osm/${id}-raw.json`);
 const output = path.join(root, `assets/maps/${id}.geojson`);
 
@@ -337,7 +339,9 @@ for (const ring of land) {
 for (const e of els) {
   const t = e.tags || {};
   let kind = null;
-  if (t.boundary === 'protected_area' || t.leisure === 'nature_reserve') kind = 'reserve';
+  // Maritime protected areas (e.g. the UNESCO zone over Hạ Long Bay) cover open sea: drawing them
+  // as a green reserve would make the water look like land.
+  if (t.boundary === 'protected_area' || t.leisure === 'nature_reserve') kind = t.maritime === 'yes' ? null : 'reserve';
   else if (t.landuse === 'forest' || t.natural === 'wood') kind = 'green';
   else if (t.leisure === 'park') kind = 'green';
   else if (t.aeroway === 'aerodrome') kind = 'airport';
@@ -393,6 +397,34 @@ for (const name of riverLabels) {
     const m = best[Math.floor(best.length / 2)];
     push({ k: 'label', lk: 'water', t: name }, point(m[0], m[1]));
   }
+}
+
+// Island labels: the listed names, at the island's node, or at the centroid of its outline.
+function ringCentroid(ring) {
+  let a = 0, cx = 0, cy = 0;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const f = ring[j][0] * ring[i][1] - ring[i][0] * ring[j][1];
+    a += f; cx += (ring[j][0] + ring[i][0]) * f; cy += (ring[j][1] + ring[i][1]) * f;
+  }
+  return a ? [cx / (3 * a), cy / (3 * a)] : ring[0];
+}
+const ringArea = (ring) => Math.abs(ring.reduce((s, p, i) => {
+  const q = ring[(i + 1) % ring.length];
+  return s + p[0] * q[1] - q[0] * p[1];
+}, 0)) / 2;
+for (const name of islandLabels) {
+  const cands = els.filter((x) => x.tags && x.tags.name === name && /^(island|islet)$/.test(x.tags.place || ''));
+  let at = null;
+  const node = cands.find((x) => x.type === 'node');
+  if (node) at = [node.lon, node.lat];
+  else {
+    // Largest outer ring of the matching ways/relations.
+    const rings = cands.flatMap((e) => polygonsFromElement(e)?.outer ?? []);
+    const big = rings.sort((r1, r2) => ringArea(r2) - ringArea(r1))[0];
+    if (big) { at = ringCentroid(big); if (!pointInRing(big, at)) at = big[Math.floor(big.length / 2)]; }
+  }
+  if (at && inside(at)) push({ k: 'label', lk: 'area', t: name }, point(at[0], at[1]));
+  else console.warn(`island label not found inside the area: ${name}`);
 }
 
 const out = {
