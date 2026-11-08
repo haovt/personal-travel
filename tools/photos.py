@@ -34,9 +34,12 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import wm_http  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 API = "https://commons.wikimedia.org/w/api.php"
-UA = "LocalLiveTravel/0.1 (personal non-commercial virtual travel atlas; build-time asset collection)"
+UA = wm_http.UA
 WIDTHS = [400, 800, 1200, 1800]
 DOWNLOAD_WIDTH = 2400
 FREE = re.compile(r"^(CC0|Public domain|PD\b|CC BY(-SA)? \d(\.\d)?)", re.I)
@@ -91,17 +94,8 @@ class Dest:
 
 
 def get_json(params):
-    url = API + "?" + urllib.parse.urlencode({**params, "format": "json", "formatversion": "2", "maxlag": "5"})
-    for attempt in range(5):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:
-                return json.load(r)
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
-                time.sleep(15 * (attempt + 1))
-                continue
-            raise
-    raise RuntimeError("Commons API keeps rate-limiting; try again later")
+    # All Wikimedia traffic goes through the shared, paced client (see tools/wm_http.py).
+    return wm_http.api_get(params)
 
 
 def strip_html(s):
@@ -158,7 +152,6 @@ def cmd_meta(d):
                 "attributionRequired": val("AttributionRequired") == "true",
                 "description": strip_html(val("ImageDescription"))[:300],
             }
-        time.sleep(2)
     d.meta.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     for owner, i, name in items:
         m = meta.get(key(name), {"missing": True})
@@ -190,10 +183,8 @@ def cmd_download(d):
         if dest.exists():
             continue
         dest.parent.mkdir(parents=True, exist_ok=True)
-        with urllib.request.urlopen(urllib.request.Request(m["downloadUrl"], headers={"User-Agent": UA}), timeout=120) as r:
-            dest.write_bytes(r.read())
-        print(f"downloaded {owner} #{i}: {dest.stat().st_size // 1024} kB")
-        time.sleep(1.5)
+        dest.write_bytes(wm_http.fetch(m["downloadUrl"], timeout=120))
+        print(f"downloaded {owner} #{i}: {dest.stat().st_size // 1024} kB", flush=True)
 
 
 def cmd_build(d):

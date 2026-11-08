@@ -138,10 +138,18 @@ Replace the `planned` placeholder. Shape (see `da-nang`):
 
 1. Add `candidateSources` to `data/destinations/<id>/photo-selection.json`:
    `{"cover": {"cats": ["Category:…"], "search": ["…"], "min_w": 1800, "pre2023": true}, "<location-id>": {…}}`.
-2. Run `python -I tools/commons_candidates.py <id> <scratch-dir> <place> [<place>]`.
-   - Do one or two places per run, because Commons rate-limits.
-   - It writes a numbered contact sheet per place. **Look at it**, and read titles and descriptions
-     in `candidates.json`.
+2. Run `python -I tools/commons_candidates.py <id> <scratch-dir> <place> [<place> …]`.
+   - Options: `--max-files 100` (files inspected per place), `--sheet 30` (previews drawn),
+     `--refresh` (ignore the cache).
+   - All Wikimedia traffic from every session goes through one shared, paced queue
+     (`tools/wm_http.py`), so a run takes seconds, not minutes, and parallel sessions don't trigger
+     rate limits.
+   - Results are cached in `source-assets/commons-cache/`.
+   - **Prefer categories.** For `search`, use precise queries (`intitle:"Con Market"`,
+     `"Chợ Cồn"`, `incategory:"…"`), because free-text words match loosely and bring unrelated
+     files. Results come in relevance order: category files first, then search hits.
+   - It writes a numbered contact sheet per place. **Look at it**, and read titles, descriptions
+     and `from` in `candidates.json`.
 3. Put the chosen file names into `photo-selection.json` (`cover`, `locations.<location-id>`), in
    gallery order: the best photo first.
 4. Run `python -I tools/photos.py <id> meta`. Every line must say `OK`; drop `REJECT` and `MISSING`
