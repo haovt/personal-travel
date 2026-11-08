@@ -141,11 +141,51 @@ not a constraint here. KKL (1998) exteriors would also be fine, but it is not pr
 |---|---|
 | 2026-11-08 | Brief created by the main session. Placeholder `destination.json` exists with `"status": "planned"`. |
 | 2026-11-08 | Stage A research done on branch `dest/luzern`; proposal written above (8 locations, compact bbox, Pilatus as an option). Waiting for owner approval. |
+| 2026-11-08 | **Owner approved** all 8 locations, the compact city map (no Pilatus) and the names "Luzern" / "hồ Luzern". |
+| 2026-11-08 | Local map built: OSM extract 2.1 MB → `assets/maps/luzern.geojson` 247 kB. Inland: whole area is land; Lake Lucerne (relation 1442399, 51 outer ways, all closed) and the Reuss render correctly. |
+| 2026-11-08 | Photos: 27 (3 per place). 24 from Commons; 3 from Flickr (owner approved downloading them through the browser, because Flickr returns HTTP 429 to `photos.py`). Every built photo checked on a contact sheet. |
+| 2026-11-08 | B6 passed at 1440 × 900 and 390 × 844; `status: "published"`. Committed on `dest/luzern` (not pushed, not merged). |
 
 ## Result
 
-_(Stage C: what works, photo counts (target 3 per place), known gaps.)_
+**Published** (`#/thuy-si/luzern`), 8 locations, 27 photos (exactly 3 per place, including the cover).
+
+- **Works (tested at 1440 × 900 and 390 × 844):** world → Thụy Sĩ → Luzern (from the list card) → fly-in
+  and local map fade-in; area lock (dragging can't leave the bbox; min zoom 14.5 on iPhone 13);
+  category chips (e.g. "Ẩm thực" shows the 2 food pins and the list "2 địa điểm"); each location's
+  gallery, thumbnails, full-screen viewer (arrow keys, Esc), credit line and "Xem trên Google Maps";
+  back from location → destination → country (sheet button and top-bar arrow); the credits page lists
+  all Luzern photos, with "chỉ dùng phi thương mại" on the 2 NC Flickr photos. No 404s or console
+  errors after a reload.
+- **Map:** 247 kB. Labels: "Hồ Luzern", "Sông Reuss" and the OSM suburb "Reussbühl".
+- **Photos per place:** cover 3, Kapellbrücke 3, Löwendenkmal 3, Spreuerbrücke 3, Musegg 3, phố cổ 3,
+  du thuyền 3, Chügelipastete 3, sô-cô-la 3.
+  - Chügelipastete: all 3 tagged "Ảnh minh họa" (none was taken at Wirtshaus Galliker): one plated
+    dish (Commons), one home-made (Flickr, CC BY-NC-SA 2.0) and one photo of a **replica** pie from an
+    exhibition (Commons, "Nachbildung"); the alt text says "Mô hình".
+  - Sô-cô-la: #1 chocolate counter inside Confiserie Bachmann Luzern (Flickr, CC BY-NC-SA 2.0, taken
+    2006), #2 the Bachmann shop front next to Gübelin (Flickr, CC BY-SA 2.0, 2007, small "eirikso.com"
+    watermark), #3 a chocolate shop in Luzern that isn't Bachmann (Commons, tagged "Ảnh minh họa").
+  - NC photos (remove if the site ever becomes commercial): `luzern-chugelipastete-02`, `luzern-socola-01`.
+- **Known gaps / notes:**
+  - Wirtshaus Galliker has no OSM `check_date`; its own website (read 2026-11-08) shows 2026 hours and
+    the dish. Bachmann's Schwanenplatz shop has check_date 2026-03-05.
+  - The Bachmann shop photos are from 2006–2007; the shop front may look different today.
+  - On iPhone 13 at the lowest zoom the 8 pins sit close together, so only some names are shown until
+    the user zooms in (normal collision handling).
 
 ## Requests for the main session
 
-_(Shared-code bugs or changes you need. Don't edit shared files yourself.)_
+1. **`tools/photos.py` caches originals by position, not by file.** I inserted a Flickr entry at #2 of a
+   place that already had a Commons file cached as `02.jpg`. `download` skipped #2 ("exists") and the
+   old file would have been built under the new photo's credit; the Commons file was also downloaded
+   again as `03.jpg`. I fixed it by hand (deleted the stale `02.jpg`). Suggestion: store the source
+   file name or URL next to each `NN.jpg` (e.g. in `metadata.json`) and re-download when it differs,
+   or warn.
+2. **`.claude/launch.json` hardcodes port 5520 in `runtimeArgs`.** With several worktrees, another
+   session's server already held 5520, so `preview_start` "moved" to 5521 while python still bound
+   5520 and served the other worktree. I served this worktree with a temporary
+   `python -m http.server 5531` instead (I couldn't edit the shared file). Suggestion: one entry per
+   worktree port, or a launcher that reads the port from the environment.
+3. **Playbook B4b:** Chrome blocks a second script-triggered download from the same site; clicking
+   Flickr's own "Download the Large 2048 size" link on the `/sizes/k/` page works. Worth a line in B4b.

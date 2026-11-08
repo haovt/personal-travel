@@ -2,7 +2,77 @@
   "id": "luzern",
   "countryId": "thuy-si",
   "name": "Luzern",
+  "type": "city",
   "region": null,
-  "status": "planned",
-  "_note": "Placeholder. Owned by the session in docs/sessions/luzern.md, which fills this in and sets status to \"published\"."
+  "status": "published",
+  "coordinates": {
+    "lat": 47.0523,
+    "lon": 8.3059,
+    "source": "https://www.wikidata.org/wiki/Q4191"
+  },
+  "bounds": [
+    [
+      47.03,
+      8.27
+    ],
+    [
+      47.07,
+      8.345
+    ]
+  ],
+  "initialView": [
+    [
+      47.047,
+      8.296
+    ],
+    [
+      47.061,
+      8.318
+    ]
+  ],
+  "mapData": "assets/maps/luzern.geojson",
+  "mapAttribution": "© <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>",
+  "mapLabels": [
+    {
+      "text": "Hồ Luzern",
+      "kind": "water",
+      "lat": 47.0522,
+      "lon": 8.3165
+    },
+    {
+      "text": "Sông Reuss",
+      "kind": "water",
+      "lat": 47.0545,
+      "lon": 8.2965
+    }
+  ],
+  "summary": "Thành phố bên hồ Luzern, nơi sông Reuss chảy qua phố cổ với những cây cầu gỗ có mái che, nhìn ra núi Pilatus và Rigi.",
+  "images": [
+    {
+      "photo": "luzern-01",
+      "alt": "Phố cổ Luzern bên sông Reuss nhìn từ trên đồi, xa xa là hồ Luzern"
+    },
+    {
+      "photo": "luzern-02",
+      "alt": "Thành phố Luzern dưới bầu trời xanh, phía sau là núi Pilatus"
+    },
+    {
+      "photo": "luzern-03",
+      "alt": "Bờ hồ Luzern với hai tháp nhọn của nhà thờ Hofkirche"
+    }
+  ],
+  "locationIds": [
+    "luzern-kapellbrucke",
+    "luzern-lowendenkmal",
+    "luzern-spreuerbrucke",
+    "luzern-museggmauer",
+    "luzern-pho-co",
+    "luzern-du-thuyen",
+    "luzern-chugelipastete",
+    "luzern-socola"
+  ],
+  "sources": [
+    "https://www.wikidata.org/wiki/Q4191",
+    "https://en.wikipedia.org/wiki/Lucerne"
+  ]
 }
