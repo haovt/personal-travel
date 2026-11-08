@@ -337,8 +337,8 @@ Deviations from the proposal:
   - If Commons can't supply 3, use the approved extra sources below (Flickr, Unsplash, Pexels)
     before accepting fewer. Never pad with unrelated photos.
   - This replaces the earlier "≥ 5 per destination" and "up to 10" rules. Đà Nẵng's existing
-    10-photo galleries (Mỹ Khê, Ngũ Hành Sơn, Bà Nà) were already downloaded and stay unless the
-    owner asks to trim them.
+    10-photo galleries (Mỹ Khê, Ngũ Hành Sơn, Bà Nà) were already downloaded and stay as they are
+    (owner confirmed 2026-11-08).
 - **Approved photo sources (owner, 2026-11-08):**
   1. **Wikimedia Commons** first: CC0, public domain, CC BY, CC BY-SA.
   2. **Flickr**, when Commons can't meet a minimum or a much better photo exists. Licences:
