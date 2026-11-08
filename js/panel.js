@@ -138,7 +138,8 @@ export function createPanel(data, handlers) {
           const img = dests.map((d) => data.imagesOf(d)[0]).find(Boolean);
           return `
           <li>
-            <button type="button" class="dest-card" data-country="${escapeHtml(c.id)}">
+            <button type="button" class="dest-card" data-country="${escapeHtml(c.id)}"
+              aria-label="${escapeHtml(`${c.name}, ${dests.length ? `${dests.length} điểm đến` : 'Đang chuẩn bị'}`)}">
               ${thumbHtml(img, null)}
               <span class="dest-card__body">
                 <span class="dest-card__name">${escapeHtml(c.name)}</span>
@@ -178,7 +179,8 @@ export function createPanel(data, handlers) {
       <ul class="dest-list peek">
         ${published.map((d) => `
           <li>
-            <button type="button" class="dest-card" data-id="${escapeHtml(d.id)}" data-region="${escapeHtml(d.region || '')}">
+            <button type="button" class="dest-card" data-id="${escapeHtml(d.id)}" data-region="${escapeHtml(d.region || '')}"
+              aria-label="${escapeHtml(`${d.name}, ${data.regionById(country.id, d.region)?.name ?? country.name}`)}">
               ${thumbHtml(data.imagesOf(d)[0], null)}
               <span class="dest-card__body">
                 <span class="dest-card__name">${escapeHtml(d.name)}</span>
@@ -230,7 +232,8 @@ export function createPanel(data, handlers) {
                const cat = data.categoryById(loc.category);
                return `
                <li>
-                 <button type="button" class="dest-card loc-card" data-id="${escapeHtml(loc.id)}">
+                 <button type="button" class="dest-card loc-card" data-id="${escapeHtml(loc.id)}"
+                   aria-label="${escapeHtml([loc.name, cat?.name, loc.venue?.name].filter(Boolean).join(', '))}">
                    ${thumbHtml(data.imagesOf(loc)[0], cat?.color ?? '#5f6368')}
                    <span class="dest-card__body">
                      <span class="dest-card__name">${escapeHtml(loc.name)}</span>

@@ -200,3 +200,4 @@ with photos of how it looks now, then add older photos.
    (`read_page` shows them unnamed); an `aria-label` with the destination name would help screen readers.
 7. Status of 1–4: fixed on main (2026-11-08) and confirmed here: rebuild without workaround, no NaN error on first
    fly-in.
+8. Status of 5–6: fixed on main (2026-11-08): nearby pins are spread apart on the country map, and list cards have an `aria-label`.
