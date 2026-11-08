@@ -1,0 +1,8 @@
+{
+  "id": "vinh-ha-long",
+  "countryId": "viet-nam",
+  "name": "Vịnh Hạ Long",
+  "region": "bac",
+  "status": "planned",
+  "_note": "Placeholder. Owned by the session in docs/sessions/vinh-ha-long.md, which fills this in and sets status to \"published\"."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "can-gio",
+  "countryId": "viet-nam",
+  "name": "Cần Giờ",
+  "region": "nam",
+  "status": "planned",
+  "_note": "Placeholder. Owned by the session in docs/sessions/can-gio.md, which fills this in and sets status to \"published\"."
+}

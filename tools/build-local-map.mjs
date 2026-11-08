@@ -2,12 +2,18 @@
 // Converts a one-time OpenStreetMap Overpass extract into a compact GeoJSON for a destination's
 // local map, styled at runtime like a flat road map.
 //
-// Usage: node tools/build-local-map.mjs da-nang
-// Input:  source-assets/osm/<id>-raw.json   (Overpass "out geom" result, see query.overpassql)
-// Output: assets/maps/<id>.geojson
+// Usage:
+//   node tools/build-local-map.mjs <destination-id> fetch   # one Overpass download -> source-assets/osm/<id>-raw.json
+//   node tools/build-local-map.mjs <destination-id> build   # -> assets/maps/<id>.geojson
+//
+// Settings: data/destinations/<id>/map-config.json
+//   bbox        [minLon, minLat, maxLon, maxLat]  area of the local map (= destination "bounds")
+//   coreBbox    [minLon, minLat, maxLon, maxLat]  optional: also include residential streets here
+//   riverLabels ["Sông …", …]                     optional: named rivers/lakes to label
 //
 // Data © OpenStreetMap contributors, ODbL 1.0 (https://www.openstreetmap.org/copyright).
-// The output is a derived database and stays under ODbL.
+// The output is a derived database and stays under ODbL. Download once per destination; do not
+// re-fetch repeatedly (Overpass is a shared free service).
 //
 // Feature property "k" (kind): land | water | river | green | reserve | airport | road | label
 //   road:  "c" = class (motorway, trunk, primary, secondary, tertiary, link, minor)
@@ -16,20 +22,47 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const CONFIG = {
-  'da-nang': {
-    bbox: [107.95, 15.97, 108.33, 16.17], // [minLon, minLat, maxLon, maxLat]
-    riverLabels: ['Sông Hàn', 'Sông Cẩm Lệ', 'Sông Cu Đê', 'Sông Vĩnh Điện'],
-  },
-};
-
-const id = process.argv[2];
-if (!CONFIG[id]) { console.error('Unknown destination id. Known:', Object.keys(CONFIG).join(', ')); process.exit(1); }
-const { bbox, riverLabels } = CONFIG[id];
-
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
-const raw = JSON.parse(fs.readFileSync(path.join(root, `source-assets/osm/${id}-raw.json`), 'utf8'));
+const [id, mode = 'build'] = process.argv.slice(2);
+const configPath = path.join(root, `data/destinations/${id}/map-config.json`);
+if (!id || !fs.existsSync(configPath) || !['fetch', 'build'].includes(mode)) {
+  console.error('Usage: node tools/build-local-map.mjs <destination-id> fetch|build  (needs data/destinations/<id>/map-config.json)');
+  process.exit(1);
+}
+const { bbox, coreBbox, riverLabels = [] } = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+const rawPath = path.join(root, `source-assets/osm/${id}-raw.json`);
 const output = path.join(root, `assets/maps/${id}.geojson`);
+
+if (mode === 'fetch') {
+  const b = (x) => `${x[1]},${x[0]},${x[3]},${x[2]}`; // Overpass wants south,west,north,east
+  const query = `[out:json][timeout:180][bbox:${b(bbox)}];
+(
+  way["natural"="coastline"];
+  way["highway"~"^(motorway|trunk|primary|secondary|tertiary|motorway_link|trunk_link|primary_link|secondary_link)$"];
+  way["natural"="water"]; relation["natural"="water"];
+  way["waterway"="riverbank"]; way["waterway"="river"];
+  way["leisure"="park"]; way["landuse"="forest"]; relation["landuse"="forest"];
+  way["natural"="wood"]; relation["natural"="wood"]; relation["boundary"="protected_area"];
+  way["aeroway"="aerodrome"]; relation["aeroway"="aerodrome"];
+  node["place"~"^(suburb|quarter|island|islet)$"]; node["natural"="peak"]["name"];
+  ${coreBbox ? `way["highway"~"^(residential|unclassified|living_street)$"](${b(coreBbox)});` : ''}
+);
+out geom;`;
+  fs.mkdirSync(path.dirname(rawPath), { recursive: true });
+  fs.writeFileSync(rawPath.replace(/-raw\.json$/, '-query.overpassql'), query);
+  console.log('Querying Overpass (this can take a minute)…');
+  const res = await fetch('https://overpass-api.de/api/interpreter', {
+    method: 'POST',
+    headers: { 'User-Agent': 'LocalLiveTravel/0.1 (personal non-commercial project)', 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'data=' + encodeURIComponent(query),
+  });
+  if (!res.ok) { console.error('Overpass error', res.status, (await res.text()).slice(0, 300)); process.exit(1); }
+  fs.writeFileSync(rawPath, await res.text());
+  console.log(`saved ${path.relative(root, rawPath)} (${(fs.statSync(rawPath).size / 1e6).toFixed(1)} MB)`);
+  process.exit(0);
+}
+
+const raw = JSON.parse(fs.readFileSync(rawPath, 'utf8'));
 
 const [minX, minY, maxX, maxY] = bbox;
 const W = maxX - minX, H = maxY - minY;

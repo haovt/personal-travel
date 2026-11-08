@@ -77,17 +77,24 @@ export function createPanel(data, handlers) {
     else handlers.onCategory(next);
   });
 
+  let currentCountry = null;
+
   function setRegion(regionId) {
     chipValue = regionId;
     if (chipMode === 'region') renderChips();
-    content.querySelectorAll('.dest-card').forEach((card) => {
+    content.querySelectorAll('.dest-card[data-region]').forEach((card) => {
       card.classList.toggle('is-dimmed', regionId != null && card.dataset.region !== regionId);
     });
     const empty = content.querySelector('[data-empty-region]');
-    if (empty) {
-      const hasAny = data.destinations.some((d) => d.status === 'published' && (regionId == null || d.region === regionId));
+    if (empty && currentCountry) {
+      const published = data.destinationsOf(currentCountry).filter((d) => d.status === 'published');
+      const hasAny = published.some((d) => regionId == null || d.region === regionId);
       empty.hidden = hasAny;
-      if (!hasAny) empty.textContent = `${data.regionById(regionId).name} chưa có điểm đến trong phiên bản này.`;
+      if (!hasAny) {
+        empty.textContent = regionId == null
+          ? 'Các điểm đến đang được chuẩn bị.'
+          : `${data.regionById(currentCountry.id, regionId)?.name ?? ''} chưa có điểm đến trong phiên bản này.`;
+      }
     }
   }
 
@@ -112,34 +119,70 @@ export function createPanel(data, handlers) {
     closeViewer();
   }
 
-  function showCountry(regionId) {
+  // First level: pick a country.
+  function showWorld() {
     setMode('list');
-    titleEl.textContent = 'Khám phá Việt Nam';
+    currentCountry = null;
+    titleEl.textContent = 'Tập bản đồ du lịch';
     backBtn.hidden = true;
-    backBtn.setAttribute('aria-label', 'Quay lại');
-    chipsEl.hidden = false;
+    chipsEl.hidden = true;
+    setCollapsed(false);
+    content.innerHTML = `
+      <div class="sheet__peek peek">
+        <p class="eyebrow">Tập bản đồ du lịch</p>
+        <h2>Bạn muốn khám phá nơi nào?</h2>
+      </div>
+      <ul class="dest-list peek">
+        ${data.countries.map((c) => {
+          const dests = data.destinationsOf(c).filter((d) => d.status === 'published');
+          const img = dests.map((d) => data.imagesOf(d)[0]).find(Boolean);
+          return `
+          <li>
+            <button type="button" class="dest-card" data-country="${escapeHtml(c.id)}">
+              ${thumbHtml(img, null)}
+              <span class="dest-card__body">
+                <span class="dest-card__name">${escapeHtml(c.name)}</span>
+                <span class="dest-card__meta">${dests.length ? `${dests.length} điểm đến` : 'Đang chuẩn bị'}</span>
+              </span>
+              ${CHEVRON}
+            </button>
+          </li>`;
+        }).join('')}
+      </ul>
+      <p class="fine-print"><a href="#/nguon-anh">Nguồn ảnh &amp; bản quyền</a></p>`;
+    content.querySelectorAll('[data-country]').forEach((btn) =>
+      btn.addEventListener('click', () => handlers.onSelectCountry(btn.dataset.country)));
+  }
+
+  function showCountry(country, regionId) {
+    setMode('list');
+    currentCountry = country;
+    titleEl.textContent = country.title;
+    backBtn.hidden = false;
+    backBtn.setAttribute('aria-label', 'Quay lại chọn quốc gia');
     chipMode = 'region';
-    chipItems = data.regions;
+    chipItems = country.regions || [];
+    chipsEl.hidden = chipItems.length === 0;
     chipValue = regionId ?? null;
     renderChips();
     setCollapsed(phonePortrait.matches);
 
-    const published = data.destinations.filter((d) => d.status === 'published');
+    const published = data.destinationsOf(country).filter((d) => d.status === 'published');
     content.innerHTML = `
       <div class="sheet__peek peek">
-        <p class="eyebrow">Tập bản đồ du lịch</p>
-        <h2>Hành trình qua dải đất hình chữ S</h2>
+        <p class="eyebrow">${escapeHtml(country.eyebrow || '')}</p>
+        <h2>${escapeHtml(country.heading || country.name)}</h2>
       </div>
-      <p class="lead">Chọn một điểm đến trên bản đồ để phóng to và khám phá địa danh, ẩm thực, văn hóa của từng vùng đất qua những bức ảnh thật.</p>
+      <p class="lead">${escapeHtml(country.intro || '')}</p>
       <h3 class="section-title peek">Điểm đến</h3>
       <ul class="dest-list peek">
         ${published.map((d) => `
           <li>
-            <button type="button" class="dest-card" data-id="${escapeHtml(d.id)}" data-region="${escapeHtml(d.region)}">
+            <button type="button" class="dest-card" data-id="${escapeHtml(d.id)}" data-region="${escapeHtml(d.region || '')}">
               ${thumbHtml(data.imagesOf(d)[0], null)}
               <span class="dest-card__body">
                 <span class="dest-card__name">${escapeHtml(d.name)}</span>
-                <span class="dest-card__meta">${escapeHtml(data.regionById(d.region)?.name ?? '')}</span>
+                <span class="dest-card__meta">${escapeHtml(data.regionById(country.id, d.region)?.name ?? country.name)}</span>
               </span>
               ${CHEVRON}
             </button>
@@ -147,16 +190,17 @@ export function createPanel(data, handlers) {
       </ul>
       <p class="notice peek" data-empty-region hidden></p>
       <p class="fine-print"><a href="#/nguon-anh">Nguồn ảnh &amp; bản quyền</a></p>`;
-    content.querySelectorAll('.dest-card').forEach((btn) =>
+    content.querySelectorAll('.dest-card[data-id]').forEach((btn) =>
       btn.addEventListener('click', () => handlers.onSelectDestination(btn.dataset.id)));
     setRegion(chipValue);
   }
 
   function showDestination(dest, { categoryId, matches, collapse }) {
     setMode('list');
+    const country = data.countryById(dest.countryId);
     titleEl.textContent = dest.name;
     backBtn.hidden = false;
-    backBtn.setAttribute('aria-label', 'Quay lại bản đồ Việt Nam');
+    backBtn.setAttribute('aria-label', `Quay lại bản đồ ${country?.name ?? ''}`);
     const locations = data.locationsFor(dest);
 
     // Category chips: only the categories this destination has.
@@ -168,7 +212,7 @@ export function createPanel(data, handlers) {
     renderChips();
     setCollapsed(collapse ?? phonePortrait.matches);
 
-    const region = data.regionById(dest.region);
+    const region = data.regionById(dest.countryId, dest.region);
     const destImages = data.imagesOf(dest);
     content.innerHTML = `
       ${galleryHtml(destImages, { sizes: SHEET_IMG_SIZES, label: `Ảnh ${dest.name}` })}
@@ -197,7 +241,7 @@ export function createPanel(data, handlers) {
                </li>`;
              }).join('')}
            </ul>`}
-      <button type="button" class="btn" data-back>${ARROW_BACK}Quay lại bản đồ Việt Nam</button>`;
+      <button type="button" class="btn" data-back>${ARROW_BACK}Quay lại bản đồ ${escapeHtml(country?.name ?? "")}</button>`;
     content.querySelector('[data-back]').addEventListener('click', () => handlers.onBackToCountry());
     content.querySelectorAll('.loc-card').forEach((btn) =>
       btn.addEventListener('click', () => handlers.onSelectLocation(btn.dataset.id)));
@@ -241,5 +285,5 @@ export function createPanel(data, handlers) {
     initGallery(content, images);
   }
 
-  return { showCountry, showDestination, showLocation, setRegion, setCategory };
+  return { showWorld, showCountry, showDestination, showLocation, setRegion, setCategory };
 }

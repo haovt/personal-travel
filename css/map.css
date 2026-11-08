@@ -125,6 +125,15 @@
 .map.is-local .leaflet-localLabels-pane { opacity: 1; }
 .map.is-local .leaflet-country-pane { opacity: 0; }
 
+/* World level ⇄ country level: the faint world land and the country pins fade out inside a
+   country; the country outline, its labels and destination pins fade out at world level. */
+.leaflet-world-pane { transition: opacity .6s ease; }
+.map:not(.level-world) .leaflet-world-pane { opacity: 0; }
+.map.level-world .leaflet-country-pane { opacity: 0; }
+.map.level-world .layer-country-label { opacity: 0; pointer-events: none; }
+.world-pin { transition: opacity .5s ease; }
+.map:not(.level-world) .world-pin { opacity: 0; pointer-events: none; }
+
 /* Country-level labels and pins hide when zoomed into a destination. */
 .map.is-local .layer-country-label { opacity: 0; pointer-events: none; }
 .layer-country-label { transition: opacity .5s ease; }

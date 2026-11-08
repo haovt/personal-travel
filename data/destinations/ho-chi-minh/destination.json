@@ -1,0 +1,15 @@
+{
+  "id": "ho-chi-minh",
+  "countryId": "viet-nam",
+  "name": "TP. Hồ Chí Minh",
+  "type": "city",
+  "region": "nam",
+  "status": "reference",
+  "coordinates": {
+    "lat": 10.77556,
+    "lon": 106.70194,
+    "source": "https://www.wikidata.org/wiki/Q1854"
+  },
+  "summary": "",
+  "locationIds": []
+}

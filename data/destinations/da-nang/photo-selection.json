@@ -1,11 +1,9 @@
 {
-  "_note": "Wikimedia Commons files approved in Phase 0 (docs/phase-0-proposal.md, section 5.1). Order = gallery order. Used by tools/photos.py.",
-  "destinations": {
-    "da-nang": [
-      "Han_River_in_Da_Nang_at_sunrise.jpg",
-      "Da_Nang_and_the_Son_Tra_Peninsula.jpg"
-    ]
-  },
+  "_note": "Wikimedia Commons files for this destination. Order = gallery order. Used by: python -I tools/photos.py da-nang meta|download|build",
+  "cover": [
+    "Han_River_in_Da_Nang_at_sunrise.jpg",
+    "Da_Nang_and_the_Son_Tra_Peninsula.jpg"
+  ],
   "locations": {
     "cau-rong": [
       "Remote_view_of_the_Dragon_Bridge_in_Da_Nang.jpg",
@@ -71,5 +69,74 @@
       "Bun_cha_ca.jpg",
       "Bún_chả_cá,_tháng_8_năm_2018.JPG"
     ]
+  },
+  "candidateSources": {
+    "bai-bien-my-khe": {
+      "cats": [
+        "Category:My Khe Beach"
+      ],
+      "min_w": 1600
+    },
+    "ngu-hanh-son": {
+      "cats": [
+        "Category:Ngũ Hành Sơn",
+        "Category:Thuy Son",
+        "Category:Views from Thuy Son",
+        "Category:Huyen Khong Cave",
+        "Category:Pagodas in the Marble Mountains"
+      ],
+      "min_w": 1600
+    },
+    "ba-na-cau-vang": {
+      "cats": [
+        "Category:Ba Na Hills",
+        "Category:Golden Bridge (Vietnam)",
+        "Category:Ba Na Hills Cable Car"
+      ],
+      "min_w": 1600,
+      "pre2023": true
+    },
+    "cho-con": {
+      "cats": [
+        "Category:Con Market"
+      ],
+      "search": [
+        "Chợ Cồn Đà Nẵng",
+        "Con market Da Nang"
+      ],
+      "min_w": 1200
+    },
+    "mi-quang": {
+      "cats": [
+        "Category:Mì quảng"
+      ],
+      "search": [
+        "Mì Quảng"
+      ],
+      "min_w": 1200
+    },
+    "bun-cha-ca": {
+      "search": [
+        "bún chả cá",
+        "bun cha ca",
+        "fish cake noodle soup Vietnam"
+      ],
+      "min_w": 1200
+    },
+    "cover": {
+      "cats": [
+        "Category:Skylines of Da Nang",
+        "Category:Han River (Vietnam)",
+        "Category:Views of Da Nang",
+        "Category:Da Nang at night"
+      ],
+      "search": [
+        "Da Nang skyline",
+        "Da Nang city view",
+        "Đà Nẵng toàn cảnh"
+      ],
+      "min_w": 1800,
+      "pre2023": true
+    }
   }
 }

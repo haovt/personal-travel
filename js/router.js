@@ -1,27 +1,42 @@
 // Hash-based routing. Works on any static host (GitHub Pages needs no rewrite rules) and keeps
 // browser back / iPhone swipe-back meaningful.
 //
-//   #/                         Vietnam overview
-//   #/<destinationId>          destination local map
-//   #/<destinationId>/<locId>  location detail (Phase 3)
+//   #/                                  world (pick a country)
+//   #/<countryId>                       country overview map
+//   #/<countryId>/<destinationId>       destination local map
+//   #/<countryId>/<destinationId>/<locationId>   location detail
+//   #/nguon-anh                         credits page (overlay)
 
-export const CREDITS_SLUG = 'nguon-anh';   // #/nguon-anh — reserved, not a destination id
+export const CREDITS_SLUG = 'nguon-anh';   // reserved, never a country id
 
 export function parseHash(hash = location.hash) {
   const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
-  if (parts.length === 0) return { view: 'country' };
+  if (parts.length === 0) return { view: 'world' };
   if (parts[0] === CREDITS_SLUG) return { view: 'credits' };
-  if (parts.length === 1) return { view: 'destination', destinationId: parts[0] };
-  return { view: 'location', destinationId: parts[0], locationId: parts[1] };
+  const [countryId, destinationId, locationId] = parts;
+  if (!destinationId) return { view: 'country', countryId };
+  if (!locationId) return { view: 'destination', countryId, destinationId };
+  return { view: 'location', countryId, destinationId, locationId };
 }
 
-export function hrefFor(route) {
-  if (route.view === 'credits') return `#/${CREDITS_SLUG}`;
-  if (route.view === 'destination') return `#/${encodeURIComponent(route.destinationId)}`;
-  if (route.view === 'location') {
-    return `#/${encodeURIComponent(route.destinationId)}/${encodeURIComponent(route.locationId)}`;
+export function hrefFor(r) {
+  const e = encodeURIComponent;
+  switch (r.view) {
+    case 'credits': return `#/${CREDITS_SLUG}`;
+    case 'country': return `#/${e(r.countryId)}`;
+    case 'destination': return `#/${e(r.countryId)}/${e(r.destinationId)}`;
+    case 'location': return `#/${e(r.countryId)}/${e(r.destinationId)}/${e(r.locationId)}`;
+    default: return '#/';
   }
-  return '#/';
+}
+
+// The level above a route (used by "back" when there is no in-app history).
+export function parentOf(r) {
+  switch (r?.view) {
+    case 'location': return { view: 'destination', countryId: r.countryId, destinationId: r.destinationId };
+    case 'destination': return { view: 'country', countryId: r.countryId };
+    default: return { view: 'world' };
+  }
 }
 
 let internalNavigations = 0;
@@ -44,7 +59,7 @@ export function navigate(route, { replace = false } = {}) {
 }
 
 // "Back" inside the app: use browser history when we navigated here ourselves,
-// otherwise (deep link) go to the parent level.
+// otherwise (deep link) go to the given parent level.
 export function goBack(parentRoute) {
   if (internalNavigations > 0) {
     internalNavigations--;

@@ -1,0 +1,8 @@
+{
+  "id": "da-lat",
+  "countryId": "viet-nam",
+  "name": "Đà Lạt",
+  "region": "nam",
+  "status": "planned",
+  "_note": "Placeholder. Owned by the session in docs/sessions/da-lat.md, which fills this in and sets status to \"published\"."
+}

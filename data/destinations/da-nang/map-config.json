@@ -1,0 +1,21 @@
+{
+  "_note": "Local map extract settings. Used by: node tools/build-local-map.mjs da-nang fetch|build",
+  "bbox": [
+    107.95,
+    15.97,
+    108.33,
+    16.17
+  ],
+  "coreBbox": [
+    108.19,
+    16.03,
+    108.26,
+    16.09
+  ],
+  "riverLabels": [
+    "Sông Hàn",
+    "Sông Cẩm Lệ",
+    "Sông Cu Đê",
+    "Sông Vĩnh Điện"
+  ]
+}

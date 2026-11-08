@@ -7,8 +7,8 @@ const OTHER_CREDITS = [
   {
     title: 'Dữ liệu bản đồ',
     items: [
-      { name: 'Bản đồ Việt Nam', by: 'Natural Earth', license: 'Phạm vi công cộng', url: 'https://www.naturalearthdata.com/' },
-      { name: 'Bản đồ chi tiết Đà Nẵng', by: '© Những người đóng góp OpenStreetMap', license: 'ODbL 1.0', url: 'https://www.openstreetmap.org/copyright' },
+      { name: 'Bản đồ thế giới và các quốc gia', by: 'Natural Earth', license: 'Phạm vi công cộng', url: 'https://www.naturalearthdata.com/' },
+      { name: 'Bản đồ chi tiết các điểm đến', by: '© Những người đóng góp OpenStreetMap', license: 'ODbL 1.0', url: 'https://www.openstreetmap.org/copyright' },
     ],
   },
   {

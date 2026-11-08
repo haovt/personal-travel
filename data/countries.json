@@ -1,0 +1,125 @@
+[
+  {
+    "id": "viet-nam",
+    "name": "Việt Nam",
+    "adm0": "VNM",
+    "status": "published",
+    "coordinates": {
+      "lat": 16,
+      "lon": 108,
+      "source": "https://www.wikidata.org/wiki/Q881"
+    },
+    "bounds": [
+      [
+        8.4,
+        102.1
+      ],
+      [
+        23.4,
+        116
+      ]
+    ],
+    "mapData": "assets/maps/country-viet-nam.geojson",
+    "title": "Khám phá Việt Nam",
+    "eyebrow": "Tập bản đồ du lịch",
+    "heading": "Hành trình qua dải đất hình chữ S",
+    "intro": "Chọn một điểm đến trên bản đồ để phóng to và khám phá địa danh, ẩm thực, văn hóa của từng vùng đất qua những bức ảnh thật.",
+    "regions": [
+      {
+        "id": "bac",
+        "name": "Miền Bắc"
+      },
+      {
+        "id": "trung",
+        "name": "Miền Trung"
+      },
+      {
+        "id": "nam",
+        "name": "Miền Nam"
+      }
+    ],
+    "mapLabels": [
+      {
+        "text": "Biển Đông",
+        "kind": "sea",
+        "lat": 13.2,
+        "lon": 112.6
+      },
+      {
+        "text": "Vịnh Bắc Bộ",
+        "kind": "sea",
+        "lat": 20.2,
+        "lon": 107.7
+      },
+      {
+        "text": "Vịnh Thái Lan",
+        "kind": "sea",
+        "lat": 9.1,
+        "lon": 103.3
+      },
+      {
+        "text": "Quần đảo Hoàng Sa",
+        "kind": "islands",
+        "group": "hoang-sa",
+        "offset": [
+          0,
+          22
+        ]
+      },
+      {
+        "text": "Quần đảo Trường Sa",
+        "kind": "islands",
+        "group": "truong-sa",
+        "offset": [
+          0,
+          26
+        ]
+      }
+    ],
+    "destinations": [
+      "da-nang",
+      "ha-noi",
+      "ho-chi-minh",
+      "hoi-an",
+      "vinh-ha-long",
+      "ninh-binh",
+      "da-lat",
+      "nha-trang",
+      "vung-tau",
+      "can-gio"
+    ]
+  },
+  {
+    "id": "thuy-si",
+    "name": "Thụy Sĩ",
+    "adm0": "CHE",
+    "status": "published",
+    "coordinates": {
+      "lat": 46.79856,
+      "lon": 8.23197,
+      "source": "https://www.wikidata.org/wiki/Q39"
+    },
+    "bounds": [
+      [
+        45.82,
+        5.95
+      ],
+      [
+        47.81,
+        10.47
+      ]
+    ],
+    "mapData": "assets/maps/country-thuy-si.geojson",
+    "title": "Khám phá Thụy Sĩ",
+    "eyebrow": "Tập bản đồ du lịch",
+    "heading": "Giữa núi tuyết và hồ xanh",
+    "intro": "Chọn một điểm đến trên bản đồ để khám phá thành phố, hồ nước và núi non Thụy Sĩ qua những bức ảnh thật.",
+    "regions": [],
+    "mapLabels": [],
+    "destinations": [
+      "zurich",
+      "luzern",
+      "montreux"
+    ]
+  }
+]

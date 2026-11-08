@@ -1,12 +1,14 @@
-// Entry point: loads data, creates the shared map, wires routing, the panel and both map levels.
+// Entry point: loads data, creates the shared map, wires routing, the panel and the map levels:
+//   world → country → destination (local map) → location (detail)
 /* global L */
 
 import { loadData, getJSON } from './data.js';
-import { parseHash, navigate, goBack, onRouteChange } from './router.js';
+import { parseHash, parentOf, navigate, goBack, onRouteChange } from './router.js';
 import {
-  createMap, viewPadding, prefersReducedMotion, centerForVisible, createAreaLock, VIETNAM_BOUNDS,
+  createMap, viewPadding, prefersReducedMotion, centerForVisible, createAreaLock, WORLD_BOUNDS,
 } from './map-core.js';
-import { createVietnamLayer } from './vietnam-map.js';
+import { createWorldLayer } from './world-map.js';
+import { createCountryLayer } from './country-map.js';
 import { createLocalLayer } from './local-map.js';
 import { createPanel } from './panel.js';
 import { createOffscreenHints } from './offscreen-hints.js';
@@ -14,6 +16,7 @@ import { createCreditsPage } from './credits.js';
 
 const REGIONAL_ZOOM = 7.5;   // used when a destination has no local map yet
 const LOCATION_ZOOM = 15;
+const SITE_TITLE = 'Tập bản đồ du lịch';
 
 // ---------- small session store (survives reloads in the same tab) ----------
 const store = {
@@ -31,9 +34,48 @@ async function main() {
 
   const animate = () => !prefersReducedMotion();
   const flyBoundsOpts = (duration) => ({ ...viewPadding(), animate: animate(), duration, easeLinearity: 0.2 });
+  const saveView = (key) => store.set(key, { center: map.getCenter(), zoom: map.getZoom() });
+  const afterLanding = (fn) => { if (animate()) map.once('moveend', fn); else setTimeout(fn, 0); };
 
-  // ---------- local layers (one per destination, created on first use) ----------
-  const localLayers = new Map();   // id -> Promise<layer|null>
+  let route = null;
+
+  // ---------- level class on the map container (drives pane cross-fades in map.css) ----------
+  let level = null;
+  function setLevel(next) {
+    level = next;
+    mapEl.classList.toggle('level-world', next === 'world');
+    mapEl.classList.toggle('level-country', next === 'country');
+  }
+
+  // ---------- world layer (lazy) ----------
+  let worldPromise = null;
+  const loadWorld = () => (worldPromise ||= getJSON('assets/maps/world.geojson')
+    .then((geo) => createWorldLayer(map, data, geo, {
+      onSelectCountry: (id) => navigate({ view: 'country', countryId: id }),
+    })));
+
+  // ---------- country layers (one per country, lazy) ----------
+  const countryLayers = new Map();
+  let activeCountry = null;
+  function loadCountry(country) {
+    if (!countryLayers.has(country.id)) {
+      countryLayers.set(country.id, getJSON(country.mapData).then((geo) => createCountryLayer(map, data, country, geo, {
+        onSelectDestination: (id) => navigate({ view: 'destination', countryId: country.id, destinationId: id }),
+      })));
+    }
+    return countryLayers.get(country.id);
+  }
+  async function activateCountry(country) {
+    const layer = await loadCountry(country);
+    if (activeCountry && activeCountry !== layer) activeCountry.hide();
+    activeCountry = layer;
+    layer.show();
+    layer.setRegion(store.get(`region:${country.id}`) ?? null);
+    return layer;
+  }
+
+  // ---------- local layers (one per destination, lazy) ----------
+  const localLayers = new Map();
   let activeLocal = null;          // { dest, layer }
 
   function loadLocal(dest) {
@@ -41,7 +83,7 @@ async function main() {
     if (!localLayers.has(dest.id)) {
       localLayers.set(dest.id, getJSON(dest.mapData)
         .then((geo) => createLocalLayer(map, data, dest, geo, {
-          onSelectLocation: (id) => navigate({ view: 'location', destinationId: dest.id, locationId: id }),
+          onSelectLocation: (id) => navigate({ view: 'location', countryId: dest.countryId, destinationId: dest.id, locationId: id }),
         }))
         .catch((err) => { console.warn('Local map unavailable:', err); return null; }));
     }
@@ -72,15 +114,22 @@ async function main() {
     hints.update();
   }
 
-  // ---------- views ----------
-  function showWholeCountry(withAnimation = true) {
-    if (withAnimation) map.flyToBounds(VIETNAM_BOUNDS, flyBoundsOpts(1.2));
-    else map.fitBounds(VIETNAM_BOUNDS, { ...viewPadding(), animate: false });
+  // Leave a destination: fade its local map out now, remove it after the flight.
+  function leaveLocal() {
+    areaLock.unlock();
+    map.vvSetLocalActive(false);
+    afterLanding(() => { if (route.view === 'world' || route.view === 'country') deactivateLocal(); });
   }
 
-  function showRegion(regionId) {
-    if (regionId == null) return showWholeCountry();
-    const pts = vietnam.regionPoints(regionId);
+  // ---------- camera helpers ----------
+  function showCountryBounds(country, withAnimation = true) {
+    if (withAnimation) map.flyToBounds(country.bounds, flyBoundsOpts(1.4));
+    else map.fitBounds(country.bounds, { ...viewPadding(), animate: false });
+  }
+
+  function showRegion(country, regionId) {
+    if (regionId == null) return showCountryBounds(country);
+    const pts = activeCountry?.regionPoints(regionId) || [];
     if (!pts.length) return;
     map.flyToBounds(L.latLngBounds(pts).pad(0.6), { ...flyBoundsOpts(1), maxZoom: 6 });
   }
@@ -91,19 +140,20 @@ async function main() {
     map.flyTo(centerForVisible(map, latlng, z), z, { animate: animate(), duration });
   }
 
+  // ---------- UI handlers ----------
   const handlers = {
-    onSelectDestination: (id) => navigate({ view: 'destination', destinationId: id }),
-    onSelectLocation: (id) => navigate({ view: 'location', destinationId: route.destinationId, locationId: id }),
-    onBack: () => {
-      if (route.view === 'location') goBack({ view: 'destination', destinationId: route.destinationId });
-      else goBack({ view: 'country' });
-    },
-    onBackToCountry: () => navigate({ view: 'country' }),
+    onSelectCountry: (id) => navigate({ view: 'country', countryId: id }),
+    onSelectDestination: (id) => navigate({ view: 'destination', countryId: route.countryId, destinationId: id }),
+    onSelectLocation: (id) => navigate({ view: 'location', countryId: route.countryId, destinationId: route.destinationId, locationId: id }),
+    onBack: () => goBack(parentOf(route)),
+    onBackToCountry: () => navigate({ view: 'country', countryId: route.countryId }),
+    onBackToWorld: () => navigate({ view: 'world' }),
     onRegion: (regionId) => {
-      store.set('region', regionId);
+      const country = data.countryById(route.countryId);
+      store.set(`region:${country.id}`, regionId);
       panel.setRegion(regionId);
-      vietnam.setRegion(regionId);
-      showRegion(regionId);
+      activeCountry?.setRegion(regionId);
+      showRegion(country, regionId);
     },
     onCategory: (catId) => {
       if (!activeLocal) return;
@@ -131,37 +181,35 @@ async function main() {
     resizeTimer = setTimeout(recenterLocation, 200);
   });
 
-  const vietnam = createVietnamLayer(map, data, handlers);
   const panel = createPanel(data, handlers);
   const hints = createOffscreenHints(map, document.getElementById('offscreen-hints'), {
     getCandidates: () => (activeLocal && route?.view === 'destination' ? activeLocal.layer.visibleLocations() : []),
     onSelect: (loc) => flyToLocation(loc, 1.6),
   });
 
-  let route = null;
-
   // Keep the view inside the destination's map data once a flight has landed there.
   const areaLock = createAreaLock(map);
   function lockWhenLanded(dest) {
     if (areaLock.isLocked()) return;
     map.once('moveend', () => {
-      if (route.view !== 'country' && route.destinationId === dest.id && activeLocal?.dest.id === dest.id) {
+      if ((route.view === 'destination' || route.view === 'location') && route.destinationId === dest.id
+          && activeLocal?.dest.id === dest.id) {
         areaLock.lock(dest.bounds);
       }
     });
   }
 
   // The credits page overlays the map; the map route underneath stays as it was.
-  const credits = createCreditsPage(data, { onBack: () => goBack(route ?? { view: 'country' }) });
+  const credits = createCreditsPage(data, { onBack: () => goBack(route ?? { view: 'world' }) });
   let mapTitle = document.title;
   const setTitle = (t) => { mapTitle = t; document.title = t; };
-  const sameRoute = (a, b) => a && b && a.view === b.view
+  const sameRoute = (a, b) => a && b && a.view === b.view && a.countryId === b.countryId
     && a.destinationId === b.destinationId && a.locationId === b.locationId;
 
   async function render(next) {
     if (next.view === 'credits') {
       credits.show();
-      document.title = 'Nguồn ảnh & bản quyền · Khám phá Việt Nam';
+      document.title = `Nguồn ảnh & bản quyền · ${SITE_TITLE}`;
       return;
     }
     credits.hide();
@@ -169,69 +217,81 @@ async function main() {
     const prev = route;
     route = next;
 
-    // ----- Level 1: Vietnam -----
+    // ----- World -----
+    if (next.view === 'world') {
+      panel.showWorld();
+      setTitle(SITE_TITLE);
+      if (prev && prev.view !== 'country') leaveLocal();
+      if (prev?.view === 'country') saveView(`country-view:${prev.countryId}`);
+      setLevel('world');
+      const world = await loadWorld();
+      world.show();
+      // Always frame all countries (a saved view may come from another screen size).
+      if (!prev) map.fitBounds(WORLD_BOUNDS, { ...viewPadding(), animate: false });
+      else map.flyToBounds(WORLD_BOUNDS, flyBoundsOpts(1.6));
+      afterLanding(() => { if (route.view === 'world') { deactivateLocal(); activeCountry?.hide(); activeCountry = null; } });
+      return;
+    }
+
+    const country = data.countryById(next.countryId);
+    if (!country) { navigate({ view: 'world' }, { replace: true }); return; }
+    const countryLayer = await activateCountry(country);
+    if (route !== next) return;
+    setLevel('country');
+    afterLanding(() => { if (level === 'country') worldPromise?.then((w) => w.hide()); });
+
+    // ----- Country -----
     if (next.view === 'country') {
-      vietnam.setActive(null);
-      panel.showCountry(store.get('region'));
-      setTitle('Khám phá Việt Nam');
-      const saved = store.get('country-view');
-      if (prev && prev.view !== 'country') {
-        // Fade the local map out now (the country layer fades in); remove it after landing.
-        areaLock.unlock();
-        map.vvSetLocalActive(false);
-        const done = () => { if (route.view === 'country') deactivateLocal(); };
+      countryLayer.setActive(null);
+      panel.showCountry(country, store.get(`region:${country.id}`) ?? null);
+      setTitle(`${country.title} · ${SITE_TITLE}`);
+      const saved = store.get(`country-view:${country.id}`);
+      if (!prev) showCountryBounds(country, false);
+      else if (prev.view === 'world') showCountryBounds(country);
+      else {
+        leaveLocal();
         if (saved) map.flyTo(saved.center, saved.zoom, { animate: animate(), duration: 1.6 });
-        else showWholeCountry();
-        if (animate()) map.once('moveend', done); else done();
-      } else if (!prev) {
-        showWholeCountry(false);
+        else showCountryBounds(country);
       }
       return;
     }
 
     const dest = data.destinationById(next.destinationId);
-    if (!dest || dest.status !== 'published') {
-      navigate({ view: 'country' }, { replace: true });
+    if (!dest || dest.status !== 'published' || dest.countryId !== country.id) {
+      navigate({ view: 'country', countryId: country.id }, { replace: true });
       return;
     }
-    if (!prev || prev.view === 'country') {
-      if (prev) store.set('country-view', { center: map.getCenter(), zoom: map.getZoom() });
-      else map.fitBounds(VIETNAM_BOUNDS, { ...viewPadding(), animate: false });
-    }
-    vietnam.setActive(dest.id);
+    if (prev?.view === 'country' && prev.countryId === country.id) saveView(`country-view:${country.id}`);
+    if (!prev) map.fitBounds(country.bounds, { ...viewPadding(), animate: false });
+    countryLayer.setActive(dest.id);
 
-    // ----- Level 3: location (preview until Phase 3) -----
+    // ----- Location -----
     if (next.view === 'location') {
       const loc = data.locationById(next.locationId);
       if (!loc || loc.destinationId !== dest.id) {
-        navigate({ view: 'destination', destinationId: dest.id }, { replace: true });
+        navigate({ view: 'destination', countryId: country.id, destinationId: dest.id }, { replace: true });
         return;
       }
-      if (prev?.view === 'destination' && prev.destinationId === dest.id) {
-        store.set(`dest-view:${dest.id}`, { center: map.getCenter(), zoom: map.getZoom() });
-      }
+      if (prev?.view === 'destination' && prev.destinationId === dest.id) saveView(`dest-view:${dest.id}`);
       panel.showLocation(dest, loc);
-      setTitle(`${loc.name} · ${dest.name} · Khám phá Việt Nam`);
+      setTitle(`${loc.name} · ${dest.name} · ${SITE_TITLE}`);
       const layer = await activateLocal(dest);
       if (route !== next) return;
       layer?.setActive(loc.id);
       hints.update();
       setTimeout(() => {
         if (layer) lockWhenLanded(dest);
-        flyToLocation(loc, prev?.view === 'country' || !prev ? 2 : 1.2);
+        flyToLocation(loc, !prev || prev.view === 'world' || prev.view === 'country' ? 2 : 1.2);
       }, 0);
       return;
     }
 
-    // ----- Level 2: destination -----
+    // ----- Destination -----
     const layer = await activateLocal(dest);
     if (route !== next) return;
     layer?.setActive(null);
-    panel.showDestination(dest, {
-      categoryId: layer?.getFilter() ?? null,
-      matches: layer?.matches,
-    });
-    setTitle(`${dest.name} · Khám phá Việt Nam`);
+    panel.showDestination(dest, { categoryId: layer?.getFilter() ?? null, matches: layer?.matches });
+    setTitle(`${dest.name} · ${country.name} · ${SITE_TITLE}`);
 
     setTimeout(() => {
       if (layer) lockWhenLanded(dest);
@@ -241,7 +301,7 @@ async function main() {
       } else if (layer) {
         map.flyToBounds(dest.initialView || dest.bounds, flyBoundsOpts(prev ? 1.8 : 2));
       } else {
-        // No detailed local map: the country outline is too coarse for city zoom.
+        // No detailed local map yet: the country outline is too coarse for city zoom.
         const ll = L.latLng(dest.coordinates.lat, dest.coordinates.lon);
         map.flyTo(centerForVisible(map, ll, REGIONAL_ZOOM), REGIONAL_ZOOM, { animate: animate(), duration: 1.6 });
       }
@@ -250,13 +310,11 @@ async function main() {
 
   onRouteChange(render);
   await render(parseHash());
-  // Markers only have DOM elements once the map has a view, so apply the saved region now.
-  vietnam.setRegion(store.get('region'));
 
   // Warm the cache for published destinations so the first fly-in is smooth.
   setTimeout(() => data.destinations
     .filter((d) => d.status === 'published')
-    .forEach((d) => loadLocal(d)), 1200);
+    .forEach((d) => loadLocal(d)), 1500);
 }
 
 main().catch((err) => {

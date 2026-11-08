@@ -1,13 +1,14 @@
 [
   {
     "id": "da-nang-01",
+    "destinationId": "da-nang",
     "owner": "da-nang",
     "ownerType": "destination",
     "files": {
-      "400": "assets/destinations/da-nang/01-400.webp",
-      "800": "assets/destinations/da-nang/01-800.webp",
-      "1200": "assets/destinations/da-nang/01-1200.webp",
-      "1800": "assets/destinations/da-nang/01-1800.webp"
+      "400": "assets/destinations/da-nang/cover/01-400.webp",
+      "800": "assets/destinations/da-nang/cover/01-800.webp",
+      "1200": "assets/destinations/da-nang/cover/01-1200.webp",
+      "1800": "assets/destinations/da-nang/cover/01-1800.webp"
     },
     "width": 3840,
     "height": 1980,
@@ -22,13 +23,14 @@
   },
   {
     "id": "da-nang-02",
+    "destinationId": "da-nang",
     "owner": "da-nang",
     "ownerType": "destination",
     "files": {
-      "400": "assets/destinations/da-nang/02-400.webp",
-      "800": "assets/destinations/da-nang/02-800.webp",
-      "1200": "assets/destinations/da-nang/02-1200.webp",
-      "1800": "assets/destinations/da-nang/02-1800.webp"
+      "400": "assets/destinations/da-nang/cover/02-400.webp",
+      "800": "assets/destinations/da-nang/cover/02-800.webp",
+      "1200": "assets/destinations/da-nang/cover/02-1200.webp",
+      "1800": "assets/destinations/da-nang/cover/02-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -43,13 +45,14 @@
   },
   {
     "id": "cau-rong-01",
+    "destinationId": "da-nang",
     "owner": "cau-rong",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/cau-rong/01-400.webp",
-      "800": "assets/locations/cau-rong/01-800.webp",
-      "1200": "assets/locations/cau-rong/01-1200.webp",
-      "1800": "assets/locations/cau-rong/01-1800.webp"
+      "400": "assets/destinations/da-nang/cau-rong/01-400.webp",
+      "800": "assets/destinations/da-nang/cau-rong/01-800.webp",
+      "1200": "assets/destinations/da-nang/cau-rong/01-1200.webp",
+      "1800": "assets/destinations/da-nang/cau-rong/01-1800.webp"
     },
     "width": 3840,
     "height": 2155,
@@ -64,13 +67,14 @@
   },
   {
     "id": "cau-rong-02",
+    "destinationId": "da-nang",
     "owner": "cau-rong",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/cau-rong/02-400.webp",
-      "800": "assets/locations/cau-rong/02-800.webp",
-      "1200": "assets/locations/cau-rong/02-1200.webp",
-      "1800": "assets/locations/cau-rong/02-1800.webp"
+      "400": "assets/destinations/da-nang/cau-rong/02-400.webp",
+      "800": "assets/destinations/da-nang/cau-rong/02-800.webp",
+      "1200": "assets/destinations/da-nang/cau-rong/02-1200.webp",
+      "1800": "assets/destinations/da-nang/cau-rong/02-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -85,13 +89,14 @@
   },
   {
     "id": "cau-rong-03",
+    "destinationId": "da-nang",
     "owner": "cau-rong",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/cau-rong/03-400.webp",
-      "800": "assets/locations/cau-rong/03-800.webp",
-      "1200": "assets/locations/cau-rong/03-1200.webp",
-      "1800": "assets/locations/cau-rong/03-1800.webp"
+      "400": "assets/destinations/da-nang/cau-rong/03-400.webp",
+      "800": "assets/destinations/da-nang/cau-rong/03-800.webp",
+      "1200": "assets/destinations/da-nang/cau-rong/03-1200.webp",
+      "1800": "assets/destinations/da-nang/cau-rong/03-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -106,13 +111,14 @@
   },
   {
     "id": "bai-bien-my-khe-01",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/01-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/01-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/01-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/01-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/01-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/01-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/01-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/01-1800.webp"
     },
     "width": 3840,
     "height": 2509,
@@ -127,13 +133,14 @@
   },
   {
     "id": "bai-bien-my-khe-02",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/02-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/02-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/02-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/02-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/02-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/02-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/02-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/02-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -148,13 +155,14 @@
   },
   {
     "id": "bai-bien-my-khe-03",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/03-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/03-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/03-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/03-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/03-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/03-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/03-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/03-1800.webp"
     },
     "width": 2048,
     "height": 1536,
@@ -169,13 +177,14 @@
   },
   {
     "id": "bai-bien-my-khe-04",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/04-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/04-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/04-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/04-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/04-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/04-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/04-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/04-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -190,13 +199,14 @@
   },
   {
     "id": "bai-bien-my-khe-05",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/05-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/05-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/05-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/05-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/05-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/05-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/05-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/05-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -211,13 +221,14 @@
   },
   {
     "id": "bai-bien-my-khe-06",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/06-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/06-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/06-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/06-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/06-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/06-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/06-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/06-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -232,13 +243,14 @@
   },
   {
     "id": "bai-bien-my-khe-07",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/07-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/07-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/07-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/07-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/07-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/07-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/07-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/07-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -253,13 +265,14 @@
   },
   {
     "id": "bai-bien-my-khe-08",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/08-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/08-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/08-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/08-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/08-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/08-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/08-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/08-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -274,13 +287,14 @@
   },
   {
     "id": "bai-bien-my-khe-09",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/09-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/09-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/09-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/09-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/09-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/09-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/09-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/09-1800.webp"
     },
     "width": 2592,
     "height": 1944,
@@ -295,13 +309,14 @@
   },
   {
     "id": "bai-bien-my-khe-10",
+    "destinationId": "da-nang",
     "owner": "bai-bien-my-khe",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bai-bien-my-khe/10-400.webp",
-      "800": "assets/locations/bai-bien-my-khe/10-800.webp",
-      "1200": "assets/locations/bai-bien-my-khe/10-1200.webp",
-      "1800": "assets/locations/bai-bien-my-khe/10-1800.webp"
+      "400": "assets/destinations/da-nang/bai-bien-my-khe/10-400.webp",
+      "800": "assets/destinations/da-nang/bai-bien-my-khe/10-800.webp",
+      "1200": "assets/destinations/da-nang/bai-bien-my-khe/10-1200.webp",
+      "1800": "assets/destinations/da-nang/bai-bien-my-khe/10-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -316,13 +331,14 @@
   },
   {
     "id": "ngu-hanh-son-01",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/01-400.webp",
-      "800": "assets/locations/ngu-hanh-son/01-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/01-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/01-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/01-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/01-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/01-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/01-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -337,13 +353,14 @@
   },
   {
     "id": "ngu-hanh-son-02",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/02-400.webp",
-      "800": "assets/locations/ngu-hanh-son/02-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/02-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/02-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/02-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/02-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/02-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/02-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -358,13 +375,14 @@
   },
   {
     "id": "ngu-hanh-son-03",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/03-400.webp",
-      "800": "assets/locations/ngu-hanh-son/03-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/03-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/03-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/03-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/03-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/03-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/03-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -379,13 +397,14 @@
   },
   {
     "id": "ngu-hanh-son-04",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/04-400.webp",
-      "800": "assets/locations/ngu-hanh-son/04-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/04-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/04-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/04-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/04-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/04-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/04-1800.webp"
     },
     "width": 2047,
     "height": 1365,
@@ -400,13 +419,14 @@
   },
   {
     "id": "ngu-hanh-son-05",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/05-400.webp",
-      "800": "assets/locations/ngu-hanh-son/05-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/05-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/05-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/05-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/05-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/05-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/05-1800.webp"
     },
     "width": 3840,
     "height": 1942,
@@ -421,13 +441,14 @@
   },
   {
     "id": "ngu-hanh-son-06",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/06-400.webp",
-      "800": "assets/locations/ngu-hanh-son/06-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/06-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/06-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/06-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/06-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/06-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/06-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -442,13 +463,14 @@
   },
   {
     "id": "ngu-hanh-son-07",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/07-400.webp",
-      "800": "assets/locations/ngu-hanh-son/07-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/07-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/07-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/07-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/07-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/07-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/07-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -463,13 +485,14 @@
   },
   {
     "id": "ngu-hanh-son-08",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/08-400.webp",
-      "800": "assets/locations/ngu-hanh-son/08-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/08-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/08-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/08-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/08-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/08-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/08-1800.webp"
     },
     "width": 3840,
     "height": 5760,
@@ -484,13 +507,14 @@
   },
   {
     "id": "ngu-hanh-son-09",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/09-400.webp",
-      "800": "assets/locations/ngu-hanh-son/09-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/09-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/09-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/09-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/09-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/09-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/09-1800.webp"
     },
     "width": 3840,
     "height": 5760,
@@ -505,13 +529,14 @@
   },
   {
     "id": "ngu-hanh-son-10",
+    "destinationId": "da-nang",
     "owner": "ngu-hanh-son",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ngu-hanh-son/10-400.webp",
-      "800": "assets/locations/ngu-hanh-son/10-800.webp",
-      "1200": "assets/locations/ngu-hanh-son/10-1200.webp",
-      "1800": "assets/locations/ngu-hanh-son/10-1800.webp"
+      "400": "assets/destinations/da-nang/ngu-hanh-son/10-400.webp",
+      "800": "assets/destinations/da-nang/ngu-hanh-son/10-800.webp",
+      "1200": "assets/destinations/da-nang/ngu-hanh-son/10-1200.webp",
+      "1800": "assets/destinations/da-nang/ngu-hanh-son/10-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -526,13 +551,14 @@
   },
   {
     "id": "chua-linh-ung-bai-but-01",
+    "destinationId": "da-nang",
     "owner": "chua-linh-ung-bai-but",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/chua-linh-ung-bai-but/01-400.webp",
-      "800": "assets/locations/chua-linh-ung-bai-but/01-800.webp",
-      "1200": "assets/locations/chua-linh-ung-bai-but/01-1200.webp",
-      "1800": "assets/locations/chua-linh-ung-bai-but/01-1800.webp"
+      "400": "assets/destinations/da-nang/chua-linh-ung-bai-but/01-400.webp",
+      "800": "assets/destinations/da-nang/chua-linh-ung-bai-but/01-800.webp",
+      "1200": "assets/destinations/da-nang/chua-linh-ung-bai-but/01-1200.webp",
+      "1800": "assets/destinations/da-nang/chua-linh-ung-bai-but/01-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -547,13 +573,14 @@
   },
   {
     "id": "chua-linh-ung-bai-but-02",
+    "destinationId": "da-nang",
     "owner": "chua-linh-ung-bai-but",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/chua-linh-ung-bai-but/02-400.webp",
-      "800": "assets/locations/chua-linh-ung-bai-but/02-800.webp",
-      "1200": "assets/locations/chua-linh-ung-bai-but/02-1200.webp",
-      "1800": "assets/locations/chua-linh-ung-bai-but/02-1800.webp"
+      "400": "assets/destinations/da-nang/chua-linh-ung-bai-but/02-400.webp",
+      "800": "assets/destinations/da-nang/chua-linh-ung-bai-but/02-800.webp",
+      "1200": "assets/destinations/da-nang/chua-linh-ung-bai-but/02-1200.webp",
+      "1800": "assets/destinations/da-nang/chua-linh-ung-bai-but/02-1800.webp"
     },
     "width": 3840,
     "height": 1647,
@@ -568,13 +595,14 @@
   },
   {
     "id": "chua-linh-ung-bai-but-03",
+    "destinationId": "da-nang",
     "owner": "chua-linh-ung-bai-but",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/chua-linh-ung-bai-but/03-400.webp",
-      "800": "assets/locations/chua-linh-ung-bai-but/03-800.webp",
-      "1200": "assets/locations/chua-linh-ung-bai-but/03-1200.webp",
-      "1800": "assets/locations/chua-linh-ung-bai-but/03-1800.webp"
+      "400": "assets/destinations/da-nang/chua-linh-ung-bai-but/03-400.webp",
+      "800": "assets/destinations/da-nang/chua-linh-ung-bai-but/03-800.webp",
+      "1200": "assets/destinations/da-nang/chua-linh-ung-bai-but/03-1200.webp",
+      "1800": "assets/destinations/da-nang/chua-linh-ung-bai-but/03-1800.webp"
     },
     "width": 3840,
     "height": 5120,
@@ -589,13 +617,14 @@
   },
   {
     "id": "bao-tang-dieu-khac-cham-01",
+    "destinationId": "da-nang",
     "owner": "bao-tang-dieu-khac-cham",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bao-tang-dieu-khac-cham/01-400.webp",
-      "800": "assets/locations/bao-tang-dieu-khac-cham/01-800.webp",
-      "1200": "assets/locations/bao-tang-dieu-khac-cham/01-1200.webp",
-      "1800": "assets/locations/bao-tang-dieu-khac-cham/01-1800.webp"
+      "400": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/01-400.webp",
+      "800": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/01-800.webp",
+      "1200": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/01-1200.webp",
+      "1800": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/01-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -610,13 +639,14 @@
   },
   {
     "id": "bao-tang-dieu-khac-cham-02",
+    "destinationId": "da-nang",
     "owner": "bao-tang-dieu-khac-cham",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bao-tang-dieu-khac-cham/02-400.webp",
-      "800": "assets/locations/bao-tang-dieu-khac-cham/02-800.webp",
-      "1200": "assets/locations/bao-tang-dieu-khac-cham/02-1200.webp",
-      "1800": "assets/locations/bao-tang-dieu-khac-cham/02-1800.webp"
+      "400": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/02-400.webp",
+      "800": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/02-800.webp",
+      "1200": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/02-1200.webp",
+      "1800": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/02-1800.webp"
     },
     "width": 3840,
     "height": 2405,
@@ -631,13 +661,14 @@
   },
   {
     "id": "bao-tang-dieu-khac-cham-03",
+    "destinationId": "da-nang",
     "owner": "bao-tang-dieu-khac-cham",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bao-tang-dieu-khac-cham/03-400.webp",
-      "800": "assets/locations/bao-tang-dieu-khac-cham/03-800.webp",
-      "1200": "assets/locations/bao-tang-dieu-khac-cham/03-1200.webp",
-      "1800": "assets/locations/bao-tang-dieu-khac-cham/03-1800.webp"
+      "400": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/03-400.webp",
+      "800": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/03-800.webp",
+      "1200": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/03-1200.webp",
+      "1800": "assets/destinations/da-nang/bao-tang-dieu-khac-cham/03-1800.webp"
     },
     "width": 1800,
     "height": 1200,
@@ -652,13 +683,14 @@
   },
   {
     "id": "ba-na-cau-vang-01",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/01-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/01-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/01-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/01-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/01-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/01-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/01-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/01-1800.webp"
     },
     "width": 3840,
     "height": 2543,
@@ -673,13 +705,14 @@
   },
   {
     "id": "ba-na-cau-vang-02",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/02-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/02-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/02-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/02-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/02-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/02-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/02-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/02-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -694,13 +727,14 @@
   },
   {
     "id": "ba-na-cau-vang-03",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/03-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/03-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/03-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/03-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/03-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/03-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/03-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/03-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -715,13 +749,14 @@
   },
   {
     "id": "ba-na-cau-vang-04",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/04-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/04-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/04-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/04-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/04-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/04-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/04-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/04-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -736,13 +771,14 @@
   },
   {
     "id": "ba-na-cau-vang-05",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/05-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/05-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/05-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/05-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/05-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/05-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/05-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/05-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -757,13 +793,14 @@
   },
   {
     "id": "ba-na-cau-vang-06",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/06-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/06-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/06-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/06-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/06-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/06-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/06-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/06-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -778,13 +815,14 @@
   },
   {
     "id": "ba-na-cau-vang-07",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/07-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/07-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/07-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/07-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/07-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/07-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/07-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/07-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -799,13 +837,14 @@
   },
   {
     "id": "ba-na-cau-vang-08",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/08-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/08-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/08-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/08-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/08-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/08-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/08-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/08-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -820,13 +859,14 @@
   },
   {
     "id": "ba-na-cau-vang-09",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/09-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/09-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/09-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/09-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/09-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/09-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/09-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/09-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -841,13 +881,14 @@
   },
   {
     "id": "ba-na-cau-vang-10",
+    "destinationId": "da-nang",
     "owner": "ba-na-cau-vang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/ba-na-cau-vang/10-400.webp",
-      "800": "assets/locations/ba-na-cau-vang/10-800.webp",
-      "1200": "assets/locations/ba-na-cau-vang/10-1200.webp",
-      "1800": "assets/locations/ba-na-cau-vang/10-1800.webp"
+      "400": "assets/destinations/da-nang/ba-na-cau-vang/10-400.webp",
+      "800": "assets/destinations/da-nang/ba-na-cau-vang/10-800.webp",
+      "1200": "assets/destinations/da-nang/ba-na-cau-vang/10-1200.webp",
+      "1800": "assets/destinations/da-nang/ba-na-cau-vang/10-1800.webp"
     },
     "width": 3840,
     "height": 2560,
@@ -862,13 +903,14 @@
   },
   {
     "id": "cho-con-01",
+    "destinationId": "da-nang",
     "owner": "cho-con",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/cho-con/01-400.webp",
-      "800": "assets/locations/cho-con/01-800.webp",
-      "1200": "assets/locations/cho-con/01-1200.webp",
-      "1800": "assets/locations/cho-con/01-1800.webp"
+      "400": "assets/destinations/da-nang/cho-con/01-400.webp",
+      "800": "assets/destinations/da-nang/cho-con/01-800.webp",
+      "1200": "assets/destinations/da-nang/cho-con/01-1200.webp",
+      "1800": "assets/destinations/da-nang/cho-con/01-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -883,13 +925,14 @@
   },
   {
     "id": "cho-con-02",
+    "destinationId": "da-nang",
     "owner": "cho-con",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/cho-con/02-400.webp",
-      "800": "assets/locations/cho-con/02-800.webp",
-      "1200": "assets/locations/cho-con/02-1200.webp",
-      "1800": "assets/locations/cho-con/02-1800.webp"
+      "400": "assets/destinations/da-nang/cho-con/02-400.webp",
+      "800": "assets/destinations/da-nang/cho-con/02-800.webp",
+      "1200": "assets/destinations/da-nang/cho-con/02-1200.webp",
+      "1800": "assets/destinations/da-nang/cho-con/02-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -904,13 +947,14 @@
   },
   {
     "id": "cho-con-03",
+    "destinationId": "da-nang",
     "owner": "cho-con",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/cho-con/03-400.webp",
-      "800": "assets/locations/cho-con/03-800.webp",
-      "1200": "assets/locations/cho-con/03-1200.webp",
-      "1800": "assets/locations/cho-con/03-1800.webp"
+      "400": "assets/destinations/da-nang/cho-con/03-400.webp",
+      "800": "assets/destinations/da-nang/cho-con/03-800.webp",
+      "1200": "assets/destinations/da-nang/cho-con/03-1200.webp",
+      "1800": "assets/destinations/da-nang/cho-con/03-1800.webp"
     },
     "width": 2048,
     "height": 1536,
@@ -925,13 +969,14 @@
   },
   {
     "id": "mi-quang-01",
+    "destinationId": "da-nang",
     "owner": "mi-quang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/mi-quang/01-400.webp",
-      "800": "assets/locations/mi-quang/01-800.webp",
-      "1200": "assets/locations/mi-quang/01-1200.webp",
-      "1800": "assets/locations/mi-quang/01-1800.webp"
+      "400": "assets/destinations/da-nang/mi-quang/01-400.webp",
+      "800": "assets/destinations/da-nang/mi-quang/01-800.webp",
+      "1200": "assets/destinations/da-nang/mi-quang/01-1200.webp",
+      "1800": "assets/destinations/da-nang/mi-quang/01-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -946,13 +991,14 @@
   },
   {
     "id": "mi-quang-02",
+    "destinationId": "da-nang",
     "owner": "mi-quang",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/mi-quang/02-400.webp",
-      "800": "assets/locations/mi-quang/02-800.webp",
-      "1200": "assets/locations/mi-quang/02-1200.webp",
-      "1800": "assets/locations/mi-quang/02-1800.webp"
+      "400": "assets/destinations/da-nang/mi-quang/02-400.webp",
+      "800": "assets/destinations/da-nang/mi-quang/02-800.webp",
+      "1200": "assets/destinations/da-nang/mi-quang/02-1200.webp",
+      "1800": "assets/destinations/da-nang/mi-quang/02-1800.webp"
     },
     "width": 2048,
     "height": 1536,
@@ -967,13 +1013,14 @@
   },
   {
     "id": "bun-cha-ca-01",
+    "destinationId": "da-nang",
     "owner": "bun-cha-ca",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bun-cha-ca/01-400.webp",
-      "800": "assets/locations/bun-cha-ca/01-800.webp",
-      "1200": "assets/locations/bun-cha-ca/01-1200.webp",
-      "1800": "assets/locations/bun-cha-ca/01-1800.webp"
+      "400": "assets/destinations/da-nang/bun-cha-ca/01-400.webp",
+      "800": "assets/destinations/da-nang/bun-cha-ca/01-800.webp",
+      "1200": "assets/destinations/da-nang/bun-cha-ca/01-1200.webp",
+      "1800": "assets/destinations/da-nang/bun-cha-ca/01-1800.webp"
     },
     "width": 3840,
     "height": 2880,
@@ -988,13 +1035,14 @@
   },
   {
     "id": "bun-cha-ca-02",
+    "destinationId": "da-nang",
     "owner": "bun-cha-ca",
     "ownerType": "location",
     "files": {
-      "400": "assets/locations/bun-cha-ca/02-400.webp",
-      "800": "assets/locations/bun-cha-ca/02-800.webp",
-      "1200": "assets/locations/bun-cha-ca/02-1200.webp",
-      "1800": "assets/locations/bun-cha-ca/02-1800.webp"
+      "400": "assets/destinations/da-nang/bun-cha-ca/02-400.webp",
+      "800": "assets/destinations/da-nang/bun-cha-ca/02-800.webp",
+      "1200": "assets/destinations/da-nang/bun-cha-ca/02-1200.webp",
+      "1800": "assets/destinations/da-nang/bun-cha-ca/02-1800.webp"
     },
     "width": 2437,
     "height": 1728,

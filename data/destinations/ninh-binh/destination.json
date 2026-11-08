@@ -1,0 +1,8 @@
+{
+  "id": "ninh-binh",
+  "countryId": "viet-nam",
+  "name": "Ninh Bình",
+  "region": "bac",
+  "status": "planned",
+  "_note": "Placeholder. Owned by the session in docs/sessions/ninh-binh.md, which fills this in and sets status to \"published\"."
+}

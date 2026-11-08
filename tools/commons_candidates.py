@@ -5,8 +5,13 @@ keeps only freely licensed, large, reasonably landscape files, and writes:
   - <out>/candidates.json      metadata per place (title, licence, author, size, upload year)
   - <out>/<place>.jpg          numbered contact sheet of small previews, for picking by eye
 
-Usage: python -I tools/commons_candidates.py <out_dir> [place ...]
-Nothing here is shipped; picked files go into tools/photo-selection.json and through photos.py.
+Usage: python -I tools/commons_candidates.py <destination-id> <out_dir> [place ...]
+Sources per place come from data/destinations/<id>/photo-selection.json -> "candidateSources":
+  {"<place>": {"cats": ["Category:…"], "search": ["…"], "min_w": 1600, "pre2023": true}}
+Use "cover" as the place for destination (city) photos.
+Keep runs small (one or two places at a time): Commons rate-limits, and each contact sheet
+downloads up to 60 small previews.
+Nothing here is shipped; picked files go into photo-selection.json and through photos.py.
 """
 
 import io
@@ -24,21 +29,6 @@ FREE = re.compile(r"^(CC0|Public domain|PD\b|CC BY(-SA)? \d(\.\d)?)", re.I)
 
 # Places that contain copyrighted modern works (no freedom of panorama in Vietnam since 2023):
 # only files uploaded before 2023 are accepted for these.
-CANDIDATE_SOURCES = {
-    # Destination (city) views; cityscapes often include modern bridges/buildings -> pre-2023 only.
-    "da-nang": {"cats": ["Category:Skylines of Da Nang", "Category:Han River (Vietnam)", "Category:Views of Da Nang",
-                         "Category:Da Nang at night"],
-                "search": ["Da Nang skyline", "Da Nang city view", "Đà Nẵng toàn cảnh"],
-                "min_w": 1800, "pre2023": True},
-    "bai-bien-my-khe": {"cats": ["Category:My Khe Beach"], "min_w": 1600},
-    "ngu-hanh-son": {"cats": ["Category:Ngũ Hành Sơn", "Category:Thuy Son", "Category:Views from Thuy Son",
-                              "Category:Huyen Khong Cave", "Category:Pagodas in the Marble Mountains"], "min_w": 1600},
-    "ba-na-cau-vang": {"cats": ["Category:Ba Na Hills", "Category:Golden Bridge (Vietnam)", "Category:Ba Na Hills Cable Car"],
-                       "min_w": 1600, "pre2023": True},
-    "cho-con": {"cats": ["Category:Con Market"], "search": ["Chợ Cồn Đà Nẵng", "Con market Da Nang"], "min_w": 1200},
-    "mi-quang": {"cats": ["Category:Mì quảng"], "search": ["Mì Quảng"], "min_w": 1200},
-    "bun-cha-ca": {"search": ["bún chả cá", "bun cha ca", "fish cake noodle soup Vietnam"], "min_w": 1200},
-}
 
 
 def api(params):
@@ -131,11 +121,13 @@ def contact_sheet(cands, path):
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
-    out = Path(sys.argv[1])
+    dest, out = sys.argv[1], Path(sys.argv[2])
     out.mkdir(parents=True, exist_ok=True)
-    places = sys.argv[2:] or list(CANDIDATE_SOURCES)
-    sel = json.loads((Path(__file__).parent / "photo-selection.json").read_text(encoding="utf-8"))
-    existing = {f for files in sel["locations"].values() for f in files}
+    sel_path = Path(__file__).resolve().parent.parent / "data" / "destinations" / dest / "photo-selection.json"
+    sel = json.loads(sel_path.read_text(encoding="utf-8"))
+    CANDIDATE_SOURCES = sel.get("candidateSources", {})
+    places = sys.argv[3:] or list(CANDIDATE_SOURCES)
+    existing = set(sel.get("cover", [])) | {f for files in sel.get("locations", {}).values() for f in files}
     result_path = out / "candidates.json"
     result = json.loads(result_path.read_text(encoding="utf-8")) if result_path.exists() else {}
     for place in places:

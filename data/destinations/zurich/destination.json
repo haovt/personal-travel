@@ -1,0 +1,8 @@
+{
+  "id": "zurich",
+  "countryId": "thuy-si",
+  "name": "Zürich",
+  "region": null,
+  "status": "planned",
+  "_note": "Placeholder. Owned by the session in docs/sessions/zurich.md, which fills this in and sets status to \"published\"."
+}

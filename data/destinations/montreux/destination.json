@@ -1,0 +1,8 @@
+{
+  "id": "montreux",
+  "countryId": "thuy-si",
+  "name": "Montreux",
+  "region": null,
+  "status": "planned",
+  "_note": "Placeholder. Owned by the session in docs/sessions/montreux.md, which fills this in and sets status to \"published\"."
+}

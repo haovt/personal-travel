@@ -1,0 +1,15 @@
+{
+  "id": "ha-noi",
+  "countryId": "viet-nam",
+  "name": "Hà Nội",
+  "type": "city",
+  "region": "bac",
+  "status": "reference",
+  "coordinates": {
+    "lat": 21.0245,
+    "lon": 105.84117,
+    "source": "https://www.wikidata.org/wiki/Q1858"
+  },
+  "summary": "",
+  "locationIds": []
+}

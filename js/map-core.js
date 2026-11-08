@@ -2,8 +2,9 @@
 /* global L */
 
 export const VIETNAM_BOUNDS = [[8.4, 102.1], [23.4, 116.0]];
-export const COUNTRY_MAX_BOUNDS = [[-2, 92], [32, 128]];
-export const COUNTRY_MIN_ZOOM = 4;
+export const WORLD_MAX_BOUNDS = [[-60, -180], [80, 180]];
+export const WORLD_BOUNDS = [[6, 2], [50, 128]];   // frames both countries
+export const COUNTRY_MIN_ZOOM = 1;
 export const LOCAL_ZOOM_THRESHOLD = 8; // at or above this zoom the map is "local"
 
 export const prefersReducedMotion = () =>
@@ -18,7 +19,7 @@ export function createMap(el) {
     wheelPxPerZoomLevel: 90,
     minZoom: COUNTRY_MIN_ZOOM,
     maxZoom: 17,
-    maxBounds: COUNTRY_MAX_BOUNDS,
+    maxBounds: WORLD_MAX_BOUNDS,
     maxBoundsViscosity: 0.9,
     inertia: true,
     bounceAtZoomLimits: false,
@@ -30,6 +31,7 @@ export function createMap(el) {
   map.attributionControl.setPrefix('<a href="#/nguon-anh">Nguồn &amp; bản quyền</a>');
 
   // Panes: the country layer and a destination's local layer cross-fade (see map.css).
+  map.createPane('world').style.zIndex = 290;
   map.createPane('country').style.zIndex = 300;
   map.createPane('local').style.zIndex = 320;
   map.createPane('localLabels').style.zIndex = 450;
@@ -112,7 +114,7 @@ export function createAreaLock(map) {
       bounds = null;
       map.options.maxBoundsViscosity = 0.9;
       map.setMinZoom(COUNTRY_MIN_ZOOM);
-      map.setMaxBounds(COUNTRY_MAX_BOUNDS);
+      map.setMaxBounds(WORLD_MAX_BOUNDS);
     },
     isLocked: () => bounds != null,
   };

@@ -1,0 +1,8 @@
+{
+  "id": "hoi-an",
+  "countryId": "viet-nam",
+  "name": "Hội An",
+  "region": "trung",
+  "status": "planned",
+  "_note": "Placeholder. Owned by the session in docs/sessions/hoi-an.md, which fills this in and sets status to \"published\"."
+}
