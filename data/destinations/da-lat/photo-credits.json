@@ -1,0 +1,222 @@
+[
+  {
+    "id": "da-lat-01",
+    "destinationId": "da-lat",
+    "owner": "da-lat",
+    "ownerType": "destination",
+    "files": {
+      "400": "assets/destinations/da-lat/cover/01-400.webp",
+      "800": "assets/destinations/da-lat/cover/01-800.webp",
+      "1200": "assets/destinations/da-lat/cover/01-1200.webp",
+      "1800": "assets/destinations/da-lat/cover/01-1800.webp"
+    },
+    "width": 3840,
+    "height": 2160,
+    "source": "https://commons.wikimedia.org/wiki/File:Da_Lat_-_Viet_Nam.jpg",
+    "creator": "Tuong Lam Photos",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attributionRequired": true,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2021-04-11",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-02",
+    "destinationId": "da-lat",
+    "owner": "da-lat",
+    "ownerType": "destination",
+    "files": {
+      "400": "assets/destinations/da-lat/cover/02-400.webp",
+      "800": "assets/destinations/da-lat/cover/02-800.webp",
+      "1200": "assets/destinations/da-lat/cover/02-1200.webp",
+      "1800": "assets/destinations/da-lat/cover/02-1800.webp"
+    },
+    "width": 2965,
+    "height": 2223,
+    "source": "https://commons.wikimedia.org/wiki/File:DA_LAT_VIETNAM_JAN_2012_(6864583156).jpg",
+    "creator": "calflier001",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "attributionRequired": true,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2013-05-28",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-03",
+    "destinationId": "da-lat",
+    "owner": "da-lat",
+    "ownerType": "destination",
+    "files": {
+      "400": "assets/destinations/da-lat/cover/03-400.webp",
+      "800": "assets/destinations/da-lat/cover/03-800.webp",
+      "1200": "assets/destinations/da-lat/cover/03-1200.webp",
+      "1800": "assets/destinations/da-lat/cover/03-1800.webp"
+    },
+    "width": 3840,
+    "height": 2563,
+    "source": "https://commons.wikimedia.org/wiki/File:Vietnam_-_panoramio_(54).jpg",
+    "creator": "Андрей Бобровский",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "attributionRequired": true,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2017-05-18",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-04",
+    "destinationId": "da-lat",
+    "owner": "da-lat",
+    "ownerType": "destination",
+    "files": {
+      "400": "assets/destinations/da-lat/cover/04-400.webp",
+      "800": "assets/destinations/da-lat/cover/04-800.webp",
+      "1200": "assets/destinations/da-lat/cover/04-1200.webp",
+      "1800": "assets/destinations/da-lat/cover/04-1800.webp"
+    },
+    "width": 2435,
+    "height": 1521,
+    "source": "https://commons.wikimedia.org/wiki/File:475_Vietnam_Aussicht_auf_Dalat.jpg",
+    "creator": "Alice Stoecklin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "attributionRequired": true,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2009-12-29",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-05",
+    "destinationId": "da-lat",
+    "owner": "da-lat",
+    "ownerType": "destination",
+    "files": {
+      "400": "assets/destinations/da-lat/cover/05-400.webp",
+      "800": "assets/destinations/da-lat/cover/05-800.webp",
+      "1200": "assets/destinations/da-lat/cover/05-1200.webp",
+      "1800": "assets/destinations/da-lat/cover/05-1800.webp"
+    },
+    "width": 3840,
+    "height": 2563,
+    "source": "https://commons.wikimedia.org/wiki/File:Vietnam_-_panoramio_(61).jpg",
+    "creator": "Андрей Бобровский",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "attributionRequired": true,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2017-05-18",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-06",
+    "destinationId": "da-lat",
+    "owner": "da-lat",
+    "ownerType": "destination",
+    "files": {
+      "400": "assets/destinations/da-lat/cover/06-400.webp",
+      "800": "assets/destinations/da-lat/cover/06-800.webp",
+      "1200": "assets/destinations/da-lat/cover/06-1200.webp",
+      "1800": "assets/destinations/da-lat/cover/06-1800.webp"
+    },
+    "width": 3840,
+    "height": 2358,
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Da_Lat_03.jpg",
+    "creator": "ruben i",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "attributionRequired": true,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2011-04-28",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-ho-xuan-huong-01",
+    "destinationId": "da-lat",
+    "owner": "da-lat-ho-xuan-huong",
+    "ownerType": "location",
+    "files": {
+      "400": "assets/destinations/da-lat/da-lat-ho-xuan-huong/01-400.webp",
+      "800": "assets/destinations/da-lat/da-lat-ho-xuan-huong/01-800.webp",
+      "1200": "assets/destinations/da-lat/da-lat-ho-xuan-huong/01-1200.webp",
+      "1800": "assets/destinations/da-lat/da-lat-ho-xuan-huong/01-1800.webp"
+    },
+    "width": 3072,
+    "height": 2304,
+    "source": "https://commons.wikimedia.org/wiki/File:Xuan_Huong_Lake_16.jpg",
+    "creator": "Diane Selwyn",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attributionRequired": true,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2011-10-02",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-ho-xuan-huong-02",
+    "destinationId": "da-lat",
+    "owner": "da-lat-ho-xuan-huong",
+    "ownerType": "location",
+    "files": {
+      "400": "assets/destinations/da-lat/da-lat-ho-xuan-huong/02-400.webp",
+      "800": "assets/destinations/da-lat/da-lat-ho-xuan-huong/02-800.webp",
+      "1200": "assets/destinations/da-lat/da-lat-ho-xuan-huong/02-1200.webp",
+      "1800": "assets/destinations/da-lat/da-lat-ho-xuan-huong/02-1800.webp"
+    },
+    "width": 3840,
+    "height": 2280,
+    "source": "https://commons.wikimedia.org/wiki/File:Xuan_Huong_Lake_(46420763535).jpg",
+    "creator": "Lê  Minh Phát from 6, Việt Nam",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "attributionRequired": true,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2023-08-21",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-ho-xuan-huong-03",
+    "destinationId": "da-lat",
+    "owner": "da-lat-ho-xuan-huong",
+    "ownerType": "location",
+    "files": {
+      "400": "assets/destinations/da-lat/da-lat-ho-xuan-huong/03-400.webp",
+      "800": "assets/destinations/da-lat/da-lat-ho-xuan-huong/03-800.webp",
+      "1200": "assets/destinations/da-lat/da-lat-ho-xuan-huong/03-1200.webp",
+      "1800": "assets/destinations/da-lat/da-lat-ho-xuan-huong/03-1800.webp"
+    },
+    "width": 3072,
+    "height": 2304,
+    "source": "https://commons.wikimedia.org/wiki/File:Xuan_Huong_Lake_06.jpg",
+    "creator": "Diane Selwyn",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "attributionRequired": false,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2011-04-09",
+    "retrieved": "2026-11-08"
+  },
+  {
+    "id": "da-lat-ho-xuan-huong-04",
+    "destinationId": "da-lat",
+    "owner": "da-lat-ho-xuan-huong",
+    "ownerType": "location",
+    "files": {
+      "400": "assets/destinations/da-lat/da-lat-ho-xuan-huong/04-400.webp",
+      "800": "assets/destinations/da-lat/da-lat-ho-xuan-huong/04-800.webp",
+      "1200": "assets/destinations/da-lat/da-lat-ho-xuan-huong/04-1200.webp",
+      "1800": "assets/destinations/da-lat/da-lat-ho-xuan-huong/04-1800.webp"
+    },
+    "width": 3072,
+    "height": 2304,
+    "source": "https://commons.wikimedia.org/wiki/File:Ho_Xuan_Huong_03.jpg",
+    "creator": "Diane Selwyn",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "attributionRequired": false,
+    "modified": "đã thu nhỏ kích thước",
+    "uploaded": "2011-03-11",
+    "retrieved": "2026-11-08"
+  }
+]

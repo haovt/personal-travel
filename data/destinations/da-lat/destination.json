@@ -2,7 +2,58 @@
   "id": "da-lat",
   "countryId": "viet-nam",
   "name": "Đà Lạt",
+  "type": "city",
   "region": "nam",
-  "status": "planned",
-  "_note": "Placeholder. Owned by the session in docs/sessions/da-lat.md, which fills this in and sets status to \"published\"."
+  "status": "draft",
+  "coordinates": {
+    "lat": 11.94024,
+    "lon": 108.43758,
+    "source": "https://www.openstreetmap.org/node/369486906",
+    "wikidata": "Q25281",
+    "note": "OSM place=city node. Wikidata Q25281 gives 11.94000, 108.43750 (the same place). Since 1 July 2025 the city is dissolved into the wards Xuân Hương, Cam Ly, Xuân Trường, Lâm Viên and part of Lang Biang (all '– Đà Lạt'), province Lâm Đồng."
+  },
+  "bounds": [
+    [11.865, 108.4],
+    [11.96, 108.475]
+  ],
+  "initialView": [
+    [11.926, 108.424],
+    [11.952, 108.462]
+  ],
+  "mapData": "assets/maps/da-lat.geojson",
+  "mapAttribution": "© <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>",
+  "mapLabels": [
+    {
+      "text": "Hồ Xuân Hương",
+      "kind": "water",
+      "lat": 11.94185,
+      "lon": 108.44683,
+      "_source": "Wikidata Q10772055 P625; tested inside the OSM lake polygon (relation 2390139)"
+    },
+    {
+      "text": "Hồ Tuyền Lâm",
+      "kind": "water",
+      "lat": 11.893,
+      "lon": 108.425,
+      "_source": "Wikidata Q10772031 P625; tested inside the OSM lake polygon (way 125165263)"
+    }
+  ],
+  "summary": "Thành phố cao nguyên giữa rừng thông, quanh hồ Xuân Hương, với nhà thờ, nhà ga và dinh thự từ thời Pháp.",
+  "images": [],
+  "locationIds": [
+    "da-lat-ho-xuan-huong",
+    "da-lat-nha-tho-chinh-toa",
+    "da-lat-ga-da-lat",
+    "da-lat-dinh-bao-dai",
+    "da-lat-thien-vien-truc-lam",
+    "da-lat-thac-datanla",
+    "da-lat-cho-da-lat",
+    "da-lat-banh-trang-nuong"
+  ],
+  "sources": [
+    "https://www.openstreetmap.org/node/369486906",
+    "https://www.wikidata.org/wiki/Q25281",
+    "https://vi.wikipedia.org/wiki/%C4%90%C3%A0_L%E1%BA%A1t",
+    "https://vi.wikipedia.org/wiki/L%C3%A2m_%C4%90%E1%BB%93ng"
+  ]
 }
