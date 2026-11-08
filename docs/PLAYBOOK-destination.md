@@ -53,20 +53,20 @@ coordinate and fact needs a source you actually read.
    - `coreBbox`: the dense centre, where residential streets are included. Keep it small.
    - `initialView`: what the first view shows.
    - A far-away location (e.g. Bà Nà, 26 km) is fine: an off-screen hint pill points to it.
-6. **Photo plan** (owner rules):
-   - **≥ 5 destination (cover) photos.**
-   - **≥ 3 per location**, and **≥ 3 per food location**. Generic dish photos tagged
-     "Ảnh minh họa" (`"illustrative": true`) count.
-   - **Up to 10** for food, beach and mountain/forest places.
+6. **Photo plan** (owner rule, updated 2026-11-08): **at most 3 photos per place**, both the
+   destination (cover) and each location. Aim for exactly 3, and use fewer only if no suitable
+   licensed photos exist (report it as a gap).
+   - Food locations also get 3; generic dish photos tagged "Ảnh minh họa"
+     (`"illustrative": true`) count.
    - **Wikimedia Commons first** (CC0, public domain, CC BY, CC BY-SA).
-   - If Commons can't meet a minimum, use **Flickr** (CC0, Public Domain Mark, CC BY, CC BY-SA,
+   - If Commons can't supply 3, use **Flickr** (CC0, Public Domain Mark, CC BY, CC BY-SA,
      CC BY-NC, CC BY-NC-SA; **never ND or "All rights reserved"**), **Unsplash** or **Pexels**
      (step B4b).
    - Vietnam has no freedom of panorama since 2023. For modern copyrighted works (new bridges,
      statues, modern buildings) use only files uploaded **before 2023**.
    - Switzerland: check `Commons:Copyright rules by territory/Switzerland` (freedom of panorama)
      before choosing photos of modern works, and note what you found.
-   - If even these sources can't reach a minimum, list it as a gap and ask the owner (for example
+   - If even these sources can't reach 3, list it as a gap and ask the owner (for example
      about their own photos). Never pad with unrelated photos.
 7. **Write the proposal** in the "Proposal" section of your brief:
    - the locations table (Vietnamese name, category, lat/lon, source, facts);
@@ -219,7 +219,7 @@ Replace the `planned` placeholder. Shape (see `da-nang`):
    ```
    Use a clear message ending with the co-author line. **Don't push and don't merge** unless the
    owner asks.
-3. Report to the owner: what works, the photo counts against the minimums, gaps, and decisions
+3. Report to the owner: what works, the photo counts (target 3 per place), gaps, and decisions
    needed.
 
 ## Things not to do

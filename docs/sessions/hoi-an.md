@@ -32,13 +32,10 @@ source you read (OSM / Wikidata / Wikipedia). Location ids must be `hoi-an-<slug
 
 ## Photos
 
-Commons has many Hội An photos; check categories such as the old town and the Japanese Covered Bridge. Cao lầu and cơm gà need ≥ 3 photos each (generic "Ảnh minh họa" allowed).
+Commons has many Hội An photos; check categories such as the old town and the Japanese Covered Bridge. Cao lầu and cơm gà need 3 photos each (generic "Ảnh minh họa" allowed).
 
-Minimums (owner):
-- ≥ 5 destination photos;
-- ≥ 3 per location;
-- ≥ 3 per food location;
-- up to 10 for food, beach and mountain/forest places.
+Photo count (owner, updated 2026-11-08): **at most 3 photos per place**, both the destination and
+each location (food too). Aim for exactly 3; fewer only if no suitable licensed photo exists.
 
 Wikimedia Commons first (CC0 / PD / CC BY / CC BY-SA). If a minimum can't be met, use Flickr (CC, never ND), Unsplash or Pexels as described in the playbook (step B4b). Report gaps instead of padding.
 

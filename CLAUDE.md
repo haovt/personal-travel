@@ -174,6 +174,7 @@ separate git worktree). To keep the sessions from conflicting:
 | 2026-11-08 | **Owner: new destinations.** Việt Nam: Đà Lạt, Vũng Tàu, Cần Giờ, Hội An, Vịnh Hạ Long, Ninh Bình, Nha Trang. Thụy Sĩ: Zürich, Luzern, Montreux (Lake Geneva). Same site with a country picker; Vietnamese for Switzerland too; git set up with `haovt/personal-travel`. |
 | 2026-11-08 | **Owner approved extra photo sources:** Flickr (CC, NC allowed for this non-commercial site, never ND), Unsplash, Pexels (see "Approved photo sources"). `tools/photos.py` accepts object entries for them, and the credits show the source and Vietnamese licence labels. Google Maps/Images photos stay forbidden. |
 | 2026-11-08 | **Faster, polite photo tools:** `tools/wm_http.py` puts all Wikimedia traffic from all sessions/worktrees through one paced queue (lock in `.git/livetravel-locks`, Retry-After back-off, User-Agent with the repo URL). `commons_candidates.py` caps files per place, caches API results, draws smaller sheets and keeps relevance order. A candidate run for one place takes ~10 s, down from 11+ min. |
+| 2026-11-08 | **Owner: at most 3 photos per place** (destinations and locations), aiming for exactly 3, to cut download time. Replaces the ≥ 5 / up to 10 rules. |
 | 2026-11-08 | **Restructured for parallel work** (commit `10b0116`): world level, `data/countries.json`, one folder per destination, per-destination tools, and `status: "planned"` placeholders for the 10 new destinations. Playbook and session briefs in `docs/`. **Next:** the owner starts one session per brief; the main session later merges branches and continues Phase 4 (search, favourites, featured, related places/food) and Phase 5 (offline, Pages). |
 
 ### Phase 3 extension (2026-11-08): more photos, wider detail, Google Maps link
@@ -190,7 +191,7 @@ separate git worktree). To keep the sessions from conflicting:
     aspect, and accepts only pre-2023 uploads where modern copyrighted works appear.
   - The tool is slow because Commons rate-limits it. The owner stopped it mid-run.
 - **Known gaps, accepted by the owner for now ("use what we have"):**
-  - Đà Nẵng destination: 2 photos (rule: ≥ 5).
+  - Đà Nẵng destination: 2 photos (rule now: 3).
   - Mì Quảng: 2 (rule: ≥ 3).
   - Bún chả cá: 2 (rule: ≥ 3).
   - Fill these later with a quick targeted Commons pass, or ask the owner about another source.
@@ -329,13 +330,15 @@ Deviations from the proposal:
 - No long essays and no history lectures. Cut anything that isn't interesting at a glance.
 - Map previews and list items: name, category and one short line at most.
 - Still factual and sourced, as before. Short does not mean invented.
-- **Photo counts (owner, 2026-11-08):** at least **5 photos per destination (city)** and at least
-  3 photos per location where suitable licensed photos exist. **Every food location (dish or
-  food market) must have at least 3 photos** (owner, 2026-11-08). Generic dish photos tagged
-  "Ảnh minh họa" count. If Commons can't supply 3, use the approved extra sources below
-  (Flickr, Unsplash, Pexels) rather than leaving it short. Food places,
-  beaches and mountain/forest places get more, up to 10. If a place
-  can't reach 3, report it as a gap instead of padding with unrelated photos.
+- **Photo counts (owner, updated 2026-11-08, because downloading photos is the bottleneck):**
+  **at most 3 photos for every place**, both destinations (cities) and locations. Aim for exactly
+  3; use fewer only when no more suitable licensed photos exist, and report that as a gap.
+  - Food locations also get 3; generic dish photos tagged "Ảnh minh họa" count.
+  - If Commons can't supply 3, use the approved extra sources below (Flickr, Unsplash, Pexels)
+    before accepting fewer. Never pad with unrelated photos.
+  - This replaces the earlier "≥ 5 per destination" and "up to 10" rules. Đà Nẵng's existing
+    10-photo galleries (Mỹ Khê, Ngũ Hành Sơn, Bà Nà) were already downloaded and stay unless the
+    owner asks to trim them.
 - **Approved photo sources (owner, 2026-11-08):**
   1. **Wikimedia Commons** first: CC0, public domain, CC BY, CC BY-SA.
   2. **Flickr**, when Commons can't meet a minimum or a much better photo exists. Licences:
