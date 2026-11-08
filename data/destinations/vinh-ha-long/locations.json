@@ -1,0 +1,408 @@
+[
+  {
+    "id": "vinh-ha-long-hang-sung-sot",
+    "destinationId": "vinh-ha-long",
+    "name": "Hang Sửng Sốt",
+    "category": "nature",
+    "tags": [
+      "attraction"
+    ],
+    "coordinates": {
+      "lat": 20.844,
+      "lon": 107.09126,
+      "source": "https://www.openstreetmap.org/node/3494812595",
+      "wikidata": "Q10765376",
+      "note": "OSM cave entrance. Wikidata gives 20.84441, 107.09144 (about 50 m away)."
+    },
+    "summary": "Một trong những hang động rộng và đẹp nhất vịnh, trên đảo Bồ Hòn, phủ đầy nhũ đá và măng đá.",
+    "facts": [
+      {
+        "label": "Vị trí",
+        "value": "Đảo Bồ Hòn, giữa vịnh Hạ Long"
+      },
+      {
+        "label": "Diện tích",
+        "value": "Khoảng 10.000 m², chia làm hai ngăn"
+      },
+      {
+        "label": "Cửa hang",
+        "value": "Cao khoảng 25 m so với mực nước biển"
+      }
+    ],
+    "images": [
+      {
+        "photo": "vinh-ha-long-hang-sung-sot-01",
+        "alt": "Lòng hang Sửng Sốt rộng lớn, nhũ đá được chiếu đèn nhiều màu"
+      },
+      {
+        "photo": "vinh-ha-long-hang-sung-sot-02",
+        "alt": "Cột nhũ đá lớn được chiếu sáng trong hang Sửng Sốt"
+      },
+      {
+        "photo": "vinh-ha-long-hang-sung-sot-03",
+        "alt": "Vách hang phủ kín nhũ đá rủ xuống"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/3494812595",
+      "https://www.wikidata.org/wiki/Q10765376",
+      "https://vi.wikipedia.org/wiki/Hang_S%E1%BB%ADng_S%E1%BB%91t",
+      "https://vi.wikipedia.org/wiki/V%E1%BB%8Bnh_H%E1%BA%A1_Long"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "vinh-ha-long-dong-thien-cung",
+    "destinationId": "vinh-ha-long",
+    "name": "Động Thiên Cung",
+    "category": "nature",
+    "tags": [],
+    "coordinates": {
+      "lat": 20.91268,
+      "lon": 107.01721,
+      "source": "https://www.openstreetmap.org/node/4730928605",
+      "note": "OSM cave entrance. Wikidata Q124453533 \"Thien Cung Cave\" is a different cave in Ninh Bình."
+    },
+    "summary": "Hang động trên đảo Canh Độc, vách và trần phủ nhũ đá với nhiều hình thù kỳ lạ.",
+    "facts": [
+      {
+        "label": "Mở cửa đón khách",
+        "value": "1/5/1998"
+      },
+      {
+        "label": "Chiều dài",
+        "value": "Hơn 130 m"
+      },
+      {
+        "label": "Gần đó",
+        "value": "Hang Đầu Gỗ, cách khoảng 100 m"
+      }
+    ],
+    "images": [
+      {
+        "photo": "vinh-ha-long-dong-thien-cung-01",
+        "alt": "Nhũ đá trắng và măng đá trong động Thiên Cung, ánh đèn xanh vàng"
+      },
+      {
+        "photo": "vinh-ha-long-dong-thien-cung-02",
+        "alt": "Khối nhũ đá nhiều màu dưới ánh đèn trong động Thiên Cung"
+      },
+      {
+        "photo": "vinh-ha-long-dong-thien-cung-03",
+        "alt": "Du khách tham quan lòng động Thiên Cung phủ đầy nhũ đá"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/4730928605",
+      "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%99ng_Thi%C3%AAn_Cung",
+      "https://vi.wikipedia.org/wiki/V%E1%BB%8Bnh_H%E1%BA%A1_Long"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "vinh-ha-long-hon-trong-mai",
+    "destinationId": "vinh-ha-long",
+    "name": "Hòn Trống Mái",
+    "category": "nature",
+    "tags": [
+      "attraction"
+    ],
+    "coordinates": {
+      "lat": 20.89049,
+      "lon": 107.02623,
+      "source": "https://www.openstreetmap.org/way/480056722",
+      "note": "Centre of the OSM islet \"Hòn Gà chọi\" (Fighting Cock Islet)."
+    },
+    "mapsQuery": "Hòn Trống Mái, Vịnh Hạ Long",
+    "summary": "Hai khối đá như đôi gà, một trống một mái, đứng chênh vênh trên mặt nước, biểu tượng của vịnh Hạ Long.",
+    "facts": [
+      {
+        "label": "Tên khác",
+        "value": "Hòn Gà Chọi"
+      },
+      {
+        "label": "Chiều cao",
+        "value": "Hơn 10 m"
+      },
+      {
+        "label": "Cách cảng Bãi Cháy",
+        "value": "Khoảng 5 km"
+      }
+    ],
+    "images": [
+      {
+        "photo": "vinh-ha-long-hon-trong-mai-01",
+        "alt": "Hai khối đá Trống Mái đứng sát nhau trên mặt nước"
+      },
+      {
+        "photo": "vinh-ha-long-hon-trong-mai-02",
+        "alt": "Hòn Trống Mái với chân đá thắt lại, nhìn từ mặt biển"
+      },
+      {
+        "photo": "vinh-ha-long-hon-trong-mai-03",
+        "alt": "Hai hòn đá hình đôi gà đứng chênh vênh giữa vịnh"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/480056722",
+      "https://vi.wikipedia.org/wiki/V%E1%BB%8Bnh_H%E1%BA%A1_Long"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "vinh-ha-long-dao-ti-top",
+    "destinationId": "vinh-ha-long",
+    "name": "Đảo Ti Tốp",
+    "category": "nature",
+    "tags": [
+      "experience"
+    ],
+    "coordinates": {
+      "lat": 20.8592,
+      "lon": 107.08027,
+      "source": "https://www.openstreetmap.org/way/342805164",
+      "wikidata": "Q16481033",
+      "note": "Centre of the OSM island outline. Wikidata gives 20.859, 107.08014 (about 25 m away)."
+    },
+    "summary": "Đảo nhỏ có bãi tắm cát trắng hình vầng trăng và đỉnh núi nhìn ra toàn cảnh vịnh.",
+    "facts": [
+      {
+        "label": "Đặt tên",
+        "value": "22/1/1962, theo tên nhà du hành vũ trụ Gherman Titov"
+      },
+      {
+        "label": "Tên cũ",
+        "value": "Hòn Cát Nàng"
+      }
+    ],
+    "images": [
+      {
+        "photo": "vinh-ha-long-dao-ti-top-02",
+        "alt": "Toàn cảnh vịnh và tàu du lịch nhìn từ đỉnh đảo Ti Tốp"
+      },
+      {
+        "photo": "vinh-ha-long-dao-ti-top-01",
+        "alt": "Đảo Ti Tốp phủ cây xanh với bãi cát dưới chân đảo"
+      },
+      {
+        "photo": "vinh-ha-long-dao-ti-top-03",
+        "alt": "Du khách trên bãi cát đảo Ti Tốp"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/342805164",
+      "https://www.wikidata.org/wiki/Q16481033",
+      "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A3o_Ti_T%E1%BB%91p",
+      "https://vi.wikipedia.org/wiki/V%E1%BB%8Bnh_H%E1%BA%A1_Long"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "vinh-ha-long-hang-luon",
+    "destinationId": "vinh-ha-long",
+    "name": "Chèo thuyền qua Hang Luồn",
+    "category": "experience",
+    "tags": [
+      "nature"
+    ],
+    "coordinates": {
+      "lat": 20.85309,
+      "lon": 107.09487,
+      "source": "https://www.openstreetmap.org/node/3560283504",
+      "note": "OSM cave entrance \"Hang Luồn\". The vi.wikipedia disambiguation page \"Hang Luồn\" gives 20°51′10″ N, 107°05′43″ E (about 60 m away). The article \"Hang Luồn Hạ Long\" gives a point about 1 km south, near Hang Sửng Sốt; not used."
+    },
+    "mapsQuery": "Hang Luồn, Vịnh Hạ Long",
+    "summary": "Ngồi kayak hoặc đò chèo tay luồn qua vòm hang đá để vào một hồ nước kín giữa đảo.",
+    "facts": [
+      {
+        "label": "Chiều dài hang",
+        "value": "Khoảng 100 m"
+      },
+      {
+        "label": "Cửa hang",
+        "value": "Rộng khoảng 4 m, cao 3 m"
+      },
+      {
+        "label": "Vị trí",
+        "value": "Đảo Bồ Hòn, gần hang Sửng Sốt"
+      }
+    ],
+    "images": [
+      {
+        "photo": "vinh-ha-long-hang-luon-01",
+        "alt": "Vòm Hang Luồn sát mặt nước, phía sau là hồ nước giữa núi"
+      },
+      {
+        "photo": "vinh-ha-long-hang-luon-02",
+        "alt": "Cửa Hang Luồn với biển tên hang và thuyền kayak"
+      },
+      {
+        "photo": "vinh-ha-long-hang-luon-03",
+        "alt": "Đò chèo tay chở du khách trên mặt nước giữa vách đá"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/3560283504",
+      "https://vi.wikipedia.org/wiki/Hang_Lu%E1%BB%93n_H%E1%BA%A1_Long",
+      "https://vi.wikipedia.org/wiki/Hang_Lu%E1%BB%93n",
+      "https://en.wikivoyage.org/wiki/Ha_Long_Bay"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "vinh-ha-long-lang-chai-cua-van",
+    "destinationId": "vinh-ha-long",
+    "name": "Làng chài Cửa Vạn",
+    "category": "culture",
+    "tags": [],
+    "coordinates": {
+      "lat": 20.80724,
+      "lon": 107.11794,
+      "source": "https://www.openstreetmap.org/node/4730877540",
+      "note": "OSM tourism=attraction node \"Cửa Vạn\". No Wikidata item (Q31909546 is another Cửa Vạn, in Khánh Hòa)."
+    },
+    "mapsQuery": "Làng chài Cửa Vạn, Vịnh Hạ Long",
+    "summary": "Làng chài giữa vịnh, nơi ngư dân sống trên thuyền và nhà bè, còn giữ lối hát đúm, hò biển.",
+    "facts": [
+      {
+        "label": "Thuộc",
+        "value": "Phường Bãi Cháy, thành phố Quảng Ninh"
+      },
+      {
+        "label": "Làn điệu",
+        "value": "Hát đúm, hò biển, hát đám cưới"
+      }
+    ],
+    "images": [
+      {
+        "photo": "vinh-ha-long-lang-chai-cua-van-01",
+        "alt": "Nhà bè và thuyền của làng chài Cửa Vạn dưới chân núi đá"
+      },
+      {
+        "photo": "vinh-ha-long-lang-chai-cua-van-02",
+        "alt": "Thuyền đánh cá neo tại làng chài Cửa Vạn"
+      },
+      {
+        "photo": "vinh-ha-long-lang-chai-cua-van-03",
+        "alt": "Mặt nước và những hòn đảo quanh làng chài Cửa Vạn"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/4730877540",
+      "https://vi.wikipedia.org/wiki/V%E1%BB%8Bnh_H%E1%BA%A1_Long"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "vinh-ha-long-hai-san",
+    "destinationId": "vinh-ha-long",
+    "name": "Hải sản tươi",
+    "category": "food",
+    "tags": [
+      "market"
+    ],
+    "coordinates": {
+      "lat": 20.9498,
+      "lon": 107.08231,
+      "source": "https://www.openstreetmap.org/way/673096988",
+      "note": "Centre of the OSM market area \"Chợ Hòn Gai (Hon Gai Market)\" (landuse=retail, check_date 2025-03-15). Owner decision 2026-11-08: name the venue \"Chợ Hòn Gai\" as in OSM, without claiming it is chợ Hạ Long I (no source links the two), and pin both food locations here. No source confirms that this market sells chả mực."
+    },
+    "venue": {
+      "name": "Chợ Hòn Gai",
+      "address": "Phường Hồng Gai"
+    },
+    "mapsQuery": "Chợ Hòn Gai, Hồng Gai, Quảng Ninh",
+    "summary": "Hải sản tươi sống của vùng vịnh, tìm mua ở chợ bên bờ Hồng Gai.",
+    "facts": [
+      {
+        "label": "Một địa chỉ tiêu biểu",
+        "value": "Chợ Hòn Gai, phường Hồng Gai"
+      }
+    ],
+    "images": [
+      {
+        "photo": "vinh-ha-long-hai-san-01",
+        "alt": "Người bán hải sản trên thuyền ở vịnh Hạ Long",
+        "illustrative": true
+      },
+      {
+        "photo": "vinh-ha-long-hai-san-02",
+        "alt": "Sạp cá biển bày bán trong khay nhựa ở một khu chợ",
+        "illustrative": true
+      },
+      {
+        "photo": "vinh-ha-long-hai-san-03",
+        "alt": "Cá và mực tươi bày trên khay",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/673096988",
+      "https://vi.wikipedia.org/wiki/H%E1%BB%93ng_Gai_(ph%C6%B0%E1%BB%9Dng)"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "vinh-ha-long-cha-muc",
+    "destinationId": "vinh-ha-long",
+    "name": "Chả mực",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 20.9498,
+      "lon": 107.08231,
+      "source": "https://www.openstreetmap.org/way/673096988",
+      "note": "Centre of the OSM market area \"Chợ Hòn Gai (Hon Gai Market)\" (landuse=retail, check_date 2025-03-15). Owner decision 2026-11-08: name the venue \"Chợ Hòn Gai\" as in OSM, without claiming it is chợ Hạ Long I (no source links the two), and pin both food locations here. No source confirms that this market sells chả mực."
+    },
+    "venue": {
+      "name": "Chợ Hòn Gai",
+      "address": "Phường Hồng Gai"
+    },
+    "mapsQuery": "Chả mực, Chợ Hòn Gai, Quảng Ninh",
+    "summary": "Mực giã nhuyễn nặn thành miếng rồi chiên vàng, món đặc sản nổi tiếng của Hạ Long.",
+    "facts": [
+      {
+        "label": "Ăn kèm",
+        "value": "Dưa leo, cà chua, nước mắm hoặc tương ớt"
+      },
+      {
+        "label": "Kỷ lục",
+        "value": "Trong top 50 món đặc sản Việt Nam (Trung tâm Sách kỷ lục Việt Nam)"
+      },
+      {
+        "label": "Một địa chỉ tiêu biểu",
+        "value": "Chợ Hòn Gai, phường Hồng Gai"
+      }
+    ],
+    "images": [
+      {
+        "photo": "vinh-ha-long-cha-muc-01",
+        "alt": "Đĩa chả mực chiên vàng",
+        "illustrative": true
+      },
+      {
+        "photo": "vinh-ha-long-cha-muc-02",
+        "alt": "Chả mực chiên vàng xếp trong khay",
+        "illustrative": true
+      },
+      {
+        "photo": "vinh-ha-long-cha-muc-03",
+        "alt": "Những miếng chả mực đang rán trong chảo",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://vi.wikipedia.org/wiki/Ch%E1%BA%A3_m%E1%BB%B1c",
+      "https://www.openstreetmap.org/way/673096988"
+    ],
+    "status": "published"
+  }
+]

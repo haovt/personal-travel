@@ -1,0 +1,16 @@
+{
+  "_note": "Local map extract settings. Used by: node tools/build-local-map.mjs vinh-ha-long fetch|build",
+  "bbox": [
+    106.93,
+    20.75,
+    107.21,
+    21.01
+  ],
+  "coreBbox": [
+    107.075,
+    20.944,
+    107.09,
+    20.956
+  ],
+  "riverLabels": []
+}
