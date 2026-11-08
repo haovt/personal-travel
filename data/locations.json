@@ -1,0 +1,506 @@
+[
+  {
+    "id": "cau-rong",
+    "destinationId": "da-nang",
+    "name": "Cầu Rồng",
+    "category": "attraction",
+    "tags": [
+      "experience"
+    ],
+    "coordinates": {
+      "lat": 16.06117,
+      "lon": 108.2279,
+      "source": "https://www.openstreetmap.org/way/694831926",
+      "wikidata": "Q5305270"
+    },
+    "summary": "Cây cầu hình rồng vàng vắt qua sông Hàn, cuối tuần rồng phun lửa và phun nước.",
+    "facts": [
+      {
+        "label": "Thông xe",
+        "value": "29/3/2013"
+      },
+      {
+        "label": "Chiều dài",
+        "value": "666 m"
+      },
+      {
+        "label": "Rồng phun lửa, phun nước",
+        "value": "21 giờ tối thứ Bảy và Chủ nhật"
+      }
+    ],
+    "images": [
+      {
+        "photo": "cau-rong-02",
+        "alt": "Đầu rồng vàng của Cầu Rồng nhìn từ bờ sông Hàn"
+      },
+      {
+        "photo": "cau-rong-03",
+        "alt": "Mặt cầu Cầu Rồng với thân rồng uốn lượn phía trên"
+      },
+      {
+        "photo": "cau-rong-01",
+        "alt": "Cầu Rồng và trung tâm Đà Nẵng nhìn từ xa"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q5305270",
+      "https://en.wikipedia.org/wiki/Dragon_Bridge_(Da_Nang)"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "bai-bien-my-khe",
+    "destinationId": "da-nang",
+    "name": "Bãi biển Mỹ Khê",
+    "category": "nature",
+    "tags": [],
+    "coordinates": {
+      "lat": 16.07563,
+      "lon": 108.24688,
+      "source": "https://www.openstreetmap.org/relation/19000664",
+      "wikidata": "Q10796763",
+      "note": "Centroid of the OSM beach area. Wikidata gives 16.07040, 108.24610 (about 590 m away, also on the beach)."
+    },
+    "summary": "Bãi biển trải dài phía đông thành phố, một trong những bãi tắm đông vui nhất Đà Nẵng.",
+    "facts": [],
+    "images": [
+      {
+        "photo": "bai-bien-my-khe-03",
+        "alt": "Bãi biển Mỹ Khê với hàng dù che nắng, phía xa là bán đảo Sơn Trà"
+      },
+      {
+        "photo": "bai-bien-my-khe-04",
+        "alt": "Toàn cảnh bờ biển Mỹ Khê và hàng dừa ven đường biển nhìn từ trên cao"
+      },
+      {
+        "photo": "bai-bien-my-khe-10",
+        "alt": "Sóng vỗ vào bờ cát Mỹ Khê, phía xa là núi Sơn Trà"
+      },
+      {
+        "photo": "bai-bien-my-khe-05",
+        "alt": "Bãi cát rộng của Mỹ Khê trước dãy khách sạn cao tầng"
+      },
+      {
+        "photo": "bai-bien-my-khe-06",
+        "alt": "Thuyền đánh cá dưới hàng dừa trên bãi biển Mỹ Khê"
+      },
+      {
+        "photo": "bai-bien-my-khe-07",
+        "alt": "Những chiếc thúng chai trên bãi cát, phía xa là thành phố"
+      },
+      {
+        "photo": "bai-bien-my-khe-09",
+        "alt": "Ngư dân dựng thúng chai trên bãi biển"
+      },
+      {
+        "photo": "bai-bien-my-khe-08",
+        "alt": "Bờ biển Mỹ Khê uốn cong về phía núi Sơn Trà"
+      },
+      {
+        "photo": "bai-bien-my-khe-02",
+        "alt": "Đường cong bờ biển Mỹ Khê nhìn từ núi Sơn Trà"
+      },
+      {
+        "photo": "bai-bien-my-khe-01",
+        "alt": "Hàng dừa và bãi cát Mỹ Khê"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q10796763",
+      "https://vi.wikipedia.org/wiki/B%C3%A3i_bi%E1%BB%83n_M%E1%BB%B9_Kh%C3%AA"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "ngu-hanh-son",
+    "destinationId": "da-nang",
+    "name": "Ngũ Hành Sơn",
+    "category": "nature",
+    "tags": [
+      "culture"
+    ],
+    "coordinates": {
+      "lat": 16.0043,
+      "lon": 108.26353,
+      "source": "https://www.openstreetmap.org/node/1758586662",
+      "wikidata": "Q6755207",
+      "note": "Pin on Thủy Sơn, the hill visitors climb. Massif centroid: OSM relation/8552348 (16.00402, 108.26277)."
+    },
+    "summary": "Năm ngọn núi đá vôi mang tên ngũ hành, ẩn chứa chùa chiền và hang động.",
+    "facts": [
+      {
+        "label": "Năm ngọn núi",
+        "value": "Kim Sơn, Mộc Sơn, Thủy Sơn, Hỏa Sơn, Thổ Sơn"
+      },
+      {
+        "label": "Có thể leo lên",
+        "value": "Thủy Sơn"
+      },
+      {
+        "label": "Hang động nổi bật",
+        "value": "Động Huyền Không"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ngu-hanh-son-01",
+        "alt": "Các ngọn núi đá vôi Ngũ Hành Sơn nhô lên giữa khu dân cư"
+      },
+      {
+        "photo": "ngu-hanh-son-05",
+        "alt": "Toàn cảnh Ngũ Hành Sơn dưới bầu trời xanh"
+      },
+      {
+        "photo": "ngu-hanh-son-06",
+        "alt": "Ngôi chùa mái ngói đỏ trên núi Ngũ Hành Sơn"
+      },
+      {
+        "photo": "ngu-hanh-son-08",
+        "alt": "Tháp đá nhiều tầng giữa cây xanh trên Thủy Sơn"
+      },
+      {
+        "photo": "ngu-hanh-son-07",
+        "alt": "Vườn tượng Phật bằng đá trắng dưới vách núi"
+      },
+      {
+        "photo": "ngu-hanh-son-02",
+        "alt": "Cổng đá cổ dẫn vào hang động ở Ngũ Hành Sơn"
+      },
+      {
+        "photo": "ngu-hanh-son-10",
+        "alt": "Lối đi bậc đá men theo vách núi"
+      },
+      {
+        "photo": "ngu-hanh-son-03",
+        "alt": "Bàn thờ và tượng Phật bên trong động Huyền Không"
+      },
+      {
+        "photo": "ngu-hanh-son-09",
+        "alt": "Tượng thần hộ pháp nhiều màu sắc trong hang"
+      },
+      {
+        "photo": "ngu-hanh-son-04",
+        "alt": "Ánh nắng chiếu xuyên qua khe đá vào động Huyền Không"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q6755207",
+      "https://en.wikipedia.org/wiki/Marble_Mountains_(Vietnam)"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "chua-linh-ung-bai-but",
+    "destinationId": "da-nang",
+    "name": "Chùa Linh Ứng Bãi Bụt",
+    "category": "culture",
+    "tags": [],
+    "coordinates": {
+      "lat": 16.10014,
+      "lon": 108.27844,
+      "source": "https://www.openstreetmap.org/way/486703049",
+      "wikidata": "Q18277260",
+      "note": "Wikidata gives 16.09900, 108.27700 (about 200 m away)."
+    },
+    "summary": "Ngôi chùa trên bán đảo Sơn Trà, nổi tiếng với tượng Quán Thế Âm cao nhất Việt Nam.",
+    "facts": [
+      {
+        "label": "Khánh thành",
+        "value": "30/7/2010"
+      },
+      {
+        "label": "Tượng Quán Thế Âm",
+        "value": "Cao 67 m"
+      }
+    ],
+    "images": [
+      {
+        "photo": "chua-linh-ung-bai-but-02",
+        "alt": "Các điện mái xanh và sân bonsai của chùa Linh Ứng Bãi Bụt"
+      },
+      {
+        "photo": "chua-linh-ung-bai-but-01",
+        "alt": "Sân lát đá và chính điện chùa Linh Ứng"
+      },
+      {
+        "photo": "chua-linh-ung-bai-but-03",
+        "alt": "Tượng Quán Thế Âm màu trắng giữa rừng Sơn Trà"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q18277260",
+      "https://vi.wikipedia.org/wiki/Ch%C3%B9a_Linh_%E1%BB%A8ng"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "bao-tang-dieu-khac-cham",
+    "destinationId": "da-nang",
+    "name": "Bảo tàng Điêu khắc Chăm",
+    "category": "history",
+    "tags": [
+      "culture"
+    ],
+    "coordinates": {
+      "lat": 16.0602,
+      "lon": 108.22317,
+      "source": "https://www.openstreetmap.org/way/302872188",
+      "wikidata": "Q6940790"
+    },
+    "summary": "Nơi lưu giữ các tác phẩm điêu khắc Chăm, trong tòa nhà xây từ năm 1919.",
+    "facts": [
+      {
+        "label": "Tòa nhà đầu tiên",
+        "value": "Khánh thành năm 1919"
+      },
+      {
+        "label": "Mở rộng",
+        "value": "Năm 2002"
+      }
+    ],
+    "images": [
+      {
+        "photo": "bao-tang-dieu-khac-cham-03",
+        "alt": "Tòa nhà màu vàng và sân vườn của Bảo tàng Điêu khắc Chăm"
+      },
+      {
+        "photo": "bao-tang-dieu-khac-cham-02",
+        "alt": "Phòng trưng bày tượng đá Chăm"
+      },
+      {
+        "photo": "bao-tang-dieu-khac-cham-01",
+        "alt": "Hiên gạch của bảo tàng với các chi tiết trang trí Chăm"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q6940790",
+      "https://en.wikipedia.org/wiki/Museum_of_Cham_Sculpture"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "ba-na-cau-vang",
+    "destinationId": "da-nang",
+    "name": "Bà Nà Hills – Cầu Vàng",
+    "category": "experience",
+    "tags": [
+      "attraction"
+    ],
+    "coordinates": {
+      "lat": 15.99492,
+      "lon": 107.99623,
+      "source": "https://www.openstreetmap.org/way/683416736",
+      "wikidata": "Q55954790",
+      "note": "Pin on Cầu Vàng. Bà Nà Hills: Wikidata Q5004763 (15.99556, 107.99417)."
+    },
+    "summary": "Khu nghỉ mát trên đỉnh núi Bà Nà, nơi có Cầu Vàng nâng đỡ bởi hai bàn tay khổng lồ.",
+    "facts": [
+      {
+        "label": "Độ cao",
+        "value": "Khoảng 1.500 m"
+      },
+      {
+        "label": "Cáp treo",
+        "value": "Dài 5.801 m, khai trương 29/3/2013"
+      },
+      {
+        "label": "Cầu Vàng",
+        "value": "Dài 150 m, mở cửa năm 2018"
+      }
+    ],
+    "images": [
+      {
+        "photo": "ba-na-cau-vang-03",
+        "alt": "Cầu Vàng trên hai bàn tay đá khổng lồ, đông du khách"
+      },
+      {
+        "photo": "ba-na-cau-vang-02",
+        "alt": "Cầu Vàng uốn cong trên hai bàn tay đá khổng lồ"
+      },
+      {
+        "photo": "ba-na-cau-vang-04",
+        "alt": "Cabin cáp treo bay trên rừng núi Bà Nà"
+      },
+      {
+        "photo": "ba-na-cau-vang-05",
+        "alt": "Núi rừng xanh Bà Nà và ngôi biệt thự mái đỏ"
+      },
+      {
+        "photo": "ba-na-cau-vang-09",
+        "alt": "Sương mù bao phủ rừng núi trên đỉnh Bà Nà"
+      },
+      {
+        "photo": "ba-na-cau-vang-06",
+        "alt": "Làng Pháp với những mái nhà nhọn trên đỉnh Bà Nà"
+      },
+      {
+        "photo": "ba-na-cau-vang-07",
+        "alt": "Tháp trắng nhiều tầng giữa cây xanh trên núi Bà Nà"
+      },
+      {
+        "photo": "ba-na-cau-vang-08",
+        "alt": "Sân chùa với chậu cây cảnh trên đỉnh Bà Nà"
+      },
+      {
+        "photo": "ba-na-cau-vang-01",
+        "alt": "Vườn hoa trên đỉnh Bà Nà Hills trong sương mù"
+      },
+      {
+        "photo": "ba-na-cau-vang-10",
+        "alt": "Cabin cáp treo chìm trong sương mù"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q55954790",
+      "https://www.wikidata.org/wiki/Q5004763",
+      "https://en.wikipedia.org/wiki/Golden_Bridge_(Vietnam)",
+      "https://en.wikipedia.org/wiki/B%C3%A0_N%C3%A0_Hills"
+    ],
+    "status": "published",
+    "mapsQuery": "Cầu Vàng, Bà Nà Hills, Đà Nẵng"
+  },
+  {
+    "id": "cho-con",
+    "destinationId": "da-nang",
+    "name": "Chợ Cồn",
+    "category": "food",
+    "tags": [
+      "market"
+    ],
+    "coordinates": {
+      "lat": 16.06813,
+      "lon": 108.21452,
+      "source": "https://www.openstreetmap.org/way/204790989",
+      "wikidata": "Q10748770",
+      "note": "Centroid of the market building (Nominatim). The food area inside is not mapped separately in OSM."
+    },
+    "venue": {
+      "address": "290 Hùng Vương"
+    },
+    "summary": "Khu chợ lớn giữa trung tâm thành phố, tên gọi có từ những năm 1940.",
+    "facts": [
+      {
+        "label": "Địa chỉ",
+        "value": "290 Hùng Vương"
+      },
+      {
+        "label": "Khu chợ hiện nay",
+        "value": "Xây lại năm 1984, ba tầng"
+      }
+    ],
+    "dishes": [],
+    "images": [
+      {
+        "photo": "cho-con-02",
+        "alt": "Cổng chợ Cồn với bảng tên lúc hoàng hôn"
+      },
+      {
+        "photo": "cho-con-01",
+        "alt": "Các sạp rau củ đông người mua ở chợ Cồn"
+      },
+      {
+        "photo": "cho-con-03",
+        "alt": "Tòa nhà chợ Cồn nhìn từ ngã tư"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/204790989",
+      "https://vi.wikipedia.org/wiki/Ch%E1%BB%A3_C%E1%BB%93n"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "mi-quang",
+    "destinationId": "da-nang",
+    "name": "Mì Quảng",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 16.07238,
+      "lon": 108.21913,
+      "source": "https://www.openstreetmap.org/node/4430077491"
+    },
+    "venue": {
+      "name": "Mì Quảng 1A",
+      "address": "1A Hải Phòng"
+    },
+    "summary": "Đặc sản của xứ Quảng, sợi mì to ăn cùng rau sống và bánh tráng.",
+    "facts": [
+      {
+        "label": "Quán",
+        "value": "Mì Quảng 1A"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "1A Hải Phòng"
+      }
+    ],
+    "images": [
+      {
+        "photo": "mi-quang-01",
+        "alt": "Tô mì Quảng với bánh tráng ở quán Mì Quảng 1A"
+      },
+      {
+        "photo": "mi-quang-02",
+        "alt": "Tô mì Quảng với trứng cút, thịt và rau thơm"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/4430077491"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "bun-cha-ca",
+    "destinationId": "da-nang",
+    "name": "Bún chả cá",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 16.07439,
+      "lon": 108.2208,
+      "source": "https://www.openstreetmap.org/node/5484764821",
+      "note": "OSM check_date 2026-11-03."
+    },
+    "venue": {
+      "name": "Bún chả cá 109",
+      "address": "109 Nguyễn Chí Thanh"
+    },
+    "summary": "Món bún ăn cùng chả cá.",
+    "facts": [
+      {
+        "label": "Quán",
+        "value": "Bún chả cá 109"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "109 Nguyễn Chí Thanh"
+      }
+    ],
+    "images": [
+      {
+        "photo": "bun-cha-ca-01",
+        "alt": "Tô bún chả cá",
+        "illustrative": true
+      },
+      {
+        "photo": "bun-cha-ca-02",
+        "alt": "Tô bún chả cá với rau thơm",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/5484764821"
+    ],
+    "status": "published"
+  }
+]

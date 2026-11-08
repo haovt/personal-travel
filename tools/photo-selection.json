@@ -1,0 +1,75 @@
+{
+  "_note": "Wikimedia Commons files approved in Phase 0 (docs/phase-0-proposal.md, section 5.1). Order = gallery order. Used by tools/photos.py.",
+  "destinations": {
+    "da-nang": [
+      "Han_River_in_Da_Nang_at_sunrise.jpg",
+      "Da_Nang_and_the_Son_Tra_Peninsula.jpg"
+    ]
+  },
+  "locations": {
+    "cau-rong": [
+      "Remote_view_of_the_Dragon_Bridge_in_Da_Nang.jpg",
+      "Da_Nang_Dragon_Bridge_2020_IMG_4019.jpg",
+      "Dragon_Bridge_Da_Nang_1.jpg"
+    ],
+    "bai-bien-my-khe": [
+      "My_Khe_Beach,_Da_Nang,_Vietnam.jpg",
+      "My_Khe_Beach_seen_from_the_Son_Tra_Mountain.jpg",
+      "Bai_bien_My_Khe.jpg",
+      "My_Khe_Beach_Danang_Coastline.jpg",
+      "My_Khe_Beach_3.jpg",
+      "Boats_on_My_Khe_Beach_2.jpg",
+      "Coracles_in_Da_Nang_8.jpg",
+      "My_Khe_Beach_9.jpg",
+      "Coracles_on_Danang_Beach.jpg",
+      "Da_Nang_china_Beach_2020_IMG_4009.jpg"
+    ],
+    "ngu-hanh-son": [
+      "Marble_Mountains_20190919.jpg",
+      "The_Marble_Mountains_(45485988652).jpg",
+      "Huyen_Khong_Cave_1.jpg",
+      "Sunlight_Huyen_Khong_Cave.jpg",
+      "Da_Nang_Marble_Mountains_2020_IMG_4008.jpg",
+      "Marble_Mountain_(25652591577).jpg",
+      "Marble_Mountain_(25634494767).jpg",
+      "Marble_Mountain_(40462794922).jpg",
+      "Marble_Mountain_(38694885060).jpg",
+      "The_Marble_Mountains_(30595695437).jpg"
+    ],
+    "chua-linh-ung-bai-but": [
+      "Linh_Ung_Pagoda_2.jpg",
+      "Chùa_Linh_Ứng.jpg",
+      "Lady_Buddha_Da_Nang.jpg"
+    ],
+    "bao-tang-dieu-khac-cham": [
+      "Terrace_-_Museum_of_Cham_Sculpture_-_Danang,_Vietnam_-_DSC01987.JPG",
+      "Interior_view_-_Museum_of_Cham_Sculpture_-_Danang,_Vietnam_-_DSC01931.JPG",
+      "Le_musée_de_sculpture_Cham_(Da_Nang)_(4394725713).jpg"
+    ],
+    "ba-na-cau-vang": [
+      "Golden_Bridge,_Ba_Na_Hills,_Vietnam_(49056923018).jpg",
+      "Vietnam,_Ba_Na_Hill,_Golden_Bridge_-_Laslovarga.jpg",
+      "Golden_Bridge_(Vietnam)_20190920.jpg",
+      "DSC00416_(37428877080).jpg",
+      "DSC00399_(37637980156).jpg",
+      "Bà_Nà_Hills_Western_Part_(44621789585).jpg",
+      "Bà_Nà_Hills_Asian_Part_(44621787075).jpg",
+      "Bà_Nà_Hills_Asian_Part_(44810268994).jpg",
+      "Bà_Nà_Hills_in_the_clouds_(45485212342).jpg",
+      "Bà_Nà_Hills_ropeway_(44621782055).jpg"
+    ],
+    "cho-con": [
+      "Con_Market_1.jpg",
+      "Con_Market_at_sunset.jpg",
+      "Con_Market_across_intersection.JPG"
+    ],
+    "mi-quang": [
+      "Mi_Quang_1A_Danang.jpg",
+      "My_Quang_Da_Nang.JPG"
+    ],
+    "bun-cha-ca": [
+      "Bun_cha_ca.jpg",
+      "Bún_chả_cá,_tháng_8_năm_2018.JPG"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+# Original downloads and build caches: never published
+source-assets/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Local tool settings
+.claude/settings.local.json

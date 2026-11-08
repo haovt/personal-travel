@@ -1,0 +1,9 @@
+[
+  { "id": "attraction", "name": "Địa danh",    "color": "#d93025", "glyph": "star" },
+  { "id": "nature",     "name": "Thiên nhiên", "color": "#188038", "glyph": "leaf" },
+  { "id": "food",       "name": "Ẩm thực",     "color": "#e8710a", "glyph": "bowl" },
+  { "id": "culture",    "name": "Văn hóa",     "color": "#8430ce", "glyph": "temple" },
+  { "id": "history",    "name": "Lịch sử",     "color": "#795548", "glyph": "column" },
+  { "id": "market",     "name": "Chợ",         "color": "#c5221f", "glyph": "basket" },
+  { "id": "experience", "name": "Trải nghiệm", "color": "#1a73e8", "glyph": "spark" }
+]

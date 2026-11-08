@@ -1,0 +1,10 @@
+{
+  "_note": "Label anchor positions for the overview map. These are cartographic text placements, not point locations of real places. Island-group labels are anchored to the centroid of that group's island dots (computed at runtime).",
+  "labels": [
+    { "text": "Biển Đông",       "kind": "sea",     "lat": 13.2,  "lon": 112.6 },
+    { "text": "Vịnh Bắc Bộ",     "kind": "sea",     "lat": 20.2,  "lon": 107.7 },
+    { "text": "Vịnh Thái Lan",   "kind": "sea",     "lat": 9.1,   "lon": 103.3 },
+    { "text": "Quần đảo Hoàng Sa", "kind": "islands", "group": "hoang-sa",  "offset": [0, 22] },
+    { "text": "Quần đảo Trường Sa", "kind": "islands", "group": "truong-sa", "offset": [0, 26] }
+  ]
+}

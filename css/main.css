@@ -1,0 +1,346 @@
+/* Base layout, tokens, top bar, region chips and the info sheet.
+   Mobile-first (iPhone 13: 390 x 844 CSS px); desktop from 768 px wide. */
+
+:root {
+  color-scheme: light;
+
+  /* Map palette, similar to a default road map (see CLAUDE.md "Map style decision"). */
+  --water: #aadaff;
+  --land: #f8f9fa;
+  --land-neighbour: #eceff1;
+  --border: #9aa0a6;
+  --park: #c8e6c9;
+  --road-major: #fde293;
+  --road-major-casing: #f2b950;
+  --label: #3c4043;
+  --label-sea: #4a7aa8;
+
+  /* Interface */
+  --surface: #ffffff;
+  --text: #202124;
+  --text-2: #5f6368;
+  --divider: #e0e3e7;
+  --accent: #c8402f;
+  --accent-soft: #fbe9e6;
+  --chip: #ffffff;
+  --chip-active: #e8f0fe;
+  --chip-active-text: #174ea6;
+  --shadow-1: 0 1px 2px rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+  --shadow-2: 0 1px 3px rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+
+  --radius: 16px;
+  --font-ui: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Noto Serif", Georgia, serif;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --gutter: 12px;
+  --panel-width: 420px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;              /* the map handles all panning; the page never scrolls */
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--water);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  height: 100dvh;
+}
+
+button { font: inherit; color: inherit; }
+
+[hidden] { display: none !important; }
+
+.noscript {
+  position: fixed; inset: auto 16px 16px; padding: 12px 16px;
+  background: var(--surface); border-radius: 12px; box-shadow: var(--shadow-2);
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  position: fixed;
+  z-index: 1000;
+  top: calc(var(--safe-top) + 8px);
+  left: calc(var(--safe-left) + var(--gutter));
+  right: calc(var(--safe-right) + var(--gutter));
+  pointer-events: none;           /* only its children catch taps; the map stays draggable around them */
+}
+
+.topbar__row {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 48px;
+  padding: 0 16px 0 6px;
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: var(--shadow-2);
+}
+
+.topbar__title {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar__back + .topbar__title { padding-left: 0; }
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+.icon-btn svg { width: 24px; height: 24px; fill: var(--text-2); }
+.icon-btn:hover { background: #f1f3f4; }
+.icon-btn:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
+
+/* ---------- Region chips ---------- */
+
+.chips {
+  pointer-events: auto;
+  display: flex;
+  gap: 8px;
+  margin: 10px calc(-1 * var(--gutter)) 0;
+  padding: 2px var(--gutter) 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.chips::-webkit-scrollbar { display: none; }
+
+.chip {
+  flex: none;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1px solid var(--divider);
+  border-radius: 18px;
+  background: var(--chip);
+  box-shadow: var(--shadow-1);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  /* enlarge the touch area to 44 px without changing the look */
+  position: relative;
+}
+.chip::after { content: ""; position: absolute; inset: -4px 0; }
+.chip[aria-pressed="true"] {
+  background: var(--chip-active);
+  border-color: var(--chip-active);
+  color: var(--chip-active-text);
+}
+.chip:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; }
+.chip__dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+/* ---------- Info sheet (bottom sheet on phones, side panel on desktop) ---------- */
+
+.sheet {
+  position: fixed;
+  z-index: 1000;
+  left: calc(var(--safe-left));
+  right: calc(var(--safe-right));
+  bottom: 0;
+  max-height: min(56dvh, 520px);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: var(--radius) var(--radius) 0 0;
+  box-shadow: 0 -2px 10px rgba(60, 64, 67, .2);
+  padding-bottom: var(--safe-bottom);
+}
+
+.sheet__handle {
+  flex: none;
+  position: relative;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.sheet__handle::before {
+  content: "";
+  position: absolute;
+  left: 50%; top: 10px;
+  width: 36px; height: 4px;
+  margin-left: -18px;
+  border-radius: 2px;
+  background: #dadce0;
+}
+
+.sheet__content {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 20px 20px;
+}
+
+/* Collapsed (phones): only blocks marked .peek stay visible. */
+.sheet.is-collapsed .sheet__content > :not(.peek) { display: none; }
+
+.sheet__peek { margin: 0 0 4px; }
+
+.eyebrow {
+  margin: 0 0 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.sheet h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.lead { margin: 8px 0 0; color: var(--text-2); }
+
+.sheet__meta { margin: 2px 0 0; font-size: 13px; color: var(--text-2); }
+
+.eyebrow__dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  vertical-align: 1px;
+}
+
+.venue { margin: 10px 0 0; font-size: 14px; color: var(--text); }
+
+.dest-list li[hidden] { display: none; }
+
+.section-title {
+  margin: 20px 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+/* Destination cards in the sheet */
+.dest-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+
+.dest-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 64px;
+  padding: 10px 12px;
+  border: 1px solid var(--divider);
+  border-radius: 12px;
+  background: var(--surface);
+  text-align: left;
+  cursor: pointer;
+}
+.dest-card:hover { background: #f8f9fa; }
+.dest-card:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
+.dest-card.is-dimmed { opacity: .45; }
+.dest-card__pin { flex: none; width: 28px; height: 36px; }
+.dest-card__body { flex: 1; min-width: 0; }
+.dest-card__name { display: block; font-weight: 600; }
+.dest-card__meta { display: block; font-size: 13px; color: var(--text-2); }
+.dest-card__go { flex: none; width: 20px; height: 20px; fill: var(--text-2); }
+
+.notice {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f1f3f4;
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 16px;
+  padding: 0 18px;
+  border: 1px solid var(--divider);
+  border-radius: 22px;
+  background: var(--surface);
+  font-weight: 500;
+  color: #1a73e8;
+  cursor: pointer;
+}
+.btn svg { width: 20px; height: 20px; fill: currentColor; }
+.btn:hover { background: #f1f6fe; }
+
+/* ---------- Phones ---------- */
+
+@media (max-width: 767px) {
+  .sheet h2 { font-size: 20px; }
+  .chip { padding: 0 13px; }
+  .section-title { margin-top: 14px; }
+}
+
+/* ---------- Desktop / tablet landscape: side panel ---------- */
+
+@media (min-width: 768px) {
+  .topbar {
+    right: auto;
+    width: var(--panel-width);
+    top: calc(var(--safe-top) + 16px);
+    left: calc(var(--safe-left) + 16px);
+  }
+  .chips { margin-left: 0; margin-right: 0; padding-left: 2px; padding-right: 2px; flex-wrap: wrap; overflow: visible; }
+  .chip { padding: 0 14px; }
+
+  .sheet {
+    top: calc(var(--topbar-bottom, 130px) + 12px);
+    left: calc(var(--safe-left) + 16px);
+    right: auto;
+    bottom: auto;
+    width: var(--panel-width);
+    max-height: calc(100dvh - var(--topbar-bottom, 130px) - 28px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-2);
+    padding-bottom: 0;
+  }
+  .sheet__handle { display: none; }
+  .sheet__content { padding-top: 20px; }
+  .sheet.is-collapsed .sheet__content > :not(.peek) { display: revert; }
+}
+
+/* Phones in landscape: keep the sheet narrow on the right so the map stays visible. */
+@media (max-width: 767px) and (orientation: landscape) {
+  .sheet {
+    left: auto;
+    right: calc(var(--safe-right) + 8px);
+    width: min(360px, 50vw);
+    max-height: calc(100dvh - 16px);
+    bottom: 8px;
+    border-radius: var(--radius);
+  }
+  .topbar { right: calc(var(--safe-right) + min(360px, 50vw) + 20px); }
+}

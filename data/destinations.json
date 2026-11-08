@@ -1,0 +1,66 @@
+[
+  {
+    "id": "da-nang",
+    "name": "Đà Nẵng",
+    "type": "city",
+    "region": "trung",
+    "status": "published",
+    "coordinates": {
+      "lat": 16.0685,
+      "lon": 108.22402,
+      "source": "https://www.openstreetmap.org/node/369487028",
+      "note": "OSM place=city node. Wikidata Q25282 gives 16.06944, 108.20972 (about 1.5 km away)."
+    },
+    "bounds": [[15.97, 107.95], [16.17, 108.33]],
+    "initialView": [[15.995, 108.195], [16.115, 108.285]],
+    "mapData": "assets/maps/da-nang.geojson",
+    "mapAttribution": "© <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>",
+    "mapLabels": [
+      { "text": "Vịnh Đà Nẵng", "kind": "water", "lat": 16.125, "lon": 108.175 },
+      { "text": "Biển Đông", "kind": "sea", "lat": 16.03, "lon": 108.305 },
+      { "text": "Bán đảo Sơn Trà", "kind": "area", "lat": 16.128, "lon": 108.265 }
+    ],
+    "cover": null,
+    "images": [
+      { "photo": "da-nang-02", "alt": "Bờ biển Đà Nẵng nhìn từ bán đảo Sơn Trà" },
+      { "photo": "da-nang-01", "alt": "Sông Hàn và trung tâm Đà Nẵng lúc bình minh" }
+    ],
+    "summary": "Thành phố biển miền Trung, nơi sông Hàn đổ ra vịnh Đà Nẵng, nằm giữa bán đảo Sơn Trà, Ngũ Hành Sơn và núi Bà Nà.",
+    "locationIds": [
+      "cau-rong", "bai-bien-my-khe", "ngu-hanh-son", "chua-linh-ung-bai-but",
+      "bao-tang-dieu-khac-cham", "ba-na-cau-vang", "cho-con", "mi-quang", "bun-cha-ca"
+    ],
+    "sources": [
+      "https://www.openstreetmap.org/node/369487028",
+      "https://www.wikidata.org/wiki/Q25282"
+    ]
+  },
+  {
+    "id": "ha-noi",
+    "name": "Hà Nội",
+    "type": "city",
+    "region": "bac",
+    "status": "reference",
+    "coordinates": {
+      "lat": 21.0245,
+      "lon": 105.84117,
+      "source": "https://www.wikidata.org/wiki/Q1858"
+    },
+    "summary": "",
+    "locationIds": []
+  },
+  {
+    "id": "ho-chi-minh",
+    "name": "TP. Hồ Chí Minh",
+    "type": "city",
+    "region": "nam",
+    "status": "reference",
+    "coordinates": {
+      "lat": 10.77556,
+      "lon": 106.70194,
+      "source": "https://www.wikidata.org/wiki/Q1854"
+    },
+    "summary": "",
+    "locationIds": []
+  }
+]

@@ -1,0 +1,5 @@
+[
+  { "id": "bac", "name": "Miền Bắc" },
+  { "id": "trung", "name": "Miền Trung" },
+  { "id": "nam", "name": "Miền Nam" }
+]

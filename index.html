@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Khám phá Việt Nam qua bản đồ tương tác, hình ảnh thật và câu chuyện về từng điểm đến.">
+  <title>Khám phá Việt Nam</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/map.css">
+  <link rel="stylesheet" href="css/details.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div id="map" class="map" role="application" aria-label="Bản đồ Việt Nam"></div>
+  <div class="offscreen-hints" id="offscreen-hints" aria-label="Địa điểm ngoài khung nhìn"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="topbar__row">
+      <button class="icon-btn topbar__back" id="back-btn" type="button" hidden aria-label="Quay lại bản đồ Việt Nam">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
+      </button>
+      <h1 class="topbar__title" id="page-title">Khám phá Việt Nam</h1>
+    </div>
+    <nav class="chips" id="region-chips" aria-label="Lọc theo vùng miền"></nav>
+  </header>
+
+  <aside class="sheet" id="sheet" aria-live="polite">
+    <button class="sheet__handle" id="sheet-handle" type="button" aria-label="Thu gọn hoặc mở rộng bảng thông tin" aria-expanded="true"></button>
+    <div class="sheet__content" id="sheet-content"></div>
+  </aside>
+
+  <noscript><p class="noscript">Trang này cần bật JavaScript để hiển thị bản đồ.</p></noscript>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+/* Map container, pins and labels. Flat road-map look (see CLAUDE.md "Map style decision"). */
+
+.map {
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  background: var(--water);
+  touch-action: none;
+}
+
+.leaflet-container {
+  background: var(--water);
+  font-family: var(--font-ui);
+  outline: none;
+}
+
+/* Land polygons are SVG paths; their colours come from js/vietnam-map.js styles.
+   Smooth fade when the layer set changes between levels. */
+.leaflet-overlay-pane path { transition: fill-opacity .6s ease, stroke-opacity .6s ease; }
+
+/* ---------- Text labels ---------- */
+
+.map-label {
+  /* Leaflet sets width/height on divIcons; let text size itself. */
+  width: auto !important;
+  height: auto !important;
+  white-space: nowrap;
+  pointer-events: none;
+  transform-origin: center;
+}
+.map-label span {
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: var(--label);
+  text-shadow:
+    -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff,
+    0 0 3px #fff;
+}
+.map-label--sea span {
+  color: var(--label-sea);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: .04em;
+  text-shadow: none;
+}
+.map-label--country span {
+  color: #80868b;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.map-label--islands span {
+  color: var(--label-sea);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 12px;
+  text-shadow: none;
+}
+.map-label--reference span {
+  transform: translate(10px, -50%);
+  color: #5f6368;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ---------- Destination pin ---------- */
+
+.dest-pin {
+  /* 44 x 44 tap target; the drawn pin is 28 x 36 anchored at the bottom centre */
+  width: 44px !important;
+  height: 44px !important;
+  background: none;
+  border: 0;
+}
+.dest-pin__svg {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 28px;
+  height: 36px;
+  filter: drop-shadow(0 1px 1.5px rgba(0, 0, 0, .35));
+  transition: transform .2s ease;
+  transform-origin: 50% 100%;
+}
+.dest-pin__label {
+  position: absolute;
+  left: 38px;
+  top: 6px;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow:
+    -1.5px -1.5px 0 #fff, 1.5px -1.5px 0 #fff, -1.5px 1.5px 0 #fff, 1.5px 1.5px 0 #fff,
+    0 0 4px #fff;
+}
+.dest-pin:hover .dest-pin__svg,
+.dest-pin:focus-visible .dest-pin__svg,
+.dest-pin.is-active .dest-pin__svg { transform: scale(1.15); }
+.dest-pin:focus-visible { outline: none; }
+.dest-pin:focus-visible .dest-pin__label { text-decoration: underline; }
+.dest-pin.is-dimmed { opacity: .35; }
+
+/* Reference city dot (not clickable) */
+.ref-dot {
+  width: 10px !important;
+  height: 10px !important;
+  margin: -5px 0 0 -5px !important;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #80868b;
+  pointer-events: none;
+}
+.ref-dot.is-dimmed, .map-label--reference.is-dimmed { opacity: .35; }
+
+/* ---------- Level visibility ---------- */
+/* The country layer and a destination's local layer cross-fade around zoom 8. */
+.leaflet-country-pane,
+.leaflet-local-pane,
+.leaflet-localLabels-pane { transition: opacity .6s ease; }
+.leaflet-local-pane,
+.leaflet-localLabels-pane { opacity: 0; }
+.map.is-local .leaflet-local-pane,
+.map.is-local .leaflet-localLabels-pane { opacity: 1; }
+.map.is-local .leaflet-country-pane { opacity: 0; }
+
+/* Country-level labels and pins hide when zoomed into a destination. */
+.map.is-local .layer-country-label { opacity: 0; pointer-events: none; }
+.layer-country-label { transition: opacity .5s ease; }
+
+/* ---------- Local labels (shown progressively by zoom band) ---------- */
+.local-label span[data-minz] { display: none; }
+.map.z10 .local-label span[data-minz="10"],
+.map.z11 .local-label span[data-minz="11"],
+.map.z12 .local-label span[data-minz="12"],
+.map.z13 .local-label span[data-minz="13"],
+.map.z14 .local-label span[data-minz="14"] { display: inline-block; }
+
+.local-label--area span {
+  color: #70757a;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.local-label--water span, .local-label--sea span {
+  color: var(--label-sea);
+  font-style: italic;
+  font-size: 12px;
+  text-shadow: none;
+}
+.local-label--sea span { font-size: 14px; letter-spacing: .06em; }
+.local-label--peak span { color: #6d5a43; font-size: 11px; }
+
+/* ---------- Location pins ---------- */
+.loc-pin {
+  width: 40px !important;
+  height: 40px !important;
+  background: none;
+  border: 0;
+}
+.loc-pin__svg {
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  width: 22px;
+  height: 28px;
+  filter: drop-shadow(0 1px 1.5px rgba(0, 0, 0, .35));
+  transform-origin: 50% 100%;
+  transition: transform .2s ease;
+}
+.loc-pin__label {
+  position: absolute;
+  left: 32px;
+  top: 8px;
+  display: none;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  text-shadow:
+    -1.5px -1.5px 0 #fff, 1.5px -1.5px 0 #fff, -1.5px 1.5px 0 #fff, 1.5px 1.5px 0 #fff,
+    0 0 4px #fff;
+  pointer-events: none;
+}
+.loc-pin.show-label .loc-pin__label,
+.loc-pin.is-active .loc-pin__label,
+.loc-pin:hover .loc-pin__label,
+.loc-pin:focus-visible .loc-pin__label { display: block; }
+.loc-pin.label-left .loc-pin__label { left: auto; right: 32px; }
+.loc-pin.is-active .loc-pin__svg { transform: scale(1.4); }
+.loc-pin:hover .loc-pin__svg, .loc-pin:focus-visible .loc-pin__svg { transform: scale(1.15); }
+.loc-pin.is-active:hover .loc-pin__svg { transform: scale(1.4); }
+.loc-pin:focus-visible { outline: none; }
+.loc-pin.is-filtered { display: none; }
+.map:not(.is-local) .loc-pin { opacity: 0; pointer-events: none; }
+
+/* ---------- Off-screen hints ---------- */
+.offscreen-hints { position: fixed; inset: 0; z-index: 900; pointer-events: none; }
+.offscreen-hint {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 220px;
+  min-height: 36px;
+  padding: 0 12px 0 8px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  pointer-events: auto;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+.offscreen-hint::after { content: ""; position: absolute; inset: -4px 0; } /* 44 px tap area */
+.offscreen-hint__arrow { width: 18px; height: 18px; flex: none; fill: #1a73e8; }
+.offscreen-hint__dot { width: 10px; height: 10px; flex: none; border-radius: 50%; }
+.offscreen-hint__text { overflow: hidden; text-overflow: ellipsis; }
+.offscreen-hint__km { color: var(--text-2); font-weight: 400; }
+
+/* ---------- Controls ---------- */
+
+.leaflet-control-zoom {
+  border: 0 !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.leaflet-control-zoom a {
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  color: var(--text-2) !important;
+  font-size: 20px !important;
+}
+.leaflet-bottom.leaflet-right { margin-bottom: 8px; margin-right: 4px; }
+
+/* Touch devices: no zoom buttons, pinch instead. */
+@media (pointer: coarse) {
+  .leaflet-control-zoom { display: none; }
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+  background: rgba(255, 255, 255, .8) !important;
+  color: var(--text-2);
+}
+.leaflet-control-attribution a { color: var(--text-2); }
+
+/* On phones the sheet covers the bottom: place attribution at the top-right under the chips. */
+@media (max-width: 767px) {
+  .leaflet-bottom.leaflet-right {
+    bottom: auto;
+    top: calc(var(--safe-top) + 112px);
+  }
+}
