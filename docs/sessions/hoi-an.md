@@ -138,10 +138,11 @@ with photos of how it looks now, then add older photos.
 | 2026-11-08 | Committed the draft, merged `main` (no conflicts; main's photo-rule wording kept in this brief). Rebuilt the map with the fixed tool, no junction and no post-processing: islands draw as land. |
 | 2026-11-08 | Cut every place to 3 photos. Found cao lầu (3), cơm gà (3) and one Bảy Mẫu photo on Commons; added 2 Bảy Mẫu photos from Pexels (no CC-licensed Flickr photos of the forest; every candidate was "All rights reserved"; Unsplash showed a bot check). `photos.py` meta/download/build: 27 photos, all OK, 12 MB. Each built photo checked on a contact sheet; Vietnamese alt text written. |
 | 2026-11-08 | B6 passed at 1440 × 900 and 390 × 844 with the Browser pane visible: world → country → Hội An (fly-in, local map fade, area lock holds), all 8 locations (3/3 gallery, thumbnails, full-screen viewer, credit line, Google Maps link), back buttons, category chips, credits page. No console errors. Status set to `published`. |
+| 2026-11-08 | Owner: drop the third Bảy Mẫu photo (Pexels 38116999, place unconfirmed). Removed from selection, locations and assets; credits rebuilt (26 photos). Bảy Mẫu: 2 photos, reported as a gap. |
 
 ## Result
 
-**Published 2026-11-08.** `#/viet-nam/hoi-an`, 8 locations, 27 photos (all 3 per place; 25 Wikimedia Commons, 2 Pexels).
+**Published 2026-11-08.** `#/viet-nam/hoi-an`, 8 locations, 26 photos (3 per place except Bảy Mẫu with 2; 25 Wikimedia Commons, 1 Pexels).
 
 | Place | Photos | Notes |
 |---|---|---|
@@ -151,15 +152,17 @@ with photos of how it looks now, then add older photos.
 | Nhà cổ Tấn Ký | 3 | Facade, interior, corridor |
 | Sông Hoài về đêm | 3 | Floating lanterns, river at night, boats |
 | Bãi biển An Bàng | 3 | Beach at dusk, sand and waves, "Bãi tắm An Bàng" stone |
-| Rừng dừa Bảy Mẫu | 3 | 1 Commons (CC0, Cẩm Thanh) + 2 Pexels |
+| Rừng dừa Bảy Mẫu | **2** | 1 Commons (CC0, Cẩm Thanh) + 1 Pexels (described as Hội An). **Gap: 1 photo** |
 | Cao lầu | 3 | All "Ảnh minh họa" (Hội An bowls, not the pinned eatery) |
 | Cơm gà | 3 | All "Ảnh minh họa" (generic cơm gà, CC0) |
 
 - Map: 347 kB, built by the fixed `build-local-map.mjs` with no post-processing.
-- **No gaps** against the 3-per-place rule.
+- **Gap:** Rừng dừa Bảy Mẫu has 2 photos, not 3.
+  - The owner dropped a third Pexels photo (38116999) because its page didn't confirm the place.
+  - Commons has only one photo of the forest. Every Flickr candidate was "All rights reserved", and Unsplash
+    showed a bot check.
+  - The owner's own photo, or a later Unsplash or Flickr pass, could fill it.
 - **Check, please:**
-  - Bảy Mẫu photo 3 (Pexels 38116999, Kashvi Shah): its page says only "Vietnam". It matches the Cẩm Thanh
-    basket-boat docks visually, but the place isn't confirmed by the photographer. Replace it if you prefer.
   - Venue names: "Cao lầu Bá Lễ" (OSM writes "Ba Le"; the accents are my reading after the nearby Bá Lễ well) and
     "Cơm gà Bà Buội" (from OSM's second-branch node). Both venues were last checked in OSM in 2023.
 

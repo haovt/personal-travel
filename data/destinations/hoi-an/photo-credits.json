@@ -460,29 +460,6 @@
     "retrieved": "2026-11-08"
   },
   {
-    "id": "hoi-an-rung-dua-bay-mau-03",
-    "destinationId": "hoi-an",
-    "owner": "hoi-an-rung-dua-bay-mau",
-    "ownerType": "location",
-    "files": {
-      "400": "assets/destinations/hoi-an/hoi-an-rung-dua-bay-mau/03-400.webp",
-      "800": "assets/destinations/hoi-an/hoi-an-rung-dua-bay-mau/03-800.webp",
-      "1200": "assets/destinations/hoi-an/hoi-an-rung-dua-bay-mau/03-1200.webp",
-      "1800": "assets/destinations/hoi-an/hoi-an-rung-dua-bay-mau/03-1800.webp"
-    },
-    "width": 2400,
-    "height": 1600,
-    "source": "https://www.pexels.com/photo/colorful-basket-boats-on-vietnamese-river-38116999/",
-    "creator": "Kashvi Shah",
-    "license": "Pexels License",
-    "licenseUrl": "https://www.pexels.com/license/",
-    "attributionRequired": false,
-    "sourceName": "Pexels",
-    "modified": "đã thu nhỏ kích thước",
-    "uploaded": "",
-    "retrieved": "2026-11-08"
-  },
-  {
     "id": "hoi-an-cao-lau-01",
     "destinationId": "hoi-an",
     "owner": "hoi-an-cao-lau",
