@@ -6,3 +6,7 @@ Thumbs.db
 
 # Local tool settings
 .claude/settings.local.json
+
+# Python bytecode
+__pycache__/
+*.pyc

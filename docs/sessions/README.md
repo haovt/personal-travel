@@ -20,10 +20,10 @@ worktree is best). They can run **in parallel**: each session writes only to its
 **Starting a session:** create the branch or worktree from `main`, open a session in it, and paste
 the prompt from the brief's "How to start this session".
 
-**Practical limits when running many at once:**
-- Wikimedia Commons and Overpass are shared free services that rate-limit heavy use. Running all
-  10 sessions at the same moment will make their downloads slow. Three or four at a time is
-  smoother.
+**Running many at once:** all Wikimedia downloads from every session share one paced queue
+(`tools/wm_http.py`, lock in `.git/livetravel-locks`), so parallel sessions no longer slow each other
+down with rate-limit back-offs. Overpass (map extract) is still a shared free service: one fetch per
+destination.
 - Each session asks you to approve its proposal (stage A) before building.
 
 **Merging (owner or main session):** merge `dest/<id>` into `main` when its brief's "Result" says

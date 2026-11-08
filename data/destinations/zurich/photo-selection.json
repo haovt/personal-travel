@@ -1,0 +1,142 @@
+{
+  "_note": "Wikimedia Commons files for this destination. Order = gallery order. Used by: python -I tools/photos.py zurich meta|download|build. candidateSources is read by tools/commons_candidates.py. Swiss freedom of panorama covers outdoor works only: no interiors with copyrighted works (Chagall windows, Kronenhalle art).",
+  "cover": [
+    "City_3.jpg",
+    "Central_mit_Blick_auf_den_See.jpg",
+    "D81_1735.jpg"
+  ],
+  "locations": {
+    "zurich-geschnetzeltes": [
+      "Kalbsgeschnetzeltes_nach_Zürcher_Art_Zeughauskeller_Zürich.jpg",
+      "Kalbsleber_und_Zürcher_Geschnetzeltes_Zeughauskeller_Zürich.jpg",
+      "7474_-_Zürich_-_Zeughauskeller.JPG"
+    ],
+    "zurich-luxemburgerli": [
+      "Luxemburgerli_Himbeere_Zitrone.jpg",
+      "Luxemburgerli_zurich_Sprungli.JPG",
+      "Sprüngli.JPG"
+    ],
+    "zurich-grossmunster": [
+      "KG_Grossmünster,_Ansicht_von_der_Quaibrücke_Zürich_20240324_0097.jpg",
+      "Grossmünster_-_Limmatquai_-_Münsterbrücke_Wühre_2018-09-05_15-59-14.jpg",
+      "Grossmünster_Zürich_2022-09-24_04.jpg"
+    ],
+    "zurich-fraumunster": [
+      "Zürich_-_Münsterbrücke_(48688171526).jpg",
+      "Zürich_-_Fraumünster_(48721785448).jpg",
+      "Iglesia_de_Fraumünster,_Zúrich,_Suiza,_2023-03-05,_DD_21.jpg"
+    ],
+    "zurich-landesmuseum": [
+      "Zürich_Switzerland-City-view-01.jpg",
+      "Zürich_Switzerland-Landesmuseum-Zürich-01.jpg",
+      "Landesmuseum_Zürich_-_Eingangstor_2018-09-05_12-22-33.jpg"
+    ],
+    "zurich-lindenhof": [
+      "View_across_Limmat_river_from_Lindenhof.jpg",
+      "Zürich_-_Lindenhof_2011-08-01.jpg",
+      "Lindenhof_Square_and_Hill,_Zurich_(Ank_Kumar)_06.jpg"
+    ],
+    "zurich-zurichhorn": [
+      "'Zürichhorn'_in_Zürich-Seefeld,_Ansicht_von_der_Schifflände_der_Zürichsee-Schifffahrtsgesellschaft_(ZSG)_2013-09-19_17-50-37.JPG",
+      "'Säntis'_-_Zürichhorn_2011-04-07_17-15-24.jpg",
+      "Adlisberg_-_Seefeldquai_-_Zürichhorn_-_Zürichsee_in_Zürich_-_Landiwiese_2015-05-06_13-34-03.JPG"
+    ],
+    "zurich-uetliberg": [
+      "City_Zürich_mit_Zürichsee.jpg",
+      "Albis,_Felsenegg,_Zimmerberg_und_die_Voralpen_im_Nebelmeer,_Ansicht_vom_Uetliberg_2011-11-19_16-14-08.JPG",
+      "Blick_vom_uetliberg_uebers_nebelmeer_zu_den_alpen.jpg"
+    ]
+  },
+  "candidateSources": {
+    "cover": {
+      "cats": [
+        "Category:Limmat in Zürich"
+      ],
+      "search": [
+        "Zürich Limmat Grossmünster panorama",
+        "Zürich skyline lake"
+      ],
+      "min_w": 1800
+    },
+    "zurich-grossmunster": {
+      "cats": [
+        "Category:Grossmünster"
+      ],
+      "search": [
+        "Grossmünster Zürich exterior"
+      ],
+      "min_w": 1600
+    },
+    "zurich-fraumunster": {
+      "cats": [
+        "Category:Fraumünster"
+      ],
+      "search": [
+        "Fraumünster Zürich Münsterhof"
+      ],
+      "min_w": 1600
+    },
+    "zurich-lindenhof": {
+      "cats": [
+        "Category:Lindenhof (Zürich)",
+        "Category:Lindenhofbrunnen"
+      ],
+      "search": [
+        "intitle:Lindenhof intitle:Zürich",
+        "Lindenhof Zürich Limmat view"
+      ],
+      "min_w": 1400
+    },
+    "zurich-landesmuseum": {
+      "cats": [
+        "Category:Swiss National Museum",
+        "Category:Landesmuseum Zürich"
+      ],
+      "search": [
+        "Landesmuseum Zürich building"
+      ],
+      "min_w": 1600
+    },
+    "zurich-zurichhorn": {
+      "cats": [
+        "Category:Zürichhorn"
+      ],
+      "search": [
+        "Zürichhorn lake Zürich park",
+        "Chinagarten Zürich"
+      ],
+      "min_w": 1600
+    },
+    "zurich-uetliberg": {
+      "cats": [
+        "Category:Views from Uetliberg"
+      ],
+      "search": [
+        "intitle:\"Uto Kulm\"",
+        "intitle:Uetliberg intitle:Aussichtsturm",
+        "intitle:Uetliberg intitle:Turm"
+      ],
+      "min_w": 1600
+    },
+    "zurich-geschnetzeltes": {
+      "cats": [
+        "Category:Zürcher Geschnetzeltes",
+        "Category:Rösti"
+      ],
+      "search": [
+        "Zeughauskeller Zürich"
+      ],
+      "min_w": 1000
+    },
+    "zurich-luxemburgerli": {
+      "cats": [
+        "Category:Luxemburgerli",
+        "Category:Confiserie Sprüngli"
+      ],
+      "search": [
+        "Sprüngli Paradeplatz"
+      ],
+      "min_w": 1000
+    }
+  }
+}

@@ -53,6 +53,19 @@ export function createMap(el) {
     updateLevelClass();
   };
 
+  // Guard camera moves: with a zero-size container (e.g. a hidden tab or iframe), Leaflet's
+  // flyTo/getBoundsZoom divide by the map size and produce NaN ("Invalid LatLng (NaN, NaN)").
+  // Wait until the map has a size, then do the move.
+  const hasSize = () => { const s = map.getSize(); return s.x > 0 && s.y > 0; };
+  const whenSized = (fn) => (hasSize() ? fn() : map.once('resize', () => whenSized(fn)));
+  for (const name of ['flyTo', 'flyToBounds', 'fitBounds', 'setView']) {
+    const original = map[name].bind(map);
+    map[name] = (...args) => {
+      if (!hasSize()) { whenSized(() => map[name](...args)); return map; }
+      return original(...args);
+    };
+  }
+
   return map;
 }
 

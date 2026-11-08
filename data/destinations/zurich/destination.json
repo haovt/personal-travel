@@ -2,7 +2,78 @@
   "id": "zurich",
   "countryId": "thuy-si",
   "name": "Zürich",
+  "type": "city",
   "region": null,
-  "status": "planned",
-  "_note": "Placeholder. Owned by the session in docs/sessions/zurich.md, which fills this in and sets status to \"published\"."
+  "status": "published",
+  "coordinates": {
+    "lat": 47.374444,
+    "lon": 8.541111,
+    "source": "https://www.wikidata.org/wiki/Q72"
+  },
+  "bounds": [
+    [
+      47.337,
+      8.475
+    ],
+    [
+      47.392,
+      8.575
+    ]
+  ],
+  "initialView": [
+    [
+      47.352,
+      8.528
+    ],
+    [
+      47.382,
+      8.558
+    ]
+  ],
+  "mapData": "assets/maps/zurich.geojson",
+  "mapAttribution": "© <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>",
+  "mapLabels": [
+    {
+      "text": "Hồ Zürich",
+      "kind": "water",
+      "lat": 47.36,
+      "lon": 8.546
+    },
+    {
+      "text": "Sông Limmat",
+      "kind": "water",
+      "lat": 47.3813,
+      "lon": 8.5406
+    }
+  ],
+  "summary": "Thành phố lớn nhất Thụy Sĩ, nằm bên hồ Zürich, nơi sông Limmat bắt đầu chảy qua phố cổ.",
+  "images": [
+    {
+      "photo": "zurich-01",
+      "alt": "Toàn cảnh phố cổ Zürich bên sông Limmat với hai tháp Grossmünster và tháp nhọn Fraumünster, xa xa là hồ Zürich và dãy Alps"
+    },
+    {
+      "photo": "zurich-02",
+      "alt": "Sông Limmat chảy qua trung tâm Zürich ra hồ Zürich, nhìn từ trên cao, phía xa là dãy Alps"
+    },
+    {
+      "photo": "zurich-03",
+      "alt": "Hồ Zürich và các mái nhà thành phố nhìn từ trên cao vào ngày trời trong"
+    }
+  ],
+  "locationIds": [
+    "zurich-grossmunster",
+    "zurich-fraumunster",
+    "zurich-lindenhof",
+    "zurich-landesmuseum",
+    "zurich-zurichhorn",
+    "zurich-uetliberg",
+    "zurich-geschnetzeltes",
+    "zurich-luxemburgerli"
+  ],
+  "sources": [
+    "https://www.wikidata.org/wiki/Q72",
+    "https://en.wikipedia.org/wiki/Swiss_National_Museum",
+    "https://en.wikipedia.org/wiki/Limmat"
+  ]
 }

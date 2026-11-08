@@ -1,0 +1,6 @@
+{
+  "_note": "Local map extract settings. Used by: node tools/build-local-map.mjs da-lat fetch|build",
+  "bbox": [108.4, 11.865, 108.475, 11.96],
+  "coreBbox": [108.425, 11.93, 108.462, 11.952],
+  "riverLabels": []
+}

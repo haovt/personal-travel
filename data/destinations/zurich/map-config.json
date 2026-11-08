@@ -1,0 +1,6 @@
+{
+  "_note": "Local map extract settings. Used by: node tools/build-local-map.mjs zurich fetch|build",
+  "bbox": [8.475, 47.337, 8.575, 47.392],
+  "coreBbox": [8.535, 47.365, 8.55, 47.38],
+  "riverLabels": ["Sihl"]
+}

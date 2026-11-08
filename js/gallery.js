@@ -6,12 +6,24 @@ import { escapeHtml } from './map-core.js';
 const srcset = (files) => Object.entries(files).map(([w, p]) => `${p} ${w}w`).join(', ');
 const smallest = (files) => files[Object.keys(files).sort((a, b) => a - b).find((w) => +w >= 800) ?? Object.keys(files).pop()];
 
+// Vietnamese labels for licence names that are words rather than codes (CC codes stay as is).
+export function licenseLabel(name = '') {
+  const n = name.trim().toLowerCase();
+  if (n === 'unsplash license') return 'Giấy phép Unsplash';
+  if (n === 'pexels license') return 'Giấy phép Pexels';
+  if (n.startsWith('public domain')) return 'Phạm vi công cộng';
+  return name;
+}
+
+export function licenseHtml(p) {
+  const label = escapeHtml(licenseLabel(p.license));
+  return p.licenseUrl ? `<a href="${escapeHtml(p.licenseUrl)}" target="_blank" rel="noopener">${label}</a>` : label;
+}
+
 function creditHtml(p) {
   const who = p.creator ? `<a href="${escapeHtml(p.source)}" target="_blank" rel="noopener">${escapeHtml(p.creator)}</a>` : '';
-  const lic = p.licenseUrl
-    ? `<a href="${escapeHtml(p.licenseUrl)}" target="_blank" rel="noopener">${escapeHtml(p.license)}</a>`
-    : escapeHtml(p.license);
-  return `${p.illustrative ? '<span class="tag">Ảnh minh họa</span> ' : ''}Ảnh: ${who} · ${lic}`;
+  const via = p.sourceName && p.sourceName !== 'Wikimedia Commons' ? ` (${escapeHtml(p.sourceName)})` : '';
+  return `${p.illustrative ? '<span class="tag">Ảnh minh họa</span> ' : ''}Ảnh: ${who}${via} · ${licenseHtml(p)}`;
 }
 
 const ARROW = (dir) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${dir === 'prev'
