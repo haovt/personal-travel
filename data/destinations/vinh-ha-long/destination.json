@@ -2,7 +2,99 @@
   "id": "vinh-ha-long",
   "countryId": "viet-nam",
   "name": "Vịnh Hạ Long",
+  "type": "bay",
   "region": "bac",
-  "status": "planned",
-  "_note": "Placeholder. Owned by the session in docs/sessions/vinh-ha-long.md, which fills this in and sets status to \"published\"."
+  "status": "published",
+  "coordinates": {
+    "lat": 20.90844,
+    "lon": 107.06828,
+    "source": "https://www.openstreetmap.org/node/2707025319",
+    "wikidata": "Q190128",
+    "note": "OSM label node \"Vịnh Hạ Long\". Wikidata Q190128 gives a coarse 20.9, 107.2 (about 14 km east, in Bái Tử Long)."
+  },
+  "bounds": [
+    [
+      20.75,
+      106.93
+    ],
+    [
+      21.01,
+      107.21
+    ]
+  ],
+  "initialView": [
+    [
+      20.835,
+      107.005
+    ],
+    [
+      20.925,
+      107.1
+    ]
+  ],
+  "mapData": "assets/maps/vinh-ha-long.geojson",
+  "mapAttribution": "© <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>",
+  "mapLabels": [
+    {
+      "text": "Vịnh Hạ Long",
+      "kind": "sea",
+      "lat": 20.90844,
+      "lon": 107.06828
+    },
+    {
+      "text": "Đảo Bồ Hòn",
+      "kind": "area",
+      "lat": 20.84236,
+      "lon": 107.09733
+    },
+    {
+      "text": "Hòn Đầu Gỗ",
+      "kind": "area",
+      "lat": 20.90712,
+      "lon": 107.01925
+    },
+    {
+      "text": "Đảo Tuần Châu",
+      "kind": "area",
+      "lat": 20.92849,
+      "lon": 106.97909
+    },
+    {
+      "text": "Đảo Cát Bà",
+      "kind": "area",
+      "lat": 20.79519,
+      "lon": 107.00911
+    }
+  ],
+  "summary": "Vịnh biển với gần 2.000 hòn đảo, phần lớn là đảo đá vôi, được UNESCO công nhận là di sản thiên nhiên thế giới năm 1994 và 2000.",
+  "images": [
+    {
+      "photo": "vinh-ha-long-01",
+      "alt": "Tàu du lịch giữa những đảo đá vôi dựng đứng trên vịnh Hạ Long"
+    },
+    {
+      "photo": "vinh-ha-long-02",
+      "alt": "Mặt vịnh xanh thẫm với các đảo đá vôi dưới trời mây trắng"
+    },
+    {
+      "photo": "vinh-ha-long-03",
+      "alt": "Hàng thuyền nan neo trước dãy đảo đá vôi"
+    }
+  ],
+  "locationIds": [
+    "vinh-ha-long-hang-sung-sot",
+    "vinh-ha-long-dong-thien-cung",
+    "vinh-ha-long-hon-trong-mai",
+    "vinh-ha-long-dao-ti-top",
+    "vinh-ha-long-hang-luon",
+    "vinh-ha-long-lang-chai-cua-van",
+    "vinh-ha-long-hai-san",
+    "vinh-ha-long-cha-muc"
+  ],
+  "sources": [
+    "https://www.openstreetmap.org/node/2707025319",
+    "https://www.wikidata.org/wiki/Q190128",
+    "https://vi.wikipedia.org/wiki/V%E1%BB%8Bnh_H%E1%BA%A1_Long",
+    "https://vi.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ninh"
+  ]
 }

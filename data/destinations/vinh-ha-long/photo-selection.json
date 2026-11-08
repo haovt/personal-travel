@@ -1,0 +1,139 @@
+{
+  "_note": "Wikimedia Commons files for this destination. Order = gallery order. Used by: python -I tools/photos.py vinh-ha-long meta|download|build",
+  "cover": [
+    "Bahía_de_Halong_(14847476448).jpg",
+    "Ha_Long_Bay_04.jpg",
+    "Bahía_de_Halong_(15033731252).jpg"
+  ],
+  "locations": {
+    "vinh-ha-long-hang-sung-sot": [
+      "Sung_Sot_Cave,_Ha_Long_Bay,_northern_Vietnam_(18)_(37657930095).jpg",
+      "Sung_Sot_Cave,_Ha_Long_Bay,_northern_Vietnam_(6)_(26769833129).jpg",
+      "Sung_Sot_Cave,_Ha_Long_Bay,_northern_Vietnam_(15)_(37657990375).jpg"
+    ],
+    "vinh-ha-long-dong-thien-cung": [
+      "Thien_Cung_Cave_(32735760722).jpg",
+      "Thien_Cung_Cave_(32508934290).jpg",
+      "Thien_Cung_Cave_(32074503963).jpg"
+    ],
+    "vinh-ha-long-hon-trong-mai": [
+      "Kisantaj_Rokoj_en_la_golfo_Halongo_02.jpg",
+      "Cock_And_Hen_Islands_(90194937).jpeg",
+      "The_Kissing_Rocks-Ha_Long_Bay-Vietnam.jpg"
+    ],
+    "vinh-ha-long-dao-ti-top": [
+      "Halong_Bay_Titov_island_Pearls_(29024).jpg",
+      "View_of_sea_from_Titov_Island,_Ha_Long_Bay,_Vietnam,_20240128_1343_3738.jpg",
+      "Titốp_Island_beach_(39398221775).jpg"
+    ],
+    "vinh-ha-long-hang-luon": [
+      "Through_Luồn_Cave_(40254284332).jpg",
+      "Luồn_Cave_(38485887740).jpg",
+      "Heading_to_Luồn_Cave_(40250520962).jpg"
+    ],
+    "vinh-ha-long-lang-chai-cua-van": [
+      "Cua_Van_Floating_Village.jpg",
+      "Local_Fishing_Boat.jpg",
+      "Hang_Trai_Island.jpg"
+    ],
+    "vinh-ha-long-hai-san": [
+      "Lady_selling_seafood_in_Ha_Long_Bay.jpg",
+      "Fish_Market_Advertising_-_Flickr_-_Lucas_Jans.jpg",
+      "Hai_san_Hau_Loc02.JPG"
+    ],
+    "vinh-ha-long-cha-muc": [
+      "Chả_mực.jpg",
+      "Chả_mực_Hạ_Long,_Quảng_Ninh,_Việt_Nam.jpg",
+      "Tết_2024_nhà_mình_(món_chả_mực_rán_ng17th2n2024)_(6).jpg"
+    ]
+  },
+  "candidateSources": {
+    "cover": {
+      "cats": [
+        "Category:Panoramics in Ha Long Bay",
+        "Category:Limestone islands in Ha Long Bay",
+        "Category:Ha Long Bay"
+      ],
+      "search": [],
+      "min_w": 1800
+    },
+    "vinh-ha-long-hang-sung-sot": {
+      "cats": [
+        "Category:Sung Sot Cave"
+      ],
+      "search": [],
+      "min_w": 1600
+    },
+    "vinh-ha-long-dong-thien-cung": {
+      "cats": [
+        "Category:Thien Cung Cave"
+      ],
+      "search": [
+        "intitle:\"Thien Cung\""
+      ],
+      "min_w": 1400
+    },
+    "vinh-ha-long-hon-trong-mai": {
+      "cats": [
+        "Category:Kissing Rocks (Ha Long Bay)"
+      ],
+      "search": [
+        "intitle:\"Trong Mai\"",
+        "intitle:\"Trống Mái\"",
+        "intitle:\"Ga Choi\"",
+        "intitle:\"Gà Chọi\""
+      ],
+      "min_w": 1200
+    },
+    "vinh-ha-long-dao-ti-top": {
+      "cats": [
+        "Category:Titov Island"
+      ],
+      "search": [
+        "intitle:\"Ti Top\"",
+        "intitle:\"Titop\""
+      ],
+      "min_w": 1600
+    },
+    "vinh-ha-long-hang-luon": {
+      "cats": [
+        "Category:Luồn Cave"
+      ],
+      "search": [
+        "intitle:kayak \"Ha Long\"",
+        "intitle:kayaking \"Halong\""
+      ],
+      "min_w": 1400
+    },
+    "vinh-ha-long-lang-chai-cua-van": {
+      "cats": [
+        "Category:Halong Bay floating village",
+        "Category:Floating fishing village, Halong Bay"
+      ],
+      "search": [
+        "intitle:\"Cua Van\"",
+        "intitle:\"Cửa Vạn\""
+      ],
+      "min_w": 1200
+    },
+    "vinh-ha-long-hai-san": {
+      "cats": [
+        "Category:Fish markets in Vietnam",
+        "Category:Seafood of Vietnam"
+      ],
+      "search": [
+        "intitle:\"Lady selling seafood\"",
+        "intitle:seafood \"Ha Long\""
+      ],
+      "min_w": 1000
+    },
+    "vinh-ha-long-cha-muc": {
+      "cats": [],
+      "search": [
+        "intitle:\"chả mực\"",
+        "intitle:\"cha muc\""
+      ],
+      "min_w": 500
+    }
+  }
+}
