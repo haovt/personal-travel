@@ -3,48 +3,64 @@
   "cover": [
     "Hội_An_river_boats_(44810595704).jpg",
     "Hoi_An_Riverside_(38714293090).jpg",
-    "Hội_An_streets_(44622168345).jpg",
-    "Hoi_An,_Vietnam_(25710326363).jpg",
-    "Hoi'an_by_the_river.jpg",
-    "Hoi_An_(26653103898).jpg"
+    "Hoi_An,_Vietnam_(25710326363).jpg"
   ],
   "locations": {
     "hoi-an-chua-cau": [
       "DSC1063_-_Hoi_An_-_Ponte_coperto_giapponese.jpg",
       "2024-12-20_Japanese_Bridge_in_Hoi_An.jpg",
-      "DSC1070_-_Hoi_An_-_Ponte_coperto_giapponese.jpg",
-      "Japanese_Bridge_in_Hoi_An.jpg",
-      "Chùa_Cầu,_Hội_An,_from_an_angle.jpg",
-      "Japanese_Covered_Bridge_in_Hoi_An_(26312976905).jpg"
+      "Chùa_Cầu,_Hội_An,_from_an_angle.jpg"
     ],
     "hoi-an-hoi-quan-phuc-kien": [
       "Hội_An_2024_-_Fujian_Assembly_Hall_(Hội_quán_Phúc_Kiến_,_會安福建會館)_-_img_14.jpg",
-      "Hội_An_2024_-_Fujian_Assembly_Hall_(Hội_quán_Phúc_Kiến_,_會安福建會館)_-_img_02.jpg",
       "Hội_An_2024_-_Fujian_Assembly_Hall_(Hội_quán_Phúc_Kiến_,_會安福建會館)_-_img_06.jpg",
-      "Fujian_Assembly_Hall_Hoi_An_6.jpg",
-      "Hoi_Quan_Phuc_Kien_(Hoi_An)_(4410385675).jpg"
+      "Fujian_Assembly_Hall_Hoi_An_6.jpg"
     ],
     "hoi-an-nha-co-tan-ky": [
       "Hoi_An_-_Tan_Ky_Old_House.jpg",
       "DSC1051_-Vecchia_casa_di_Tan_Ky.jpg",
-      "DSC1054_-Vecchia_casa_di_Tan_Ky.jpg",
-      "DSC1057_-Vecchia_casa_di_Tan_Ky.jpg"
+      "DSC1054_-Vecchia_casa_di_Tan_Ky.jpg"
     ],
     "hoi-an-song-hoai": [
       "Hội_An_lantern_festival_(45485644722).jpg",
       "Hoi_An_by_night_(53200).jpg",
-      "Hoi_An_by_night_(47751).jpg",
-      "Hoi_An_by_night_(13772).jpg",
-      "Hội_An_lantern_festival_(44810593224).jpg",
-      "Lanterns_in_Hoi_An_(26652142358).jpg"
+      "Hoi_An_by_night_(13772).jpg"
     ],
     "hoi-an-bien-an-bang": [
       "Playa_An_Bang,_Hoi_An,_Vietnam_(39510560665).jpg",
       "An_Bàng_Beach_(40500401802).jpg",
-      "An_Bàng_Beach_(39647687335).jpg",
-      "An_Bàng_Beach_(39647682455).jpg",
-      "An_Bang_Beach_(46404328641).jpg",
       "An_Bàng_Beach_(39647680125).jpg"
+    ],
+    "hoi-an-rung-dua-bay-mau": [
+      "Basket_Boat_and_the_Bamboo_forest_(Unsplash).jpg",
+      {
+        "source": "pexels",
+        "page": "https://www.pexels.com/photo/tourists-enjoying-basket-boat-ride-in-h-i-an-29627565/",
+        "file": "https://images.pexels.com/photos/29627565/pexels-photo-29627565.jpeg?w=2400",
+        "creator": "Ethan Brooke",
+        "license": "Pexels License",
+        "licenseUrl": "https://www.pexels.com/license/",
+        "checked": "2026-11-08"
+      },
+      {
+        "source": "pexels",
+        "page": "https://www.pexels.com/photo/colorful-basket-boats-on-vietnamese-river-38116999/",
+        "file": "https://images.pexels.com/photos/38116999/pexels-photo-38116999.jpeg?w=2400",
+        "creator": "Kashvi Shah",
+        "license": "Pexels License",
+        "licenseUrl": "https://www.pexels.com/license/",
+        "checked": "2026-11-08"
+      }
+    ],
+    "hoi-an-cao-lau": [
+      "Cao_lầu_Hội_An_(2024).jpg",
+      "Cao_lầu_in_Hoi_An.jpg",
+      "Cao_Lau_-_Ba_Be,_Hoi_An_Market_VND15000.jpg"
+    ],
+    "hoi-an-com-ga": [
+      "AE_liên_hoan,_Cơm_gà_Trúc_My_ơi,_ng1th9n2019_(gà_luộc)_(1).jpg",
+      "AE_liên_hoan,_Cơm_gà_Trúc_My_ơi,_ng1th9n2019_(cơm)_(1).jpg",
+      "AE_liên_hoan,_Cơm_gà_Trúc_My_ơi,_ng1th9n2019_(gà_luộc)_(3).jpg"
     ]
   },
   "candidateSources": {
@@ -102,10 +118,11 @@
     "hoi-an-rung-dua-bay-mau": {
       "cats": [],
       "search": [
-        "Cam Thanh coconut",
-        "Bay Mau coconut",
-        "basket boat Hoi An",
-        "Cẩm Thanh Hội An"
+        "intitle:\"Bay Mau\"",
+        "\"Cẩm Thanh\"",
+        "\"coconut forest\" Hoi An",
+        "intitle:\"basket boat\" Hoi An",
+        "\"Cam Thanh\" coconut"
       ],
       "min_w": 1200
     },
@@ -114,16 +131,18 @@
         "Category:Cao lầu"
       ],
       "search": [
-        "cao lau Hoi An"
+        "intitle:\"cao lau\"",
+        "intitle:\"cao lầu\""
       ],
       "min_w": 1000
     },
     "hoi-an-com-ga": {
       "cats": [],
       "search": [
-        "cơm gà Hội An",
-        "com ga Hoi An",
-        "Hoi An chicken rice"
+        "\"cơm gà\" \"Hội An\"",
+        "\"com ga\" \"Hoi An\"",
+        "intitle:\"chicken rice\" Hoi An",
+        "intitle:\"cơm gà\""
       ],
       "min_w": 1000
     }

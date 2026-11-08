@@ -4,7 +4,7 @@
   "name": "Hội An",
   "type": "city",
   "region": "trung",
-  "status": "draft",
+  "status": "published",
   "coordinates": {
     "lat": 15.87959,
     "lon": 108.33194,
@@ -42,7 +42,20 @@
     }
   ],
   "summary": "Đô thị cổ bên sông Thu Bồn, từng là thương cảng sầm uất thế kỷ 17–18, được UNESCO công nhận là di sản văn hóa thế giới năm 1999.",
-  "images": [],
+  "images": [
+    {
+      "photo": "hoi-an-01",
+      "alt": "Thuyền gỗ neo bên sông, phía xa là dãy nhà phố cổ Hội An"
+    },
+    {
+      "photo": "hoi-an-02",
+      "alt": "Dãy nhà phố cổ mái ngói, tường vàng bên bờ sông"
+    },
+    {
+      "photo": "hoi-an-03",
+      "alt": "Con phố cổ rực rỡ đèn lồng về đêm"
+    }
+  ],
   "locationIds": [
     "hoi-an-chua-cau",
     "hoi-an-hoi-quan-phuc-kien",

@@ -97,8 +97,12 @@ about 5 km east and gets an off-screen hint pill at old-town zoom.
 - `riverLabels`: Sông Thu Bồn.
 - Possible `mapLabels`: Biển Đông (sea), Phố cổ Hội An (area).
 - The area is coastal, so the coastline step is needed.
+- **Built with (2026-11-08):** `bbox` widened to [108.24, 15.835, 108.43, 15.955], about 2× the initial view, so the
+  area lock's minimum zoom stays below the initial view's zoom. `bounds` in `destination.json` matches.
 
 ### Photo plan (Commons, CC0/PD/CC BY/CC BY-SA)
+
+_Superseded by the owner's 3-per-place rule (2026-11-08); see Result for what was built._
 
 The sites are old buildings, so the pre-2023 rule doesn't apply to them. Chùa Cầu was restored in 2022–2024: lead
 with photos of how it looks now, then add older photos.
@@ -131,10 +135,33 @@ with photos of how it looks now, then add older photos.
 | 2026-11-08 | Owner approved the 8 locations; both food venues pinned with an OSM check-date note; a cơm gà photo shortfall is to be reported as a gap. |
 | 2026-11-08 | Built: `destination.json` (temporarily `published` for browser testing), `locations.json`, `map-config.json`. Local map built; bbox widened to [108.24, 15.835, 108.43, 15.955] (see Requests 4) and island holes fixed (Requests 1). Checked at 1440 × 900 with the Browser pane hidden, so animations were not checked. |
 | 2026-11-08 | Photos picked in `photo-selection.json` (not yet run through `photos.py`): cover 6, Chùa Cầu 6, Phúc Kiến 5, Tấn Ký 4, Sông Hoài 6, An Bàng 6. **Image search stopped at the owner's request** (a new photo rule is coming from the main session) before Bảy Mẫu, cao lầu and cơm gà. |
+| 2026-11-08 | Committed the draft, merged `main` (no conflicts; main's photo-rule wording kept in this brief). Rebuilt the map with the fixed tool, no junction and no post-processing: islands draw as land. |
+| 2026-11-08 | Cut every place to 3 photos. Found cao lầu (3), cơm gà (3) and one Bảy Mẫu photo on Commons; added 2 Bảy Mẫu photos from Pexels (no CC-licensed Flickr photos of the forest; every candidate was "All rights reserved"; Unsplash showed a bot check). `photos.py` meta/download/build: 27 photos, all OK, 12 MB. Each built photo checked on a contact sheet; Vietnamese alt text written. |
+| 2026-11-08 | B6 passed at 1440 × 900 and 390 × 844 with the Browser pane visible: world → country → Hội An (fly-in, local map fade, area lock holds), all 8 locations (3/3 gallery, thumbnails, full-screen viewer, credit line, Google Maps link), back buttons, category chips, credits page. No console errors. Status set to `published`. |
 
 ## Result
 
-_(Stage C: what works, photo counts (target 3 per place), known gaps.)_
+**Published 2026-11-08.** `#/viet-nam/hoi-an`, 8 locations, 27 photos (all 3 per place; 25 Wikimedia Commons, 2 Pexels).
+
+| Place | Photos | Notes |
+|---|---|---|
+| Cover | 3 | River with boats, riverside houses, lantern street at night |
+| Chùa Cầu | 3 | Two after the 2022–2024 restoration, one from before |
+| Hội quán Phúc Kiến | 3 | Gate, main hall, dragon fountain |
+| Nhà cổ Tấn Ký | 3 | Facade, interior, corridor |
+| Sông Hoài về đêm | 3 | Floating lanterns, river at night, boats |
+| Bãi biển An Bàng | 3 | Beach at dusk, sand and waves, "Bãi tắm An Bàng" stone |
+| Rừng dừa Bảy Mẫu | 3 | 1 Commons (CC0, Cẩm Thanh) + 2 Pexels |
+| Cao lầu | 3 | All "Ảnh minh họa" (Hội An bowls, not the pinned eatery) |
+| Cơm gà | 3 | All "Ảnh minh họa" (generic cơm gà, CC0) |
+
+- Map: 347 kB, built by the fixed `build-local-map.mjs` with no post-processing.
+- **No gaps** against the 3-per-place rule.
+- **Check, please:**
+  - Bảy Mẫu photo 3 (Pexels 38116999, Kashvi Shah): its page says only "Vietnam". It matches the Cẩm Thanh
+    basket-boat docks visually, but the place isn't confirmed by the photographer. Replace it if you prefer.
+  - Venue names: "Cao lầu Bá Lễ" (OSM writes "Ba Le"; the accents are my reading after the nearby Bá Lễ well) and
+    "Cơm gà Bà Buội" (from OSM's second-branch node). Both venues were last checked in OSM in 2023.
 
 ## Requests for the main session
 
@@ -163,3 +190,10 @@ _(Stage C: what works, photo counts (target 3 per place), known gaps.)_
    - Tested only with the Browser pane hidden (animations throttled), so please re-check with the pane visible.
    - For Hội An I made the bbox about 2× the initial view, like Đà Nẵng's, so the lock's minimum zoom stays below
      the initial view's zoom.
+5. **Country map: the Hội An pin overlaps Đà Nẵng's** at country zoom (about 25 km apart), and their labels collide.
+   A click on the Hội An pin at 1440 × 900 didn't open it; the list works. Maybe use label collision or an
+   offset/cluster for nearby pins.
+6. **Accessibility:** the destination list items on the country sheet are buttons with no accessible name
+   (`read_page` shows them unnamed); an `aria-label` with the destination name would help screen readers.
+7. Status of 1–4: fixed on main (2026-11-08) and confirmed here: rebuild without workaround, no NaN error on first
+   fly-in.
