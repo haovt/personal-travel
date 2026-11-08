@@ -141,10 +141,36 @@
       "Da_Lat_Market_02.jpg"
     ],
     "da-lat-banh-trang-nuong": [
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/lugxyh/33065548282/",
+        "file": "https://live.staticflickr.com/3704/33065548282_ec5438a9a4_o.jpg",
+        "creator": "Lùg Memories",
+        "license": "CC BY-NC-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "checked": "2026-11-08"
+      },
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/trungquan/15013764957/",
+        "file": "https://live.staticflickr.com/3882/15013764957_e65572f704_k.jpg",
+        "creator": "Trung Quân",
+        "license": "CC BY-NC 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/2.0/",
+        "checked": "2026-11-08"
+      },
+      {
+        "source": "flickr",
+        "page": "https://www.flickr.com/photos/christophercrouzet/38659281742/",
+        "file": "https://live.staticflickr.com/4570/38659281742_79e33bdf82_k.jpg",
+        "creator": "Christopher Crouzet",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "checked": "2026-11-08"
+      },
       "Bánh_tráng_nướng_TP._Hồ_Chí_Minh_-_street_food_in_Ho_Chi_Minh_City,_Vietnam.jpg",
       "Dalat_market,_Vietnam.jpg",
       "Dalat_night_market_-_panoramio.jpg",
-      "Dalat_night_market_-_panoramio_(2).jpg",
       "DA_LAT_MARKET_VIETNAM_JAN_2012_(6910709520).jpg"
     ]
   }

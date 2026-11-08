@@ -14,12 +14,61 @@
     },
     "summary": "Hồ nhân tạo hình trăng lưỡi liềm giữa trung tâm Đà Lạt, bao quanh là rừng thông, bãi cỏ và vườn hoa.",
     "facts": [
-      { "label": "Diện tích", "value": "Khoảng 25 ha" },
-      { "label": "Chu vi", "value": "Khoảng 5 km" },
-      { "label": "Tạo hồ", "value": "Năm 1919, ngăn dòng suối Cam Ly" },
-      { "label": "Mang tên Xuân Hương", "value": "Từ năm 1953" }
+      {
+        "label": "Diện tích",
+        "value": "Khoảng 25 ha"
+      },
+      {
+        "label": "Chu vi",
+        "value": "Khoảng 5 km"
+      },
+      {
+        "label": "Tạo hồ",
+        "value": "Năm 1919, ngăn dòng suối Cam Ly"
+      },
+      {
+        "label": "Mang tên Xuân Hương",
+        "value": "Từ năm 1953"
+      }
     ],
-    "images": [],
+    "images": [
+      {
+        "photo": "da-lat-ho-xuan-huong-01",
+        "alt": "Hồ Xuân Hương nhìn từ trên cao, hàng thông bên bờ hồ"
+      },
+      {
+        "photo": "da-lat-ho-xuan-huong-02",
+        "alt": "Cầu gỗ trên hồ Xuân Hương lúc hoàng hôn"
+      },
+      {
+        "photo": "da-lat-ho-xuan-huong-03",
+        "alt": "Cây thông và cầu gỗ nhỏ bên bờ hồ Xuân Hương"
+      },
+      {
+        "photo": "da-lat-ho-xuan-huong-04",
+        "alt": "Nhà hàng Thủy Tạ màu trắng bên hồ Xuân Hương"
+      },
+      {
+        "photo": "da-lat-ho-xuan-huong-05",
+        "alt": "Hồ Xuân Hương phủ sương buổi sáng"
+      },
+      {
+        "photo": "da-lat-ho-xuan-huong-06",
+        "alt": "Thuyền thiên nga đậu bên bờ hồ Xuân Hương"
+      },
+      {
+        "photo": "da-lat-ho-xuan-huong-07",
+        "alt": "Nhà hàng Thanh Thủy bên bờ hồ Xuân Hương"
+      },
+      {
+        "photo": "da-lat-ho-xuan-huong-08",
+        "alt": "Ánh đèn phản chiếu trên mặt hồ Xuân Hương về đêm"
+      },
+      {
+        "photo": "da-lat-ho-xuan-huong-09",
+        "alt": "Mặt hồ Xuân Hương xanh, phía xa là núi"
+      }
+    ],
     "audio": null,
     "sources": [
       "https://www.openstreetmap.org/relation/2390139",
@@ -43,12 +92,49 @@
     },
     "summary": "Nhà thờ lớn nhất Đà Lạt, quen gọi là nhà thờ Con Gà vì có con gà bằng đồng trên đỉnh tháp chuông.",
     "facts": [
-      { "label": "Khởi công", "value": "19/7/1931" },
-      { "label": "Khánh thành", "value": "25/1/1942" },
-      { "label": "Tháp chuông", "value": "Cao 47 m" },
-      { "label": "Địa chỉ", "value": "13 Trần Phú" }
+      {
+        "label": "Khởi công",
+        "value": "19/7/1931"
+      },
+      {
+        "label": "Khánh thành",
+        "value": "25/1/1942"
+      },
+      {
+        "label": "Tháp chuông",
+        "value": "Cao 47 m"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "13 Trần Phú"
+      }
     ],
-    "images": [],
+    "images": [
+      {
+        "photo": "da-lat-nha-tho-chinh-toa-01",
+        "alt": "Mặt tiền và tháp chuông nhà thờ chính tòa Đà Lạt"
+      },
+      {
+        "photo": "da-lat-nha-tho-chinh-toa-02",
+        "alt": "Tháp chuông và mái vòm nhà thờ nhìn từ bên hông"
+      },
+      {
+        "photo": "da-lat-nha-tho-chinh-toa-03",
+        "alt": "Tháp chuông nhà thờ dưới bầu trời chiều u ám"
+      },
+      {
+        "photo": "da-lat-nha-tho-chinh-toa-04",
+        "alt": "Cửa sổ kính màu và tháp chuông của nhà thờ"
+      },
+      {
+        "photo": "da-lat-nha-tho-chinh-toa-05",
+        "alt": "Nhà thờ chính tòa Đà Lạt với tường sơn màu hồng"
+      },
+      {
+        "photo": "da-lat-nha-tho-chinh-toa-06",
+        "alt": "Du khách trước cửa chính nhà thờ"
+      }
+    ],
     "audio": null,
     "sources": [
       "https://www.openstreetmap.org/way/452519411",
@@ -62,7 +148,9 @@
     "destinationId": "da-lat",
     "name": "Ga Đà Lạt",
     "category": "history",
-    "tags": ["attraction"],
+    "tags": [
+      "attraction"
+    ],
     "coordinates": {
       "lat": 11.9416,
       "lon": 108.45443,
@@ -72,11 +160,45 @@
     },
     "summary": "Nhà ga thời Pháp với ba mái nhọn cách điệu ba đỉnh núi Langbiang, nay chạy tàu du lịch đến Trại Mát.",
     "facts": [
-      { "label": "Xây dựng", "value": "1932–1938" },
-      { "label": "Di tích quốc gia", "value": "Năm 2001" },
-      { "label": "Tàu du lịch", "value": "Đà Lạt – Trại Mát, 7 km" }
+      {
+        "label": "Xây dựng",
+        "value": "1932–1938"
+      },
+      {
+        "label": "Di tích quốc gia",
+        "value": "Năm 2001"
+      },
+      {
+        "label": "Tàu du lịch",
+        "value": "Đà Lạt – Trại Mát, 7 km"
+      }
     ],
-    "images": [],
+    "images": [
+      {
+        "photo": "da-lat-ga-da-lat-01",
+        "alt": "Mặt tiền ga Đà Lạt với ba mái nhọn và đồng hồ"
+      },
+      {
+        "photo": "da-lat-ga-da-lat-02",
+        "alt": "Ga Đà Lạt nhìn từ bãi cỏ phía trước"
+      },
+      {
+        "photo": "da-lat-ga-da-lat-03",
+        "alt": "Một góc ga Đà Lạt với mái ngói đỏ"
+      },
+      {
+        "photo": "da-lat-ga-da-lat-04",
+        "alt": "Sân ga có mái che và hàng cột, bên cạnh là đường ray"
+      },
+      {
+        "photo": "da-lat-ga-da-lat-05",
+        "alt": "Toa tàu gỗ ghi chữ Dalat Plateau Rail Road"
+      },
+      {
+        "photo": "da-lat-ga-da-lat-06",
+        "alt": "Trần cao và cửa kính màu bên trong nhà ga"
+      }
+    ],
     "audio": null,
     "sources": [
       "https://www.openstreetmap.org/relation/17877171",
@@ -101,11 +223,45 @@
     },
     "summary": "Biệt điện nơi gia đình vua Bảo Đại sống và làm việc, nằm trên đỉnh đồi giữa rừng thông Ái Ân.",
     "facts": [
-      { "label": "Xây dựng", "value": "1933–1938" },
-      { "label": "Thiết kế", "value": "Paul Veysseyre và Arthur Kruze" },
-      { "label": "Địa chỉ", "value": "1 Triệu Việt Vương" }
+      {
+        "label": "Xây dựng",
+        "value": "1933–1938"
+      },
+      {
+        "label": "Thiết kế",
+        "value": "Paul Veysseyre và Arthur Kruze"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "1 Triệu Việt Vương"
+      }
     ],
-    "images": [],
+    "images": [
+      {
+        "photo": "da-lat-dinh-bao-dai-01",
+        "alt": "Mặt tiền Dinh III với cờ trên mái và luống hoa đỏ"
+      },
+      {
+        "photo": "da-lat-dinh-bao-dai-02",
+        "alt": "Giàn cây leo trước Dinh III"
+      },
+      {
+        "photo": "da-lat-dinh-bao-dai-03",
+        "alt": "Vườn hoa kiểu Pháp trước Dinh III"
+      },
+      {
+        "photo": "da-lat-dinh-bao-dai-04",
+        "alt": "Phòng khách với bộ ghế màu cam bên trong dinh"
+      },
+      {
+        "photo": "da-lat-dinh-bao-dai-05",
+        "alt": "Hiên dinh với ô cửa tròn nhìn ra rừng thông"
+      },
+      {
+        "photo": "da-lat-dinh-bao-dai-06",
+        "alt": "Dinh III giữa rừng thông dưới trời xanh"
+      }
+    ],
     "audio": null,
     "mapsQuery": "Dinh III Bảo Đại, 1 Triệu Việt Vương, Đà Lạt",
     "sources": [
@@ -120,7 +276,9 @@
     "destinationId": "da-lat",
     "name": "Thiền viện Trúc Lâm",
     "category": "culture",
-    "tags": ["nature"],
+    "tags": [
+      "nature"
+    ],
     "coordinates": {
       "lat": 11.90416,
       "lon": 108.43479,
@@ -130,11 +288,45 @@
     },
     "summary": "Thiền viện trên núi Phụng Hoàng, nhìn xuống hồ Tuyền Lâm giữa rừng thông.",
     "facts": [
-      { "label": "Xây dựng", "value": "1993–1994" },
-      { "label": "Lối lên từ hồ", "value": "140 bậc đá" },
-      { "label": "Hồ Tuyền Lâm", "value": "Khoảng 320 ha" }
+      {
+        "label": "Xây dựng",
+        "value": "1993–1994"
+      },
+      {
+        "label": "Lối lên từ hồ",
+        "value": "140 bậc đá"
+      },
+      {
+        "label": "Hồ Tuyền Lâm",
+        "value": "Khoảng 320 ha"
+      }
     ],
-    "images": [],
+    "images": [
+      {
+        "photo": "da-lat-thien-vien-truc-lam-01",
+        "alt": "Chánh điện Thiền viện Trúc Lâm với lư hương lớn phía trước"
+      },
+      {
+        "photo": "da-lat-thien-vien-truc-lam-02",
+        "alt": "Hồ Tuyền Lâm lúc chạng vạng"
+      },
+      {
+        "photo": "da-lat-thien-vien-truc-lam-03",
+        "alt": "Gác trống trong thiền viện"
+      },
+      {
+        "photo": "da-lat-thien-vien-truc-lam-04",
+        "alt": "Một am nhỏ thờ Phật trong khuôn viên thiền viện"
+      },
+      {
+        "photo": "da-lat-thien-vien-truc-lam-05",
+        "alt": "Lối đi giữa hai chậu bonsai lớn trong thiền viện"
+      },
+      {
+        "photo": "da-lat-thien-vien-truc-lam-06",
+        "alt": "Rừng thông trong khuôn viên thiền viện"
+      }
+    ],
     "audio": null,
     "mapsQuery": "Thiền viện Trúc Lâm Đà Lạt",
     "sources": [
@@ -160,10 +352,49 @@
     },
     "summary": "Thác nước giữa rừng ở phía nam Đà Lạt, chảy qua nhiều thềm đá.",
     "facts": [
-      { "label": "Thác đổ từ", "value": "Ghềnh cao 20 m" },
-      { "label": "Tên gọi", "value": "Theo tiếng K'Ho, nghĩa là \"dưới lá có nước\"" }
+      {
+        "label": "Thác đổ từ",
+        "value": "Ghềnh cao 20 m"
+      },
+      {
+        "label": "Tên gọi",
+        "value": "Theo tiếng K'Ho, nghĩa là \"dưới lá có nước\""
+      }
     ],
-    "images": [],
+    "images": [
+      {
+        "photo": "da-lat-thac-datanla-01",
+        "alt": "Thác Datanla đổ qua những thềm đá"
+      },
+      {
+        "photo": "da-lat-thac-datanla-02",
+        "alt": "Dòng thác Datanla chảy giữa rừng"
+      },
+      {
+        "photo": "da-lat-thac-datanla-03",
+        "alt": "Cây cầu gỗ bắc qua suối dưới chân thác"
+      },
+      {
+        "photo": "da-lat-thac-datanla-04",
+        "alt": "Thác Datanla nhìn từ phía dưới"
+      },
+      {
+        "photo": "da-lat-thac-datanla-05",
+        "alt": "Thác Datanla dưới trời xanh"
+      },
+      {
+        "photo": "da-lat-thac-datanla-06",
+        "alt": "Dòng nước trắng xóa đổ xuống ghềnh đá"
+      },
+      {
+        "photo": "da-lat-thac-datanla-07",
+        "alt": "Đường ray máng trượt xuyên qua rừng"
+      },
+      {
+        "photo": "da-lat-thac-datanla-08",
+        "alt": "Rừng thông ở khu du lịch thác Datanla"
+      }
+    ],
     "audio": null,
     "sources": [
       "https://www.openstreetmap.org/node/4502225092",
@@ -177,7 +408,9 @@
     "destinationId": "da-lat",
     "name": "Chợ Đà Lạt",
     "category": "food",
-    "tags": ["market"],
+    "tags": [
+      "market"
+    ],
     "coordinates": {
       "lat": 11.94344,
       "lon": 108.43718,
@@ -190,10 +423,41 @@
     },
     "summary": "Khu chợ trung tâm bán rau, trái cây và đặc sản Đà Lạt; buổi tối, phố trước chợ thành chợ đêm.",
     "facts": [
-      { "label": "Xây dựng", "value": "1958–1960" },
-      { "label": "Chợ đêm", "value": "Tổ chức chính thức từ năm 2013" }
+      {
+        "label": "Xây dựng",
+        "value": "1958–1960"
+      },
+      {
+        "label": "Chợ đêm",
+        "value": "Tổ chức chính thức từ năm 2013"
+      }
     ],
-    "images": [],
+    "images": [
+      {
+        "photo": "da-lat-cho-da-lat-01",
+        "alt": "Mặt tiền chợ Đà Lạt với bảng tên chợ"
+      },
+      {
+        "photo": "da-lat-cho-da-lat-02",
+        "alt": "Người mua bán rau củ trước chợ Đà Lạt buổi sáng"
+      },
+      {
+        "photo": "da-lat-cho-da-lat-03",
+        "alt": "Các gian hàng đặc sản bên trong chợ Đà Lạt"
+      },
+      {
+        "photo": "da-lat-cho-da-lat-04",
+        "alt": "Khu gian hàng trong chợ nhìn từ tầng trên"
+      },
+      {
+        "photo": "da-lat-cho-da-lat-05",
+        "alt": "Bùng binh trước chợ Đà Lạt nhìn từ trên cao"
+      },
+      {
+        "photo": "da-lat-cho-da-lat-06",
+        "alt": "Các sạp trái cây và rau trong chợ"
+      }
+    ],
     "audio": null,
     "sources": [
       "https://www.openstreetmap.org/relation/4119185",
@@ -208,7 +472,9 @@
     "destinationId": "da-lat",
     "name": "Bánh tráng nướng",
     "category": "food",
-    "tags": ["market"],
+    "tags": [
+      "market"
+    ],
     "coordinates": {
       "lat": 11.9415,
       "lon": 108.43727,
@@ -221,10 +487,47 @@
     },
     "summary": "Món ăn vặt nổi tiếng của Đà Lạt, bánh tráng nướng giòn phủ trứng, hành và nhiều loại nhân; chợ đêm là một địa chỉ tiêu biểu.",
     "facts": [
-      { "label": "Địa chỉ tiêu biểu", "value": "Chợ đêm Đà Lạt" },
-      { "label": "Địa chỉ", "value": "Nguyễn Thị Minh Khai, trước chợ Đà Lạt" }
+      {
+        "label": "Địa chỉ tiêu biểu",
+        "value": "Chợ đêm Đà Lạt"
+      },
+      {
+        "label": "Địa chỉ",
+        "value": "Nguyễn Thị Minh Khai, trước chợ Đà Lạt"
+      }
     ],
-    "images": [],
+    "images": [
+      {
+        "photo": "da-lat-banh-trang-nuong-01",
+        "alt": "Những chiếc bánh tráng nướng phủ hành, trứng và xúc xích trên vỉ"
+      },
+      {
+        "photo": "da-lat-banh-trang-nuong-02",
+        "alt": "Người bán nướng bánh tráng bên lề đường ở Đà Lạt"
+      },
+      {
+        "photo": "da-lat-banh-trang-nuong-03",
+        "alt": "Người bán nướng bánh tráng với trứng trên vỉ",
+        "illustrative": true
+      },
+      {
+        "photo": "da-lat-banh-trang-nuong-04",
+        "alt": "Gánh hàng bánh tráng nướng với bánh tráng, trứng cút, hành và tôm khô",
+        "illustrative": true
+      },
+      {
+        "photo": "da-lat-banh-trang-nuong-05",
+        "alt": "Chợ Đà Lạt và khu chợ đêm lúc chập tối"
+      },
+      {
+        "photo": "da-lat-banh-trang-nuong-06",
+        "alt": "Đông người ở chợ đêm trước chợ Đà Lạt"
+      },
+      {
+        "photo": "da-lat-banh-trang-nuong-07",
+        "alt": "Các hàng ăn của chợ đêm Đà Lạt"
+      }
+    ],
     "audio": null,
     "sources": [
       "https://www.openstreetmap.org/way/407704132",

@@ -153,10 +153,49 @@ of the 4 files pass.
 | 2026-11-08 | Built: `destination.json` (kept `draft`), `map-config.json`, `locations.json`, and `assets/maps/da-lat.geojson` (210 kB; one Overpass fetch, OSM base 2026-11-08T05:18Z). The map checked OK in the browser at 1440 × 900: both lakes are water, roads and labels show, all 8 pins appear, and the Trúc Lâm hint pill works. |
 | 2026-11-08 | Photos: the candidate search ran once per place; 54 files were picked by eye and written to `photo-selection.json` (cover 6, Hồ Xuân Hương 9, nhà thờ 6, ga 6, Dinh III 6, Trúc Lâm 6, Datanla 8, chợ 6, bánh tráng nướng 5). `meta`: all 54 OK. `download` hit Commons HTTP 429 repeatedly: **16/54 originals** downloaded; 10 built to WebP before the stop. **Stopped at the owner's request** (the owner is updating the photo rule in the main session). Resume under the new rule. |
 | 2026-11-08 | Photo gap: Commons has only **one full-size bánh tráng nướng photo** (a TP.HCM street stall, generic, to be tagged "Ảnh minh họa"); the other 4 files are 500–600 px. The location's other 4 photos show the Đà Lạt night market (the venue). |
+| 2026-11-08 | Merged `main` (shared paced Wikimedia client, playbook B4b with Flickr/Unsplash/Pexels). With the new tools the remaining Commons originals downloaded without a single 429. |
+| 2026-11-08 | Bánh tráng nướng (B4b): added 3 Flickr dish photos, each licence read on the photo's own page: Lùg Memories "Bánh tráng nướng Đà Lạt" (CC BY-NC-SA 2.0, only 800 px wide), Trung Quân "đường Hoàng Diệu, Đà Lạt" (CC BY-NC 2.0), Christopher Crouzet (CC BY 2.0, place not stated → `illustrative`). Dropped one night-market photo (balloons). Rejected: one Flickr photo with a corner watermark, one where the dish isn't visible. |
+| 2026-11-08 | Flickr's image server answered every `photos.py download` request with HTTP 429. **Owner approved downloading the 3 files through the in-app browser**; they were fetched there and saved to `source-assets/commons/da-lat/da-lat-banh-trang-nuong/01–03.jpg` via a one-off localhost receiver, then built normally. |
+| 2026-11-08 | All 60 photos checked on contact sheets (right place, no watermarks except a tiny signature on lake #2); Vietnamese `alt` written for each. B6 passed at 1440 × 900 and 390 × 844 (details under Result). `status` → `published`. |
 
 ## Result
 
-_(Stage C: what works, photo counts vs. minimums, known gaps.)_
+**Published** (`status: "published"`), 2026-11-08. 8 locations, 60 photos (34 MB WebP), local
+map 212 kB.
+
+**Works** (tested in the in-app browser at 1440 × 900 and 390 × 844; no console errors):
+- World → Việt Nam (Đà Lạt card under Miền Nam) → the Đà Lạt pin → the fly-in lands and the
+  local map fades in.
+- Area lock: `maxBounds` equals the bbox, and zooming out stops at 14.75 on desktop.
+- All 8 location pages: gallery with counter, thumbnails, credit line, "Xem trên Google Maps"
+  link with a sensible query, back to the map.
+- Full-screen viewer opens; the close button and the Escape key close it.
+- Chips: Ẩm thực 2, Lịch sử 2, Thiên nhiên 3 (Trúc Lâm is tagged nature), Văn hóa 2,
+  Tất cả 8.
+- "Nguồn ảnh & bản quyền" lists the Đà Lạt photos including the Flickr credits; both NC
+  photos are flagged "phi thương mại".
+
+**Photo counts vs. minimums:**
+
+| Place | Photos | Minimum | Note |
+|---|---|---|---|
+| Cover (Đà Lạt) | 6 | 5 | |
+| Hồ Xuân Hương | 9 | 3 (up to 10) | |
+| Nhà thờ chính tòa | 6 | 3 | |
+| Ga Đà Lạt | 6 | 3 | |
+| Dinh III | 6 | 3 | |
+| Thiền viện Trúc Lâm | 6 | 3 | Built 1993–94: all uploads before 2023 |
+| Thác Datanla | 8 | 3 (up to 10) | Coaster photo uploaded 2009 |
+| Chợ Đà Lạt (food) | 6 | 3 | |
+| Bánh tráng nướng (food) | 7 | 3 | 3 dish photos (Flickr: 2 taken in Đà Lạt, 1 `illustrative`), 1 generic stall photo (`illustrative`), 3 night-market photos. 2 photos are CC BY-NC / BY-NC-SA (`nonCommercialOnly`). |
+
+**Known gaps / cosmetic:**
+- Bánh tráng nướng photo 1 is only 800 px wide, so it looks slightly soft in the wide desktop
+  panel.
+- On a phone (390 × 844) the area lock shows the whole area; the city pins sit near the top,
+  just under the chip row, because the bbox's north edge (11.96) is close to the city. Moving
+  it north (e.g. 11.975) would need a second Overpass fetch; not done.
+- Not tested on a real iPhone.
 
 ## Requests for the main session
 
@@ -175,3 +214,12 @@ _(Shared-code bugs or changes you need. Don't edit shared files yourself.)_
      `get_json` already does.
    - Workaround used: re-ran `download` with a 75-second pause between runs. Each file is
      still downloaded only once.
+   - **Resolved on main** (`tools/wm_http.py`), for Wikimedia.
+3. **Flickr downloads fail with HTTP 429.** `live.staticflickr.com` answered every request from
+   `photos.py` (User-Agent `LocalLiveTravel…`) with 429, through all 8 back-off attempts, while
+   the same files loaded fine in a browser. B4b therefore doesn't work end to end yet. Đà Lạt
+   used owner-approved browser downloads instead. Worth a documented manual step in B4b (save
+   the file as `source-assets/commons/<id>/<owner>/NN.jpg`, which `download` then skips).
+4. **`tools/__pycache__/*.pyc` is committed on main.** Every run of the tools rewrites
+   `wm_http.cpython-311.pyc`, so each destination branch sees a modified shared file. Suggest
+   `git rm -r --cached tools/__pycache__` and `__pycache__/` in `.gitignore`.
