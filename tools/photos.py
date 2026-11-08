@@ -1,4 +1,4 @@
-"""Build-time tool (not needed at runtime): photos from Wikimedia Commons, one destination at a time.
+"""Build-time tool (not needed at runtime): destination photos, one destination at a time.
 
   python -I tools/photos.py <destination-id> meta      # licence/author/size of every selected file
   python -I tools/photos.py <destination-id> download  # download each approved file once (<= 2400 px wide)
@@ -9,8 +9,20 @@ Cache:   source-assets/commons/<id>/metadata.json, source-assets/commons/<id>/<o
 Output:  assets/destinations/<id>/<owner>/NN-<width>.webp   (owner = "cover" or a location id)
          data/destinations/<id>/photo-credits.json           (generated; do not edit by hand)
 
-Only files whose licence is CC0, public domain, CC BY or CC BY-SA are downloaded.
 Photo ids: "<id>-NN" for cover photos, "<location-id>-NN" for location photos.
+
+Each entry in photo-selection.json is either
+  - a Wikimedia Commons file name (string): licence, author and size are read from the Commons API;
+    only CC0, public domain, CC BY and CC BY-SA pass; or
+  - an object for an approved non-Commons source (owner decision 2026-11-08), filled in by the
+    session from the photo's own page (the tool cannot read these sites' licences itself):
+      {"source": "flickr" | "unsplash" | "pexels",
+       "page": "<photo page URL>", "file": "<direct image URL, ~2400 px wide if offered>",
+       "creator": "<name as shown on the page>", "license": "<exact licence name>",
+       "licenseUrl": "<licence URL>", "checked": "YYYY-MM-DD"}
+    Flickr: CC0, Public Domain Mark, CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA (NC = only because
+    this site is non-commercial; flagged nonCommercialOnly). Never ND ("NoDerivs") or
+    "All rights reserved". Unsplash: "Unsplash License". Pexels: "Pexels License".
 """
 
 import html
@@ -22,12 +34,38 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import wm_http  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 API = "https://commons.wikimedia.org/w/api.php"
-UA = "LocalLiveTravel/0.1 (personal non-commercial virtual travel atlas; build-time asset collection)"
+UA = wm_http.UA
 WIDTHS = [400, 800, 1200, 1800]
 DOWNLOAD_WIDTH = 2400
 FREE = re.compile(r"^(CC0|Public domain|PD\b|CC BY(-SA)? \d(\.\d)?)", re.I)
+# Approved non-Commons sources (owner decision 2026-11-08) and the licence names each may carry.
+OTHER_SOURCES = {
+    "flickr": {"name": "Flickr", "host": "flickr.com",
+               "licenses": re.compile(r"^(CC0( 1\.0)?|Public Domain Mark( 1\.0)?|CC BY(-SA|-NC|-NC-SA)? \d(\.\d)?)$", re.I)},
+    "unsplash": {"name": "Unsplash", "host": "unsplash.com", "licenses": re.compile(r"^Unsplash License$", re.I)},
+    "pexels": {"name": "Pexels", "host": "pexels.com", "licenses": re.compile(r"^Pexels License$", re.I)},
+}
+
+
+def other_ok(e):
+    """Validate a non-Commons entry; returns an error string or None."""
+    src = OTHER_SOURCES.get(e.get("source"))
+    if not src:
+        return f"unknown source {e.get('source')!r}"
+    for k in ("page", "file", "creator", "license", "licenseUrl"):
+        if not e.get(k):
+            return f"missing {k}"
+    if src["host"] not in e["page"]:
+        return f"page is not on {src['host']}"
+    lic = e["license"].strip()
+    if re.search(r"\bND\b|NoDeriv|all rights reserved", lic, re.I) or not src["licenses"].match(lic):
+        return f"licence not allowed: {lic}"
+    return None
 
 
 class Dest:
@@ -56,17 +94,8 @@ class Dest:
 
 
 def get_json(params):
-    url = API + "?" + urllib.parse.urlencode({**params, "format": "json", "formatversion": "2", "maxlag": "5"})
-    for attempt in range(5):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:
-                return json.load(r)
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
-                time.sleep(15 * (attempt + 1))
-                continue
-            raise
-    raise RuntimeError("Commons API keeps rate-limiting; try again later")
+    # All Wikimedia traffic goes through the shared, paced client (see tools/wm_http.py).
+    return wm_http.api_get(params)
 
 
 def strip_html(s):
@@ -78,15 +107,28 @@ def clean_creator(s):
     return re.sub(r"\s*\((thảo luận|talk|discussion|contribs)\)\s*$", "", s, flags=re.I).strip()
 
 
-def key(name):
-    return "File:" + name.replace("_", " ")
+def key(entry):
+    if isinstance(entry, dict):
+        return entry.get("page", "")
+    return "File:" + entry.replace("_", " ")
 
 
 def cmd_meta(d):
     d.src.mkdir(parents=True, exist_ok=True)
     items = list(d.items())
     meta = json.loads(d.meta.read_text(encoding="utf-8")) if d.meta.exists() else {}
-    todo = [key(n) for _, _, n in items if key(n) not in meta]
+    for _, _, n in items:
+        if isinstance(n, dict):
+            err = other_ok(n)
+            meta[key(n)] = {"error": err} if err else {
+                "page": n["page"], "downloadUrl": n["file"], "lastUploaded": "",
+                "artist": n["creator"], "license": n["license"].strip(), "licenseUrl": n["licenseUrl"],
+                "attributionRequired": n["source"] == "flickr" and n["license"].upper().startswith("CC BY"),
+                "sourceName": OTHER_SOURCES[n["source"]]["name"],
+                "nonCommercialOnly": "-NC" in n["license"].upper(),
+                "checked": n.get("checked", ""),
+            }
+    todo = [key(n) for _, _, n in items if not isinstance(n, dict) and key(n) not in meta]
     for start in range(0, len(todo), 20):
         data = get_json({
             "action": "query", "titles": "|".join(todo[start:start + 20]), "prop": "imageinfo",
@@ -110,32 +152,39 @@ def cmd_meta(d):
                 "attributionRequired": val("AttributionRequired") == "true",
                 "description": strip_html(val("ImageDescription"))[:300],
             }
-        time.sleep(2)
     d.meta.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     for owner, i, name in items:
         m = meta.get(key(name), {"missing": True})
         if m.get("missing"):
             print(f"MISSING {owner} #{i}: {name}")
+        elif m.get("error"):
+            print(f"REJECT {owner} #{i}: {m['error']} ({key(name)})")
+        elif isinstance(name, dict):
+            print(f"OK     {owner} #{i}: {m['license']:<14} {m['sourceName']:<9} {m['artist'][:40]}")
         else:
             ok = "OK    " if FREE.match(m["license"]) else "REJECT"
             print(f"{ok} {owner} #{i}: {m['license']:<14} {m['width']}x{m['height']}  {m['artist'][:40]:<40} up {m['lastUploaded'][:4]}")
+
+
+def usable(m):
+    if not m or m.get("missing") or m.get("error"):
+        return False
+    return bool(m.get("sourceName")) or bool(FREE.match(m["license"]))
 
 
 def cmd_download(d):
     meta = json.loads(d.meta.read_text(encoding="utf-8"))
     for owner, i, name in d.items():
         m = meta.get(key(name))
-        if not m or m.get("missing") or not FREE.match(m["license"]):
-            print(f"skip {owner} #{i} ({name})")
+        if not usable(m):
+            print(f"skip {owner} #{i} ({key(name)})")
             continue
         dest = d.src / owner / f"{i:02d}.jpg"
         if dest.exists():
             continue
         dest.parent.mkdir(parents=True, exist_ok=True)
-        with urllib.request.urlopen(urllib.request.Request(m["downloadUrl"], headers={"User-Agent": UA}), timeout=120) as r:
-            dest.write_bytes(r.read())
-        print(f"downloaded {owner} #{i}: {dest.stat().st_size // 1024} kB")
-        time.sleep(1.5)
+        dest.write_bytes(wm_http.fetch(m["downloadUrl"], timeout=120))
+        print(f"downloaded {owner} #{i}: {dest.stat().st_size // 1024} kB", flush=True)
 
 
 def cmd_build(d):
@@ -146,7 +195,7 @@ def cmd_build(d):
     for owner, i, name in d.items():
         m = meta.get(key(name))
         src = d.src / owner / f"{i:02d}.jpg"
-        if not m or m.get("missing") or not src.exists():
+        if not usable(m) or not src.exists():
             print(f"skip {owner} #{i}")
             continue
         out_dir = d.assets / owner
@@ -175,6 +224,8 @@ def cmd_build(d):
             "license": m["license"],
             "licenseUrl": m["licenseUrl"],
             "attributionRequired": m["attributionRequired"],
+            "sourceName": m.get("sourceName", "Wikimedia Commons"),
+            **({"nonCommercialOnly": True} if m.get("nonCommercialOnly") else {}),
             "modified": "đã thu nhỏ kích thước",
             "uploaded": (m["lastUploaded"] or "")[:10],
             "retrieved": time.strftime("%Y-%m-%d"),

@@ -101,8 +101,8 @@
         "Category:Con Market"
       ],
       "search": [
-        "Chợ Cồn Đà Nẵng",
-        "Con market Da Nang"
+        "intitle:\"Con Market\"",
+        "\"Chợ Cồn\""
       ],
       "min_w": 1200
     },

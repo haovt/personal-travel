@@ -2,6 +2,7 @@
 // plus credits for map data, fonts and libraries. Built from data files only.
 
 import { escapeHtml } from './map-core.js';
+import { licenseHtml } from './gallery.js';
 
 const OTHER_CREDITS = [
   {
@@ -48,7 +49,7 @@ export function createCreditsPage(data, { onBack }) {
         <h1 id="credits-title">Nguồn ảnh &amp; bản quyền</h1>
       </header>
       <div class="page__body">
-        <p class="lead">Tất cả ảnh là ảnh thật, dùng theo giấy phép tự do của tác giả. Ảnh đã được thu nhỏ kích thước để hiển thị trên web.</p>
+        <p class="lead">Tất cả ảnh là ảnh thật, dùng theo giấy phép của tác giả hoặc nền tảng đăng ảnh (Wikimedia Commons, Flickr, Unsplash, Pexels). Ảnh đã được thu nhỏ kích thước để hiển thị trên web.</p>
         ${[...groups].map(([owner, photos]) => `
           <h2>${escapeHtml(ownerName(photos[0]))}</h2>
           <ul class="credit-list">
@@ -57,10 +58,8 @@ export function createCreditsPage(data, { onBack }) {
                 <img src="${escapeHtml(p.files['400'])}" alt="" loading="lazy" decoding="async">
                 <div>
                   <p><strong>${escapeHtml(p.creator || 'Không rõ tác giả')}</strong></p>
-                  <p>${p.licenseUrl
-                    ? `<a href="${escapeHtml(p.licenseUrl)}" target="_blank" rel="noopener">${escapeHtml(p.license)}</a>`
-                    : escapeHtml(p.license)} · ${escapeHtml(p.modified || '')}</p>
-                  <p><a href="${escapeHtml(p.source)}" target="_blank" rel="noopener">Xem ảnh gốc trên Wikimedia Commons</a></p>
+                  <p>${licenseHtml(p)} · ${escapeHtml(p.modified || '')}${p.nonCommercialOnly ? ' · chỉ dùng phi thương mại' : ''}</p>
+                  <p><a href="${escapeHtml(p.source)}" target="_blank" rel="noopener">Xem ảnh gốc trên ${escapeHtml(p.sourceName || 'Wikimedia Commons')}</a></p>
                 </div>
               </li>`).join('')}
           </ul>`).join('')}
