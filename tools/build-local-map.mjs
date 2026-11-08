@@ -274,15 +274,28 @@ const push = (props, geometry) => features.push({ type: 'Feature', properties: p
 
 const roundRing = (ring) => ring.map(([x, y]) => [r5(x), r5(y)]);
 
+// Ray-casting point-in-polygon test (ring = closed list of [x, y]).
+function pointInRing(ring, [x, y]) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i], [xj, yj] = ring[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+
 function addPolygon(kind, outerRings, innerRings = [], tol = 0.00005) {
   for (const o of outerRings) {
     let ring = same(o[0], o[o.length - 1]) ? o : null;
     if (!ring) continue;
+    // A multipolygon can have several outer rings: each hole belongs only to the outer ring that
+    // contains it (otherwise a small outer ring would be drawn with every island as a hole).
+    const ownHoles = innerRings.filter((h) => pointInRing(o, h[0]) || pointInRing(o, h[Math.floor(h.length / 2)]));
     ring = clipRing(ring);
     if (!ring) continue;
     ring = simplifyRing(ring, tol);
     if (!ring) continue;
-    const holes = innerRings
+    const holes = ownHoles
       .map((h) => clipRing(h))
       .filter(Boolean)
       .map((h) => simplifyRing(h, tol))

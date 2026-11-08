@@ -141,7 +141,7 @@ def cmd_meta(d):
                 meta[page["title"]] = {"missing": True}
                 continue
             ii = page["imageinfo"][0]
-            em = ii.get("extmetadata", {})
+            em = ii.get("extmetadata") or {}  # Commons sometimes returns [] instead of {}
             val = lambda k: em.get(k, {}).get("value", "")  # noqa: E731
             meta[page["title"]] = {
                 "page": ii.get("descriptionurl"),

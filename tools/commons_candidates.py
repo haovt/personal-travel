@@ -92,7 +92,7 @@ def collect(spec, existing, max_files, refresh):
             continue
         seen.add(title)
         ii = p["imageinfo"][0]
-        em = ii.get("extmetadata", {})
+        em = ii.get("extmetadata") or {}  # Commons sometimes returns [] instead of {}
         lic = strip(em.get("LicenseShortName", {}).get("value"))
         w, h = ii["width"], ii["height"]
         year = int(ii["timestamp"][:4])
