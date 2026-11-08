@@ -262,6 +262,9 @@ async function main() {
       return;
     }
     if (prev?.view === 'country' && prev.countryId === country.id) saveView(`country-view:${country.id}`);
+    // Jumping straight from another destination (history, shared link): release that
+    // destination's area lock first, or the flight can't leave the old area.
+    if (prev?.destinationId && prev.destinationId !== dest.id) areaLock.unlock();
     if (!prev) map.fitBounds(country.bounds, { ...viewPadding(), animate: false });
     countryLayer.setActive(dest.id);
 
