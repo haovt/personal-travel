@@ -1,0 +1,18 @@
+{
+  "_note": "Local map extract settings. Used by: node tools/build-local-map.mjs hoi-an fetch|build",
+  "bbox": [
+    108.24,
+    15.835,
+    108.43,
+    15.955
+  ],
+  "coreBbox": [
+    108.318,
+    15.871,
+    108.338,
+    15.885
+  ],
+  "riverLabels": [
+    "Sông Thu Bồn"
+  ]
+}

@@ -1,0 +1,378 @@
+[
+  {
+    "id": "hoi-an-chua-cau",
+    "destinationId": "hoi-an",
+    "name": "Chùa Cầu",
+    "category": "attraction",
+    "tags": [
+      "history"
+    ],
+    "coordinates": {
+      "lat": 15.87712,
+      "lon": 108.32602,
+      "source": "https://www.openstreetmap.org/way/39268284",
+      "wikidata": "Q1091054",
+      "note": "Centre of the OSM bridge way. Wikidata gives 15.87719, 108.32597 (about 9 m away)."
+    },
+    "summary": "Cây cầu gỗ có mái che vắt qua lạch nước đổ ra sông Thu Bồn, biểu tượng của phố cổ Hội An.",
+    "facts": [
+      {
+        "label": "Chiều dài",
+        "value": "Khoảng 18 m"
+      },
+      {
+        "label": "Tên chữ",
+        "value": "Lai Viễn Kiều, do chúa Nguyễn Phúc Chu đặt năm 1719"
+      },
+      {
+        "label": "Đại trùng tu",
+        "value": "Hoàn thành ngày 3/8/2024"
+      }
+    ],
+    "images": [
+      {
+        "photo": "hoi-an-chua-cau-01",
+        "alt": "Chùa Cầu sau đợt đại trùng tu, nhìn dọc lạch nước"
+      },
+      {
+        "photo": "hoi-an-chua-cau-02",
+        "alt": "Chùa Cầu lên đèn vào buổi tối"
+      },
+      {
+        "photo": "hoi-an-chua-cau-03",
+        "alt": "Chùa Cầu trước đợt đại trùng tu, tường hồng và mái ngói cũ"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/39268284",
+      "https://www.wikidata.org/wiki/Q1091054",
+      "https://vi.wikipedia.org/wiki/Ch%C3%B9a_C%E1%BA%A7u",
+      "https://en.wikipedia.org/wiki/Japanese_Bridge"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "hoi-an-hoi-quan-phuc-kien",
+    "destinationId": "hoi-an",
+    "name": "Hội quán Phúc Kiến",
+    "category": "culture",
+    "tags": [],
+    "coordinates": {
+      "lat": 15.87814,
+      "lon": 108.33099,
+      "source": "https://www.openstreetmap.org/way/320722329",
+      "note": "Centre of the OSM building outline."
+    },
+    "summary": "Hội quán lớn nhất trong năm hội quán của người Hoa ở Hội An, nổi bật với cổng tam quan mái ngói men xanh.",
+    "facts": [
+      {
+        "label": "Địa chỉ",
+        "value": "46 Trần Phú"
+      },
+      {
+        "label": "Thành hội quán",
+        "value": "Năm 1792"
+      },
+      {
+        "label": "Cổng tam quan",
+        "value": "Xây đầu thập niên 1970"
+      }
+    ],
+    "images": [
+      {
+        "photo": "hoi-an-hoi-quan-phuc-kien-01",
+        "alt": "Cổng tam quan Hội quán Phúc Kiến với mái ngói men xanh"
+      },
+      {
+        "photo": "hoi-an-hoi-quan-phuc-kien-02",
+        "alt": "Bên trong chính điện, treo bảng chữ Hán và đèn lồng đỏ"
+      },
+      {
+        "photo": "hoi-an-hoi-quan-phuc-kien-03",
+        "alt": "Hòn non bộ có tượng rồng giữa sân hội quán"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/320722329",
+      "https://vi.wikipedia.org/wiki/Ph%E1%BB%91_c%E1%BB%95_H%E1%BB%99i_An"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "hoi-an-nha-co-tan-ky",
+    "destinationId": "hoi-an",
+    "name": "Nhà cổ Tấn Ký",
+    "category": "history",
+    "tags": [],
+    "coordinates": {
+      "lat": 15.87646,
+      "lon": 108.32783,
+      "source": "https://www.openstreetmap.org/way/595299310",
+      "wikidata": "Q140915999",
+      "note": "Centre of the OSM building outline. Wikidata gives 15.87645, 108.32781."
+    },
+    "summary": "Ngôi nhà phố bằng gỗ, kiến trúc kết hợp nét Việt, Nhật và Hoa.",
+    "facts": [
+      {
+        "label": "Địa chỉ",
+        "value": "101 Nguyễn Thái Học"
+      }
+    ],
+    "images": [
+      {
+        "photo": "hoi-an-nha-co-tan-ky-01",
+        "alt": "Mặt tiền bằng gỗ của nhà cổ Tấn Ký, đèn lồng treo trước cửa"
+      },
+      {
+        "photo": "hoi-an-nha-co-tan-ky-02",
+        "alt": "Gian nhà bày bàn ghế gỗ chạm trổ và bình sứ"
+      },
+      {
+        "photo": "hoi-an-nha-co-tan-ky-03",
+        "alt": "Lối đi sâu vào trong nhà, phía trên treo bảng chữ Hán"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/595299310",
+      "https://www.wikidata.org/wiki/Q140915999",
+      "https://en.wikivoyage.org/wiki/Hoi_An"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "hoi-an-song-hoai",
+    "destinationId": "hoi-an",
+    "name": "Sông Hoài về đêm",
+    "category": "experience",
+    "tags": [],
+    "coordinates": {
+      "lat": 15.87649,
+      "lon": 108.32646,
+      "source": "https://www.openstreetmap.org/way/35952574",
+      "note": "Pinned at Cầu An Hội (centre of the OSM bridge way), on the river front of the old town."
+    },
+    "mapsQuery": "Cầu An Hội, Hội An",
+    "summary": "Nhánh sông nhỏ chảy qua phố cổ, buổi tối rực rỡ đèn lồng và hoa đăng trên mặt nước.",
+    "facts": [
+      {
+        "label": "Đêm rằm phố cổ",
+        "value": "Đêm 14 âm lịch hằng tháng, có từ năm 1998"
+      }
+    ],
+    "images": [
+      {
+        "photo": "hoi-an-song-hoai-01",
+        "alt": "Hoa đăng hình hoa sen và đèn lồng thả trên mặt sông về đêm"
+      },
+      {
+        "photo": "hoi-an-song-hoai-02",
+        "alt": "Thuyền nhỏ và đèn lồng lấp lánh trên mặt sông buổi tối"
+      },
+      {
+        "photo": "hoi-an-song-hoai-03",
+        "alt": "Thuyền du lịch neo bên bờ sông về đêm"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/way/35952574",
+      "https://vi.wikipedia.org/wiki/S%C3%B4ng_Ho%C3%A0i",
+      "https://vi.wikipedia.org/wiki/Ph%E1%BB%91_c%E1%BB%95_H%E1%BB%99i_An",
+      "https://en.wikivoyage.org/wiki/Hoi_An"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "hoi-an-bien-an-bang",
+    "destinationId": "hoi-an",
+    "name": "Bãi biển An Bàng",
+    "category": "nature",
+    "tags": [],
+    "coordinates": {
+      "lat": 15.9137,
+      "lon": 108.34074,
+      "source": "https://en.wikivoyage.org/wiki/Hoi_An",
+      "wikidata": "Q141622910",
+      "note": "Wikivoyage listing coordinate (edited 2026-06-20). Checked with Overpass is_in: the point lies inside the OSM beach relation 7456917 (https://www.openstreetmap.org/relation/7456917). Wikidata has no coordinates."
+    },
+    "summary": "Bãi biển cát trắng cách phố cổ khoảng 4 km về phía bắc, mang nhịp sống làng biển thư thả.",
+    "facts": [
+      {
+        "label": "Bờ biển Hội An",
+        "value": "Dài hơn 7 km"
+      }
+    ],
+    "images": [
+      {
+        "photo": "hoi-an-bien-an-bang-01",
+        "alt": "Bãi biển lúc chiều tà, một chiếc thuyền thúng trên cát ướt"
+      },
+      {
+        "photo": "hoi-an-bien-an-bang-02",
+        "alt": "Bãi cát vàng và sóng biển An Bàng"
+      },
+      {
+        "photo": "hoi-an-bien-an-bang-03",
+        "alt": "Tảng đá khắc chữ “Bãi tắm An Bàng” trước biển"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/relation/7456917",
+      "https://www.wikidata.org/wiki/Q141622910",
+      "https://vi.wikipedia.org/wiki/B%C3%A3i_bi%E1%BB%83n_An_B%C3%A0ng",
+      "https://en.wikivoyage.org/wiki/Hoi_An"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "hoi-an-rung-dua-bay-mau",
+    "destinationId": "hoi-an",
+    "name": "Rừng dừa Bảy Mẫu",
+    "category": "nature",
+    "tags": [
+      "experience"
+    ],
+    "coordinates": {
+      "lat": 15.875,
+      "lon": 108.37417,
+      "source": "https://www.wikidata.org/wiki/Q138660353",
+      "wikidata": "Q138660353",
+      "note": "Wikidata P625. OSM node 12295680120 (a basket-boat tour on Đường Rừng Dừa Bảy Mẫu) gives 15.87614, 108.37379, about 140 m away."
+    },
+    "summary": "Rừng dừa nước ở Cẩm Thanh, du khách ngồi thuyền thúng len lỏi qua các lạch nước.",
+    "facts": [
+      {
+        "label": "Diện tích",
+        "value": "Hơn 80 ha"
+      },
+      {
+        "label": "Di tích cấp tỉnh",
+        "value": "Năm 2007"
+      },
+      {
+        "label": "Thuộc",
+        "value": "Khu dự trữ sinh quyển thế giới Cù Lao Chàm – Hội An"
+      }
+    ],
+    "images": [
+      {
+        "photo": "hoi-an-rung-dua-bay-mau-01",
+        "alt": "Người chèo thuyền thúng giữa những tàu lá dừa nước"
+      },
+      {
+        "photo": "hoi-an-rung-dua-bay-mau-02",
+        "alt": "Du khách đội nón lá ngồi thuyền thúng, một người biểu diễn quay thúng"
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.wikidata.org/wiki/Q138660353",
+      "https://vi.wikipedia.org/wiki/R%E1%BB%ABng_d%E1%BB%ABa_B%E1%BA%A3y_M%E1%BA%ABu"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "hoi-an-cao-lau",
+    "destinationId": "hoi-an",
+    "name": "Cao lầu",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 15.8795,
+      "lon": 108.32944,
+      "source": "https://www.openstreetmap.org/node/6892599587",
+      "note": "OSM name \"Quan Cao Lau Ba Le\" (no diacritics; spelled Bá Lễ after the nearby Bá Lễ well, OSM node 12065583507, about 100 m away). OSM check_date 2023-01-03, last edited 2024-11-07. Pinned with owner approval 2026-11-08."
+    },
+    "venue": {
+      "name": "Cao lầu Bá Lễ",
+      "address": "49/3 Trần Hưng Đạo"
+    },
+    "summary": "Món mì đặc sản Hội An, sợi mì vàng ăn cùng thịt xíu, rau sống và rất ít nước dùng.",
+    "facts": [
+      {
+        "label": "Một địa chỉ tiêu biểu",
+        "value": "Cao lầu Bá Lễ, 49/3 Trần Hưng Đạo"
+      },
+      {
+        "label": "Sợi mì",
+        "value": "Gạo ngâm nước tro; tương truyền nước phải lấy từ giếng Bá Lễ"
+      }
+    ],
+    "images": [
+      {
+        "photo": "hoi-an-cao-lau-01",
+        "alt": "Tô cao lầu với thịt heo, rau sống và những miếng bánh giòn",
+        "illustrative": true
+      },
+      {
+        "photo": "hoi-an-cao-lau-02",
+        "alt": "Tô cao lầu với thịt heo và rau xanh",
+        "illustrative": true
+      },
+      {
+        "photo": "hoi-an-cao-lau-03",
+        "alt": "Cận cảnh sợi cao lầu với thịt xíu và rau sống",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/6892599587",
+      "https://vi.wikipedia.org/wiki/Cao_l%E1%BA%A7u",
+      "https://en.wikipedia.org/wiki/Cao_l%E1%BA%A7u"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "hoi-an-com-ga",
+    "destinationId": "hoi-an",
+    "name": "Cơm gà",
+    "category": "food",
+    "tags": [],
+    "coordinates": {
+      "lat": 15.87849,
+      "lon": 108.33043,
+      "source": "https://www.openstreetmap.org/node/4120953690",
+      "note": "OSM tags this node \"Cơm gà Bà Bụi\" (check_date 2023-01-03, last edited 2024-02-02). The spelling \"Bà Buội\" follows the shop's second branch in OSM, node 5401363321 \"Cơm Gà Bà Buội 2\". Pinned with owner approval 2026-11-08."
+    },
+    "venue": {
+      "name": "Cơm gà Bà Buội",
+      "address": "22 Phan Châu Trinh"
+    },
+    "summary": "Cơm nấu bằng nước luộc gà cho hạt vàng ươm, ăn cùng thịt gà.",
+    "facts": [
+      {
+        "label": "Một địa chỉ tiêu biểu",
+        "value": "Cơm gà Bà Buội, 22 Phan Châu Trinh"
+      }
+    ],
+    "images": [
+      {
+        "photo": "hoi-an-com-ga-01",
+        "alt": "Đĩa gà luộc trộn rau thơm, bên cạnh chén canh",
+        "illustrative": true
+      },
+      {
+        "photo": "hoi-an-com-ga-02",
+        "alt": "Đĩa cơm vàng nấu kiểu cơm gà",
+        "illustrative": true
+      },
+      {
+        "photo": "hoi-an-com-ga-03",
+        "alt": "Đĩa gà xé trộn rau thơm, rắc đậu phộng",
+        "illustrative": true
+      }
+    ],
+    "audio": null,
+    "sources": [
+      "https://www.openstreetmap.org/node/4120953690",
+      "https://www.openstreetmap.org/node/5401363321",
+      "https://vi.wikipedia.org/wiki/C%C6%A1m_g%C3%A0"
+    ],
+    "status": "published"
+  }
+]
